@@ -4,6 +4,7 @@ node_js:
 cache:
   directories:
   - node_modules
+before_script: cd ./server/client && npm install
 script:
   - npm test
   - npm run test:coverage
