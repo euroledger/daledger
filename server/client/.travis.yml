@@ -1,19 +1,19 @@
 language: node_js
 node_js:
-  - 11.6.0
-cache: npm
-
-install: 
-  - npm ci
-
-script: 
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
   - npm test
+  - npm run test:coverage
   - npm run build
 
-deploy: 
+deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
   on:
     branch: master
   
