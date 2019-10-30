@@ -1,14 +1,21 @@
 {
   "name": "daledger",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "--prefix ./server/client -scripts start"
+  },
+  "description": "DA Ledger Blockchain MarketPlace for Architects in Romania",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starlingseurope/daledger.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "bugs": {
+    "url": "https://github.com/starlingseurope/daledger/issues"
+  },
+  "homepage": "https://github.com/starlingseurope/daledger#readme"
 }
