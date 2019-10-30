@@ -10,10 +10,10 @@ script:
   - npm run build
 
 deploy:
-  provider: pages
+  provider: heroku
+  api_key: 782e3428-c9af-41c0-9555-ee83a9605a9e
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: build
   on:
     branch: master
   
