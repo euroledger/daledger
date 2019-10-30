@@ -1,5 +1,5 @@
 Command line:
-"travis encrypt 009132da-64bb-433f-bbd4-61a6748e1614"
+"travis encrypt 02ef388d-3e19-4224-a26b-6d6e29e821a7 --add deploy.api_key"
 
 
    ________                                 __
@@ -26,7 +26,7 @@ Command line:
 
      There is absolutely no warranty on any results obtained from TRAVIS.
 
-  #  Running on mike-HP-Pavilion-17-Notebook-PC at Wed Oct 30 11:30:23 2019 (PID 28533).
+  #  Running on mike-HP-Pavilion-17-Notebook-PC at Mon Oct 28 15:24:01 2019 (PID 18214).
   #  Running in /home/mike/daledger
   #  Source code version: Nov 07 2015.
   #  Compiled at Nov 17 2015 23:12:21.
@@ -40,7 +40,8 @@ Command line:
 
  >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
 
-    Loading configuration from /home/mike/.travis.conf ...
+    No configuration file found.
+    Writing default configuration to /home/mike/.travis.conf ...
 
 Unknown parameter: "encrypt".
 

@@ -11,7 +11,7 @@ script:
 
 deploy:
   provider: heroku
-  api_key: 782e3428-c9af-41c0-9555-ee83a9605a9e
+  api_key: 658742ce-2954-4b44-be8b-723b024f062a
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   on:
