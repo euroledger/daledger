@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          for the Architects (and others)
+          for the Architects
         </a>
       </header>
     </div>
