@@ -1,15 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './components/header/logo2.png';
 import './App.css';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header></Header>
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        {/* <p>
           DA Ledger
-        </p>
+        </p> */}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,7 +20,7 @@ function App() {
         >
           for the Architects
         </a>
-      </header>
+      </div>
     </div>
   );
 }
