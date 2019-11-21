@@ -48,6 +48,7 @@ export function register(config) {
         });
       } else {
         // Is not localhost. Just register service worker
+        // is this ok MJR 21 Nov?
         registerValidSW(swUrl, config);
       }
     });
