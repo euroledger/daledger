@@ -58,7 +58,6 @@ const MobileButtonAppBar = ({ links, onSelect }) => {
     });
 
     const toggleDrawer = (side, open) => event => {
-        console.log('QOOHOOO');
         if (
             event.type === 'keydown' &&
             (event.key === 'Tab' || event.key === 'Shift')

@@ -9,9 +9,10 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             height: '4.5em'
         },
+        textAlign: 'center'
     },
     img: {
-        maxWidth: '25em',
+        maxWidth: '20em',
         [theme.breakpoints.down('md')]: {
             maxWidth: '15em',
         },
@@ -26,7 +27,7 @@ const LogoPanel = () => {
     const classes = useStyles();
     return (
         <header data-test='headerComponent' className={classes.header}>
-            <div className='wrap'>
+            <div>
                 <div id='parent' className='logo'>
                     <img
                         className={classes.img}
