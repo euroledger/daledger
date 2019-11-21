@@ -1,0 +1,27 @@
+{
+    "navbar": {
+        "link1": "How it Works",
+        "link2": "Ongoing Competitions",
+        "link3": "Past Competitions",
+        "link4": "Community"
+    },
+    "help": {
+        "button": "Help",
+        "item1": "Customer FAQ",
+        "item2": "Designer FAQ",
+        "item3": "Contact Us"
+    },
+    "loginbuttontext": "Login with Google",
+    "frontbuttons": {
+        "project": "I have a Project",
+        "designer": "I am a designer"
+    },
+    "footer": {
+        "link1": "Terms and Conditions",
+        "link2": "Privacy Policy",
+        "link3": "Past Competitions",
+        "link4": "Community"
+    }
+}
+
+

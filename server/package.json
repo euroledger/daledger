@@ -1,14 +1,21 @@
 {
-  "name": "daledger",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "daledger",
+    "version": "0.1.0",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "client": "npm run start --prefix client",
+        "dev": "npm run client"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "i18next": "^19.0.1",
+        "i18next-browser-languagedetector": "^4.0.1",
+        "i18next-xhr-backend": "^3.2.2",
+        "react-flags-select": "^1.1.10",
+        "react-i18next": "^11.2.2"
+    }
 }

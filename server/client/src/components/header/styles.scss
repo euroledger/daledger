@@ -1,15 +1,16 @@
 header {
-  background-color: #24578b;
+//   background-color: #24578b;
+// font-family: 'Architects Daughter', cursive;
+background-color: black;
   display: block;
-  padding-left: 200px;
-  padding: 0 10px;
-  height: 100px;
-  img {
-    max-width: 120px;
-  }
+  padding: 0 2em;
 
   #child {
-    line-height: 100px;
+    line-height: 10em;
     color: white;
   }
+}
+
+.flag-select {
+    margin-left: 0.5em;
 }
