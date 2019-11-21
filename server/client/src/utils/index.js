@@ -1,4 +1,4 @@
-import checkPropTypes from 'check-prop-types';
+// import checkPropTypes from 'check-prop-types';
 import { useMediaQuery } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles';
 
