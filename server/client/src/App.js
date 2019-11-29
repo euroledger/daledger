@@ -4,7 +4,6 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Content from './components/content';
 import { Container } from '@material-ui/core';
-import { DeviceHelper } from './utils';
 import log4javascript from 'log4javascript';
 
 // @TODO
