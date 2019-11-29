@@ -28,8 +28,8 @@ const GlobalCss = withStyles({
 })(() => null);
 function App() {
    
-    const appPadding = DeviceHelper() ? process.env.REACT_APP_PADDING : 0;
-
+    // const appPadding = DeviceHelper() ? process.env.REACT_APP_PADDING : 0;
+    const appPadding = 0;
     console.log('Component Loaded...setting up Logging');
     //in debug mode use
     //window.myLogger = log4javascript.getDefaultLogger();

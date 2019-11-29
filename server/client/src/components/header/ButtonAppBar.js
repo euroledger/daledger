@@ -74,6 +74,7 @@ const ButtonAppBar = ({
     const preventDefault = event => event.preventDefault();
 
     const handleClick = e => {
+        console.log("Button clicked")
         e.preventDefault();
         const message = {
             user: 'Mike', // replace with login info
