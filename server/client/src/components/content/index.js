@@ -27,6 +27,8 @@ const useStyles = makeStyles(theme => ({
         background: 'transparent',
         paddingLeft: '1em',
         paddingRight: '1em',
+        // borderColor: 'cyan',
+        // color: 'cyan',
         width: '12em',
         '&:hover': {
             backgroundColor: '#616060',
@@ -45,7 +47,7 @@ const Content = () => {
         return DeviceHelper();
     };
     return (
-        <div className={classes.container}>
+        <div className={classes.container} data-test="contentComponent">
             <div className={classes.panel}>
                 <Button color='inherit' className={classes.button}>
                     {t('frontbuttons.project')}

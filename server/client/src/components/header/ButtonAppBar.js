@@ -55,19 +55,35 @@ const useStyles = makeStyles(theme => ({
         background: 'transparent',
         paddingLeft: '1em',
         paddingRight: '1em',
-        borderWidth:'1px',
+        borderWidth: '1px',
         '&:hover': {
-            backgroundColor: '#616060',
+            backgroundColor: '#616060'
             // opacity: 0.4
         }
     }
 }));
 
-
-
-const ButtonAppBar = ({ links, buttonText, helpTitle, helpItems, onSelect }) => {
+const ButtonAppBar = ({
+    links,
+    buttonText,
+    helpTitle,
+    helpItems,
+    onSelect
+}) => {
     const classes = useStyles();
     const preventDefault = event => event.preventDefault();
+
+    const handleClick = e => {
+        e.preventDefault();
+        const message = {
+            user: 'Mike', // replace with login info
+            level: 'ERROR',
+            url: 'localhost:3000',
+            text: "ButtonAppBar::handleclick() Login Button Clicked",
+        }
+        window.applogger.error(JSON.stringify(message));
+    };
+
     return (
         <div className={classes.root}>
             <AppBar position='fixed' className={classes.header}>
@@ -102,8 +118,9 @@ const ButtonAppBar = ({ links, buttonText, helpTitle, helpItems, onSelect }) => 
                     <Button
                         className={classes.button}
                         color='inherit'
+                        onClick={handleClick}
                     >
-                       {buttonText}
+                        {buttonText}
                     </Button>
                     <ReactFlagsSelect
                         showSelectedLabel={false}

@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 const LogoPanel = () => {
     const classes = useStyles();
     return (
-        <header data-test='headerComponent' className={classes.header}>
+        <header data-test='logopanelComponent' className={classes.header}>
             <div>
                 <div id='parent' className='logo'>
                     <img

@@ -33,7 +33,7 @@ const Header = () => {
     ];
     const loginButtonText = t('loginbuttontext');
     const helpTitle = t('help.button');
-    const helpItems = [t('help.item1'),t('help.item2'),t('help.item3')];
+    const helpItems = [t('help.item1'), t('help.item2'), t('help.item3')];
     const onSelectFlag = countryCode => {
         switch (countryCode) {
             case 'GB':
@@ -48,26 +48,28 @@ const Header = () => {
     };
     return (
         <>
-            {!isLaptop() ? (
-                <>
-                    <LogoPanel></LogoPanel>
-                    <MobileButtonAppBar
+            <div data-test="headerComponent">
+                {!isLaptop() ? (
+                    <>
+                        <LogoPanel></LogoPanel>
+                        <MobileButtonAppBar
+                            links={linkItems}
+                            buttonText={loginButtonText}
+                            helpTitle={helpTitle}
+                            helpItems={helpItems}
+                            onSelect={onSelectFlag}
+                        ></MobileButtonAppBar>
+                    </>
+                ) : (
+                    <ButtonAppBar
                         links={linkItems}
                         buttonText={loginButtonText}
                         helpTitle={helpTitle}
                         helpItems={helpItems}
                         onSelect={onSelectFlag}
-                    ></MobileButtonAppBar>
-                </>
-            ) : (
-                <ButtonAppBar
-                    links={linkItems}
-                    buttonText={loginButtonText}
-                    helpTitle={helpTitle}
-                    helpItems={helpItems}
-                    onSelect={onSelectFlag}
-                ></ButtonAppBar>
-            )}
+                    ></ButtonAppBar>
+                )}
+            </div>
         </>
     );
 };

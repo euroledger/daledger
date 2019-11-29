@@ -23,7 +23,9 @@ const Footer = () => {
         }
     ];
     return (
-        <FooterAppBar linkItems={linkItems}></FooterAppBar>
+        <div data-test='footerComponent'>
+            <FooterAppBar linkItems={linkItems}></FooterAppBar>
+        </div>
     );
 };
 

@@ -1,1 +1,48 @@
+const serverConf = require('./config');
 const express = require('express');
+const bodyParser = require('body-parser');
+const log4js = require('log4js');
+
+var logger = log4js.getLogger('index.js');
+logger.level = 'all';
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+console.log('Starting EXPRESSJS server...');
+
+app.post('/api/logger', function(req, res) {
+    const logMsg = JSON.parse(req.body.data);
+
+    if (logMsg.level === 'ERROR') {
+        logger.error(`[${logMsg.user}] [ERROR] ${logMsg.text}`);
+    }
+    res.send('IT WORKED!!');
+});
+
+log4js.configure({
+    appenders: { file: { type: 'file', filename: 'logs/server.log', maxLogSize: 10485760,  numBackups: 3
+      }, },
+    categories: { default: { appenders: ['file'], level: 'debug' } }
+});
+// log4js.configure({
+//     appenders: {
+//         date: {
+//             type: 'dateFile',
+//             filename: 'logs/date-file-test.log',
+//             pattern: '-yyyy-MM-dd-hh-mm',
+//             layout: { type: 'messagePassThrough' }
+//         }
+//     },
+//     categories: { default: { appenders: ['date'], level: 'WARN' } }
+// });
+// logger.setLevel('DEBUG');
+logger.trace('Entering cheese testing');
+logger.debug('Got cheese.');
+logger.info('Cheese is Gouda.');
+logger.warn('Cheese is quite smelly.');
+logger.error('Cheese is too ripe!');
+logger.fatal('Cheese was breeding ground for listeria.');
+app.listen(serverConf.port, () => {
+    logger.info(`Server running on port ${serverConf.port} ...`);
+});

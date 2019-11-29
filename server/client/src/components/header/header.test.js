@@ -15,7 +15,7 @@ describe('Header Component', () => {
     });
 
     it('should render withour errors', () => {
-        const wrapper = findByTestAttribute(component, 'headerComponent');
+        const wrapper = findByTestAttribute(component, 'logopanelComponent');
         expect(wrapper.length).toBe(1);
     });
 
