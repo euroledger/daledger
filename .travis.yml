@@ -8,7 +8,7 @@ before_script:
     - cd ./server && npm install
     - npm install --prefix client
 script:
-    - npm test
+    # - npm test
     - npm run build
 
 deploy:
