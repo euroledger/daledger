@@ -3,18 +3,17 @@ node_js:
 - '8'
 cache:
   directories:
-  - server/node_modules
-  - server/client/node_modules
-install:
-- cd ./server
-- npm install
+  - ./server/node_modules
+  - ./server/client/node_modules
+before_script: 
+  - cd ./server && npm install
+  - cd ./client && npm install
+  - cd ..
 # - npm run build
 script:
 - nohup npm run start &
 - sleep 3
-- cd ./client
-- npm run build
-- cd .. 
+- npm run build --prefix client
 
 # - npm run test
 # - npm run lint
