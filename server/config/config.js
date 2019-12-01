@@ -1,5 +1,5 @@
 const SERVER_ENV = {
-    'production': { port: process.env.SERVER_PORT },
+    'production': { port: process.env.PORT },
     'development': { port: 5000 }
 };
 

@@ -16,7 +16,6 @@ const theme = createMuiTheme({
             contrastText: '#fff'
         },
         secondary: cyan,
-        // fontFamily: "'Architects Daughter',"
     },
     typography: {
         button: {
@@ -26,9 +25,6 @@ const theme = createMuiTheme({
             borderColor: 'white',
             borderStyle: 'solid',
             background: 'transparent'
-            // '&:hover': {
-            //     backgroundColor: '#616060'
-            // }
         }
     },
     props: {
@@ -38,14 +34,7 @@ const theme = createMuiTheme({
             fontFamily: 'inherit'
         }
     }
-    // ,
-    // overrides: {
-    //     MuiAppBar: {
-    //         root: {
-    //             background: '#fff'
-    //         }
-    //     }
-    // }
+
 });
 ReactDOM.render(
     <Suspense fallback={<div>Loading</div>}>

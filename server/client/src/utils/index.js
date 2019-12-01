@@ -40,4 +40,3 @@ export const logMessage = (log, msg) => {
         log.fatal(errorMsg + ' in ' + url + ', line ' + lineNumber);
     };
 };
-

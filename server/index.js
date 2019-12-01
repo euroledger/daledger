@@ -25,18 +25,7 @@ log4js.configure({
       }, },
     categories: { default: { appenders: ['file'], level: 'debug' } }
 });
-// log4js.configure({
-//     appenders: {
-//         date: {
-//             type: 'dateFile',
-//             filename: 'logs/date-file-test.log',
-//             pattern: '-yyyy-MM-dd-hh-mm',
-//             layout: { type: 'messagePassThrough' }
-//         }
-//     },
-//     categories: { default: { appenders: ['date'], level: 'WARN' } }
-// });
-// logger.setLevel('DEBUG');
+
 logger.trace('Entering cheese testing');
 logger.debug('Got cheese.');
 logger.info('Cheese is Gouda.');

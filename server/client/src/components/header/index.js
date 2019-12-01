@@ -4,36 +4,16 @@ import ButtonAppBar from './ButtonAppBar';
 import MobileButtonAppBar from './MobileButtonAppBar';
 import LogoPanel from './LogoPanel';
 import { DeviceHelper } from '../../utils';
-import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import LinkItems  from '../config';
 
 const isLaptop = () => {
     return DeviceHelper();
 };
 
 const Header = () => {
-    const { t } = useTranslation();
-    const linkItems = [
-        {
-            href: '#',
-            title: t('navbar.link1')
-        },
-        {
-            href: '#',
-            title: t('navbar.link2')
-        },
-        {
-            href: '#',
-            title: t('navbar.link3')
-        },
-        {
-            href: '#',
-            title: t('navbar.link4')
-        }
-    ];
-    const loginButtonText = t('loginbuttontext');
-    const helpTitle = t('help.button');
-    const helpItems = [t('help.item1'), t('help.item2'), t('help.item3')];
+    
+    const props = LinkItems();
     const onSelectFlag = countryCode => {
         switch (countryCode) {
             case 'GB':
@@ -46,6 +26,7 @@ const Header = () => {
                 break;
         }
     };
+    
     return (
         <>
             <div data-test="headerComponent">
@@ -53,19 +34,13 @@ const Header = () => {
                     <>
                         <LogoPanel></LogoPanel>
                         <MobileButtonAppBar
-                            links={linkItems}
-                            buttonText={loginButtonText}
-                            helpTitle={helpTitle}
-                            helpItems={helpItems}
+                            {...props}
                             onSelect={onSelectFlag}
                         ></MobileButtonAppBar>
                     </>
                 ) : (
                     <ButtonAppBar
-                        links={linkItems}
-                        buttonText={loginButtonText}
-                        helpTitle={helpTitle}
-                        helpItems={helpItems}
+                        {...props}
                         onSelect={onSelectFlag}
                     ></ButtonAppBar>
                 )}

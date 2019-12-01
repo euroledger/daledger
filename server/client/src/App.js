@@ -25,13 +25,8 @@ const GlobalCss = withStyles({
         }
     }
 })(() => null);
-function App() {
-   
-    // const appPadding = DeviceHelper() ? process.env.REACT_APP_PADDING : 0;
-    const appPadding = 0;
-    console.log('Component Loaded...setting up Logging');
-    //in debug mode use
-    //window.myLogger = log4javascript.getDefaultLogger();
+
+const setupLogging = () => {
     window.applogger = log4javascript.getLogger();
     var ajaxAppender = new log4javascript.AjaxAppender('/api/logger');
     ajaxAppender.setBatchSize(1); // send in batches of 10
@@ -51,6 +46,16 @@ function App() {
         window.applogger.error(JSON.stringify(errorMsg));
         return true;
     };
+
+}
+function App() {
+   
+    // const appPadding = DeviceHelper() ? process.env.REACT_APP_PADDING : 0;
+    const appPadding = 0;
+    console.log('Component Loaded...setting up Logging');
+
+    setupLogging();
+    
     return (
         <>
             <Container

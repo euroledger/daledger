@@ -86,7 +86,7 @@ const ButtonAppBar = ({
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} data-test="buttonAppBarComponent">
             <AppBar position='fixed' className={classes.header}>
                 <Toolbar className={classes.toolbar}>
                     <img
@@ -100,6 +100,7 @@ const ButtonAppBar = ({
                         <Typography className={classes.typography}>
                             {links.map(item => (
                                 <Link
+                                    data-test={item.title}
                                     key={item.title}
                                     href={item.href}
                                     onClick={preventDefault}
