@@ -20,9 +20,25 @@ app.post('/api/logger', function(req, res) {
     res.send('IT WORKED!!');
 });
 
+if (process.env.NODE_ENV === 'production') {
+    // Express will serve up production assets like main.js or main.cc
+    app.use(express.static('client/build'));
+
+    // Express will serve up the index.html file if it doesn't recognize the route
+    const path = require('path');
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 log4js.configure({
-    appenders: { file: { type: 'file', filename: 'logs/server.log', maxLogSize: 10485760,  numBackups: 3
-      }, },
+    appenders: {
+        file: {
+            type: 'file',
+            filename: 'logs/server.log',
+            maxLogSize: 10485760,
+            numBackups: 3
+        }
+    },
     categories: { default: { appenders: ['file'], level: 'debug' } }
 });
 
