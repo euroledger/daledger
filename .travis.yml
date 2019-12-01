@@ -14,9 +14,7 @@ script:
 - sleep 3 
 - cd client
 # - npm run test --prefix client
-- npm test
-- npm run build 
-- cd ..
+- npm test && npm run build && cd ..
 
 deploy:
     provider: heroku
