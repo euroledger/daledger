@@ -14,7 +14,7 @@ script:
 - sleep 3 
 - cd client
 # - npm run test --prefix client
-- npm run test:coverage 
+- npm run test
 - npm run build 
 - cd ..
 
