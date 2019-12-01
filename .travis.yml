@@ -1,16 +1,17 @@
 language: node_js
+before_install: 
+  - cd ./server
+  - npm install && node index.js &
+before_script: cd ./client && npm install
 node_js:
-    - 'stable'
+  - "stable"
 cache:
-    directories:
-        - node_modules
-before_script:
-    - cd ./server && npm install
-    - cd ./client && npm install
-    # - npm install --prefix client
+  directories:
+  - node_modules
 script:
-    # - npm test
-    - npm run build
+  - npm run test
+  - npm run lint
+  - npm run build
 
 deploy:
     provider: heroku
