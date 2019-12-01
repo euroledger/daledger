@@ -13,7 +13,7 @@ console.log('Starting EXPRESSJS server...');
 
 app.post('/api/logger', function(req, res) {
     const logMsg = JSON.parse(req.body.data);
-
+    console.log('WE ARE IN /api/logger');
     if (logMsg.level === 'ERROR') {
         logger.error(`[${logMsg.user}] [ERROR] ${logMsg.text}`);
     }

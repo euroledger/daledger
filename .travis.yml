@@ -9,14 +9,11 @@ before_script:
   - cd ./server && npm install
   - cd ./client && npm install
   - cd ..
-# - npm run build
 script:
 - nohup npm run start &
-- sleep 3
+- sleep 3 
+- npm run test --prefix client
 - npm run build --prefix client
-
-# - npm run test
-# - npm run lint
 
 deploy:
     provider: heroku
