@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -47,31 +48,31 @@ const setupLogging = () => {
         window.applogger.error(JSON.stringify(errorMsg));
         return true;
     };
-
-}
+};
 function App() {
-   
     // const appPadding = DeviceHelper() ? process.env.REACT_APP_PADDING : 0;
     const appPadding = 0;
     console.log('Component Loaded...setting up Logging');
 
     setupLogging();
-    
+
     return (
         <>
-            <Container
-                data-test='containerComponent'
-                maxWidth={false}
-                style={{
-                    paddingLeft: appPadding,
-                    paddingRight: appPadding
-                }}
-            >
-                <GlobalCss></GlobalCss>
-                <Header></Header>
-                <Content></Content>
-                <Footer></Footer>
-            </Container>
+            <BrowserRouter>
+                <Container
+                    data-test='containerComponent'
+                    maxWidth={false}
+                    style={{
+                        paddingLeft: appPadding,
+                        paddingRight: appPadding
+                    }}
+                >
+                    <GlobalCss></GlobalCss>
+                    <Header></Header>
+                    <Route exact path="/" component={Content} />
+                    <Footer></Footer>
+                </Container>
+            </BrowserRouter>
         </>
     );
 }
