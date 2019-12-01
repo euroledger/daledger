@@ -10,6 +10,7 @@ import log4javascript from 'log4javascript';
 // Footer language support (mobile) DONE
 // Get rid of warnings DONE
 // Get Express working: Add logging to front end and be able to send log messages to server DONE
+// Add Express to heroku
 // Unit tests
 // Add chosen language to state store; swap correct logo image for language
 // close icon for mobile navbar menu DONE
