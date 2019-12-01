@@ -8,7 +8,9 @@ before_script:
   - cd ./server && npm install
   - cd ./client && npm install
 script:
+  - echo "starting..."
   - npm test
+  - echo "bollocks"
   - npm run build
 
 deploy:
