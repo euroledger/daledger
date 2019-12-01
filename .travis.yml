@@ -20,8 +20,8 @@ deploy:
   on:
     branch: master
 
-notifications:
-  email:
-    recipients:
-      - emerysolutions@yahoo.co.uk
+# notifications:
+#   email:
+#     recipients:
+#       - emerysolutions@yahoo.co.uk
   

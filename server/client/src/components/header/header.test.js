@@ -8,6 +8,10 @@ const setUp = (props = {}) => {
     return component;
 };
 
+afterAll(() => {
+    console.log("ALL DONE!");
+});
+
 describe('Header Component', () => {
     let component;
     beforeEach(() => {
@@ -23,5 +27,4 @@ describe('Header Component', () => {
         const logo = findByTestAttribute(component, 'logoIMG');
         expect(logo.length).toBe(1);
     });
-
 });
