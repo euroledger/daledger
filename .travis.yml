@@ -10,7 +10,7 @@ cache:
   - node_modules
 script:
   # - npm run test
-  - npm run lint
+  # - npm run lint
   - npm run build
 
 deploy:
@@ -26,5 +26,5 @@ notifications:
     email:
         recipients:
             - emerysolutions@yahoo.co.uk
-        on_success: never # default: change
-        on_failure: always # default: always
+        on_success: never 
+        on_failure: always 
