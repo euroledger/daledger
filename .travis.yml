@@ -13,7 +13,6 @@ script:
 - nohup npm run start &
 - sleep 3 
 - cd client
-# - npm run test --prefix client
 - npm test
 - npm run build 
 - cd ..
@@ -31,5 +30,5 @@ notifications:
     email:
         recipients:
             - emerysolutions@yahoo.co.uk
-        on_success: never 
+        on_success: always 
         on_failure: always 
