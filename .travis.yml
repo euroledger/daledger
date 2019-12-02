@@ -18,11 +18,13 @@ script:
 deploy:
     provider: heroku
     api_key: 658742ce-2954-4b44-be8b-723b024f062a
-    app: daledger-prod
+    app:
+      master: daledger-prod
+      test: daledger-test
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
-    on:
-        branch: master
+    # on:
+    #     branch: master
 
 notifications:
     email:
