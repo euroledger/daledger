@@ -15,13 +15,6 @@ body {
     align-items: center;
     justify-content: center;
     font-size: calc(1em + 2vmin);
-    /* color: cyan; */
-    background-image: url('mainimage.jpg');
-    background-repeat: 'no-repeat';
-    background-position: 'center center';
-    background-size: 'cover';
-    background-attachment: 'fixed';
-    height: '100%';
 }
 
 .App-link {

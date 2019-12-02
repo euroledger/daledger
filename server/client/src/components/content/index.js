@@ -12,12 +12,12 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',
         fontSize: 'calc(1em + 2vmin)',
         color: 'white',
-        backgroundImage: 'url("mainimage.jpg")',
+        // backgroundImage: 'url("mainimage.jpg")',
+        backgroundImage: 'url("road.png")',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
-        height: '10%'
+        backgroundAttachment: 'fixed'
     },
     button: {
         textTransform: 'none',
@@ -27,8 +27,6 @@ const useStyles = makeStyles(theme => ({
         background: 'transparent',
         paddingLeft: '1em',
         paddingRight: '1em',
-        // borderColor: 'cyan',
-        // color: 'cyan',
         width: '12em',
         '&:hover': {
             backgroundColor: '#616060',

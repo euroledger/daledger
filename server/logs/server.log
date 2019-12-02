@@ -958,3 +958,75 @@
 [2019-12-02T10:55:20.750] [FATAL] index.js - Cheese was breeding ground for listeria.
 [2019-12-02T10:55:20.755] [INFO] index.js - Server running on port 5000 ...
 [2019-12-02T10:55:27.683] [ERROR] index.js - [Mike] [ERROR] ButtonAppBar::handleclick() Login Button Clicked
+[2019-12-02T11:55:06.132] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:55:06.132] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:55:06.132] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:55:06.132] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:55:06.132] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:55:06.136] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:55:43.227] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:55:43.228] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:55:43.229] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:55:43.229] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:55:43.229] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:55:43.233] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:55:50.602] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:55:50.604] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:55:50.604] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:55:50.604] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:55:50.604] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:55:50.610] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:55:59.765] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:55:59.767] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:55:59.767] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:55:59.767] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:55:59.767] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:55:59.771] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:56:09.083] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:56:09.085] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:56:09.085] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:56:09.085] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:56:09.085] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:56:09.092] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:56:13.073] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:56:13.074] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:56:13.074] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:56:13.075] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:56:13.075] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:56:13.079] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:59:01.062] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:59:01.064] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:59:01.064] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:59:01.064] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:59:01.064] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:59:01.068] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:59:02.676] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:59:02.677] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:59:02.677] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:59:02.677] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:59:02.677] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:59:02.682] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:59:08.011] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:59:08.012] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:59:08.012] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:59:08.013] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:59:08.013] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:59:08.017] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T11:59:10.624] [DEBUG] index.js - Got cheese.
+[2019-12-02T11:59:10.625] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T11:59:10.626] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T11:59:10.626] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T11:59:10.626] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T11:59:10.630] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T12:01:32.743] [DEBUG] index.js - Got cheese.
+[2019-12-02T12:01:32.744] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T12:01:32.744] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T12:01:32.745] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T12:01:32.745] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T12:01:32.749] [INFO] index.js - Server running on port 5000 ...
+[2019-12-02T12:01:35.230] [DEBUG] index.js - Got cheese.
+[2019-12-02T12:01:35.231] [INFO] index.js - Cheese is Gouda.
+[2019-12-02T12:01:35.232] [WARN] index.js - Cheese is quite smelly.
+[2019-12-02T12:01:35.232] [ERROR] index.js - Cheese is too ripe!
+[2019-12-02T12:01:35.232] [FATAL] index.js - Cheese was breeding ground for listeria.
+[2019-12-02T12:01:35.236] [INFO] index.js - Server running on port 5000 ...
