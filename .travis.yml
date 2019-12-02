@@ -10,8 +10,8 @@ before_script:
   - cd ./client && npm install
   - cd ..
 script:
-- nohup npm run start &
-- sleep 3 
+# - nohup npm run start &
+# - sleep 3 
 - cd client
 - npm test
 - npm run build 

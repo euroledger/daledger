@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 import ButtonAppBar from './ButtonAppBar';
 import MobileButtonAppBar from './MobileButtonAppBar';
@@ -12,15 +12,18 @@ const isLaptop = () => {
 };
 
 const Header = () => {
+    const [language, setLanguage] = useState('en'); // TODO put this into store for use globally
     
     const props = LinkItems();
     const onSelectFlag = countryCode => {
         switch (countryCode) {
             case 'GB':
                 i18next.changeLanguage('en');
+                setLanguage('en');
                 break;
             case 'RO':
                 i18next.changeLanguage('ro');
+                setLanguage('ro');
                 break;
             default:
                 break;
@@ -32,15 +35,16 @@ const Header = () => {
             <div data-test="headerComponent">
                 {!isLaptop() ? (
                     <>
-                        <LogoPanel></LogoPanel>
+                        <LogoPanel language={language}></LogoPanel>
                         <MobileButtonAppBar
                             {...props}
                             onSelect={onSelectFlag}
                         ></MobileButtonAppBar>
                     </>
                 ) : (
-                    <ButtonAppBar
+                    <ButtonAppBar 
                         {...props}
+                        language={language}
                         onSelect={onSelectFlag}
                     ></ButtonAppBar>
                 )}

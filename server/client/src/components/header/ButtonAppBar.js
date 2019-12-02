@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from '@material-ui/core';
 import AppBarMenu from '../menu/AppBarMenu';
 import ReactFlagsSelect from 'react-flags-select';
+import LogoImage from './LogoImage';
 import 'react-flags-select/scss/react-flags-select.scss';
 import './styles.scss';
 
@@ -68,34 +69,29 @@ const ButtonAppBar = ({
     buttonText,
     helpTitle,
     helpItems,
+    language,
     onSelect
 }) => {
     const classes = useStyles();
     const preventDefault = event => event.preventDefault();
 
     const handleClick = e => {
-        console.log("Button clicked")
+        console.log('Button clicked');
         e.preventDefault();
         const message = {
             user: 'Mike', // replace with login info
             level: 'ERROR',
             url: 'localhost:3000',
-            text: "ButtonAppBar::handleclick() Login Button Clicked",
-        }
+            text: 'ButtonAppBar::handleclick() Login Button Clicked'
+        };
         window.applogger.error(JSON.stringify(message));
     };
 
     return (
-        <div className={classes.root} data-test="buttonAppBarComponent">
+        <div className={classes.root} data-test='buttonAppBarComponent'>
             <AppBar position='fixed' className={classes.header}>
                 <Toolbar className={classes.toolbar}>
-                    <img
-                        className={classes.img}
-                        data-test='logoIMG'
-                        src='logo4.png'
-                        alt='Logo'
-                    ></img>
-
+                    <LogoImage language={language}/>
                     <>
                         <Typography className={classes.typography}>
                             {links.map(item => (

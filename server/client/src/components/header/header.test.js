@@ -1,30 +1,26 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import LogoPanel from './LogoPanel';
 import { findByTestAttribute } from '../../utils';
 
 const setUp = (props = {}) => {
-    const component = shallow(<LogoPanel {...props}></LogoPanel>);
     return component;
 };
 
-afterAll(() => {
-    console.log("ALL DONE!");
-});
 
 describe('Header Component', () => {
-    let component;
+    let wrapper;
     beforeEach(() => {
-        component = setUp();
+        wrapper = mount(<LogoPanel language="en"></LogoPanel>);
     });
 
     it('should render withour errors', () => {
-        const wrapper = findByTestAttribute(component, 'logopanelComponent');
-        expect(wrapper.length).toBe(1);
+        const component = findByTestAttribute(wrapper, 'logopanelComponent');
+        expect(component.length).toBe(1);
     });
 
     it('should render a logo', () => {
-        const logo = findByTestAttribute(component, 'logoIMG');
+        const logo = findByTestAttribute(wrapper, 'logoIMG');
         expect(logo.length).toBe(1);
     });
 });

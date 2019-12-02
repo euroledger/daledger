@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import LogoImage from './LogoImage';
+
 import './styles.scss';
 
 const useStyles = makeStyles(theme => ({
@@ -23,19 +25,12 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const LogoPanel = () => {
+const LogoPanel = ({language}) => {
     const classes = useStyles();
     return (
         <header data-test='logopanelComponent' className={classes.header}>
             <div>
-                <div id='parent' className='logo'>
-                    <img
-                        className={classes.img}
-                        data-test='logoIMG'
-                        src='logo4.png'
-                        alt='Logo'
-                    ></img>
-                </div>
+               <LogoImage language={language}/>
             </div>
         </header>
     );
