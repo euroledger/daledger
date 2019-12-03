@@ -20,8 +20,13 @@ const Footer = () => {
         {
             href: '#',
             title: t('footer.link4')
+        },
+        {
+            href: '#',
+            title: t('footer.link5')
         }
     ];
+
     return (
         <div data-test='footerComponent'>
             <FooterAppBar linkItems={linkItems}></FooterAppBar>

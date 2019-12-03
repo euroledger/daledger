@@ -11,16 +11,17 @@
         "item2": "Designer FAQ",
         "item3": "Contact Us"
     },
-    "loginbuttontext": "Login with Google",
+    "loginbuttontext": "Sign in with Google",
     "frontbuttons": {
         "project": "I have a Project",
         "designer": "I am a Designer"
     },
     "footer": {
-        "link1": "Terms and Conditions",
-        "link2": "Privacy Policy",
-        "link3": "Company Info",
-        "link4": "The Community"
+        "link1": "About us",
+        "link2": "Technology",
+        "link3": "Terms and Conditions",
+        "link4": "Privacy Policy",
+        "link5": "Stay in Contact"
     }
 }
 

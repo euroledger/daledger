@@ -1,6 +1,6 @@
 {
     "navbar": {
-        "link1": "cum functioneaza",
+        "link1": "Cum funcționează",
         "link2": "Competiții în curs",
         "link3": "Competiții anterioare",
         "link4": "Comunitate"
@@ -8,8 +8,8 @@
     "help": {
         "button": "Ajutor",
         "item1": "Client FAQ",
-        "item2": "Proiectant FAQ",
-        "item3": "Contacteaza-ne"
+        "item2": "Designer FAQ",
+        "item3": "Conectează-ne"
     },
     "loginbuttontext": "Autentificare cu Google",
     "frontbuttons": {
@@ -17,9 +17,10 @@
         "designer": "Sunt un designer"
     },
        "footer": {
-        "link1": "Termeni si conditii",
-        "link2": "Politica de confidentialitate",
-        "link3": "Informații despre companie",
-        "link4": "Contacteaza-ne"
+        "link1": "Despre noi",
+        "link2": "Technologie",
+        "link3": "Termeni și condiții",
+        "link4": "Politica de confidențialitate",
+        "link5": "Rămâi în contact"
     }
 }
