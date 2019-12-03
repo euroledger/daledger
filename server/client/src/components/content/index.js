@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(theme => ({
     container: {
-        minHeight: '94vh',
+        height: '91vh',
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',
-        fontSize: 'calc(1em + 2vmin)',
+        fontSize: 'calc(1rem + 2vmin)',
         color: 'white',
         // backgroundImage: 'url("mainimage.jpg")',
         backgroundImage: 'url("road.png")',
@@ -21,13 +21,14 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         textTransform: 'none',
-        marginLeft: '1em',
-        marginRight: '1em',
-        fontSize: '1em',
+        marginLeft: '1rem',
+        marginRight: '1rem',
+        fontSize: '2rem',
         background: 'transparent',
-        paddingLeft: '1em',
-        paddingRight: '1em',
-        width: '12em',
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
+        width: '25rem',
+        height: '4.5rem',
         '&:hover': {
             backgroundColor: '#616060',
             opacity: 0.4
@@ -54,7 +55,7 @@ const Content = () => {
                     color='inherit'
                     className={classes.button}
                     style={
-                        !isLaptop() ? { marginTop: '2em' } : { marginTop: 0 }
+                        !isLaptop() ? { marginTop: '2rem' } : { marginTop: 0 }
                     }
                 >
                     {t('frontbuttons.designer')}
