@@ -32,6 +32,11 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             backgroundColor: '#616060',
             opacity: 0.4
+        },
+        marginTop: 0, 
+        [theme.breakpoints.down('md')]: {
+            width: '18rem',
+            marginTop: '2rem' 
         }
     },
     panel: {
@@ -54,9 +59,6 @@ const Content = () => {
                 <Button
                     color='inherit'
                     className={classes.button}
-                    style={
-                        !isLaptop() ? { marginTop: '2rem' } : { marginTop: 0 }
-                    }
                 >
                     {t('frontbuttons.designer')}
                 </Button>
