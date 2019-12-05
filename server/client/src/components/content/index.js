@@ -47,9 +47,6 @@ const useStyles = makeStyles(theme => ({
 const Content = () => {
     const classes = useStyles();
     const { t } = useTranslation();
-    const isLaptop = () => {
-        return DeviceHelper();
-    };
     return (
         <div className={classes.container} data-test="contentComponent">
             <div className={classes.panel}>
