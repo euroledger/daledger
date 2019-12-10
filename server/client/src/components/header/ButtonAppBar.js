@@ -3,13 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import LoginButton from './LoginButton';
 import { Link } from '@material-ui/core';
 import AppBarMenu from '../menu/AppBarMenu';
 import ReactFlagsSelect from 'react-flags-select';
 import LogoImage from './LogoImage';
 import 'react-flags-select/scss/react-flags-select.scss';
-import './styles.scss';
+// import log4javascript from 'log4javascript';
+// import './styles.scss';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -46,52 +47,26 @@ const useStyles = makeStyles(theme => ({
     toolbar: {
         position: 'relative',
         marginTop: '1em'
-    },
-    button: {
-        float: 'right',
-        textTransform: 'none',
-        marginLeft: '1em',
-        marginRight: '1em',
-        fontSize: '1em',
-        background: 'transparent',
-        paddingLeft: '1em',
-        paddingRight: '1em',
-        borderWidth: '1px',
-        '&:hover': {
-            backgroundColor: '#616060'
-            // opacity: 0.4
-        }
     }
 }));
 
 const ButtonAppBar = ({
     links,
-    buttonText,
+    loginbuttonText,
+    logoutbuttonText,
     helpTitle,
     helpItems,
     language,
-    onSelect
+    onSelect,
+    auth
 }) => {
     const classes = useStyles();
     const preventDefault = event => event.preventDefault();
-
-    const handleClick = e => {
-        console.log('Button clicked');
-        e.preventDefault();
-        const message = {
-            user: 'Mike', // replace with login info
-            level: 'ERROR',
-            url: 'localhost:3000',
-            text: 'ButtonAppBar::handleclick() Login Button Clicked'
-        };
-        window.applogger.error(JSON.stringify(message));
-    };
-
     return (
         <div className={classes.root} data-test='buttonAppBarComponent'>
             <AppBar position='fixed' className={classes.header}>
                 <Toolbar className={classes.toolbar}>
-                    <LogoImage language={language}/>
+                    <LogoImage language={language} />
                     <>
                         <Typography className={classes.typography}>
                             {links.map(item => (
@@ -113,13 +88,11 @@ const ButtonAppBar = ({
                         ></AppBarMenu>
                     </>
 
-                    <Button
-                        className={classes.button}
-                        color='inherit'
-                        onClick={handleClick}
-                    >
-                        {buttonText}
-                    </Button>
+                    <LoginButton
+                        auth={auth}
+                        loginbuttonText={loginbuttonText}
+                        logoutbuttonText={logoutbuttonText}
+                    />
                     <ReactFlagsSelect
                         showSelectedLabel={false}
                         showOptionLabel={false}

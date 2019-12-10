@@ -12,6 +12,8 @@
         "item3": "Conectează-ne"
     },
     "loginbuttontext": "Autentificare cu Google",
+    "loginbuttontext_m": "Logare",
+    "logoutbuttontext": "Sign Out",
     "frontbuttons": {
         "project": "Am un proiect",
         "designer": "Sunt un designer"

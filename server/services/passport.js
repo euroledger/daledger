@@ -15,7 +15,6 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((id, done) => {
     // find the user with given id in MongoDB
     User.findById(id).then(user => {
-        console.log('QUACK! user = ', user);
         done(null, user);
     });
 });

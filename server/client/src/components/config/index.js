@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
+import { DeviceHelper } from '../../utils';
 
 const LinkItems = () => {
+    const isLaptop = () => {
+        return DeviceHelper();
+    };
     const { t } = useTranslation();
     return {
         links: [
@@ -21,7 +25,8 @@ const LinkItems = () => {
                 title: t('navbar.link4')
             }
         ],
-        buttonText: t('loginbuttontext'),
+        loginbuttonText: isLaptop() ? t('loginbuttontext') : t('loginbuttontext_m'),
+        logoutbuttonText: t('logoutbuttontext'),
         helpTitle:  t('help.button'),
         helpItems: [t('help.item1'), t('help.item2'), t('help.item3')]
     };

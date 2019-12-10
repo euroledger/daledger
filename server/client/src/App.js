@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from './actions';
 import './App.css';
 import Header from './components/header';
 import Footer from './components/footer';
 import Content from './components/content';
+import ClientHome from './components/clienthome';
 import { Container } from '@material-ui/core';
 import log4javascript from 'log4javascript';
 
@@ -12,10 +15,10 @@ import log4javascript from 'log4javascript';
 // Get rid of warnings DONE
 // Get Express working: Add logging to front end and be able to send log messages to server DONE
 // Add Express to heroku DONE
-// Unit tests
-// Add chosen language to state store; swap correct logo image for language
+// Unit tests HALF DONE
+// Add chosen language to state store; swap correct logo image for language DONE
 // close icon for mobile navbar menu DONE
-// Routing links to new pages
+// Routing links to new pages DONE
 
 import { withStyles } from '@material-ui/core';
 
@@ -35,6 +38,7 @@ const setupLogging = () => {
     var layout = new log4javascript.PatternLayout('%m');
     ajaxAppender.setSendAllOnUnload(); // send all remaining messages on window.beforeunload()
     ajaxAppender.setLayout(layout);
+    ajaxAppender.addHeader("Content-Type","application/json;charset=utf-8");
     window.applogger.addAppender(ajaxAppender);
 
     //report all user console errors
@@ -49,31 +53,35 @@ const setupLogging = () => {
         return true;
     };
 };
-function App() {
+setupLogging();
+const App = props => {
     const appPadding = 0;
-    console.log('Component Loaded...setting up Logging');
-
-    setupLogging();
-
+    useEffect(() => {
+        async function getUserData() {
+            props.fetchUser();
+        }
+        getUserData();
+    }, [props]);
     return (
         <>
-            <BrowserRouter>
-                <Container
-                    data-test='containerComponent'
-                    maxWidth={false}
-                    style={{
-                        paddingLeft: appPadding,
-                        paddingRight: appPadding
-                    }}
-                >
-                    <GlobalCss></GlobalCss>
-                    <Header></Header>
-                    <Route exact path="/" component={Content} />
-                    <Footer></Footer>
-                </Container>
-            </BrowserRouter>
+            <Container
+                data-test='containerComponent'
+                maxWidth={false}
+                style={{
+                    paddingLeft: appPadding,
+                    paddingRight: appPadding
+                }}
+            >
+                <GlobalCss></GlobalCss>
+                <Header></Header>
+                <BrowserRouter>
+                    <Route exact path='/' component={Content} />
+                    <Route path='/clienthome' component={ClientHome} />
+                </BrowserRouter>
+                <Footer></Footer>
+            </Container>
         </>
     );
-}
+};
 
-export default App;
+export default connect(null, actions)(App);

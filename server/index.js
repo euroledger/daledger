@@ -45,12 +45,12 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 
 app.post('/api/logger', function(req, res) {
-    const { user, level, text } = JSON.parse(req.body.data);
-    console.log('WE ARE IN /api/logger');
+    const { user, level, text } = req.body;
+    // console.log('WE ARE IN /api/logger');
 
-    logger.error(`[${user}] [${level}] ${text}`);
+    logger.info(`[${user}] [${level}] ${text}`);
 
-    res.send('IT WORKED!!');
+    res.send('ok');
 });
 
 if (process.env.NODE_ENV === 'production') {

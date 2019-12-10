@@ -12,6 +12,8 @@
         "item3": "Contact Us"
     },
     "loginbuttontext": "Sign in with Google",
+    "loginbuttontext_m": "Login",
+    "logoutbuttontext": "Sign Out",
     "frontbuttons": {
         "project": "I have a Project",
         "designer": "I am a Designer"

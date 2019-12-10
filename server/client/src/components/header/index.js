@@ -6,14 +6,14 @@ import LogoPanel from './LogoPanel';
 import { DeviceHelper } from '../../utils';
 import i18next from 'i18next';
 import LinkItems  from '../config';
+import { connect } from 'react-redux';
 
 const isLaptop = () => {
     return DeviceHelper();
 };
 
-const Header = () => {
+const Header = ({auth}) => {
     const [language, setLanguage] = useState('en'); // TODO put this into store for use globally
-    
     const props = LinkItems();
     const onSelectFlag = countryCode => {
         switch (countryCode) {
@@ -38,6 +38,7 @@ const Header = () => {
                         <LogoPanel language={language}></LogoPanel>
                         <MobileButtonAppBar
                             {...props}
+                            auth={auth}
                             onSelect={onSelectFlag}
                         ></MobileButtonAppBar>
                     </>
@@ -45,6 +46,7 @@ const Header = () => {
                     <ButtonAppBar 
                         {...props}
                         language={language}
+                        auth={auth}
                         onSelect={onSelectFlag}
                     ></ButtonAppBar>
                 )}
@@ -53,4 +55,8 @@ const Header = () => {
     );
 };
 
-export default Header;
+function mapStateToProps({ auth }) {
+    return { auth };
+}
+export default connect(mapStateToProps)(Header);
+

@@ -6,11 +6,11 @@ import Footer  from './components/footer';
 import { findByTestAttribute } from './utils';
 
 describe('Main Screen Renders All Components', () => {
-    it('should render the Header', () => {
-        let wrapper = shallow(<Header/>);
-        const header = findByTestAttribute(wrapper, 'headerComponent');
-        expect(header.length).toBe(1);
-    });
+    // it('should render the Header', () => {
+    //     let wrapper = shallow(<Header/>);
+    //     const header = findByTestAttribute(wrapper, 'headerComponent');
+    //     expect(header.length).toBe(1);
+    // });
 
     it('should render the Content', () => {
         let wrapper = shallow(<Content/>);

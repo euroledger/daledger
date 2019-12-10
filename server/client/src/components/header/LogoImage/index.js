@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     img: {
@@ -19,12 +20,10 @@ const LogoImage = ({ language }) => {
     const classes = useStyles();
     const image = `logo6-${language}.png`;
     return (
-        <div id='parent' className='logo'  data-test='logoIMG'>
-            <img
-                className={classes.img}
-                src={image}
-                alt='Logo'
-            ></img>
+        <div id='parent' className='logo' data-test='logoIMG'>
+            <Link href={'/'}>
+                <img className={classes.img} src={image} alt='Logo'></img>
+            </Link>
         </div>
     );
 };

@@ -5,7 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import { cyan } from '@material-ui/core/colors';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
+import reduxThunk from 'redux-thunk';
 import './language/i18n';
+
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 const theme = createMuiTheme({
     palette: {
@@ -15,7 +21,7 @@ const theme = createMuiTheme({
             dark: '#002884',
             contrastText: '#fff'
         },
-        secondary: cyan,
+        secondary: cyan
     },
     typography: {
         button: {
@@ -34,12 +40,13 @@ const theme = createMuiTheme({
             fontFamily: 'inherit'
         }
     }
-
 });
 ReactDOM.render(
     <Suspense fallback={<div>Loading</div>}>
         <MuiThemeProvider theme={theme}>
-            <App />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </MuiThemeProvider>
     </Suspense>,
     document.getElementById('root')
