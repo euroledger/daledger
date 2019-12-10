@@ -16,15 +16,13 @@ log4js.configure({
 
 logger.level = 'all';
 dotenv.config();
-logger.info('STARTING...');
-logger.info('TEST_ENV = ', process.env.TEST_ENV);
-
+console.log('STARTING...');
 
 var environment = process.env.NODE_ENV || 'development';
 if (process.env.TEST_ENV === 'test') {
     environment = 'test';
 }
-logger.info('QUACK environment = ', environment);
+console.log('QUACK environment = ', environment);
 
 let SERVER_ENV;
 if (environment === 'development') {
