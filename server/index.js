@@ -11,19 +11,19 @@ require('./services/passport'); // run the passport.js stuff
 
 var logger = log4js.getLogger('index.js');
 
-log4js.configure({
-    appenders: {
-        file: {
-            type: 'file',
-            filename: 'logs/server.log',
-            maxLogSize: 10485760,
-            numBackups: 3
-        }
-    },
-    categories: { default: { appenders: ['file'], level: 'debug' } }
-});
+// log4js.configure({
+//     appenders: {
+//         file: {
+//             type: 'file',
+//             filename: 'logs/server.log',
+//             maxLogSize: 10485760,
+//             numBackups: 3
+//         }
+//     },
+//     categories: { default: { appenders: ['file'], level: 'debug' } }
+// });
 
-logger.level = 'all';
+// logger.level = 'all';
 
 logger.info('Starting EXPRESSJS server...(environment='+ environment+ ')');
 mongoose.connect(keys.mongoURI).catch(error => logger.error("Failed to connect: ", error));
