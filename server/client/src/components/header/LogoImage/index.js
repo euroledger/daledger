@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
     img: {
         maxWidth: '20em',
-        height: '6.5em',
-        marginTop: '-1.5em',
+        height: '5.2em',
+        marginTop: '-1.2em',
         [theme.breakpoints.down('md')]: {
             marginTop: '-0.4em',
             maxWidth: '15em',
