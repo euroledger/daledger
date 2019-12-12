@@ -4,7 +4,6 @@ import ProfileContext from '../../ProfileContext';
 
 const ClientHome = () => {
     const { translations } = useContext(ProfileContext);
-    console.log("QUACK translations=", translations);
     const classes = useStyles();
     return (
         <div className={classes.container} data-test='contentComponent'>

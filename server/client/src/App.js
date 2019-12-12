@@ -90,7 +90,7 @@ const App = props => {
             props.fetchUser();
         }
         getUserData();
-    }, [props]);
+    }, [props, language]);
 
     const getTranslations = (language) => ({
         translations: Translations(),
