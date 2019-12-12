@@ -9,7 +9,7 @@ import { IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from '@material-ui/core';
 import LoginButton from './LoginButton';
-import ReactFlagsSelect from 'react-flags-select';
+import FlagMenu from './FlagMenu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import './styles.scss';
 
@@ -38,10 +38,6 @@ const useStyles = makeStyles(theme => ({
     },
     toolbar: {
         height: '2em'
-    },
-    flagMenu: {
-        right: theme.spacing(-15),
-        bottom: theme.spacing(-0.2)
     }
 }));
 
@@ -50,7 +46,8 @@ const MobileButtonAppBar = ({
     onSelect,
     auth,
     loginbuttonText,
-    logoutbuttonText
+    logoutbuttonText,
+    language
 }) => {
     const classes = useStyles();
 
@@ -127,22 +124,12 @@ const MobileButtonAppBar = ({
                         <MenuIcon />
                     </IconButton>
                     <div className={classes.panel}>
-                        {/* <Button className={classes.button} color='inherit'>
-                            {loginbuttonText}
-                        </Button> */}
                         <LoginButton
                             auth={auth}
                             loginbuttonText={loginbuttonText}
                             logoutbuttonText={logoutbuttonText}
                         />
-                        <ReactFlagsSelect
-                            className={classes.flagMenu}
-                            showSelectedLabel={false}
-                            showOptionLabel={false}
-                            onSelect={onSelect}
-                            defaultCountry='GB'
-                            countries={['GB', 'RO']}
-                        />
+                        <FlagMenu className={classes.flagMenu} onSelect={onSelect} language={language} />
                     </div>
                 </Toolbar>
             </AppBar>

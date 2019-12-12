@@ -6,9 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import LoginButton from './LoginButton';
 import { Link } from '@material-ui/core';
 import AppBarMenu from '../menu/AppBarMenu';
-import ReactFlagsSelect from 'react-flags-select';
 import LogoImage from './LogoImage';
 import 'react-flags-select/scss/react-flags-select.scss';
+import FlagMenu from './FlagMenu';
 // import log4javascript from 'log4javascript';
 // import './styles.scss';
 
@@ -93,13 +93,7 @@ const ButtonAppBar = ({
                         loginbuttonText={loginbuttonText}
                         logoutbuttonText={logoutbuttonText}
                     />
-                    <ReactFlagsSelect
-                        showSelectedLabel={false}
-                        showOptionLabel={false}
-                        onSelect={onSelect}
-                        defaultCountry='GB'
-                        countries={['GB', 'RO']}
-                    />
+                    <FlagMenu onSelect={onSelect} language={language} />
                 </Toolbar>
             </AppBar>
         </div>

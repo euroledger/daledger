@@ -1,14 +1,15 @@
-import React from 'react';
-// import { useTranslation } from 'react-i18next';
+import React, { useContext } from 'react';
 import { useStyles } from '../containerstyle';
+import ProfileContext from '../../ProfileContext';
 
 const ClientHome = () => {
+    const { translations } = useContext(ProfileContext);
+    console.log("QUACK translations=", translations);
     const classes = useStyles();
-    // const { t } = useTranslation();
     return (
         <div className={classes.container} data-test='contentComponent'>
             <div className={classes.panel}>
-                <p style={{ background: 'white', color: 'black' }}>YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION</p>
+                <p style={{ background: 'white', color: 'black' }}>{translations.clientHomeMessage.toUpperCase()}</p>
             </div>
         </div>
     );
