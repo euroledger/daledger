@@ -116,9 +116,10 @@ const ClientRegister = () => {
                 <p
                     className={classes.labelText}
                     style={{
-                        position: 'absolute',
-                        bottom: '0.5rem',
-                        right: '5%'
+                        marginTop: '5rem'
+                        // position: 'absolute',
+                        // bottom: '0.5rem',
+                        // right: '5%'
                     }}
                 >
                     {translations.text6}{' '}
