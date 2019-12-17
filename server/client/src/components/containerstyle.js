@@ -39,7 +39,7 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     formButton: {
-        marginTop: '7rem',
+        marginTop: '2rem',
         display: 'block',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -58,8 +58,9 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     formpanel: {
-        position: 'absolute',
-        top: '30%',
+        // position: 'absolute',
+        // top: '30%',
+        marginTop: '15rem',
         height: '50vh',
         width: '50vw',
         borderStyle: 'solid',
@@ -73,7 +74,8 @@ export const useStyles = makeStyles(theme => ({
             width: '90%',
             height: '70%',
             paddingLeft: 0,
-            paddingRight: 0
+            paddingRight: 0,
+            marginTop: '1rem',
         },
     },
     formfield: {
@@ -91,8 +93,10 @@ export const useStyles = makeStyles(theme => ({
     },
     labelText: {
         width: '80%',
-        position: 'absolute',
-        left: '10%',
+        // position: 'absolute',
+        // left: '10%',
+        display: 'block',
+        margin: '0 auto',
         opacity: 1,
         borderStyle: 'none',
         // color: 'red',
