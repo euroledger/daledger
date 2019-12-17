@@ -47,9 +47,11 @@ export const useStyles = makeStyles(theme => ({
         background: '#3399CC',
         color: 'white',
         width: '8em',
-        // [theme.breakpoints.down('md')]: {
-        //     width: '19rem'
-        // },
+        [theme.breakpoints.down('md')]: {
+            // position: 'absolute',
+            // bottom: '10%'
+            marginTop: '10rem'
+        },
         height: '2.5em',
         fontSize: '0.5em',
         '&:hover': {
@@ -71,9 +73,10 @@ export const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(1),
         [theme.breakpoints.down('md')]: {
             width: '90%',
+            height: '70%',
             paddingLeft: 0,
             paddingRight: 0
-        },
+        }
     },
     formfield: {
         width: '80%',
@@ -99,7 +102,11 @@ export const useStyles = makeStyles(theme => ({
         color: 'black',
         fontSize: '0.4em',
         fontFamily: 'inherit',
-        lineHeight: 1.6
+        lineHeight: 1.6,
+        [theme.breakpoints.down('md')]: {
+            height: '120%'
+        },
+      
     },
     link: {
         color: 'blue'
