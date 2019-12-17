@@ -25,7 +25,22 @@
         "link4": "Privacy Policy",
         "link5": "Stay in Contact"
     },
+    "register": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "text1": "By clicking Register you agree to the DA Block ",
+        "text2link": "Terms And Conditions",
+        "text3": " and ",
+        "text4link": "Privacy Policy",
+        "text5": ". You also agree to receive email notifications regarding changes in either of the above",
+        "text6": " Already Registered?",
+        "text7link": "Sign In With Google",
+        "registerbutton": "Register",
+        "error1": "Must be shorter than 255",
+        "error2": "Must enter a name"
+    },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
+
 }
 
 

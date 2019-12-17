@@ -11,9 +11,9 @@
         "item2": "Designer FAQ",
         "item3": "Conectează-ne"
     },
-    "loginbuttontext": "Autentificare cu Google",
-    "loginbuttontext_m": "Logare",
-    "logoutbuttontext": "Sign Out",
+    "loginbuttontext": "Conectați-vă cu Google",
+    "loginbuttontext_m": "Conectare",
+    "logoutbuttontext": "Deconectare",
     "frontbuttons": {
         "project": "Am un proiect",
         "designer": "Sunt un designer"
@@ -24,6 +24,20 @@
         "link3": "Termeni și condiții",
         "link4": "Politica de confidențialitate",
         "link5": "Rămâi în contact"
+    },
+    "register": {
+        "firstname": "Prenume",
+        "lastname": "Nume de familie",
+        "text1": "Dând clic pe Înregistrare, sunteți de acord cu ",
+        "text2link": "Termenii și Condițiile",
+        "text3": " și ",
+        "text4link": "Politica de Confidențialitate",
+        "text5": " DA Block. De asemenea, sunteți de acord să primiți notificări prin e-mail cu privire la modificările din oricare dintre cele de mai sus",
+        "text6": "Deja înregistrat?",
+        "text7link": "Conectați-vă cu Google",
+        "registerbutton": "Înregistrare",
+        "error1": "Trebuie să fie mai scurtă de 255",
+        "error2": "trebuie să introduceți un nume"
     },
     "temp": "ești logat...pagina in constructie"
 }

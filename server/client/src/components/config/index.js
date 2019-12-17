@@ -29,7 +29,21 @@ const Translations = () => {
         logoutbuttonText: t('logoutbuttontext'),
         helpTitle:  t('help.button'),
         helpItems: [t('help.item1'), t('help.item2'), t('help.item3')],
-        clientHomeMessage: t('temp')
+        clientHomeMessage: t('temp'),
+        projectButtonText: t('frontbuttons.project'),
+        designerButtonText: t('frontbuttons.designer'),
+        firstName: t('register.firstname'),
+        lastName: t('register.lastname'),
+        text1: t('register.text1'),
+        text2link: t('register.text2link'),
+        text3: t('register.text3'),
+        text4link: t('register.text4link'),
+        text5: t('register.text5'),
+        text6: t('register.text6'),
+        text7link: t('register.text7link'),
+        registerBtn: t('register.registerbutton'),
+        error1Text: t('register.error1'),
+        error2Text: t('register.error2')
     };
 }
 

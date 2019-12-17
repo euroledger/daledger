@@ -4,16 +4,14 @@ import ButtonAppBar from './ButtonAppBar';
 import MobileButtonAppBar from './MobileButtonAppBar';
 import LogoPanel from './LogoPanel';
 import { DeviceHelper } from '../../utils';
-import { connect } from 'react-redux';
 import ProfileContext from '../../ProfileContext';
 
 const isLaptop = () => {
     return DeviceHelper();
 };
 
-const Header = ({ auth }) => {
-    const { translations, onSelectFlag, language } = useContext(ProfileContext);
-
+const Header = () => {
+    const { translations, onSelectFlag, language, auth } = useContext(ProfileContext);
     return (
         <>
             <div data-test='headerComponent'>
@@ -40,7 +38,4 @@ const Header = ({ auth }) => {
     );
 };
 
-function mapStateToProps({ auth }) {
-    return { auth };
-}
-export default connect(mapStateToProps)(Header);
+export default Header;

@@ -6,7 +6,7 @@ const ClientHome = () => {
     const { translations } = useContext(ProfileContext);
     const classes = useStyles();
     return (
-        <div className={classes.container} data-test='contentComponent'>
+        <div className={classes.container} style={{ backgroundImage: 'url("road.png")' }}data-test='contentComponent'>
             <div className={classes.panel}>
                 <p style={{ background: 'white', color: 'black' }}>{translations.clientHomeMessage.toUpperCase()}</p>
             </div>

@@ -58,7 +58,7 @@ const ButtonAppBar = ({ linkItems }) => {
     return (
         <div className={classes.root}>
             {isLaptop() ? (
-                <AppBar position='static'>
+                <AppBar position='relative' style={{bottom: 0}}>
                     <Toolbar className={classes.links}>
                         <Typography style={{ fontFamily: 'inherit' }}>
                             {linkItems.map(item => (

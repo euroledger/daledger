@@ -58,7 +58,7 @@ const LoginButton = ({ auth, loginbuttonText, logoutbuttonText }) => {
         }
     };
     return (
-        <Button
+        <Button data-test="loginButtonComponent"
             className={classes.button}
             color='inherit'
             onClick={handleClick}
