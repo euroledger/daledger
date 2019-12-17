@@ -116,7 +116,7 @@ const ClientRegister = () => {
                 <p
                     className={classes.labelText}
                     style={{
-                        marginTop: '5rem'
+                        marginTop: '3.5rem'
                         // position: 'absolute',
                         // bottom: '0.5rem',
                         // right: '5%'
