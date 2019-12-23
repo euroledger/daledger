@@ -89,8 +89,8 @@ export const useStyles = makeStyles(theme => ({
         // borderRadius: '10px',
         borderStyle: 'none',
         // color: 'red',
-        margin: '1rem',
-        marginTop: '3rem',
+        margin: '1em',
+        // marginTop: '1rem',
         marginBottom: '-0.3em'
     },
     labelText: {
