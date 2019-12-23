@@ -58,8 +58,15 @@ const ButtonAppBar = ({
     helpItems,
     language,
     onSelect,
+    settingsLink,
     auth
 }) => {
+    if (auth) {
+        links.push({
+            href: '#',
+            title: settingsLink
+        });
+    }
     const classes = useStyles();
     const preventDefault = event => event.preventDefault();
     return (

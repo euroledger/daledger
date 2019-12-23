@@ -25,6 +25,7 @@ const Translations = () => {
                 title: t('navbar.link4')
             }
         ],
+        settingsLink: t('navbar.link5'),
         loginbuttonText: isLaptop() ? t('loginbuttontext') : t('loginbuttontext_m'),
         logoutbuttonText: t('logoutbuttontext'),
         helpTitle:  t('help.button'),
