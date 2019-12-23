@@ -61,8 +61,8 @@ export const useStyles = makeStyles(theme => ({
     formpanel: {
         // position: 'absolute',
         // top: '30%',
-        marginTop: '15rem',
-        height: '50vh',
+        marginTop: '10rem',
+        height: '60vh',
         width: '50vw',
         borderStyle: 'solid',
         borderWidth: '2px',
@@ -70,7 +70,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: '#E9E7E7',
         borderColor: 'black',
         opacity: 0.8,
-        paddingTop: theme.spacing(1),
+        paddingTop: '0.1rem',
         [theme.breakpoints.down('md')]: {
             width: '90%',
             // height: '70%',
@@ -89,8 +89,8 @@ export const useStyles = makeStyles(theme => ({
         // borderRadius: '10px',
         borderStyle: 'none',
         // color: 'red',
-        margin: theme.spacing(1),
-        marginTop: theme.spacing(4),
+        margin: '1rem',
+        marginTop: '2rem',
         marginBottom: '-0.3em'
     },
     labelText: {
@@ -102,7 +102,7 @@ export const useStyles = makeStyles(theme => ({
         opacity: 1,
         borderStyle: 'none',
         // color: 'red',
-        marginBottom: theme.spacing(2),
+        marginBottom: '1.5rem',
         color: 'black',
         fontSize: '0.4em',
         fontFamily: 'inherit',
