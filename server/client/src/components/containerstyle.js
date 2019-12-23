@@ -89,7 +89,7 @@ export const useStyles = makeStyles(theme => ({
         // borderRadius: '10px',
         borderStyle: 'none',
         // color: 'red',
-        margin: '1em',
+        margin: '30px',
         // marginTop: '1rem',
         marginBottom: '-0.3em'
     },
