@@ -70,7 +70,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: '#E9E7E7',
         borderColor: 'black',
         opacity: 0.8,
-        paddingTop: '0.1rem',
+        paddingTop: '2rem',
         [theme.breakpoints.down('md')]: {
             width: '90%',
             // height: '70%',
