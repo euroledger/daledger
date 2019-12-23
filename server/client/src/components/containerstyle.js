@@ -85,6 +85,7 @@ export const useStyles = makeStyles(theme => ({
         opacity: 1,
         borderStyle: 'none',
         margin: '0.5rem',
+        marginTop: '1.5rem'
         // marginBottom: '-0.3em'
     },
     labelText: {
@@ -98,7 +99,7 @@ export const useStyles = makeStyles(theme => ({
         // color: 'red',
         marginBottom: '1.5rem',
         color: 'black',
-        fontSize: '0.4em',
+        fontSize: '0.7rem',
         fontFamily: 'inherit',
         lineHeight: 1.6
     },
