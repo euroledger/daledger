@@ -70,7 +70,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: '#E9E7E7',
         borderColor: 'black',
         opacity: 0.8,
-        paddingTop: theme.spacing(0),
+        paddingTop: theme.spacing(1),
         [theme.breakpoints.down('md')]: {
             width: '90%',
             // height: '70%',
@@ -90,7 +90,7 @@ export const useStyles = makeStyles(theme => ({
         borderStyle: 'none',
         // color: 'red',
         margin: theme.spacing(1),
-        marginTop: theme.spacing(3),
+        marginTop: theme.spacing(4),
         marginBottom: '-0.3em'
     },
     labelText: {
