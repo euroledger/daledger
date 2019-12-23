@@ -1,0 +1,17 @@
+// dev.js don't commit this!!!
+
+module.exports = {
+    googleClientID: '497797739479-r5944mufm4klb29f600s0110hnf0pb7f.apps.googleusercontent.com',
+    googleClientSecret: '-R3Qmg8zBzC7VYKyT1tzAN_d',
+    mongoURI: 'mongodb+srv://daledgerdev:Cazenove01@daledger-dev-ecxqd.mongodb.net/test?retryWrites=true&w=majority',
+    cookieKey: 'redacted',
+    stripePublishableKey: 'pk_test_uJnwA4J5rL3XCcOp3TSv4XKP00XiAgcCD2',
+    stripeSecretKey: 'sk_test_Y9E34nGSMyslEt7SaaSyyNJ3004nqHv1Rm',
+    sendGridKey: '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',
+    redirectDomain: 'http://localhost:3000'
+};
+
+// mongodb+srv://daledgerdev:Cazenove01@daledger-dev-ecxqd.mongodb.net/test?retryWrites=true&w=majority
+
+// AIzaSyDxG1rwSi9bO0DYt4wTduaaZ8vbst_hRv8#
+

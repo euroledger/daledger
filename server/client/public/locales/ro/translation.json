@@ -39,5 +39,15 @@
         "error1": "Trebuie să fie mai scurtă de 255",
         "error2": "trebuie să introduceți un nume"
     },
+    "clienthome": {
+        "button1text": "Lansați o competiție",
+        "button2text": "Proiectele mele de concursuri",
+        "button3text": "Concurența mea continuă",
+        "button4text": "Competițiile mele din trecut",
+        "tooltip1": "Dacă decideți să anulați sau să modificați o competiție lansată, vă rugăm să ne contactați în 24 de ore de la lansare",
+        "tooltip2": "Competiții care nu au fost încă lansate, încă în stare de proiect",
+        "tooltip3": "Prezintă competițiile deschise curente (excluzând proiectele de concurs)",
+        "tooltip4": "Fiecare competiție lansată (cu excepția competițiilor curente și a proiectului)"
+    },
     "temp": "ești logat...pagina in constructie"
 }

@@ -13,6 +13,7 @@ const ClientRegister = () => {
     const initialState = {
         firstName: '',
         lastName: '',
+        email : '',
         loading: false,
         translations: translations
     };
@@ -24,7 +25,10 @@ const ClientRegister = () => {
             .required(translations.error2Text),
         lastName: Yup.string()
             .max(255, translations.error1Text)
-            .required(translations.error2Text)
+            .required(translations.error2Text),
+            email: Yup.string()
+            .email(translations.error3Text)
+            .required(translations.error2Text),
     });
 
     const [form, setValues] = React.useState(initialState);
@@ -83,6 +87,14 @@ const ClientRegister = () => {
                                     name='lastName'
                                     onBlur={handleBlur}
                                     value={values.last}
+                                    component={TextField}
+                                />
+                                 <Field
+                                    className={classes.formfield}
+                                    label="Email"
+                                    name='email'
+                                    onBlur={handleBlur}
+                                    value={values.email}
                                     component={TextField}
                                 />
                                 <p

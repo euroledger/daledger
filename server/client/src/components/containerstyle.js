@@ -22,11 +22,11 @@ export const useStyles = makeStyles(theme => ({
         textTransform: 'none',
         marginLeft: '1rem',
         marginRight: '1rem',
-        fontSize: '2rem',
+        fontSize: '1.4rem',
         background: 'transparent',
         paddingLeft: '1rem',
         paddingRight: '1rem',
-        width: '25rem',
+        width: '22rem',
         height: '4.5rem',
         '&:hover': {
             backgroundColor: '#616060',
@@ -35,7 +35,8 @@ export const useStyles = makeStyles(theme => ({
         marginTop: 0,
         [theme.breakpoints.down('md')]: {
             width: '19rem',
-            marginTop: '2rem'
+            marginTop: '2rem',
+            fontSize: '1.2rem'
         }
     },
     formButton: {
@@ -69,10 +70,11 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: '#E9E7E7',
         borderColor: 'black',
         opacity: 0.8,
-        paddingTop: theme.spacing(1),
+        paddingTop: theme.spacing(0),
         [theme.breakpoints.down('md')]: {
             width: '90%',
-            height: '70%',
+            // height: '70%',
+            height: '70vh',
             paddingLeft: 0,
             paddingRight: 0,
             marginTop: '1rem',
@@ -115,5 +117,23 @@ export const useStyles = makeStyles(theme => ({
     panel: {
         position: 'absolute',
         top: '50%'
+    },
+    panel1: {
+        position: 'absolute',
+        top: '40%',
+        [theme.breakpoints.down('md')]: {
+            top: '32%',
+            left: '-5%'
+        },
+       
+        margin: '0 auto'
+    },
+    panel2: {
+        position: 'absolute',
+        top: '60%',
+        [theme.breakpoints.down('md')]: {
+            top: '70%',
+            left: '-5%'
+        }
     }
 }));

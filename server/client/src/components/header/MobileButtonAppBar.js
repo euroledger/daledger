@@ -21,7 +21,6 @@ const useStyles = makeStyles(theme => ({
         position: 'absolute',
         fontFamily: 'inherit',
         left: theme.spacing(-1)
-        // top: theme.spacing(-0.1)
     },
     paper: {
         height: '40%',
@@ -29,8 +28,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: 'transparent'
     },
     panel: {
+        display: 'flex',
         position: 'absolute',
-        right: theme.spacing(-2)
+        right: '-10%'
     },
     icon: {
         color: 'white',
@@ -129,7 +129,10 @@ const MobileButtonAppBar = ({
                             loginbuttonText={loginbuttonText}
                             logoutbuttonText={logoutbuttonText}
                         />
-                        <FlagMenu className={classes.flagMenu} onSelect={onSelect} language={language} />
+                        <FlagMenu
+                            onSelect={onSelect}
+                            language={language}
+                        />
                     </div>
                 </Toolbar>
             </AppBar>

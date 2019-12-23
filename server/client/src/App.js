@@ -8,6 +8,10 @@ import Footer from './components/footer';
 import Content from './components/content';
 import ClientHome from './components/clienthome';
 import ClientRegister from './components/register/client';
+import Launch from './components/competitions/launch';
+import Draft from './components/competitions/draft';
+import Ongoing from './components/competitions/ongoing';
+import Past from './components/competitions/past';
 import { Container } from '@material-ui/core';
 import log4javascript from 'log4javascript';
 import i18next from 'i18next';
@@ -29,6 +33,9 @@ const GlobalCss = withStyles({
             fontFamily: 'inherit',
             color: 'black'
         },
+        // '.MuiSvgIcon-root': {
+        //     display: 'none'
+        // }
     }
 })(() => null);
 
@@ -113,6 +120,10 @@ const App = (props) => {
                         <Route path='/clientregister' component={ClientRegister} />
                         {/* TODO create separate screen for Designer Register */}
                         <Route path='/designerregister' component={ClientRegister} /> 
+                        <Route path='/launch' component={Launch} /> 
+                        <Route path='/draft' component={Draft} /> 
+                        <Route path='/ongoing' component={Ongoing} /> 
+                        <Route path='/past' component={Past} /> 
                     </BrowserRouter>
                     <Footer></Footer>
                 </Container>

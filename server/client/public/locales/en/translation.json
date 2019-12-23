@@ -37,7 +37,19 @@
         "text7link": "Sign In With Google",
         "registerbutton": "Register",
         "error1": "Must be shorter than 255",
-        "error2": "Must enter a name"
+        "error2": "Must enter a name",
+        "error3": "Invalid email"
+    },
+
+    "clienthome": {
+        "button1text": "Launch a Competition",
+        "button2text": "My Draft Competitions",
+        "button3text": "My Ongoing Competitions",
+        "button4text": "My Past Competitions",
+        "tooltip1": "If you decide to cancel or modify a launched competition please contact us within 24 hours of launching",
+        "tooltip2": "Competitions which have not yet been launched, still in draft state",
+        "tooltip3": "Shows your current open competitions (excluding draft competitions)",
+        "tooltip4": "Every competition launched (excluding current and draft competitions)"
     },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
 
