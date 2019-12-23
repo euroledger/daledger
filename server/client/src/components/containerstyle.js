@@ -82,16 +82,10 @@ export const useStyles = makeStyles(theme => ({
     },
     formfield: {
         width: '80%',
-        // backgroundColor: 'white',
         opacity: 1,
-        // borderStyle: 'solid',
-        // borderWidth: '2px',
-        // borderRadius: '10px',
         borderStyle: 'none',
-        // color: 'red',
-        margin: '30px',
-        // marginTop: '1rem',
-        marginBottom: '-0.3em'
+        margin: '0.5rem',
+        // marginBottom: '-0.3em'
     },
     labelText: {
         width: '80%',
