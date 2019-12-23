@@ -33,12 +33,15 @@ const GlobalCss = withStyles({
             fontFamily: 'inherit',
             color: 'black'
         },
+        '.MuiFormControl-root': {
+            margin: '0rem',
+            marginTop: '1rem'
+        }
         // '.MuiSvgIcon-root': {
         //     display: 'none'
         // }
     }
 })(() => null);
-
 
 // TODO move this into separate file
 const setupLogging = () => {
@@ -65,7 +68,7 @@ const setupLogging = () => {
 };
 setupLogging();
 
-const App = (props) => {
+const App = props => {
     const currentLanguage = localStorage.getItem('language') || 'en';
     const [language, setLanguage] = useState(currentLanguage);
     const onSelectFlag = countryCode => {
@@ -85,7 +88,7 @@ const App = (props) => {
         }
     };
     const appPadding = 0;
-    const { fetchUser } = props; 
+    const { fetchUser } = props;
     useEffect(() => {
         async function getUserData() {
             i18next.changeLanguage(language);
@@ -116,14 +119,24 @@ const App = (props) => {
                     <Header></Header>
                     <BrowserRouter>
                         <Route exact path='/' component={Content} />
-                        <Route exact path='/clienthome' component={ClientHome} />
-                        <Route path='/clientregister' component={ClientRegister} />
+                        <Route
+                            exact
+                            path='/clienthome'
+                            component={ClientHome}
+                        />
+                        <Route
+                            path='/clientregister'
+                            component={ClientRegister}
+                        />
                         {/* TODO create separate screen for Designer Register */}
-                        <Route path='/designerregister' component={ClientRegister} /> 
-                        <Route path='/launch' component={Launch} /> 
-                        <Route path='/draft' component={Draft} /> 
-                        <Route path='/ongoing' component={Ongoing} /> 
-                        <Route path='/past' component={Past} /> 
+                        <Route
+                            path='/designerregister'
+                            component={ClientRegister}
+                        />
+                        <Route path='/launch' component={Launch} />
+                        <Route path='/draft' component={Draft} />
+                        <Route path='/ongoing' component={Ongoing} />
+                        <Route path='/past' component={Past} />
                     </BrowserRouter>
                     <Footer></Footer>
                 </Container>

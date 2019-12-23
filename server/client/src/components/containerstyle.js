@@ -84,8 +84,8 @@ export const useStyles = makeStyles(theme => ({
         width: '80%',
         opacity: 1,
         borderStyle: 'none',
-        margin: '0.5rem',
-        marginTop: '1.5rem'
+        // margin: '0.5rem',
+        // marginTop: '1.5rem'
         // marginBottom: '-0.3em'
     },
     labelText: {
