@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme => ({
     container: {
         height: '91vh',
+        // width: '100vw',
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',
@@ -77,16 +78,46 @@ export const useStyles = makeStyles(theme => ({
             height: '70vh',
             paddingLeft: 0,
             paddingRight: 0,
-            marginTop: '1rem',
-        },
+            marginTop: '1rem'
+        }
+    },
+    option: {
+        fontSize: 15,
+        '& > span': {
+            marginRight: 10,
+            fontSize: 18
+        }
+    },
+    formpanel2: {
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        borderRadius: '18px',
+        marginTop: '3rem',
+        backgroundColor: '#E9E7E7',
+        borderColor: 'black',
+        color: 'black',
+        opacity: 0.8,
+        // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
+        [theme.breakpoints.down('md')]: {
+            width: '90%',
+            // height: '70%',
+            height: '70vh',
+            paddingLeft: 0,
+            paddingRight: 0,
+            marginTop: '10rem'
+        }
     },
     formfield: {
         width: '80%',
         opacity: 1,
-        borderStyle: 'none',
+        borderStyle: 'none'
         // margin: '0.5rem',
         // marginTop: '1.5rem'
         // marginBottom: '-0.3em'
+    },
+    formTitle: {
+        fontSize: '1.5rem',
+        color: 'black'
     },
     labelText: {
         width: '80%',
@@ -111,7 +142,11 @@ export const useStyles = makeStyles(theme => ({
     },
     panel: {
         position: 'absolute',
-        top: '50%'
+        top: '50%',
+        width: '100vw'
+    },
+    buttonpanel: {
+        display: 'flex'
     },
     panel1: {
         position: 'absolute',
@@ -120,7 +155,7 @@ export const useStyles = makeStyles(theme => ({
             top: '32%',
             left: '-5%'
         },
-       
+
         margin: '0 auto'
     },
     panel2: {

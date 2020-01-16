@@ -8,7 +8,6 @@ import { DeviceHelper } from '../../utils';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-// import './list.scss';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -44,7 +43,6 @@ function ListItemLink(props) {
                 borderBottom: 'solid',
                 borderWidth: '2px',
                 fontFamily: 'inherit'
-                // fontSize: '2em'
             }}
         />
     );

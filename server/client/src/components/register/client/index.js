@@ -26,7 +26,7 @@ const ClientRegister = () => {
         lastName: Yup.string()
             .max(255, translations.error1Text)
             .required(translations.error2Text),
-            email: Yup.string()
+        email: Yup.string()
             .email(translations.error3Text)
             .required(translations.error2Text),
     });
@@ -39,7 +39,7 @@ const ClientRegister = () => {
             return { ...prevState, ...values };
         });
         setSubmitting(true);
-      
+        console.log("values =", values);
         setTimeout(() => {
             resetForm();
             setSubmitting = false;

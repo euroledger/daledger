@@ -36,10 +36,22 @@ const GlobalCss = withStyles({
         '.MuiFormControl-root': {
             margin: '0rem',
             marginTop: '1rem'
+        },
+
+        // colors for drawer
+        '.MuiDrawer-paper': {
+            background: 'black',
+            color: 'white'
+        }, 
+
+        // selected radio button color
+        '.MuiRadio-colorSecondary.Mui-checked': {
+            color: 'black'
+        },
+        // font for table cells
+        '.MuiTableCell-root': {
+            fontFamily: 'inherit'
         }
-        // '.MuiSvgIcon-root': {
-        //     display: 'none'
-        // }
     }
 })(() => null);
 
@@ -97,12 +109,22 @@ const App = props => {
         getUserData();
     }, [language, fetchUser]);
 
-    const getStateData = (language, auth) => ({
-        translations: Translations(),
-        onSelectFlag: onSelectFlag,
-        language: language,
-        auth: auth
-    });
+    const getStateData = (language, auth) => {
+        let translations = Translations();
+        console.log("LANG=", translations.language);
+        if (auth) {
+            translations.links.push({
+                href: '#',
+                title: translations.settingsLink
+            });
+        }
+        return {
+            translations: translations,
+            onSelectFlag: onSelectFlag,
+            language: language,
+            auth: auth
+        };
+    };
 
     return (
         <ProfileContext.Provider value={getStateData(language, props.auth)}>

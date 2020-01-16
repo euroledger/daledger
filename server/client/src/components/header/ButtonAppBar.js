@@ -9,8 +9,6 @@ import AppBarMenu from '../menu/AppBarMenu';
 import LogoImage from './LogoImage';
 import 'react-flags-select/scss/react-flags-select.scss';
 import FlagMenu from './FlagMenu';
-// import log4javascript from 'log4javascript';
-// import './styles.scss';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -58,15 +56,8 @@ const ButtonAppBar = ({
     helpItems,
     language,
     onSelect,
-    settingsLink,
     auth
 }) => {
-    if (auth) {
-        links.push({
-            href: '#',
-            title: settingsLink
-        });
-    }
     const classes = useStyles();
     const preventDefault = event => event.preventDefault();
     return (

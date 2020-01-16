@@ -12,12 +12,14 @@ const Content = () => {
                 <Button
                     color='inherit'
                     className={classes.button}
+                    data-test='projectButton'
                     href={auth ? '/clienthome' : '/clientregister'}
                 >
                     {translations.projectButtonText}
                 </Button>
                 <Button
                     color='inherit'
+                    data-test='designerButton'
                     className={classes.button}
                     href='/designerregister'
                 >

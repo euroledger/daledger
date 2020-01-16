@@ -7,6 +7,7 @@ const Translations = () => {
     };
     const { t } = useTranslation();
     return {
+        language: t('language'),
         links: [
             {
                 href: '#',
@@ -25,10 +26,36 @@ const Translations = () => {
                 title: t('navbar.link4')
             }
         ],
+        competitionDrawerText: [
+            t('launchcompetition.sidebar1'),
+            t('launchcompetition.sidebar2'),
+            t('launchcompetition.sidebar3'),
+            t('launchcompetition.sidebar4'),
+        ],
+        functionalAreaTitle: t('functionalarea.title'),
+        functionalareacolumns: [
+            { name: 'type', title: t('functionalarea.col1') },
+            { name: 'small', title: t('functionalarea.col2') },
+            { name: 'medium', title: t('functionalarea.col3') },
+            { name: 'large', title: t('functionalarea.col4') }
+        ],
+        functionalarearows: [
+            t('functionalarea.row1'),
+            t('functionalarea.row2'),
+            t('functionalarea.row3'),
+            t('functionalarea.row4'),
+            t('functionalarea.row5'),
+            t('functionalarea.row6'),
+            t('functionalarea.row7'),
+            t('functionalarea.row8'),
+            t('functionalarea.row9'),
+            t('functionalarea.row10')
+        ],
+        functionalAreaInstructions: t('functionalarea.instructions'),
         settingsLink: t('navbar.link5'),
         loginbuttonText: isLaptop() ? t('loginbuttontext') : t('loginbuttontext_m'),
         logoutbuttonText: t('logoutbuttontext'),
-        helpTitle:  t('help.button'),
+        helpTitle: t('help.button'),
         helpItems: [t('help.item1'), t('help.item2'), t('help.item3')],
         clientHomeMessage: t('temp'),
         projectButtonText: t('frontbuttons.project'),

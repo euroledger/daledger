@@ -22,6 +22,7 @@ const Header = () => {
                             {...translations}
                             language={language}
                             auth={auth}
+                            // settingsLink= {translations.settingsLink}
                             onSelect={onSelectFlag}
                         ></MobileButtonAppBar>
                     </>

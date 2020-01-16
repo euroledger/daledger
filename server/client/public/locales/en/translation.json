@@ -1,4 +1,5 @@
 {
+    "language": "en",
     "navbar": {
         "link1": "How it Works",
         "link2": "Ongoing Competitions",
@@ -39,7 +40,8 @@
         "registerbutton": "Register",
         "error1": "Must be shorter than 255",
         "error2": "Must enter a name",
-        "error3": "Invalid email"
+        "error3": "Invalid email",
+        "error4": "Must enter a country"
     },
 
     "clienthome": {
@@ -51,6 +53,30 @@
         "tooltip2": "Competitions which have not yet been launched, still in draft state",
         "tooltip3": "Shows your current open competitions (excluding draft competitions)",
         "tooltip4": "Every competition launched (excluding current and draft competitions)"
+    },  
+    "launchcompetition": {
+        "sidebar1": "Welcome to your journey to pick the design you love!",
+        "sidebar2": "For gathering the needed requirements, sit back relax and let us guide you through the launching process. Based on your requirements our AI engine will estimate what you will need to award to receive enough good quality submissions to choose from. You decide what the award will be, so feel free to offer above our estimate! The bigger the award, the tighter the competition and your chances to land the design of your dreams higher.",
+        "sidebar3": "There will be up to 15 questions to answer. It will take between 30 minutes to as much as you need to launch your perfect competition. Further details can be clarified with the designers on the project wall, but more details you provide upfront, more attractive your competition becomes.",
+        "sidebar4": "Remember, that up to the moment of launching, you can always find your draft for further editing."
+    },
+    "functionalarea": {
+        "title": "Define Functional Areas",
+        "col1": "Type",
+        "col2": "Small",
+        "col3": "Medium",
+        "col4": "Large",
+        "row1": "Living Rooms",
+        "row2": "Kitchens",
+        "row3": "Bathrooms",
+        "row4": "Bedrooms",
+        "row5": "Child Bedrooms",
+        "row6": "Dining Rooms",
+        "row7": "Staircases",
+        "row8": "Hallways",
+        "row9": "Other-1",
+        "row10": "Other-2",
+        "instructions": "Please select as many areas as apply to your project, integers between 0-9. If more than 1 room are identical in size, shape and design, please introduce 1. If you need design for a part of a room, please choose the category “Small”. The information in this section is also used to estimate the cost of your design. Identical areas will be charged as one single area. Please edit the \"other\" labels as required."
     },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
 

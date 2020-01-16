@@ -1,4 +1,5 @@
 {
+    "language": "ro",
     "navbar": {
         "link1": "Cum funcționează",
         "link2": "Competiții în curs",
@@ -38,7 +39,9 @@
         "text7link": "Conectați-vă cu Google",
         "registerbutton": "Înregistrare",
         "error1": "Trebuie să fie mai scurtă de 255",
-        "error2": "trebuie să introduceți un nume"
+        "error2": "Trebuie să introduceți un nume",
+        "error3": "e-mail invalid",
+        "error4": "Trebuie să intre într-o țară"
     },
     "clienthome": {
         "button1text": "Lansați o competiție",
@@ -49,6 +52,30 @@
         "tooltip2": "Competiții care nu au fost încă lansate, încă în stare de proiect",
         "tooltip3": "Prezintă competițiile deschise curente (excluzând proiectele de concurs)",
         "tooltip4": "Fiecare competiție lansată (cu excepția competițiilor curente și a proiectului)"
+    },
+    "launchcompetition": {
+        "sidebar1": "Bine ați venit în călătoria dvs. pentru a alege designul care vă place!",
+        "sidebar2": "Pentru a aduna cerințele necesare, stați-vă relaxați-ne și lăsați-ne să vă ghidăm în procesul de lansare. Pe baza cerințelor dvs., motorul nostru AI va estima ce veți face trebuie să acordați premii pentru a primi destule trimiteri de bună calitate din care să alegeți. Dumneavoastră decideți care va fi premiul, așa că nu ezitați să oferiți deasupra estimării noastre! Cu cât este mai mare premiul, cu atât concurența este mai strânsă și șansele dvs. de a crea proiectul viselor dvs. mai mare.",
+        "sidebar3": "Vă trebuie să răspundeți până la 15 întrebări. Va dura între 30 de minute până la nevoie pentru a lansa competiția dvs. perfectă. Mai multe detalii pot fi clarificate cu designerii de pe peretele proiectului, dar mai multe detalii pe care le oferiți în avans, mai atractiv devine competiția dvs.",
+        "sidebar4": "Rețineți că, până la momentul lansării, puteți găsi întotdeauna schița pentru editare ulterioară."
+    },
+    "functionalarea": {
+        "title": "Definirea Zonelor Funcționale",
+        "col1": "Tip",
+        "col2": "Mic",
+        "col3": "Mediu",
+        "col4": "Mare",
+        "row1": "Sufragerii",
+        "row2": "Bucatarii",
+        "row3": "Bai",
+        "row4": "Dormitoare",
+        "row5": "Dormitoare pentru copii",
+        "row6": "Sufragerii",
+        "row7": "Scări",
+        "row8": "Holurile",
+        "row9": "Alte Spatii-1",
+        "row10": "Alte Spatii-2",
+        "instructions": "Vă rugăm să selectați cât mai multe domenii aplicați pentru proiectul dvs., întregi între 0-9. Dacă sunt mai mult de 1 cameră identice ca mărime, formă și design, vă rugăm să introduceți 1. Dacă aveți nevoie proiectare pentru o parte dintr-o cameră, vă rog alege categoria „Mic”. informațiile din această secțiune sunt de asemenea folosit pentru a estima costul dvs. proiecta. Zonele identice vor fi taxat ca o singură zonă. Vă rugăm să editați etichetele „alte”, după cum este necesar."
     },
     "temp": "ești logat...pagina in constructie"
 }

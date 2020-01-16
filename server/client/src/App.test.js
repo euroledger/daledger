@@ -1,23 +1,29 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header  from './components/header';
+import { mount } from 'enzyme';
 import Content  from './components/content';
 import Footer  from './components/footer';
+import Button from '@material-ui/core/Button';
 import { findByTestAttribute } from './utils';
 
 describe('Main Screen Renders All Components', () => {
-    // it('should render the Header', () => {
-    //     let wrapper = shallow(<Header/>);
-    //     const header = findByTestAttribute(wrapper, 'headerComponent');
-    //     expect(header.length).toBe(1);
-    // });
+
+    let wrapper;
+    beforeEach(() => {
+        wrapper = mount(<Content/>);
+    });
 
     it('should render the Content', () => {
-        let wrapper = shallow(<Content/>);
+        // let wrapper = shallow(<Content/>);
         const content = findByTestAttribute(wrapper, 'contentComponent');
         expect(content.length).toBe(1);
     });
-
+    it('should render the Project Button', () => {
+        // let wrapper = shallow(<Button/>);
+        const button = findByTestAttribute(wrapper, 'projectButton');
+        // expect(button.length).toBe(1);
+        // expect(wrapper.find('Button')).to.have.lengthOf(2);
+    });
     it('should render the Footer', () => {
         let wrapper = shallow(<Footer/>);
         const footer = findByTestAttribute(wrapper, 'footerComponent');
