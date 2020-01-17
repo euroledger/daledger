@@ -20,7 +20,7 @@ const FormProjectDefinition = ({
 }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
-    
+
     let countries = countriesEN;
     if (translations.language === "ro") {
         countries = countriesRO;
@@ -111,42 +111,44 @@ const FormProjectDefinition = ({
                                 </div>
                             </div>
                             <br></br>
-                            <Autocomplete
-                                id='country-select-demo'
-                                name='countries'
-                                options={countries}
-                                autoHighlight
-                                getOptionLabel={option => option.label}
-                                renderOption={option => (
-                                    <React.Fragment>
-                                        {option.label}
-                                    </React.Fragment>
-                                )}
-                                value={savedCountry}
-                                onChange={(_, value) => {
-                                    setCountry(value);
-                                }}
-                                renderInput={params => (
-                                    <Field
-                                        {...params}
-                                        label={translations.projectDefinitionCountryTitle}
-                                        variant='outlined'
-                                        fullWidth
-                                        autoComplete='disabled'
-                                        inputProps={{
-                                            ...params.inputProps,
-                                            autoComplete: 'disabled' // disable autocomplete and autofill
-                                        }}
-                                        className={classes.formfield}
-                                        name='country'
-                                        onBlur={handleBlur}
-                                        component={TextField}
-                                        value={values.country}
-                                    />
-                                )}
-                            />
+                            <div className={classes.faautosize}>
+                                <Autocomplete
+                                    id='country-select-demo'
+                                    name='countries'
+                                    options={countries}
+                                    autoHighlight
+                                    getOptionLabel={option => option.label}
+                                    renderOption={option => (
+                                        <React.Fragment>
+                                            {option.label}
+                                        </React.Fragment>
+                                    )}
+                                    value={savedCountry}
+                                    onChange={(_, value) => {
+                                        setCountry(value);
+                                    }}
+                                    renderInput={params => (
+                                        <Field
+                                            {...params}
+                                            label={translations.projectDefinitionCountryTitle}
+                                            variant='outlined'
+                                            fullWidth
+                                            autoComplete='disabled'
+                                            inputProps={{
+                                                ...params.inputProps,
+                                                autoComplete: 'disabled' // disable autocomplete and autofill
+                                            }}
+                                            className={classes.formfieldauto}
+                                            name='country'
+                                            onBlur={handleBlur}
+                                            component={TextField}
+                                            value={values.country}
+                                        />
+                                    )}
+                                />
+                            </div>
                             <div
-                               className={classes.instructions}
+                                className={classes.instructions}
                             >
                                 {translations.projectDefinitionInstruction}
                             </div>

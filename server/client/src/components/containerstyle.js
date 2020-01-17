@@ -106,12 +106,15 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     formfield: {
-        width: '70vw',
+        width: '80%',
         opacity: 1,
         borderStyle: 'none'
-        // margin: '0.5rem',
-        // marginTop: '1.5rem'
-        // marginBottom: '-0.3em'
+    },
+    faautosize: {
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '2rem',
+            width: '80%',
+        }
     },
     formTitle: {
         fontSize: '1.5rem',
