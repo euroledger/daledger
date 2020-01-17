@@ -52,7 +52,8 @@ const GlobalCss = withStyles({
         },
         // font for table cells
         '.MuiTableCell-root': {
-            fontFamily: 'inherit'
+            fontFamily: 'inherit',
+            userSelect: 'none'
         },
     }
 })(() => null);
