@@ -8,10 +8,6 @@ export const useStyles = makeStyles(theme => ({
         textAlign: 'center',
         fontSize: 'calc(1rem + 2vmin)',
         color: 'white',
-        // backgroundImage: 'url("mainimage.jpg")',
-        // backgroundImage: 'url("road.png")',
-        // backgroundImage: 'url("carmen.jpg")',
-
         background:
             'linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(carmen.jpg)',
         backgroundRepeat: 'no-repeat',

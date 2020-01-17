@@ -7,7 +7,7 @@ const Content = () => {
     const classes = useStyles();
     const { translations, auth } = useContext(ProfileContext);
     return (
-        <div className={classes.container} data-test='contentComponent'>
+        <div className={classes.container} style={{height: '91vh'}} data-test='contentComponent'>
             <div className={classes.panel}>
                 <Button
                     color='inherit'
