@@ -79,7 +79,7 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
 
     const setRowTypesAccordingToLanguage = (offset) => {
         for (let i = 0; i < rows.length; i++) {
-            rows[i].type = translations.functionalarearows[i+offset];
+            rows[i].type = translations.functionalarearows[i + offset];
         }
     }
 
@@ -94,7 +94,7 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
                     continue;
                 }
             }
-            rows[i].type = translations.functionalarearows[i+offset];
+            rows[i].type = translations.functionalarearows[i + offset];
         }
     }
 
@@ -130,7 +130,7 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
                 return (change ? { ...row, ...change } : row);
             });
             changedRows = rows.map(row => {
-                return(changed[row.id] ? { ...row, ...changed[row.id] } : row);
+                return (changed[row.id] ? { ...row, ...changed[row.id] } : row);
             });
         }
         if (deleted) {
@@ -149,25 +149,28 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
 
 
     return (
-        <Paper>
-            <Grid rows={rows} columns={columns} getRowId={getRowId}>
-                <EditingState
-                    onCommitChanges={commitChanges}
+        <div style={{ userSelect: 'none' }}>
+            <Paper>
+                <Grid rows={rows} columns={columns} getRowId={getRowId}>
+                    <EditingState
+                        onCommitChanges={commitChanges}
                     // columnExtensions={editingStateColumnExtensions}
-                />
-                <Table
-                    cellComponent={FocusableCell}
-                    rowComponent={TableRow}
-                    columnExtensions={columnExtensions}
-                />
-                <TableHeaderRow />
-                <TableInlineCellEditing
-                    cellComponent={EditableCell}
-                    startEditAction={startEditAction}
-                    selectTextOnEditStart={selectTextOnEditStart}
-                />
-            </Grid>
-        </Paper>
+                    />
+                    <Table
+                        cellComponent={FocusableCell}
+                        rowComponent={TableRow}
+                        columnExtensions={columnExtensions}
+                    />
+                    <TableHeaderRow />
+                    <TableInlineCellEditing
+                        cellComponent={EditableCell}
+                        startEditAction={startEditAction}
+                        selectTextOnEditStart={selectTextOnEditStart}
+                    />
+                </Grid>
+            </Paper>
+        </div>
+
     );
 };
 

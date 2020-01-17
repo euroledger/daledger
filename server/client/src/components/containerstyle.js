@@ -106,7 +106,7 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     formfield: {
-        width: '80%',
+        width: '70vw',
         opacity: 1,
         borderStyle: 'none'
         // margin: '0.5rem',
