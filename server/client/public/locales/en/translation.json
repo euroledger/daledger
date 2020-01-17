@@ -55,10 +55,33 @@
         "tooltip4": "Every competition launched (excluding current and draft competitions)"
     },  
     "launchcompetition": {
+        "drawertext": "Read Me",
         "sidebar1": "Welcome to your journey to pick the design you love!",
         "sidebar2": "For gathering the needed requirements, sit back relax and let us guide you through the launching process. Based on your requirements our AI engine will estimate what you will need to award to receive enough good quality submissions to choose from. You decide what the award will be, so feel free to offer above our estimate! The bigger the award, the tighter the competition and your chances to land the design of your dreams higher.",
         "sidebar3": "There will be up to 15 questions to answer. It will take between 30 minutes to as much as you need to launch your perfect competition. Further details can be clarified with the designers on the project wall, but more details you provide upfront, more attractive your competition becomes.",
-        "sidebar4": "Remember, that up to the moment of launching, you can always find your draft for further editing."
+        "sidebar4": "Remember, that up to the moment of launching, you can always find your draft for further editing.",
+        "previousbuttontext": "Previous",
+        "homepagebuttontext": "My Home Page",
+        "continuebuttontext": "Continue"
+    },
+    "projectdefinition": {
+        "title": "Project Definition",
+        "radiotitle1": "What kind of space do you need to renovate?",
+        "radiotitle2": "What is the objective of your project?",
+        "radiotitle3": "Is the project Indoor or outdoor?",
+        "countrytitle": "Project Country",
+        "radio1option1": "Residential",
+        "radio1option2": "Commercial",
+        "radio2option1": "Indoor",
+        "radio2option2": "Outdoor",
+        "radio3option1": "New Space",
+        "radio3option2": "Remodelling",
+        "instruction": "Please let us know where your space is located, it will be highly useful for our professionals to study and respect the local regulations related to your project."
+    },
+    "projectcoverage": {
+        "title": "Does the project cover your entire house/flat?",
+        "radiooption1": "Yes",
+        "radiooption2": "No"
     },
     "functionalarea": {
         "title": "Define Functional Areas",
@@ -76,9 +99,14 @@
         "row8": "Hallways",
         "row9": "Other-1",
         "row10": "Other-2",
+        "panellabel1": "Residential",
+        "panellabel2newspace": "New Space",
+        "panellabel2remodel": "Remodel",
+        "panellabel3": "Indoor",
         "instructions": "Please select as many areas as apply to your project, integers between 0-9. If more than 1 room are identical in size, shape and design, please introduce 1. If you need design for a part of a room, please choose the category “Small”. The information in this section is also used to estimate the cost of your design. Identical areas will be charged as one single area. Please edit the \"other\" labels as required."
     },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
+
 
 }
 

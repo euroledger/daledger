@@ -25,9 +25,11 @@ const GlobalCss = withStyles({
         '.MuiTypography-root': {
             fontFamily: 'inherit'
         },
+        
         '.MuiFormLabel-root': {
             fontFamily: 'inherit',
-            color: 'black'
+            color: 'black',
+            // fontSize: '0.8rem'
         },
         '.MuiInputBase-root': {
             fontFamily: 'inherit',
@@ -51,7 +53,7 @@ const GlobalCss = withStyles({
         // font for table cells
         '.MuiTableCell-root': {
             fontFamily: 'inherit'
-        }
+        },
     }
 })(() => null);
 
@@ -111,7 +113,6 @@ const App = props => {
 
     const getStateData = (language, auth) => {
         let translations = Translations();
-        console.log("LANG=", translations.language);
         if (auth) {
             translations.links.push({
                 href: '#',

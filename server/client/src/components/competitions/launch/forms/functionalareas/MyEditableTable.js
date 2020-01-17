@@ -1,3 +1,4 @@
+
 import React, { useState, useContext } from 'react';
 import Paper from '@material-ui/core/Paper';
 import { EditingState } from '@devexpress/dx-react-grid';
@@ -42,7 +43,6 @@ const validate = (change, row) => {
         if (prop === "type") {
             continue;
         }
-        console.log("prop =", prop);
         const fnum = parseInt(change[prop]);
         if (isNaN(fnum)) {
             change[prop] = row[prop];
@@ -57,13 +57,15 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
         const {
             tableRow: { rowId }
         } = restProps;
-        if (rowId != 3 && rowId != 4) {
+        if (rowId !== 3 && rowId !== 4) {
             if (column.name === "type") {
                 editingEnabled = false;
             }
         } else {
-            if (side === "left") {
+            if (side === "left" && column.name === "type") {
                 editingEnabled = false;
+            } else {
+                editingEnabled = true;
             }
         }
         return (<TableInlineCellEditing.Cell
@@ -81,12 +83,23 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
         }
     }
 
-    const [editingStateColumnExtensions] = useState([
-        { columnName: 'type', editingEnabled: false }
-    ]);
+    // uber hack to work around problem whereby user input into editable field clashing with the state change
+    // due to language change...the translated default seems to take precedence over the user input...
+    // so the change here is to ignore language changes if the user has entered anything
+    // this would be ok were it not for the hard wired language strings...
+    const setRowTypesAccordingToLanguageRight = (offset) => {
+        for (let i = 0; i < rows.length; i++) {
+            if (i >= 3) {
+                if (rows[i].type !== "Other-1" && rows[i].type !== "Other-2" && rows[i].type !== "Alte Spatii-1" && rows[i].type !== "Alte Spatii-1") {
+                    continue;
+                }
+            }
+            rows[i].type = translations.functionalarearows[i+offset];
+        }
+    }
 
     const [columnExtensions] = useState([
-        { columnName: 'type', width: '190px' }
+        { columnName: 'type', width: '9rem' }
     ]);
 
 
@@ -116,15 +129,14 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
                 }
                 return (change ? { ...row, ...change } : row);
             });
-            changedRows = rows.map(row =>
-                changed[row.id] ? { ...row, ...changed[row.id] } : row
-            );
+            changedRows = rows.map(row => {
+                return(changed[row.id] ? { ...row, ...changed[row.id] } : row);
+            });
         }
         if (deleted) {
             const deletedSet = new Set(deleted);
             changedRows = rows.filter(row => !deletedSet.has(row.id));
         }
-        console.log("BATS!!!")
         handleRowUpdate(side, changedRows);
     };
 
@@ -132,7 +144,7 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
     if (side === "left") {
         setRowTypesAccordingToLanguage(0);
     } else {
-        setRowTypesAccordingToLanguage(5);
+        setRowTypesAccordingToLanguageRight(5);
     }
 
 

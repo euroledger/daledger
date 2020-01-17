@@ -1,93 +1,20 @@
 import React, { useContext, useState } from 'react';
 import ProfileContext from '../../../../ProfileContext';
+import TableData from './data/FunctionalAreaTableData';
 import FormProjectDefinition from './FormProjectDefinition';
 import FormFunctionalAreas from './functionalareas/FormFunctionalAreas';
 
 const LaunchCompetitionForm = () => {
     const { translations } = useContext(ProfileContext);
 
-    const rows =
-        [
-            {
-                id: 0,
-                type: translations.functionalarearows[0],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 1,
-                type: translations.functionalarearows[1],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 2,
-                type: translations.functionalarearows[2],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 3,
-                type: translations.functionalarearows[3],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 4,
-                type: translations.functionalarearows[4],
-                small: 0,
-                medium: 0,
-                large: 0
-            }
-        ];
+    const { rows, rowsRight } = TableData(translations);
 
-    const rowsRight =
-        [
-            {
-                id: 0,
-                type: translations.functionalarearows[5],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 1,
-                type: translations.functionalarearows[6],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 2,
-                type: translations.functionalarearows[7],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 3,
-                type: translations.functionalarearows[8],
-                small: 0,
-                medium: 0,
-                large: 0
-            },
-            {
-                id: 4,
-                type: translations.functionalarearows[9],
-                small: 0,
-                medium: 0,
-                large: 0
-            }
-        ];
     const initialState = {
         step: 1,
         space: 'residential',
-        objective: 'decorating',
+        objective: 'newspace',
         indooroutdoor: 'indoor',
+        entireprop: 'true',
         country: 'RO',
         loading: false,
         rows: rows,
@@ -101,7 +28,7 @@ const LaunchCompetitionForm = () => {
         setValues(prevState => {
             return { ...prevState, step: step + 1 };
         });
-        console.log('in nextStep: values= ', form);
+        // console.log('in nextStep: values= ', form);
     };
 
     const prevStep = () => {
@@ -112,17 +39,16 @@ const LaunchCompetitionForm = () => {
     };
 
     const handleRowUpdate = (side, changedRows) => {
-        if (side==="left") {
+        if (side === "left") {
             setValues(prevState => {
                 return { ...prevState, rows: changedRows };
             });
         } else {
-            console.log("changedRows =", changedRows);
             setValues(prevState => {
                 return { ...prevState, rowsRight: changedRows };
             });
         }
-        
+
     }
     const handleChange = (input, e) => {
         const { value } = e.target;
@@ -172,7 +98,9 @@ const LaunchCompetitionForm = () => {
                     columns={translations.functionalareacolumns}
                     handleRowUpdate={handleRowUpdate}
                     handleSubmit={handleSubmit}
+                    handleChange={handleChange}
                     values={form}
+                    objective={form.objective === 'newspace' ? translations.functionalAreaPanelLabel2newspace : translations.functionalAreaPanelLabel2remodel}
                 ></FormFunctionalAreas>
             );
         case 3:
@@ -185,6 +113,9 @@ const LaunchCompetitionForm = () => {
             return <h1>Confirm</h1>;
         case 7:
             return <h1>Success</h1>;
+        default: {
+            console.log("Error: unexpected step: ", step);
+        }
     }
 };
 

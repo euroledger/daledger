@@ -54,10 +54,33 @@
         "tooltip4": "Fiecare competiție lansată (cu excepția competițiilor curente și a proiectului)"
     },
     "launchcompetition": {
+        "drawertext": "Citește-mă",
         "sidebar1": "Bine ați venit în călătoria dvs. pentru a alege designul care vă place!",
         "sidebar2": "Pentru a aduna cerințele necesare, stați-vă relaxați-ne și lăsați-ne să vă ghidăm în procesul de lansare. Pe baza cerințelor dvs., motorul nostru AI va estima ce veți face trebuie să acordați premii pentru a primi destule trimiteri de bună calitate din care să alegeți. Dumneavoastră decideți care va fi premiul, așa că nu ezitați să oferiți deasupra estimării noastre! Cu cât este mai mare premiul, cu atât concurența este mai strânsă și șansele dvs. de a crea proiectul viselor dvs. mai mare.",
         "sidebar3": "Vă trebuie să răspundeți până la 15 întrebări. Va dura între 30 de minute până la nevoie pentru a lansa competiția dvs. perfectă. Mai multe detalii pot fi clarificate cu designerii de pe peretele proiectului, dar mai multe detalii pe care le oferiți în avans, mai atractiv devine competiția dvs.",
-        "sidebar4": "Rețineți că, până la momentul lansării, puteți găsi întotdeauna schița pentru editare ulterioară."
+        "sidebar4": "Rețineți că, până la momentul lansării, puteți găsi întotdeauna schița pentru editare ulterioară.",
+        "previousbuttontext": "Anterior",
+        "homepagebuttontext": "Pagina principala",
+        "continuebuttontext": "Continua"
+    },
+    "projectdefinition": {
+        "title": "Definiția Proiectului",
+        "radiotitle1": "Ce fel de spațiu ai nevoie pentru renovare?",
+        "radiotitle2": "Care este obiectivul proiectului dvs.?",
+        "radiotitle3": "Proiectul este interior sau exterior?",
+        "countrytitle": "Țara Proiectului",
+        "radio1option1": "Rezidențial",
+        "radio1option2": "Comercial",
+        "radio2option1": "Interior",
+        "radio2option2": "Exterior",
+        "radio3option1": "Spațiu Nou",
+        "radio3option2": "Remodelarea",
+        "instruction": "Vă rugăm să ne informați unde se află spațiul dvs., va fi foarte util pentru profesioniștii noștri să studieze și să respecte reglementările locale legate de proiectul dvs."
+    },
+    "projectcoverage": {
+        "title": "Proiectul acoperă întreaga casă / apartament?",
+        "radiooption1": "Da",
+        "radiooption2": "Nu"
     },
     "functionalarea": {
         "title": "Definirea Zonelor Funcționale",
@@ -75,6 +98,10 @@
         "row8": "Holurile",
         "row9": "Alte Spatii-1",
         "row10": "Alte Spatii-2",
+        "panellabel1": "Rezidențial",
+        "panellabel2newspace": "Spațiu Nou",
+        "panellabel2remodel": "Remodela",
+        "panellabel3": "De Interior",
         "instructions": "Vă rugăm să selectați cât mai multe domenii aplicați pentru proiectul dvs., întregi între 0-9. Dacă sunt mai mult de 1 cameră identice ca mărime, formă și design, vă rugăm să introduceți 1. Dacă aveți nevoie proiectare pentru o parte dintr-o cameră, vă rog alege categoria „Mic”. informațiile din această secțiune sunt de asemenea folosit pentru a estima costul dvs. proiecta. Zonele identice vor fi taxat ca o singură zonă. Vă rugăm să editați etichetele „alte”, după cum este necesar."
     },
     "temp": "ești logat...pagina in constructie"

@@ -17,7 +17,10 @@ export const useStyles = makeStyles(theme => ({
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        [theme.breakpoints.down('sm')]: {
+            height: '230vh',
+        }
     },
     button: {
         textTransform: 'none',
@@ -34,7 +37,7 @@ export const useStyles = makeStyles(theme => ({
             opacity: 0.4
         },
         marginTop: 0,
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '19rem',
             marginTop: '2rem',
             fontSize: '1.2rem'
@@ -49,19 +52,17 @@ export const useStyles = makeStyles(theme => ({
         background: '#3399CC',
         color: 'white',
         width: '8em',
-        // [theme.breakpoints.down('md')]: {
-        //     width: '19rem'
-        // },
-        height: '2.5em',
-        fontSize: '0.5em',
+        height: '2.8em',
+        fontSize: '1.0rem',
         '&:hover': {
             backgroundColor: '#256381',
             opacity: 0.7
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.7rem',
         }
     },
     formpanel: {
-        // position: 'absolute',
-        // top: '30%',
         marginTop: '10rem',
         height: '60vh',
         width: '50vw',
@@ -72,7 +73,7 @@ export const useStyles = makeStyles(theme => ({
         borderColor: 'black',
         opacity: 0.8,
         paddingTop: '2rem',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '90%',
             // height: '70%',
             height: '70vh',
@@ -98,12 +99,13 @@ export const useStyles = makeStyles(theme => ({
         color: 'black',
         opacity: 0.8,
         // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
-        [theme.breakpoints.down('md')]: {
-            width: '90%',
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '25rem',
             // height: '70%',
-            height: '70vh',
+            height: 'fit-content',
             paddingLeft: 0,
             paddingRight: 0,
+            fontSize: '0.6px',
             marginTop: '10rem'
         }
     },
@@ -143,7 +145,10 @@ export const useStyles = makeStyles(theme => ({
     panel: {
         position: 'absolute',
         top: '50%',
-        width: '100vw'
+        width: '100vw',
+        [theme.breakpoints.down('sm')]: {
+            // width: 'auto'
+        },
     },
     buttonpanel: {
         display: 'flex'
@@ -151,7 +156,7 @@ export const useStyles = makeStyles(theme => ({
     panel1: {
         position: 'absolute',
         top: '40%',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             top: '32%',
             left: '-5%'
         },
@@ -161,9 +166,181 @@ export const useStyles = makeStyles(theme => ({
     panel2: {
         position: 'absolute',
         top: '60%',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             top: '70%',
             left: '-5%'
+        }
+    },
+    launchformpadding: {
+        textAlign: 'center',
+        marginTop: '-19rem',
+        marginLeft: '10rem',
+        marginRight: '10rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '1rem',
+            marginRight: '1rem',
+        },
+    },
+    areaspacing: {
+        marginTop: '1rem',
+        width: '98vw',
+        marginLeft: '-9rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '10rem',
+            width: '92vw',
+            marginLeft: 0
+        },
+    },
+    areaForm: {
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block'
+        },
+    },
+    radiobutton1: {
+        display: 'inline-block',
+        [theme.breakpoints.down('sm')]: {
+            // display: 'flex'
+        }
+    },
+    button1: {
+        display: 'inline-block',
+        marginRight: '4rem',
+        marginLeft: '3rem',
+        // maxWidth: '14rem',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            marginRight: 0,
+            marginLeft: 0,
+        }
+    },
+    button2: {
+        display: 'inline-block',
+        marginRight: '4rem',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            marginRight: 0
+        }
+    },
+    instructions: {
+        fontSize: '0.9rem',
+        marginLeft: '7rem',
+        marginRight: '7rem',
+        marginTop: '1em',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.9rem',
+            marginLeft: '2rem',
+            marginRight: '2rem',
+        }
+    },
+    buttonPos1: {
+        width: '12rem',
+        marginBottom: '1rem',
+        marginLeft: '24rem',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.9rem',
+            marginLeft: '3rem',
+            marginRight: '2rem',
+            marginBottom: '2rem',
+            minWidth: '10rem'
+        }
+    },
+    buttonPos2: {
+        width: '12rem',
+        marginBottom: '1rem',
+        marginRight: '24rem',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.9rem',
+            minWidth: '7rem',
+            // marginLeft: '9rem',
+            // marginRight: '2rem',
+            // width: '20rem'
+        }
+    },
+    summaryPanel: {
+        borderStyle: 'solid',
+        borderColor: 'white',
+        borderWidth: '2px',
+        borderRadius: '18px',
+        backgroundColor: '#3399CC',
+        fontSize: '1.2rem',
+        color: 'white',
+        height: '20rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '8rem',
+        },
+
+        // TEST FOR TABLETS...
+        [theme.breakpoints.only('md')]: {
+            backgroundColor: 'red',
+        },
+    },
+    summaryPanelPosition: {
+        marginTop: '1rem',
+        marginLeft: '5.5rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '2rem',
+            marginRight: '2rem'
+        }
+    },
+    summaryPanelPadding: {
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
+        paddingTop: '6rem',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: 0,
+        }
+    },
+    facontent: {
+        marginRight: '4.5rem',
+        marginLeft: '4.5rem',
+        width: '30rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '1rem',
+            textAlign: 'center',
+            width: '24rem'
+        }
+    },
+    fatable: {
+        display: 'flex',
+        width: '73.5vw',
+        [theme.breakpoints.down('sm')]: {
+            width: '85vw',
+            display: 'block',
+            textAlign: 'center'
+        }
+    },
+    fainstruction: {
+        marginLeft: '-1rem',
+        width: '62vw',
+        fontSize: '0.8rem',
+        [theme.breakpoints.down('sm')]: {
+            width: 'fit-content',
+            marginLeft: '1rem',
+            marginRight: '2rem'
+        }
+    },
+    fatableright: {
+        marginLeft: '3rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 0,
+            marginRight: 0,
+            marginTop: '1rem'
+        }
+    },
+    fainfopanelposition: {
+        marginTop: '1rem',
+        marginLeft: '4rem',
+        width: '50rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '6rem'
+        }
+    },
+    fabuttonpanel: {
+        marginLeft: '-1rem',
+        display: 'inline-block',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '-38rem'
         }
     }
 }));

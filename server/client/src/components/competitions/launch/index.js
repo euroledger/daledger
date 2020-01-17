@@ -37,7 +37,7 @@ const Launch = () => {
                         textAlign: 'justify',
                         textJustify: 'inter-word'
                     }}
-                >   
+                >
                     {translations.competitionDrawerText[0]}<p></p>
                     {translations.competitionDrawerText[1]}<p></p>
                     {translations.competitionDrawerText[2]}<p></p>
@@ -54,7 +54,7 @@ const Launch = () => {
                 style={{
                     textAlign: 'right',
                     margin: '0px auto 0px auto',
-                    display: 'inline-block'
+                    display: 'inline-block',
                 }}
                 className={classes.panel}
             >
@@ -72,12 +72,11 @@ const Launch = () => {
                         borderRadius: '7px 7px 0 0',
                         transform: 'rotate(270deg) translateY(44px)',
                         zIndex: '1200',
-                        background: 'black'
+                        background: 'black',
                     }}
                     onClick={toggleDrawer(true)}
                 >
-                    {/* ReadMe */}
-                    Citește-mă
+                    {translations.sidebarTitle}
                 </Button>
 
                 <SwipeableDrawer
@@ -88,16 +87,8 @@ const Launch = () => {
                 >
                     {sideList('right')}
                 </SwipeableDrawer>
-                <div
-                    style={{
-                        textAlign: 'center',
-                        marginTop: '-19rem',
-                        marginLeft: '10rem',
-                        marginRight: '10rem'
-                    }}
-                >
+                <div className={classes.launchformpadding}>
                     <LaunchCompetitionForm></LaunchCompetitionForm>
-                    {/* <p>Here is some text</p> */}
                 </div>
             </div>
         </div>

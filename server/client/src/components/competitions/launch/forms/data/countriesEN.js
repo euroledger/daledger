@@ -1,6 +1,6 @@
 
     // From https://bitbucket.org/atlassian/atlaskit-mk-2/raw/4ad0e56649c3e6c973e226b7efaeb28cb240ccb0/packages/core/select/src/data/countries.js
-    const countries = [
+    const countriesEN = [
         { code: 'AD', label: 'Andorra', phone: '376' },
         { code: 'AF', label: 'Afghanistan', phone: '93' },
         { code: 'AG', label: 'Antigua and Barbuda', phone: '1-268' },
@@ -74,7 +74,7 @@
         { code: 'ET', label: 'Ethiopia', phone: '251' },
         { code: 'FI', label: 'Finland', phone: '358' },
         { code: 'FJ', label: 'Fiji', phone: '679' },
-        { code: 'FK', label: 'Falkland Islands (Malvinas)', phone: '500' },
+        { code: 'FK', label: 'Falkland Islands', phone: '500' },
         { code: 'FM', label: 'Micronesia, Federated States of', phone: '691' },
         { code: 'FO', label: 'Faroe Islands', phone: '298' },
         { code: 'FR', label: 'France', phone: '33', suggested: true },
@@ -140,7 +140,7 @@
         { code: 'KW', label: 'Kuwait', phone: '965' },
         { code: 'KY', label: 'Cayman Islands', phone: '1-345' },
         { code: 'KZ', label: 'Kazakhstan', phone: '7' },
-        { code: 'LA', label: "Lao People's Democratic Republic", phone: '856' },
+        { code: 'LA', label: "Laos People's Democratic Republic", phone: '856' },
         { code: 'LB', label: 'Lebanon', phone: '961' },
         { code: 'LC', label: 'Saint Lucia', phone: '1-758' },
         { code: 'LI', label: 'Liechtenstein', phone: '423' },
@@ -201,7 +201,6 @@
         { code: 'PM', label: 'Saint Pierre and Miquelon', phone: '508' },
         { code: 'PN', label: 'Pitcairn', phone: '870' },
         { code: 'PR', label: 'Puerto Rico', phone: '1' },
-        { code: 'PS', label: 'Palestine, State of', phone: '970' },
         { code: 'PT', label: 'Portugal', phone: '351' },
         { code: 'PW', label: 'Palau', phone: '680' },
         { code: 'PY', label: 'Paraguay', phone: '595' },
@@ -272,7 +271,7 @@
         { code: 'YT', label: 'Mayotte', phone: '262' },
         { code: 'ZA', label: 'South Africa', phone: '27' },
         { code: 'ZM', label: 'Zambia', phone: '260' },
-        { code: 'ZW', label: 'Zimbabwe', phone: '263' }
+        { code: 'ZW', label: 'Zimbabwe', phone: '263' }       
     ];
 
-export default countries;
+export default countriesEN;

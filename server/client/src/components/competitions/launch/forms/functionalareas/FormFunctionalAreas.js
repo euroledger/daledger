@@ -5,6 +5,9 @@ import ProfileContext from '../../../../../ProfileContext';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import FunctionalAreaTable from './MyEditableTable';
+import SummaryPanel from './SummaryPanel';
+import InfoPanel from './InfoPanel';
+import ButtonGroup from '../ButtonGroup';
 
 const FormFunctionalAreas = ({
     prevStep,
@@ -12,8 +15,10 @@ const FormFunctionalAreas = ({
     rowsRight,
     columns,
     handleRowUpdate,
+    handleChange,
     handleSubmit,
-    values
+    values,
+    objective
 }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
@@ -22,12 +27,13 @@ const FormFunctionalAreas = ({
         country: Yup.string().required(translations.error2Text)
     });
 
+    const buttonItems = [
+        { value: 'true', label: translations.projectCoverageRadioOption1 },
+        { value: 'false', label: translations.projectCoverageRadioOption2 }
+    ];
+
     return (
-        <div className={classes.formpanel2} style={{
-            marginTop: '1rem',
-            width: '98vw',
-            marginLeft: '-9rem'
-        }}>
+        <div  className={`${classes.formpanel2} ${classes.areaspacing}`}>
             <div
                 style={{
                     borderBottom: '1px solid black',
@@ -49,60 +55,45 @@ const FormFunctionalAreas = ({
                 {({ values, handleBlur, handleSubmit, isSubmitting }) => (
                     <form onSubmit={handleSubmit} autoComplete='off'>
                         <div>
-                            <div style={{ display: 'flex' }}>
-                                <div
-                                    style={{
-                                        marginTop: '10px',
-                                        marginLeft: '5.5rem',
-                                        borderStyle: 'solid',
-                                        borderColor: 'white',
-                                        borderWidth: '2px',
-                                        borderRadius: '18px',
-                                        backgroundColor: '#3399CC',
-                                        fontSize: '1.2rem',
-                                        color: 'white'
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            paddingLeft: '10px',
-                                            paddingRight: '10px',
-                                            paddingTop: '80px'
-                                        }}
-                                    >
-                                        <p>Residential</p>
-                                        <p>New Space</p>
-                                        <p>Indoor</p>
-                                    </div>
+                            <div className={classes.areaForm}>
+                                <div className={classes.summaryPanelPosition}>
+                                    <SummaryPanel objective={objective}/>
                                 </div>
+
                                 <div
-                                    style={{
-                                        marginRight: '4.5rem',
-                                        marginLeft: '4.5rem',
-                                        width: '30rem'
-                                    }}
+                                    className={classes.facontent}
                                 >
                                     <div
-                                        style={{
-                                            marginLeft: '-1rem',
-                                            width: '62vw',
-                                            fontSize: '0.8rem'
-                                        }}
+                                       className={classes.fainstruction}
                                     >
                                         <p>
                                             {translations.functionalAreaInstructions}
                                         </p>
                                     </div>
 
-                                    <div style={{ display: 'flex', width: '60vw' }}
+                                    <div className={classes.fatable}
                                     >
                                         <div>
                                             <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left"></FunctionalAreaTable>
                                         </div>
 
-                                        <div style={{ marginLeft: '3rem' }}>
+                                        <div className={classes.fatableright}>
                                             <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate} side="right"></FunctionalAreaTable>
                                         </div>
+                                        <div className={classes.fainfopanelposition}>
+                                            <InfoPanel />
+                                            <div className={classes.fabuttonpanel}>
+                                                <ButtonGroup
+                                                    title={translations.projectCoverageTitle}
+                                                    selected='true'
+                                                    buttonItems={buttonItems}
+                                                    onChange={handleChange}
+                                                    name='entireprop'
+                                                    display="block"
+                                                ></ButtonGroup>
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </div>
@@ -123,7 +114,7 @@ const FormFunctionalAreas = ({
                                     }}
                                     disabled={isSubmitting}
                                 >
-                                    Previous
+                                    {translations.prevButtonText}
                                 </Button>
                                 <Button
                                     size='medium'
@@ -136,7 +127,7 @@ const FormFunctionalAreas = ({
                                     }}
                                     disabled={isSubmitting}
                                 >
-                                    My Home Page
+                                    {translations.homeButtonText}
                                 </Button>
                                 <Button
                                     size='medium'
@@ -149,7 +140,7 @@ const FormFunctionalAreas = ({
                                     }}
                                     disabled={isSubmitting}
                                 >
-                                    Continue
+                                    {translations.continueButtonText}
                                 </Button>
                             </div>
                         </div>

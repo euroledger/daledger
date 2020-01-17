@@ -7,13 +7,10 @@ import { TextField } from 'formik-material-ui';
 import * as Yup from 'yup';
 import ButtonGroup from './ButtonGroup';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import countries from './data/countries';
+import countriesEN from './data/countriesEN';
+import countriesRO from './data/countriesRO';
 
-const getCountryByCode = code => {
-    return countries.find(obj => {
-        return obj.code === code;
-    });
-};
+
 
 const FormProjectDefinition = ({
     handleSubmit,
@@ -23,6 +20,18 @@ const FormProjectDefinition = ({
 }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
+    
+    let countries = countriesEN;
+    if (translations.language === "ro") {
+        countries = countriesRO;
+    }
+
+    // console.log("countries = ", countries);
+    const getCountryByCode = code => {
+        return countries.find(obj => {
+            return obj.code === code;
+        });
+    };
 
     const validationSchema = Yup.object().shape({
         country: Yup.string().required(translations.error2Text)
@@ -30,16 +39,16 @@ const FormProjectDefinition = ({
 
     // TODO move into the translation locale files
     const spaceButtonItems = [
-        { value: 'residential', label: 'Residential' },
-        { value: 'commercial', label: 'Commercial' }
+        { value: 'residential', label: translations.projectDefinitionCountryRadio1Option1 },
+        { value: 'commercial', label: translations.projectDefinitionCountryRadio1Option2 }
     ];
     const doorButtonItems = [
-        { value: 'indoor', label: 'Indoor' },
-        { value: 'outdoor', label: 'Outdoor' }
+        { value: 'indoor', label: translations.projectDefinitionCountryRadio2Option1 },
+        { value: 'outdoor', label: translations.projectDefinitionCountryRadio2Option2 }
     ];
     const objectiveButtonItems = [
-        { value: 'decorating', label: 'Decorating a new space' },
-        { value: 'remodelling', label: 'Remodelling' }
+        { value: 'newspace', label: translations.projectDefinitionCountryRadio3Option1 },
+        { value: 'remodelling', label: translations.projectDefinitionCountryRadio3Option2 }
     ];
     const savedCountry = getCountryByCode(values.country);
     return (
@@ -51,7 +60,7 @@ const FormProjectDefinition = ({
                     marginLeft: '6rem'
                 }}
             >
-                <p className={classes.formTitle}>Project Definition</p>
+                <p className={classes.formTitle}>{translations.projectDefinitionTitle}</p>
             </div>
 
             <Formik
@@ -65,42 +74,39 @@ const FormProjectDefinition = ({
                 {({ values, handleBlur, handleSubmit, isSubmitting }) => (
                     <form onSubmit={handleSubmit} autoComplete='off'>
                         <div>
-                            <div style={{ display: 'inline-block' }}>
+                            <div className={classes.radiobutton1}>
                                 <div
-                                    style={{
-                                        display: 'inline-block',
-                                        marginRight: '7rem'
-                                    }}
+                                    className={classes.button1}
                                 >
                                     <ButtonGroup
-                                        title='What kind of space do you need to renovate?'
+                                        title={translations.projectDefinitionRadioTitle1}
                                         selected={values.space}
                                         buttonItems={spaceButtonItems}
                                         onChange={handleChange}
                                         name='space'
+                                        display="flex"
                                     ></ButtonGroup>
                                 </div>
                                 <div
-                                    style={{
-                                        display: 'inline-block',
-                                        marginRight: '5rem'
-                                    }}
+                                    className={classes.button2}
                                 >
                                     <ButtonGroup
-                                        title='What is the objective of your project?'
+                                        title={translations.projectDefinitionRadioTitle2}
                                         selected={values.objective}
                                         buttonItems={objectiveButtonItems}
                                         onChange={handleChange}
                                         name='objective'
+                                        display="flex"
                                     ></ButtonGroup>
                                 </div>
-                                <div style={{ display: 'inline-block' }}>
+                                <div className={classes.button2}>
                                     <ButtonGroup
-                                        title='Indoor or outdoor?'
+                                        title={translations.projectDefinitionRadioTitle3}
                                         selected={values.indooroutdoor}
                                         buttonItems={doorButtonItems}
                                         onChange={handleChange}
                                         name='indooroutdoor'
+                                        display="flex"
                                     ></ButtonGroup>
                                 </div>
                             </div>
@@ -123,7 +129,7 @@ const FormProjectDefinition = ({
                                 renderInput={params => (
                                     <Field
                                         {...params}
-                                        label='Project Country'
+                                        label={translations.projectDefinitionCountryTitle}
                                         variant='outlined'
                                         fullWidth
                                         autoComplete='disabled'
@@ -140,44 +146,36 @@ const FormProjectDefinition = ({
                                 )}
                             />
                             <div
-                                style={{
-                                    fontSize: '0.9rem',
-                                    marginLeft: '7rem',
-                                    marginRight: '7rem',
-                                    marginTop: '1em'
-                                }}
+                               className={classes.instructions}
                             >
-                                Please let us know where your space is located,
-                                it will be highly useful for our professionals
-                                to study and respect the local regulations
-                                related to your project.
+                                {translations.projectDefinitionInstruction}
                             </div>
                             <div style={{ display: 'flex' }}>
                                 <Button
                                     size='medium'
                                     type='submit'
-                                    className={`${classes.button} ${classes.formButton}`}
-                                    style={{
-                                        width: '12rem',
-                                        marginBottom: '1rem',
-                                        marginLeft: '24rem'
-                                    }}
+                                    className={`${classes.button} ${classes.formButton} ${classes.buttonPos1}`}
+                                    // style={{
+                                    //     width: '12rem',
+                                    //     marginBottom: '1rem',
+                                    //     marginLeft: '24rem'
+                                    // }}
                                     disabled={isSubmitting}
                                 >
-                                    My Home Page
+                                    {translations.homeButtonText}
                                 </Button>
                                 <Button
                                     size='medium'
                                     type='submit'
-                                    className={`${classes.button} ${classes.formButton}`}
-                                    style={{
-                                        width: '12rem',
-                                        marginBottom: '1rem',
-                                        marginRight: '24rem'
-                                    }}
+                                    className={`${classes.button} ${classes.formButton}  ${classes.buttonPos2}`}
+                                    // style={{
+                                    //     width: '16rem',
+                                    //     marginBottom: '1rem',
+                                    //     marginRight: '24rem'
+                                    // }}
                                     disabled={isSubmitting}
                                 >
-                                    Continue
+                                    {translations.continueButtonText}
                                 </Button>
                             </div>
                         </div>
