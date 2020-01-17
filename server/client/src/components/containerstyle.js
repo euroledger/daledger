@@ -299,7 +299,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             marginLeft: '1rem',
             textAlign: 'center',
-            width: '24rem'
+            width: '14rem'
         }
     },
     fatable: {
@@ -316,7 +316,7 @@ export const useStyles = makeStyles(theme => ({
         width: '62vw',
         fontSize: '0.8rem',
         [theme.breakpoints.down('sm')]: {
-            width: 'fit-content',
+            width: '18rem',
             marginLeft: '1rem',
             marginRight: '2rem'
         }
