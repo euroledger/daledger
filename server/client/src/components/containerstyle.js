@@ -111,6 +111,8 @@ export const useStyles = makeStyles(theme => ({
         borderStyle: 'none'
     },
     faautosize: {
+        marginLeft: '7rem',
+        width: '80%',
         [theme.breakpoints.down('sm')]: {
             marginLeft: '2rem',
             width: '80%',
