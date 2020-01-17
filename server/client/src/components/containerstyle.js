@@ -334,14 +334,16 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '4rem',
         width: '50rem',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '6rem'
+            marginLeft: '6rem',
+            width: '10rem'
         }
     },
     fabuttonpanel: {
         marginLeft: '-1rem',
         display: 'inline-block',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '-38rem'
+            marginLeft: '-4rem',
+            width: '20rem'
         }
     }
 }));
