@@ -27,7 +27,7 @@ const ClientHome = () => {
     return (
         <div
             className={classes.container}
-            style={{ backgroundImage: 'url("road.png")' }}
+            style={{ backgroundImage: 'url("road.png")', height: '91vh' }}
             data-test='contentComponent'
         >
             <div className={classes.container} data-test='contentComponent'>
