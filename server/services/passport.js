@@ -3,7 +3,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const { serverConf } = require('../config');
 const keys = serverConf.keys;
 const mongoose = require('mongoose');
-const User = mongoose.model('users'); // single argument => pull model out
+const User = mongoose.model('users'); // single argument... pull model out
 const log4js = require('log4js');
 var logger = log4js.getLogger('passport.js');
 
