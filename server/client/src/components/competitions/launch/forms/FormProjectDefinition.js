@@ -152,7 +152,7 @@ const FormProjectDefinition = ({
                             >
                                 {translations.projectDefinitionInstruction}
                             </div>
-                            <div style={{ display: 'flex' }}>
+                            <div style={{ display: 'flex', 'justifyContent': 'center' }}>
                                 <Button
                                     size='medium'
                                     type='submit'
