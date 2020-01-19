@@ -33,7 +33,7 @@ const FormFunctionalAreas = ({
     ];
 
     return (
-        <div  className={`${classes.formpanel2} ${classes.areaspacing}`}>
+        <div  className={`${classes.formpanel2} ${classes.areaspacing} `} style={{marginTop: '25rem'}} >
             <div
                 style={{
                     borderBottom: '1px solid black',
