@@ -31,7 +31,11 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         position: 'absolute',
         right: '-9%',
-        marginRight: '6rem'
+        marginRight: '2.5rem',
+        // [theme.breakpoints.down('sm')]: {
+        //     marginRight: '1rem',
+        // },
+      
     },
     icon: {
         color: 'white',

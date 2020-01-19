@@ -154,22 +154,31 @@ export const useStyles = makeStyles(theme => ({
     buttonpanel: {
         display: 'flex'
     },
+    // position: 'absolute',
+        // top: '40%',
+        // [theme.breakpoints.down('sm')]: {
+        //     top: '32%',
+        //     left: '-5%'
+        // },
+        
+        // margin: '0 auto'
     panel1: {
-        position: 'absolute',
-        top: '40%',
+        marginTop: '12rem',
         [theme.breakpoints.down('sm')]: {
-            top: '32%',
-            left: '-5%'
-        },
-
-        margin: '0 auto'
+            display: 'flex',
+            'flexDirection': 'column',
+            'justifyContent': 'center',
+            margin: '0 auto'
+        }
     },
     panel2: {
-        position: 'absolute',
-        top: '60%',
+        marginTop: '5rem',
         [theme.breakpoints.down('sm')]: {
-            top: '70%',
-            left: '-5%'
+            display: 'flex',
+            'flexDirection': 'column',
+            'justifyContent': 'center',
+            margin: '0 auto',
+            marginTop: '0'
         }
     },
     launchformpadding: {

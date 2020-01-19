@@ -30,7 +30,7 @@ const ClientHome = () => {
             style={{ backgroundImage: 'url("road.png")', height: '91vh' }}
             data-test='contentComponent'
         >
-            <div className={classes.container} data-test='contentComponent'>
+            <div>
                 <div className={classes.panel1}>
                     <MyTooltip enterDelay={500} leaveDelay={200} title={translations.tooltip1text}>
                         <Button
@@ -53,29 +53,35 @@ const ClientHome = () => {
                         </Button>
                     </MyTooltip>
                 </div>
-                <div className={classes.panel2}>
-                    <MyTooltip title={translations.tooltip3text}>
-                        <Button
-                            color='inherit'
-                            className={classes.button}
-                            href='/ongoing'
-                            endIcon={!isLaptop() ? <HelpIcon /> : <p />}
-                        >
-                            {translations.button3text}
-                        </Button>
-                    </MyTooltip>
-                    <MyTooltip title={translations.tooltip4text}>
-                        <Button
-                            color='inherit'
-                            className={classes.button}
-                            href='/past'
-                            endIcon={!isLaptop() ? <HelpIcon /> : <p />}
-                        >
-                            {translations.button4text}
-                        </Button>
-                    </MyTooltip>
+                <div>
+                    <div className={classes.panel2}>
+                        <MyTooltip title={translations.tooltip3text}>
+                            <Button
+                                color='inherit'
+                                className={classes.button}
+                                href='/ongoing'
+                                endIcon={!isLaptop() ? <HelpIcon /> : <p />}
+                            >
+                                {translations.button3text}
+                            </Button>
+                        </MyTooltip>
+                        <MyTooltip title={translations.tooltip4text}>
+                            <Button
+                                color='inherit'
+                                className={classes.button}
+                                href='/past'
+                                endIcon={!isLaptop() ? <HelpIcon /> : <p />}
+                            >
+                                {translations.button4text}
+                            </Button>
+                        </MyTooltip>
+                    </div>
                 </div>
             </div>
+
+
+
+
         </div>
     );
 };
