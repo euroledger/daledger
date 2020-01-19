@@ -95,14 +95,14 @@ export const useStyles = makeStyles(theme => ({
         color: 'black',
         opacity: 0.8,
         // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('')]: {
             // maxWidth: '25rem',
             // height: '70%',
             height: 'fit-content',
             paddingLeft: 0,
             paddingRight: 0,
             fontSize: '0.6px',
-            marginTop: '20rem'
+            marginTop: '15rem'
         }
     },
     formfield: {
