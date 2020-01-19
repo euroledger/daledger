@@ -117,8 +117,12 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '7rem',
         width: '80%',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '2rem',
-            width: '80%',
+            // marginLeft: '2rem',
+            // width: '80%',
+            // display: 'flex',
+            // 'flexDirection': 'column',
+            'justifyContent': 'center',
+            margin: '0 auto'
         }
     },
     formTitle: {
@@ -240,6 +244,7 @@ export const useStyles = makeStyles(theme => ({
         display: 'inline-block',
         [theme.breakpoints.down('sm')]: {
             // display: 'flex'
+            marginLeft: '4rem'
         }
     },
     button1: {
@@ -337,7 +342,8 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             marginLeft: '1rem',
             textAlign: 'center',
-            width: '14rem'
+            width: '100%'
+            // width: '14rem'
         }
     },
     fatable: {
@@ -346,7 +352,9 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             width: '85vw',
             display: 'block',
-            textAlign: 'center'
+            textAlign: 'center',
+            
+
         }
     },
     fainstruction: {
@@ -354,9 +362,15 @@ export const useStyles = makeStyles(theme => ({
         width: '62vw',
         fontSize: '0.8rem',
         [theme.breakpoints.down('sm')]: {
-            width: '18rem',
-            marginLeft: '1rem',
-            marginRight: '2rem'
+            // width: '18rem',
+            // marginLeft: '1rem',
+            // marginRight: '2rem'
+
+            // display: 'flex',
+            // 'flexDirection': 'column',
+            // 'justifyContent': 'center',
+            margin: '0 auto'
+
         }
     },
     fatableright: {
@@ -372,8 +386,10 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '4rem',
         width: '50rem',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '6rem',
-            width: '10rem'
+            marginTop: '2rem',
+            width: '10rem',
+            'justifyContent': 'center',
+            margin: '0 auto'
         }
     },
     fabuttonpanel: {
