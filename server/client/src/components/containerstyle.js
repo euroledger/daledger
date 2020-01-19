@@ -14,8 +14,11 @@ export const useStyles = makeStyles(theme => ({
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             height: '230vh',
+        },
+        [theme.breakpoints.only('md')]: {
+            height: '120vh',
         }
     },
     button: {
@@ -89,7 +92,7 @@ export const useStyles = makeStyles(theme => ({
         borderStyle: 'solid',
         borderWidth: '1px',
         borderRadius: '18px',
-        marginTop: '3rem',
+        marginTop: '2rem',
         backgroundColor: '#E9E7E7',
         borderColor: 'black',
         color: 'black',
@@ -147,21 +150,23 @@ export const useStyles = makeStyles(theme => ({
         position: 'absolute',
         top: '50%',
         width: '100vw',
-        [theme.breakpoints.down('sm')]: {
-            // width: 'auto'
+        [theme.breakpoints.down('md')]: {
+            position: 'static',
+            // top: '50%',
+            // width: '100vw',
         },
     },
     buttonpanel: {
         display: 'flex'
     },
     // position: 'absolute',
-        // top: '40%',
-        // [theme.breakpoints.down('sm')]: {
-        //     top: '32%',
-        //     left: '-5%'
-        // },
-        
-        // margin: '0 auto'
+    // top: '40%',
+    // [theme.breakpoints.down('sm')]: {
+    //     top: '32%',
+    //     left: '-5%'
+    // },
+
+    // margin: '0 auto'
     panel1: {
         marginTop: '12rem',
         [theme.breakpoints.down('sm')]: {
@@ -183,20 +188,44 @@ export const useStyles = makeStyles(theme => ({
     },
     launchformpadding: {
         textAlign: 'center',
-        marginTop: '-19rem',
+        marginTop: '-21rem',
         marginLeft: '10rem',
         marginRight: '10rem',
         [theme.breakpoints.down('sm')]: {
+            marginTop: '-23rem',
             marginLeft: '1rem',
             marginRight: '1rem',
         },
+        [theme.breakpoints.only('md')]: {
+            marginTop: '-34rem',
+            margineft: '5rem',
+            marginRight: '5rem'
+        },
     },
     areaspacing: {
-        marginTop: '1rem',
+        // marginTop: '24rem',
         width: '98vw',
         marginLeft: '-9rem',
         [theme.breakpoints.down('sm')]: {
+            marginTop: '12rem',
+            width: '92vw',
+            marginLeft: 0
+        },
+    },
+    buttonspacing: {
+        [theme.breakpoints.down('sm')]: {
             marginTop: '10rem',
+        },
+        [theme.breakpoints.only('md')]: {
+            marginTop: '22rem',
+        }
+    },
+    formdefspacing: {
+        marginTop: '5rem',
+        // width: '98vw',
+        // marginLeft: '-9rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '11rem',
             width: '92vw',
             marginLeft: 0
         },

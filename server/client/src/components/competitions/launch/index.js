@@ -48,8 +48,7 @@ const Launch = () => {
     );
 
     return (
-        // <div className={classes.container} style={{height: '200vh'}} data-test='contentComponent'>
-        <div className={classes.container}  style={{height: '200vh'}} data-test='contentComponent'>
+        <div className={classes.container} data-test='contentComponent'>
             <div
                 style={{
                     textAlign: 'right',
@@ -60,33 +59,36 @@ const Launch = () => {
             >
                 {/* TODO Move Button and SwipeableDrawer into its own component */}
 
-                <Button
-                    color='inherit'
-                    data-test='readmebutton'
-                    style={{
-                        transition: '0.3s',
-                        width: '130px',
-                        textDecoration: 'none',
-                        fontSize: '15px',
-                        color: 'white',
-                        borderRadius: '7px 7px 0 0',
-                        transform: 'rotate(270deg) translateY(44px)',
-                        zIndex: '1200',
-                        background: 'black',
-                    }}
-                    onClick={toggleDrawer(true)}
-                >
-                    {translations.sidebarTitle}
-                </Button>
+                <div className={classes.buttonspacing}>
+                    <Button
+                        color='inherit'
+                        data-test='readmebutton'
+                        style={{
+                            transition: '0.3s',
+                            width: '130px',
+                            textDecoration: 'none',
+                            fontSize: '15px',
+                            color: 'white',
+                            borderRadius: '7px 7px 0 0',
+                            transform: 'rotate(270deg) translateY(44px)',
+                            zIndex: '1200',
+                            background: 'black',
+                        }}
+                        onClick={toggleDrawer(true)}
+                    >
+                        {translations.sidebarTitle}
+                    </Button>
 
-                <SwipeableDrawer
-                    anchor='right'
-                    open={state}
-                    onClose={toggleDrawer(false)}
-                    onOpen={toggleDrawer(true)}
-                >
-                    {sideList('right')}
-                </SwipeableDrawer>
+                    <SwipeableDrawer
+                        anchor='right'
+                        open={state}
+                        onClose={toggleDrawer(false)}
+                        onOpen={toggleDrawer(true)}
+                    >
+                        {sideList('right')}
+                    </SwipeableDrawer>
+                </div>
+
                 <div className={classes.launchformpadding}>
                     <LaunchCompetitionForm></LaunchCompetitionForm>
                 </div>

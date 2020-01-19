@@ -52,7 +52,7 @@ const FormProjectDefinition = ({
     ];
     const savedCountry = getCountryByCode(values.country);
     return (
-        <div className={classes.formpanel2}>
+        <div className={`${classes.formpanel2} ${classes.formdefspacing} `}>
             <div
                 style={{
                     borderBottom: '1px solid black',
