@@ -49,7 +49,7 @@ const Launch = () => {
 
     return (
         // <div className={classes.container} style={{height: '200vh'}} data-test='contentComponent'>
-        <div className={classes.container}  style={{height: '130vh'}} data-test='contentComponent'>
+        <div className={classes.container}  style={{height: '200vh'}} data-test='contentComponent'>
             <div
                 style={{
                     textAlign: 'right',
