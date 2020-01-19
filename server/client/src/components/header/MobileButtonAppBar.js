@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
     panel: {
         display: 'flex',
         position: 'absolute',
-        right: '-10%',
-        marginRight: '20px'
+        right: '-9%',
+        marginRight: '6rem'
     },
     icon: {
         color: 'white',
