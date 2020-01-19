@@ -156,6 +156,7 @@ export const useStyles = makeStyles(theme => ({
         width: '100vw',
         [theme.breakpoints.down('md')]: {
             position: 'static',
+            marginTop: '5rem'
             // top: '50%',
             // width: '100vw',
         },
@@ -177,7 +178,8 @@ export const useStyles = makeStyles(theme => ({
             display: 'flex',
             'flexDirection': 'column',
             'justifyContent': 'center',
-            margin: '0 auto'
+            margin: '0 auto',
+            marginTop: '7rem'
         }
     },
     panel2: {
