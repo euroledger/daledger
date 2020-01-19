@@ -31,7 +31,7 @@ const ClientHome = () => {
             data-test='contentComponent'
         >
             <div>
-                <div className={classes.panel1}>
+                <div className={classes.panel1} >
                     <MyTooltip enterDelay={500} leaveDelay={200} title={translations.tooltip1text}>
                         <Button
                             color='inherit'

@@ -95,7 +95,7 @@ export const useStyles = makeStyles(theme => ({
         color: 'black',
         opacity: 0.8,
         // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             // maxWidth: '25rem',
             // height: '70%',
             height: 'fit-content',
