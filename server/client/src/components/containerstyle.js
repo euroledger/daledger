@@ -15,7 +15,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         [theme.breakpoints.down('sm')]: {
-            height: '230vh',
+            height: '100rem',
         },
         [theme.breakpoints.only('md')]: {
             height: '120vh',
