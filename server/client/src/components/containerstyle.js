@@ -198,12 +198,12 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '10rem',
         marginRight: '10rem',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '-23rem',
+            marginTop: '-20rem',
             marginLeft: '1rem',
             marginRight: '1rem',
         },
         [theme.breakpoints.only('md')]: {
-            marginTop: '-34rem',
+            marginTop: '-22rem',
             margineft: '5rem',
             marginRight: '5rem'
         },
