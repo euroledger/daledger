@@ -3,47 +3,33 @@ import React, { useState, useContext } from 'react';
 import Paper from '@material-ui/core/Paper';
 import { EditingState } from '@devexpress/dx-react-grid';
 import ProfileContext from '../../../../../ProfileContext';
+import { DeviceHelper } from '../../../../../utils';
 import {
     Grid,
     Table,
     TableHeaderRow,
     TableInlineCellEditing
 } from '@devexpress/dx-react-grid-material-ui';
+import { withStyles } from '@material-ui/core';
+
+
 
 const getRowId = row => row.id;
-
-const FocusableCell = ({ onClick, ...restProps }) => (
-    <Table.Cell
-        {...restProps}
-        tabIndex={0}
-        onFocus={onClick}
-    // style={{
-    //     paddingTop: '10px',
-    //     paddingBottom: '10px',
-    //     fontSize: '10px'
-    // }}
-    />
-);
-
-
 
 const TableRow = ({ row, ...restProps }) => {
     return (
         <Table.Row
             {...restProps}
-            style={{
-                height: '10x'
-            }}
         />
     );
 };
 
-const validate = (change, row) => {
+const validate = (side, change, row) => {
     for (var prop in change) {
         if (prop === "type") {
             continue;
         }
-        const fnum = parseInt(change[prop]);
+        const fnum = (side === "outdoors" && prop === "size") ? parseFloat(change[prop]) : parseInt(change[prop]);
         if (isNaN(fnum)) {
             change[prop] = row[prop];
         } else {
@@ -51,27 +37,84 @@ const validate = (change, row) => {
         }
     }
 }
-const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
+const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors }) => {
+    const getRowStyle = () => {
+        if (indoors) {
+            return {}
+        } else {
+            return {
+                paddingTop: '8px',
+                paddingBottom: '8px',
+                fontSize: '13px'
+            }
+        }
+    }
+    const myObject = indoors ? {} : {
+        '.MuiInputBase-input': {
+            fontSize: '13px',
+            padding: 0,
+            fontFamily: 'inherit'
+        },
+        '.MuiTableCell-root': {
+            padding: '7px'
+        }
+        // '.EditCell-cell-444': {
+        //     padding: '8px',
+        //     paddingTop: '0px'
+        // },
+        // '.MuiTableCell-root': {
+        //     lineHeight: '1.0'
+        // }
+    }
+    let TableCss = withStyles({
+        // @global is handled by jss-plugin-global.
+        '@global': myObject
+            // size of editable table cells
+    })(() => null);
+
+    
+    const FocusableCell = ({ onClick, ...restProps }) => (
+        <Table.Cell
+            {...restProps}
+            tabIndex={0}
+            onFocus={onClick}
+            style=
+            {getRowStyle()}
+        />
+    );
     const EditableCell = (props) => {
         var { row, editingEnabled, column, ...restProps } = props;
         const {
             tableRow: { rowId }
         } = restProps;
-        if (rowId !== 3 && rowId !== 4) {
+        if (side === "outdoors") {
             if (column.name === "type") {
-                editingEnabled = false;
+                if (rowId === 7) {
+                    editingEnabled = true;    
+                } else {
+                    editingEnabled = false;
+                }
             }
         } else {
-            if (side === "left" && column.name === "type") {
-                editingEnabled = false;
+            if (rowId !== 3 && rowId !== 4) {
+                if (column.name === "type") {
+                    editingEnabled = false;
+                }
             } else {
-                editingEnabled = true;
+                if (side === "left" && column.name === "type") {
+                    editingEnabled = false;
+                } else {
+                    editingEnabled = true;
+                }
             }
         }
+
         return (<TableInlineCellEditing.Cell
             editingEnabled={editingEnabled}
             column={column}
             row={row}
+            style=
+            {getRowStyle()}
             {...restProps}
         />);
     };
@@ -83,6 +126,16 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
         }
     }
 
+    const setRowTypesAccordingToLanguageOutdoors = () => {
+        for (let i = 0; i < rows.length; i++) {
+            if (i === 7) {
+                if (rows[i].type !== "Other" && rows[i].type !== "Alte") {
+                    continue;
+                }
+            }
+            rows[i].type = translations.functionalareaoutdoorrows[i];
+        }
+    }
     // uber hack to work around problem whereby user input into editable field clashing with the state change
     // due to language change...the translated default seems to take precedence over the user input...
     // so the change here is to ignore language changes if the user has entered anything
@@ -98,8 +151,13 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
         }
     }
 
+    const isLaptop = () => {
+        return DeviceHelper();
+    };
+    const typeColWidth = indoors || !isLaptop() ? '9rem' : '12rem';
+
     const [columnExtensions] = useState([
-        { columnName: 'type', width: '9rem' }
+        { columnName: 'type', width: `${typeColWidth}` }
     ]);
 
 
@@ -125,7 +183,7 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
 
                 // // validate the numeric fields
                 if (change) {
-                    validate(change, row)
+                    validate(side, change, row)
                 }
                 return (change ? { ...row, ...change } : row);
             });
@@ -143,25 +201,29 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side }) => {
     // bit hacky...better to split the rows translations into two arrays and use the correct one here
     if (side === "left") {
         setRowTypesAccordingToLanguage(0);
-    } else {
+    } else if (side === "right") {
         setRowTypesAccordingToLanguageRight(5);
+    } else if (side === "outdoors") {
+        setRowTypesAccordingToLanguageOutdoors()
     }
 
 
     return (
-        <div style={{ userSelect: 'none' }}>
+        <div style={{ userSelect: 'none' }} data-test={side} >
+            <TableCss></TableCss>
             <Paper>
-                <Grid rows={rows} columns={columns} getRowId={getRowId}>
+                <Grid rows={rows} columns={columns} getRowId={getRowId} data-test={side}>
                     <EditingState
                         onCommitChanges={commitChanges}
-                    // columnExtensions={editingStateColumnExtensions}
                     />
                     <Table
                         cellComponent={FocusableCell}
                         rowComponent={TableRow}
                         columnExtensions={columnExtensions}
                     />
-                    <TableHeaderRow />
+                    <TableHeaderRow
+                        rowComponent={TableRow}
+                    />
                     <TableInlineCellEditing
                         cellComponent={EditableCell}
                         startEditAction={startEditAction}

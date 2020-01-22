@@ -77,9 +77,62 @@ const TableData = (translations) => {
                 large: 0
             }
         ];
+        const outdoorRows =
+        [
+            {
+                id: 0,
+                type: translations.functionalareaoutdoorrows[0],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 1,
+                type: translations.functionalareaoutdoorrows[1],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 2,
+                type: translations.functionalareaoutdoorrows[2],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 3,
+                type: translations.functionalareaoutdoorrows[3],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 4,
+                type: translations.functionalareaoutdoorrows[4],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 5,
+                type: translations.functionalareaoutdoorrows[5],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 6,
+                type: translations.functionalareaoutdoorrows[6],
+                number: 0,
+                size: 0
+            },
+            {
+                id: 7,
+                type: translations.functionalareaoutdoorrows[7],
+                number: 0,
+                size: 0
+            }
+        ]
+        
         return {
             rows: rows,
-            rowsRight: rowsRight
+            rowsRight: rowsRight,
+            outdoorRows: outdoorRows
         }
 }
 

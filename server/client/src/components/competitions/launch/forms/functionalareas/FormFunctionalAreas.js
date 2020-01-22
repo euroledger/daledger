@@ -8,20 +8,30 @@ import FunctionalAreaTable from './MyEditableTable';
 import SummaryPanel from './SummaryPanel';
 import InfoPanel from './InfoPanel';
 import ButtonGroup from '../ButtonGroup';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import CloseIcon from '@material-ui/icons/Close';
+import Alert from '@material-ui/lab/Alert';
 
 const FormFunctionalAreas = ({
     prevStep,
     rows,
     rowsRight,
     columns,
+    outdoorRows,
+    outdoorColumns,
     handleRowUpdate,
     handleChange,
     handleSubmit,
     values,
-    objective
+    objective,
+    indooroutdoor
 }) => {
+
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
+
+    const [open, setOpen] = React.useState(false);
 
     const validationSchema = Yup.object().shape({
         country: Yup.string().required(translations.error2Text)
@@ -31,9 +41,76 @@ const FormFunctionalAreas = ({
         { value: 'true', label: translations.projectCoverageRadioOption1 },
         { value: 'false', label: translations.projectCoverageRadioOption2 }
     ];
+    const indoors = indooroutdoor === 'indoor';
 
+    const submit = (values) => {
+        if (!indoors) {
+            const found = outdoorRows.find(row => (row.number > 0 && row.size === 0) || (row.number === 0 && row.size > 0));
+            console.log("found = ", found)
+            if (found) {
+                setOpen(true);
+                return;
+            }
+        }
+        handleSubmit(values)
+    }
+
+    const renderInstructions = () => {
+        if (indoors) {
+            return (
+                <p>
+                    {translations.functionalAreaInstructions}
+                </p>
+            )
+        } else {
+            return (
+                <p>
+                    {translations.functionalAreaOutdoorInstructions}
+                </p>
+            )
+        }
+    }
+    const renderContent = () => {
+        if (indoors) {
+            return (
+                <>
+                    <div className={classes.fatable}>
+                        <div>
+                            <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left" indoors={indoors}></FunctionalAreaTable>
+                        </div>
+
+                        <div className={classes.fatableright}>
+                            <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate} side="right" indoors={indoors}></FunctionalAreaTable>
+                        </div>
+                        <div className={classes.fainfopanelposition}>
+                            <InfoPanel />
+                            <div className={classes.fabuttonpanel}>
+                                <ButtonGroup
+                                    title={translations.projectCoverageTitle}
+                                    selected='true'
+                                    buttonItems={buttonItems}
+                                    onChange={handleChange}
+                                    name='entireprop'
+                                    display="block"
+                                ></ButtonGroup>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )
+        } else {
+            return (
+                <div className={classes.fatableout}>
+                    <div className={classes.fatoutdoors}>
+                        <FunctionalAreaTable rows={outdoorRows} columns={outdoorColumns} handleRowUpdate={handleRowUpdate} side="outdoors" indoors={indoors}></FunctionalAreaTable>
+                    </div>
+                </div>
+            )
+        }
+
+    }
     return (
-        <div  className={`${classes.formpanel2} ${classes.areaspacing} `} >
+        <div className={`${classes.formpanel2} ${classes.areaspacing} `} >
             <div
                 style={{
                     borderBottom: '1px solid black',
@@ -49,7 +126,7 @@ const FormFunctionalAreas = ({
                 initialValues={values}
                 validationSchema={validationSchema}
                 onSubmit={values => {
-                    handleSubmit(values);
+                    submit(values);
                 }}
             >
                 {({ values, handleBlur, handleSubmit, isSubmitting }) => (
@@ -57,51 +134,43 @@ const FormFunctionalAreas = ({
                         <div>
                             <div className={classes.areaForm}>
                                 <div className={classes.summaryPanelPosition}>
-                                    <SummaryPanel objective={objective}/>
+                                    <SummaryPanel objective={objective} indoors={indoors} />
                                 </div>
 
                                 <div
                                     className={classes.facontent}
                                 >
                                     <div
-                                       className={classes.fainstruction}
+                                        className={classes.fainstruction}
                                     >
-                                        <p>
-                                            {translations.functionalAreaInstructions}
-                                        </p>
+                                        {renderInstructions()}
                                     </div>
-
-                                    <div className={classes.fatable}
-                                    >
-                                        <div>
-                                            <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left"></FunctionalAreaTable>
-                                        </div>
-
-                                        <div className={classes.fatableright}>
-                                            <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate} side="right"></FunctionalAreaTable>
-                                        </div>
-                                        <div className={classes.fainfopanelposition}>
-                                            <InfoPanel />
-                                            <div className={classes.fabuttonpanel}>
-                                                <ButtonGroup
-                                                    title={translations.projectCoverageTitle}
-                                                    selected='true'
-                                                    buttonItems={buttonItems}
-                                                    onChange={handleChange}
-                                                    name='entireprop'
-                                                    display="block"
-                                                ></ButtonGroup>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
+                                    {renderContent()}
                                 </div>
+                                <Collapse in={open} className={classes.facollapsestyling}>
+                                    <Alert
+                                        severity="error"
+                                        action={
+                                            <IconButton
+                                                aria-label="close"
+                                                color="inherit"
+                                                size="small"
+                                                onClick={() => {
+                                                    setOpen(false);
+                                                }}
+                                            >
+                                                <CloseIcon fontSize="inherit" />
+                                            </IconButton>
+                                        }
+                                    >
+                                        {translations.functionaAreaTableError}
+                                    </Alert>
+                                </Collapse>
                             </div>
 
                             <br></br>
 
-                            <div style={{ display: 'flex', marginTop: '-2rem' }}>
+                            <div className={classes.fabuttons} >
                                 <Button
                                     size='medium'
                                     // type='submit'
@@ -110,7 +179,6 @@ const FormFunctionalAreas = ({
                                     style={{
                                         width: '12rem',
                                         marginBottom: '1rem'
-                                        // marginRight: '24rem'
                                     }}
                                     disabled={isSubmitting}
                                 >
@@ -132,16 +200,25 @@ const FormFunctionalAreas = ({
                                 <Button
                                     size='medium'
                                     type='submit'
+                                    variant="outlined"
+                                    // onClick={() => {
+                                    //     validateRows(indoors)
+                                    // }}
                                     className={`${classes.button} ${classes.formButton}`}
                                     style={{
                                         width: '12rem',
-                                        marginBottom: '1rem'
+                                        marginBottom: '1rem',
+                                        borderColor: 'white',
+                                        borderStyle: 'solid',
+                                        borderWidth: '2px',
                                         // marginRight: '24rem'
                                     }}
-                                    disabled={isSubmitting}
+                                // disabled={isSubmitting}
                                 >
                                     {translations.continueButtonText}
                                 </Button>
+
+                                {/* <Alert severity="error">This is an error message!</Alert> */}
                             </div>
                         </div>
                     </form>

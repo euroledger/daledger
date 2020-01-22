@@ -38,9 +38,9 @@ const Launch = () => {
                         textJustify: 'inter-word'
                     }}
                 >
-                    {translations.competitionDrawerText[0]}<p></p>
-                    {translations.competitionDrawerText[1]}<p></p>
-                    {translations.competitionDrawerText[2]}<p></p>
+                    {translations.competitionDrawerText[0]}<br></br><br></br>
+                    {translations.competitionDrawerText[1]}<br></br><br></br>
+                    {translations.competitionDrawerText[2]}<br></br><br></br>
                     {translations.competitionDrawerText[3]}
                 </p>
             </List>
@@ -61,19 +61,9 @@ const Launch = () => {
 
                 <div className={classes.buttonspacing}>
                     <Button
+                        className={classes.drawerButton}
                         color='inherit'
                         data-test='readmebutton'
-                        style={{
-                            transition: '0.3s',
-                            width: '130px',
-                            textDecoration: 'none',
-                            fontSize: '15px',
-                            color: 'white',
-                            borderRadius: '7px 7px 0 0',
-                            transform: 'rotate(270deg) translateY(44px)',
-                            zIndex: '1200',
-                            background: 'black',
-                        }}
                         onClick={toggleDrawer(true)}
                     >
                         {translations.sidebarTitle}

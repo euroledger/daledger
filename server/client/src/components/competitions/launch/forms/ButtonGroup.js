@@ -43,7 +43,7 @@ const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) 
                     <FormControlLabel
                         key={item.value}
                         value={item.value}
-                        control={<Radio />}
+                        control={<Radio data-test={`${name}-${item.value}`}/>}
                         label={item.label}
                         // labelPlacement="start"
                         classes={classes}

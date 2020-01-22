@@ -88,6 +88,8 @@
         "col2": "Mic",
         "col3": "Mediu",
         "col4": "Mare",
+        "col5": "Număr",
+        "col6": "Dimensiune aprox",
         "row1": "Sufragerii",
         "row2": "Bucatarii",
         "row3": "Bai",
@@ -98,11 +100,22 @@
         "row8": "Holurile",
         "row9": "Alte Spatii-1",
         "row10": "Alte Spatii-2",
+        "outdoorrow1": "Terase",
+        "outdoorrow2": "Patios",
+        "outdoorrow3": "Gardens",
+        "outdoorrow4": "Backyards",
+        "outdoorrow5": "Zonele Piscinei",
+        "outdoorrow6": "Zonă Pentru Grătar",
+        "outdoorrow7": "Zone de Joc",
+        "outdoorrow8": "Alte",
         "panellabel1": "Rezidențial",
         "panellabel2newspace": "Spațiu Nou",
         "panellabel2remodel": "Remodela",
-        "panellabel3": "De Interior",
-        "instructions": "Vă rugăm să selectați cât mai multe domenii aplicați pentru proiectul dvs., întregi între 0-9. Dacă sunt mai mult de 1 cameră identice ca mărime, formă și design, vă rugăm să introduceți 1. Dacă aveți nevoie proiectare pentru o parte dintr-o cameră, vă rog alege categoria „Mic”. informațiile din această secțiune sunt de asemenea folosit pentru a estima costul dvs. proiecta. Zonele identice vor fi taxat ca o singură zonă. Vă rugăm să editați etichetele „alte”, după cum este necesar."
+        "panellabel3indoors": "De Interior",
+        "panellabel3outdoors": "În aer liber",
+        "instructions": "Vă rugăm să selectați cât mai multe domenii aplicați pentru proiectul dvs., întregi între 0-9. Dacă sunt mai mult de 1 cameră identice ca mărime, formă și design, vă rugăm să introduceți 1. Dacă aveți nevoie proiectare pentru o parte dintr-o cameră, vă rog alege categoria „Mic”. informațiile din această secțiune sunt de asemenea folosit pentru a estima costul dvs. proiecta. Zonele identice vor fi taxat ca o singură zonă. Vă rugăm să editați etichetele „alte”, după cum este necesar.",
+        "instructionsoutdoor": "Vă rugăm să furnizați o suprafață totală de aproximativ mp pe suprafață funcțională; de exemplu, pentru două terase de 10 mp fiecare, dimensiunea de aproximativ 20 mp. Numărul de zone funcționale este opțional. Dacă mai mult de o suprafață sunt identice ca mărime, formă și design, Vă rugăm să introduceți dimensiunea unei unități. Informațiile din această secțiune sunt de asemenea utilizate pentru a estima costul proiectării dvs. Vă rugăm să editați etichetele \"alte \", după cum este necesar.",
+        "tableerror": "rândurile non-zero trebuie să conțină atât numărul cât și dimensiunea"
     },
     "temp": "ești logat...pagina in constructie"
 }

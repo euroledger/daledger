@@ -38,6 +38,7 @@ const ClientHome = () => {
                             className={classes.button}
                             href='/launch'
                             endIcon={!isLaptop() ? <HelpIcon /> : <p />}
+                            data-test="launchButton"
                         >
                             {translations.button1text}
                         </Button>
@@ -48,6 +49,7 @@ const ClientHome = () => {
                             className={classes.button}
                             href='/draft'
                             endIcon={!isLaptop() ? <HelpIcon /> : <p />}
+                            data-test="draftButton"
                         >
                             {translations.button2text}
                         </Button>
@@ -60,6 +62,7 @@ const ClientHome = () => {
                                 color='inherit'
                                 className={classes.button}
                                 href='/ongoing'
+                                data-test="ongoingButton"
                                 endIcon={!isLaptop() ? <HelpIcon /> : <p />}
                             >
                                 {translations.button3text}
@@ -69,6 +72,7 @@ const ClientHome = () => {
                             <Button
                                 color='inherit'
                                 className={classes.button}
+                                data-test="inheritButton"
                                 href='/past'
                                 endIcon={!isLaptop() ? <HelpIcon /> : <p />}
                             >

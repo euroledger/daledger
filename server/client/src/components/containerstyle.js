@@ -42,6 +42,22 @@ export const useStyles = makeStyles(theme => ({
             fontSize: '1.2rem'
         }
     },
+    drawerButton: {
+        transition: '0.3s',
+        width: '130px',
+        textDecoration: 'none',
+        fontSize: '15px',
+        color: 'white',
+        borderRadius: '7px 7px 0 0',
+        transform: 'rotate(270deg) translateY(44px)',
+
+        zIndex: '1200',
+        background: 'black',
+        '&:hover': {
+            backgroundColor: '#616060'
+            // opacity: 0.4
+        },
+    },
     formButton: {
         marginTop: '2rem',
         display: 'block',
@@ -105,7 +121,7 @@ export const useStyles = makeStyles(theme => ({
             paddingLeft: 0,
             paddingRight: 0,
             fontSize: '0.6px',
-            marginTop: '17rem'
+            marginTop: '6rem'
         }
     },
     formfield: {
@@ -238,6 +254,7 @@ export const useStyles = makeStyles(theme => ({
     },
     areaForm: {
         display: 'flex',
+        position: 'relative',
         [theme.breakpoints.down('sm')]: {
             display: 'block'
         },
@@ -353,9 +370,19 @@ export const useStyles = makeStyles(theme => ({
         width: '73.5vw',
         [theme.breakpoints.down('sm')]: {
             width: '85vw',
+            // margin: 'auto',
             display: 'block',
             textAlign: 'center',
-            
+        }
+    },
+    fatableout: {
+        display: 'flex',
+        width: '61vw',
+        [theme.breakpoints.down('sm')]: {
+            width: '85vw',
+            display: 'block',
+            textAlign: 'center',
+
 
         }
     },
@@ -383,6 +410,22 @@ export const useStyles = makeStyles(theme => ({
             marginTop: '1rem'
         }
     },
+    fatoutdoors: {
+        width: '30rem',
+        'justifyContent': 'center',
+        margin: '0 auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '23rem'
+        }
+    },
+    fabuttons: {
+        display: 'flex',
+        marginTop: '-2rem',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            marginTop: '2rem'
+        }
+    },
     fainfopanelposition: {
         marginTop: '1rem',
         marginLeft: '4rem',
@@ -400,6 +443,19 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             marginLeft: '-4rem',
             width: '20rem'
+        }
+    },
+    facollapsestyling: {
+        position: 'absolute',
+        top: '40%',
+        left: '40%',
+        // marginTop: '10rem', 
+        // marginLeft: '-15rem', 
+        width: '20rem',
+        [theme.breakpoints.down('sm')]: {
+            top: '70%',
+            left: '10%',
+            // width: '20rem'
         }
     }
 }));

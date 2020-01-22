@@ -58,6 +58,11 @@ const Translations = () => {
             { name: 'medium', title: t('functionalarea.col3') },
             { name: 'large', title: t('functionalarea.col4') }
         ],
+        functionalareacolumnsoutdoors: [
+            { name: 'type', title: t('functionalarea.col1') },
+            { name: 'number', title: t('functionalarea.col5') },
+            { name: 'size', title: t('functionalarea.col6') },
+        ],
         functionalarearows: [
             t('functionalarea.row1'),
             t('functionalarea.row2'),
@@ -70,11 +75,24 @@ const Translations = () => {
             t('functionalarea.row9'),
             t('functionalarea.row10')
         ],
+        functionalareaoutdoorrows: [
+            t('functionalarea.outdoorrow1'),
+            t('functionalarea.outdoorrow2'),
+            t('functionalarea.outdoorrow3'),
+            t('functionalarea.outdoorrow4'),
+            t('functionalarea.outdoorrow5'),
+            t('functionalarea.outdoorrow6'),
+            t('functionalarea.outdoorrow7'),
+            t('functionalarea.outdoorrow8')
+        ],
         functionalAreaInstructions: t('functionalarea.instructions'),
+        functionalAreaOutdoorInstructions: t('functionalarea.instructionsoutdoor'),
         functionalAreaPanelLabel1: t('functionalarea.panellabel1'),
         functionalAreaPanelLabel2newspace: t('functionalarea.panellabel2newspace'),
         functionalAreaPanelLabel2remodel: t('functionalarea.panellabel2remodel'),
-        functionalAreaPanelLabel3: t('functionalarea.panellabel3'),
+        functionalAreaPanelLabel3indoors: t('functionalarea.panellabel3indoors'),
+        functionalAreaPanelLabel3outdoors: t('functionalarea.panellabel3outdoors'),
+        functionaAreaTableError: t('functionalarea.tableerror'),
         settingsLink: t('navbar.link5'),
         loginbuttonText: isLaptop() ? t('loginbuttontext') : t('loginbuttontext_m'),
         logoutbuttonText: t('logoutbuttontext'),

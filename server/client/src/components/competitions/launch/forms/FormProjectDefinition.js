@@ -113,7 +113,7 @@ const FormProjectDefinition = ({
                             <br></br>
                             <div className={classes.faautosize}>
                                 <Autocomplete
-                                    id='country-select-demo'
+                                    data-test='country-select'
                                     name='countries'
                                     options={countries}
                                     autoHighlight
@@ -157,12 +157,8 @@ const FormProjectDefinition = ({
                                     size='medium'
                                     type='submit'
                                     className={`${classes.button} ${classes.formButton} ${classes.buttonPos1}`}
-                                    // style={{
-                                    //     width: '12rem',
-                                    //     marginBottom: '1rem',
-                                    //     marginLeft: '24rem'
-                                    // }}
                                     disabled={isSubmitting}
+                                    data-test="homeButton"
                                 >
                                     {translations.homeButtonText}
                                 </Button>
@@ -170,11 +166,7 @@ const FormProjectDefinition = ({
                                     size='medium'
                                     type='submit'
                                     className={`${classes.button} ${classes.formButton}  ${classes.buttonPos2}`}
-                                    // style={{
-                                    //     width: '16rem',
-                                    //     marginBottom: '1rem',
-                                    //     marginRight: '24rem'
-                                    // }}
+                                    data-test="continueButton"
                                     disabled={isSubmitting}
                                 >
                                     {translations.continueButtonText}

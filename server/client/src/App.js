@@ -55,6 +55,11 @@ const GlobalCss = withStyles({
             fontFamily: 'inherit',
             userSelect: 'none'
         },
+        // size of editable table cells
+        // '.MuiInputBase-input': {
+        //     fontSize: '13px',
+        //     padding: 0
+        // }
     }
 })(() => null);
 

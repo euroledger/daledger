@@ -13,7 +13,7 @@ const ClientRegister = () => {
     const initialState = {
         firstName: '',
         lastName: '',
-        email : '',
+        email: '',
         loading: false,
         translations: translations
     };
@@ -68,61 +68,65 @@ const ClientRegister = () => {
                         handleSubmit,
                         isSubmitting
                     }) => (
-                        <form onSubmit={handleSubmit} autoComplete='off'>
-                            <div>
-                                <Field
-                                    className={classes.formfield}
-                                    label={translations.firstName}
-                                    name='firstName'
-                                    onBlur={handleBlur}
-                                    value={values.first}
-                                    component={TextField}
-                                />
+                            <form onSubmit={handleSubmit} autoComplete='off'>
+                                <div>
+                                    <Field
+                                        data-test='firstName'
+                                        className={classes.formfield}
+                                        label={translations.firstName}
+                                        name='firstName'
+                                        onBlur={handleBlur}
+                                        value={values.first}
+                                        component={TextField}
+                                    />
 
-                                <Spinner active={form.loading}></Spinner>
+                                    <Spinner active={form.loading}></Spinner>
 
-                                <Field
-                                    className={classes.formfield}
-                                    label={translations.lastName}
-                                    name='lastName'
-                                    onBlur={handleBlur}
-                                    value={values.last}
-                                    component={TextField}
-                                />
-                                 <Field
-                                    className={classes.formfield}
-                                    label="Email"
-                                    name='email'
-                                    onBlur={handleBlur}
-                                    value={values.email}
-                                    component={TextField}
-                                />
-                                <p
-                                    className={classes.labelText}
-                                    style={{
-                                        marginTop: '3rem'
-                                    }}
-                                >
-                                    {translations.text1}
-                                    <a href='/'>{translations.text2link}</a>
-                                    {translations.text3}
-                                    <a href='/'>
-                                        {' '}
-                                        {translations.text4link}
-                                    </a>{' '}
-                                    {translations.text5}
-                                </p>
-                                <Button
-                                    size='medium'
-                                    type='submit'
-                                    className={`${classes.button} ${classes.formButton}`}
-                                    disabled={isSubmitting}
-                                >
-                                    {translations.registerBtn}
-                                </Button>
-                            </div>
-                        </form>
-                    )}
+                                    <Field
+                                        data-test='lastName'
+                                        className={classes.formfield}
+                                        label={translations.lastName}
+                                        name='lastName'
+                                        onBlur={handleBlur}
+                                        value={values.last}
+                                        component={TextField}
+                                    />
+                                    <Field
+                                        data-test='email'
+                                        className={classes.formfield}
+                                        label="Email"
+                                        name='email'
+                                        onBlur={handleBlur}
+                                        value={values.email}
+                                        component={TextField}
+                                    />
+                                    <p
+                                        className={classes.labelText}
+                                        style={{
+                                            marginTop: '3rem'
+                                        }}
+                                    >
+                                        {translations.text1}
+                                        <a href='/'>{translations.text2link}</a>
+                                        {translations.text3}
+                                        <a href='/'>
+                                            {' '}
+                                            {translations.text4link}
+                                        </a>{' '}
+                                        {translations.text5}
+                                    </p>
+                                    <Button
+                                        size='medium'
+                                        type='submit'
+                                        data-test="registerButton"
+                                        className={`${classes.button} ${classes.formButton}`}
+                                        disabled={isSubmitting}
+                                    >
+                                        {translations.registerBtn}
+                                    </Button>
+                                </div>
+                            </form>
+                        )}
                 </Formik>
 
                 <p

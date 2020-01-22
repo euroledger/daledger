@@ -89,6 +89,8 @@
         "col2": "Small",
         "col3": "Medium",
         "col4": "Large",
+        "col5": "Number",
+        "col6": "Approx Size",
         "row1": "Living Rooms",
         "row2": "Kitchens",
         "row3": "Bathrooms",
@@ -99,11 +101,22 @@
         "row8": "Hallways",
         "row9": "Other-1",
         "row10": "Other-2",
+        "outdoorrow1": "Terraces",
+        "outdoorrow2": "Patios",
+        "outdoorrow3": "Gardens",
+        "outdoorrow4": "Backyards",
+        "outdoorrow5": "Pool Areas",
+        "outdoorrow6": "BBQ Areas",
+        "outdoorrow7": "Play Areas",
+        "outdoorrow8": "Other",
         "panellabel1": "Residential",
         "panellabel2newspace": "New Space",
         "panellabel2remodel": "Remodel",
-        "panellabel3": "Indoor",
-        "instructions": "Please select as many areas as apply to your project, integers between 0-9. If more than 1 room are identical in size, shape and design, please introduce 1. If you need design for a part of a room, please choose the category “Small”. The information in this section is also used to estimate the cost of your design. Identical areas will be charged as one single area. Please edit the \"other\" labels as required."
+        "panellabel3indoors": "Indoor",
+        "panellabel3outdoors": "Outdoor",
+        "instructions": "Please select as many areas as apply to your project, integers between 0-9. If more than 1 room are identical in size, shape and design, please introduce 1. If you need design for a part of a room, please choose the category “Small”. The information in this section is also used to estimate the cost of your design. Identical areas will be charged as one single area. Please edit the \"other\" labels as required.",
+        "instructionsoutdoor": "Please provide the total approx. sqm size by functional area; e.g., for two terraces of 10sqm each, the approx size is 20sqm. Number of functional areas is optional. If 2 or more areas are identical in size, shape and design, please introduce one-unit size. The information in this section is also used to estimate the cost of your design. Please edit the \"other\" label as required.",
+        "tableerror": "non-zero rows must both contain number and size"
     },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
 

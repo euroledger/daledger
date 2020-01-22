@@ -1,8 +1,8 @@
 body {
-  margin: 0;
-  /* font-family: 'Architects Daughter', cursive; */
-  font-family: 'Josefin Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-stroke: 1px transparent;
-}
+    margin: 0;
+    /* font-family: 'Architects Daughter', cursive; */
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 1px transparent;
+  }

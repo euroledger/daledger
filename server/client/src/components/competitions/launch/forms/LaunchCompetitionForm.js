@@ -3,12 +3,14 @@ import ProfileContext from '../../../../ProfileContext';
 import TableData from './data/FunctionalAreaTableData';
 import FormProjectDefinition from './FormProjectDefinition';
 import FormFunctionalAreas from './functionalareas/FormFunctionalAreas';
+import FormProjectInfo from './FormProjectInfo';
 
 const LaunchCompetitionForm = () => {
     const { translations } = useContext(ProfileContext);
 
-    const { rows, rowsRight } = TableData(translations);
+    const { rows, rowsRight, outdoorRows } = TableData(translations);
 
+    // console.log("MEOW rows = ", outdoorRows);
     const initialState = {
         step: 1,
         space: 'residential',
@@ -19,6 +21,7 @@ const LaunchCompetitionForm = () => {
         loading: false,
         rows: rows,
         rowsRight: rowsRight,
+        outdoorRows: outdoorRows,
         translations: translations
     };
     const [form, setValues] = useState(initialState);
@@ -43,9 +46,14 @@ const LaunchCompetitionForm = () => {
             setValues(prevState => {
                 return { ...prevState, rows: changedRows };
             });
-        } else {
+        } else if (side=== "right") {
             setValues(prevState => {
                 return { ...prevState, rowsRight: changedRows };
+            });
+        } else {
+            console.log("CLUCKKKKK: changedRows: ", changedRows)
+            setValues(prevState => {
+                return { ...prevState, outdoorRows: changedRows };
             });
         }
 
@@ -62,6 +70,7 @@ const LaunchCompetitionForm = () => {
     };
     const handleSubmit = (values, setSubmitting, resetForm) => {
         // values.loading = true;
+
         setValues(prevState => {
             return { ...prevState, ...values };
         });
@@ -96,22 +105,23 @@ const LaunchCompetitionForm = () => {
                     rows={form.rows}
                     rowsRight={form.rowsRight}
                     columns={translations.functionalareacolumns}
+                    outdoorRows={form.outdoorRows}
+                    outdoorColumns={translations.functionalareacolumnsoutdoors}
                     handleRowUpdate={handleRowUpdate}
                     handleSubmit={handleSubmit}
                     handleChange={handleChange}
                     values={form}
                     objective={form.objective === 'newspace' ? translations.functionalAreaPanelLabel2newspace : translations.functionalAreaPanelLabel2remodel}
+                    indooroutdoor={form.indooroutdoor}
                 ></FormFunctionalAreas>
             );
         case 3:
-            return <h1>FormCompetitionScope1</h1>;
+            return <FormProjectInfo/>;
         case 4:
-            return <h1>FormCompetitionScope2</h1>;
-        case 5:
             return <h1>FormCompetitionStyle</h1>;
-        case 6:
+        case 5:
             return <h1>Confirm</h1>;
-        case 7:
+        case 6:
             return <h1>Success</h1>;
         default: {
             console.log("Error: unexpected step: ", step);
