@@ -3,8 +3,6 @@ import { useStyles } from '../../../containerstyle';
 import Button from '@material-ui/core/Button';
 import ProfileContext from '../../../../ProfileContext';
 import { Formik, Field, Form } from 'formik';
-import { TextField } from 'formik-material-ui';
-// import TextField from '@material-ui/core/TextField';
 import * as Yup from 'yup';
 import ButtonGroup from './controls/ButtonGroup';
 import FormButtonPanel from './controls/FormButtonPanel';
@@ -76,8 +74,8 @@ const FormProjectInfo = ({
         name: Yup.string()
             .max(64, translations.error1Text)
             .required(translations.error2Text),
-        budget: Yup.string().
-            matches(/^\d{1,3}(,\d{3})*(\.\d+)?$/, "must be a comma delimited number")
+        budget: Yup.string()
+            .matches(/^\d{1,3}(,\d{3})*(\.\d+)?$/, "must be a comma delimited number")
             .required(translations.error2Text)
     });
 
@@ -99,7 +97,7 @@ const FormProjectInfo = ({
     };
 
     const handleFileDelete = (target, values) => {
-            const changedFiles = values.uploadedfiles.filter(file => file.name != target.name);
+            const changedFiles = values.uploadedfiles.filter(file => file.name !== target.name);
             handleFileUpdate(changedFiles);
     };
 

@@ -11,7 +11,6 @@ import FormButtonPanel from './controls/FormButtonPanel';
 
 const FormProjectStyle = ({
     handleSubmit,
-    handleChange,
     prevStep,
     values
 }) => {
@@ -25,20 +24,8 @@ const FormProjectStyle = ({
         country: Yup.string().required(translations.error2Text)
     });
 
-    let buttonFocus;
-
-    const setFocus = (focus) => {
-        buttonFocus = focus;
-    }
     const submit = (values) => {
-
-        console.log("button focus = ", buttonFocus);
-        console.log("values = ", values)
-        if (buttonFocus === "prev") {
-            prevStep(values);
-        } else {
-            handleSubmit(values)
-        }
+        handleSubmit(values)
     }
 
     return (

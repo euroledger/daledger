@@ -41,24 +41,12 @@ const LaunchCompetitionForm = () => {
     };
 
     const prevStep = () => {
-        console.log("PREV YES !!!")
         const { step } = form;
         setValues(prevState => {
             return { ...prevState, step: step - 1 };
         });
     };
 
-    const prevStep2 = (values) => {
-        console.log("PISS OFF values = ", values)
-        const { step } = form;
-        setValues(prevState => {
-            return { ...prevState, ...values };
-        });
-        setValues(prevState => {
-            return { ...prevState, step: step - 1 };
-        });
-
-    };
 
     const handleFileUpdate = (changedFiles) => {
         setValues(prevState => {
@@ -159,7 +147,7 @@ const LaunchCompetitionForm = () => {
                 <FormProjectInfo
                     handleSubmit={handleSubmit}
                     handleChange={handleChange}
-                    prevStep={prevStep2}
+                    prevStep={prevStep}
                     values={form}
                     setFieldValue={setFieldValue}
                     setFieldValue2={setFieldValue2}
@@ -170,7 +158,7 @@ const LaunchCompetitionForm = () => {
             return <FormProjectStyle
                 handleSubmit={handleSubmit}
                 handleChange={handleChange}
-                prevStep={prevStep2}
+                prevStep={prevStep}
                 values={form}
                 setFieldValue={setFieldValue}
             ></FormProjectStyle>
