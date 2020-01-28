@@ -4,6 +4,7 @@ import TableData from './data/FunctionalAreaTableData';
 import FormProjectDefinition from './FormProjectDefinition';
 import FormFunctionalAreas from './functionalareas/FormFunctionalAreas';
 import FormProjectInfo from './FormProjectInfo';
+import FormProjectStyle from './FormProjectStyle';
 
 const LaunchCompetitionForm = () => {
     const { translations } = useContext(ProfileContext);
@@ -22,6 +23,11 @@ const LaunchCompetitionForm = () => {
         rows: rows,
         rowsRight: rowsRight,
         outdoorRows: outdoorRows,
+        urgency: 'fast',
+        name: '',
+        budget: '',
+        uploadedfiles: [],
+        requirements: '',
         translations: translations
     };
     const [form, setValues] = useState(initialState);
@@ -35,23 +41,41 @@ const LaunchCompetitionForm = () => {
     };
 
     const prevStep = () => {
+        console.log("PREV YES !!!")
         const { step } = form;
         setValues(prevState => {
             return { ...prevState, step: step - 1 };
         });
     };
 
+    const prevStep2 = (values) => {
+        console.log("PISS OFF values = ", values)
+        const { step } = form;
+        setValues(prevState => {
+            return { ...prevState, ...values };
+        });
+        setValues(prevState => {
+            return { ...prevState, step: step - 1 };
+        });
+
+    };
+
+    const handleFileUpdate = (changedFiles) => {
+        setValues(prevState => {
+            return { ...prevState, uploadedfiles: changedFiles };
+        });
+    }
+
     const handleRowUpdate = (side, changedRows) => {
         if (side === "left") {
             setValues(prevState => {
                 return { ...prevState, rows: changedRows };
             });
-        } else if (side=== "right") {
+        } else if (side === "right") {
             setValues(prevState => {
                 return { ...prevState, rowsRight: changedRows };
             });
         } else {
-            console.log("CLUCKKKKK: changedRows: ", changedRows)
             setValues(prevState => {
                 return { ...prevState, outdoorRows: changedRows };
             });
@@ -59,15 +83,30 @@ const LaunchCompetitionForm = () => {
 
     }
     const handleChange = (input, e) => {
+        console.log("values =", form);
         const { value } = e.target;
         setValues({ ...form, [input]: value });
     };
 
+    
+    const setFieldValue = (input, value) => {
+        console.log("BARF SETTING value=", value);
+        // setValues({ ...form, [input]: value });
+        setValues({ ...form, [input]: value });
+        console.log("form=", form);
+    }
+    const setFieldValue2 = (input, value) => {
+        console.log("BARF SETTING value=", value);
+        // setValues({ ...form, [input]: value });
+        setValues({ ...form, budget: value });
+        console.log("form=", form);
+    }
     const setCountry = value => {
         setValues(prevState => {
             return { ...prevState, country: value == null ? '' : value.code };
         });
     };
+
     const handleSubmit = (values, setSubmitting, resetForm) => {
         // values.loading = true;
 
@@ -116,9 +155,25 @@ const LaunchCompetitionForm = () => {
                 ></FormFunctionalAreas>
             );
         case 3:
-            return <FormProjectInfo/>;
+            return (
+                <FormProjectInfo
+                    handleSubmit={handleSubmit}
+                    handleChange={handleChange}
+                    prevStep={prevStep2}
+                    values={form}
+                    setFieldValue={setFieldValue}
+                    setFieldValue2={setFieldValue2}
+                    handleFileUpdate={handleFileUpdate}
+                ></FormProjectInfo>
+            );
         case 4:
-            return <h1>FormCompetitionStyle</h1>;
+            return <FormProjectStyle
+                handleSubmit={handleSubmit}
+                handleChange={handleChange}
+                prevStep={prevStep2}
+                values={form}
+                setFieldValue={setFieldValue}
+            ></FormProjectStyle>
         case 5:
             return <h1>Confirm</h1>;
         case 6:

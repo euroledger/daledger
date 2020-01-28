@@ -1,5 +1,21 @@
 import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(theme => ({
+    root: {
+        padding: '2px 4px',
+        display: 'flex',
+        alignItems: 'center',
+        width: 350,
+    },
+    input: {
+        marginLeft: theme.spacing(1),
+        flex: 1,
+    },
+    iconButton: {
+        marginLeft: '50px',
+    },
+    deletebutton: {
+        marginLeft: '-4rem'
+    },
     container: {
         height: '91vh',
         // width: '100vw',
@@ -137,7 +153,7 @@ export const useStyles = makeStyles(theme => ({
             // width: '80%',
             // display: 'flex',
             // 'flexDirection': 'column',
-            'justifyContent': 'center',
+            justifyContent: 'center',
             margin: '0 auto'
         }
     },
@@ -163,9 +179,9 @@ export const useStyles = makeStyles(theme => ({
     link: {
         color: 'blue'
     },
-    input: {
-        color: 'white'
-    },
+    // input: {
+    //     color: 'white'
+    // },
     panel: {
         position: 'absolute',
         top: '50%',
@@ -244,6 +260,16 @@ export const useStyles = makeStyles(theme => ({
     },
     formdefspacing: {
         marginTop: '5rem',
+        // width: '98vw',
+        // marginLeft: '-9rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '11rem',
+            width: '92vw',
+            marginLeft: 0
+        },
+    },
+    forminfospacing: {
+        marginTop: '2rem',
         // width: '98vw',
         // marginLeft: '-9rem',
         [theme.breakpoints.down('sm')]: {
@@ -412,7 +438,7 @@ export const useStyles = makeStyles(theme => ({
     },
     fatoutdoors: {
         width: '30rem',
-        'justifyContent': 'center',
+        justifyContent: 'center',
         margin: '0 auto',
         [theme.breakpoints.down('sm')]: {
             width: '23rem'
@@ -433,7 +459,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             marginTop: '2rem',
             width: '10rem',
-            'justifyContent': 'center',
+            justifyContent: 'center',
             margin: '0 auto'
         }
     },
@@ -456,6 +482,147 @@ export const useStyles = makeStyles(theme => ({
             top: '70%',
             left: '10%',
             // width: '20rem'
+        }
+    },
+    projectinfopanel: {
+        width: '30rem',
+        fontSize: '1.0rem',
+        marginTop: '1rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '23rem',
+        }
+    },
+    projectinfotext: {
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '0 auto',
+        minWidth: '32rem',
+        fontSize: '0.8rem',
+        marginTop: '0.5rem',
+        [theme.breakpoints.down('sm')]: {
+            minWidth: 0
+        }
+    },
+    projectinfotext2: {
+        maxWidth: '20rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '11rem',
+        }
+    },
+    pisummarypanelposition: {
+        marginTop: '1rem',
+        marginLeft: '1.5rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '2rem',
+            marginRight: '2rem'
+        }
+    },
+    piformpanel2: {
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        borderRadius: '18px',
+        marginTop: '2rem',
+        backgroundColor: '#E9E7E7',
+        borderColor: 'black',
+        color: 'black',
+        opacity: 0.8,
+        marginLeft: '-8rem',
+        marginRight: '-7rem',
+        // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
+        [theme.breakpoints.down('sm')]: {
+            // maxWidth: '25rem',
+            // height: '70%',
+            height: 'fit-content',
+            paddingLeft: 0,
+            paddingRight: 0,
+            fontSize: '0.6px',
+            marginTop: '9rem',
+            justifyContent: 'center',
+            margin: '0 auto'
+        },
+        [theme.breakpoints.only('md')]: {
+            // maxWidth: '25rem',
+            // height: '70%',
+
+            paddingLeft: 0,
+            paddingRight: 0,
+            justifyContent: 'center',
+            margin: '0 auto'
+        }
+    },
+    pilistpanel: {
+        maxWidth: '25rem',
+        marginTop: '2rem',
+        marginLeft: '6rem',
+        [theme.breakpoints.down('sm')]: {
+            // width: '60rem',
+            marginLeft: '1rem',
+            width: '24rem'
+        }
+    },
+    pifield: {
+        width: '40rem',
+        marginRight: '2rem',
+        [theme.breakpoints.down('sm')]: {
+            // width: '60rem',
+            marginRight: '0',
+            width: '20rem'
+        }
+    },
+    pifieldpanel: {
+        display: 'flex',
+        marginTop: '-3.5rem',
+        width: '68vw',
+        justifyContent: 'center',
+        margin: '0 auto',
+        height: '5rem',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+            width: '93vw',
+            height: '7rem',
+            justifyContent: 'center',
+            margin: '0 auto',
+            marginTop: '4rem'
+        }
+    },
+    pirequirements: {
+        marginTop: '0rem',
+        marginLeft: '2rem',
+        marginRight: '3rem',
+        height: '23rem',
+        width: '25rem',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center',
+            margin: '0 auto',
+            marginTop: '3rem',
+            height: '10rem',
+        }
+    },
+    pitextarea: {
+        marginLeft: '0rem',
+        marginTop: '-2.5rem',
+        width: '18vw',
+        [theme.breakpoints.down('sm')]: {
+            width: '20rem'
+        }
+    },
+    pibuttons: {
+        marginTop: '1rem'
+    },
+    piuploadbutton: {
+        backgroundColor: 'black',
+        '&:hover': {
+            backgroundColor: '#616060'
+            // opacity: 0.4
+        },
+    },
+    piheader: {
+        marginTop: '1rem',
+        fontSize: '1.0rem',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center',
+            margin: '0 auto',
+            width: '23rem'
         }
     }
 }));

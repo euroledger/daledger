@@ -5,7 +5,7 @@ import ProfileContext from '../../../../ProfileContext';
 import { Formik, Field } from 'formik';
 import { TextField } from 'formik-material-ui';
 import * as Yup from 'yup';
-import ButtonGroup from './ButtonGroup';
+import ButtonGroup from './controls/ButtonGroup';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import countriesEN from './data/countriesEN';
 import countriesRO from './data/countriesRO';
@@ -37,7 +37,6 @@ const FormProjectDefinition = ({
         country: Yup.string().required(translations.error2Text)
     });
 
-    // TODO move into the translation locale files
     const spaceButtonItems = [
         { value: 'residential', label: translations.projectDefinitionCountryRadio1Option1 },
         { value: 'commercial', label: translations.projectDefinitionCountryRadio1Option2 }

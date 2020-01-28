@@ -118,6 +118,23 @@
         "instructionsoutdoor": "Please provide the total approx. sqm size by functional area; e.g., for two terraces of 10sqm each, the approx size is 20sqm. Number of functional areas is optional. If 2 or more areas are identical in size, shape and design, please introduce one-unit size. The information in this section is also used to estimate the cost of your design. Please edit the \"other\" label as required.",
         "tableerror": "non-zero rows must both contain number and size"
     },
+    "projectinfo": {
+        "title": "Project Info",
+        "urgencytitle": "When do you need your design?",
+        "urgencybutton1label": "Urgent (5 days)",
+        "urgencybutton2label": "Fast (10 days)",
+        "urgencybutton3label": "Standard (20 days)",
+        "urgencybutton4label": "Plenty of Time (30 days)",
+        "urgencybutton5label": "I don't have a deadline",
+        "fileinstructions":  "Do you have any images, drawings, plans or other documents that might be helpful?",
+        "fileextrainfo": "Don't worry if you do not have those ready yet. You can always upload these later in the process (on the project wall)",
+        "filebutton": "Add Files",
+        "requirementsinstructions": "Are their special requirements, preferences, dos and don’ts you would like to communicate to designers?",
+        "requirementstitle": "Special Requirements (optional)",
+        "requirementsplaceholder": "Presence of small children, elderly or disabled people, favourite colours or materials, immovable elements, furniture you want to keep etc.",
+        "projectbudget": "Project Overall Budget (optional, in euros)",
+        "projectname": "Project Name (max 64 characters)"
+    },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
 
 

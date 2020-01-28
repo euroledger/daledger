@@ -12,11 +12,13 @@ import { makeStyles } from "@material-ui/core/styles";
 const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) => {
     const [value, setValue] = React.useState(selected);
 
+    // const buttonRef = React.createRef();
+
     const handleChange = event => {
         setValue(event.target.value);
         onChange(name, event)
     };
-    
+
     const useStyles = makeStyles({
         root: {
             // component default is "inline-flex", using "flex" makes the
@@ -43,8 +45,13 @@ const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) 
                     <FormControlLabel
                         key={item.value}
                         value={item.value}
-                        control={<Radio data-test={`${name}-${item.value}`}/>}
+                        onClick={() => {
+                            // console.log("QUACK buttonRef=", myref.current)
+                            // form.current.dispatchEvent(new Event('submit'));
+                        }}
+                        control={<Radio data-test={`${name}-${item.value}`} />}
                         label={item.label}
+                        // ref={buttonRef}
                         // labelPlacement="start"
                         classes={classes}
 

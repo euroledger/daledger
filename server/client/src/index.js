@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 import reduxThunk from 'redux-thunk';
-import './language/i18n';
+import './components/language/i18n';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 

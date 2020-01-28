@@ -60,7 +60,7 @@
         "sidebar3": "Vă trebuie să răspundeți până la 15 întrebări. Va dura între 30 de minute până la nevoie pentru a lansa competiția dvs. perfectă. Mai multe detalii pot fi clarificate cu designerii de pe peretele proiectului, dar mai multe detalii pe care le oferiți în avans, mai atractiv devine competiția dvs.",
         "sidebar4": "Rețineți că, până la momentul lansării, puteți găsi întotdeauna schița pentru editare ulterioară.",
         "previousbuttontext": "Anterior",
-        "homepagebuttontext": "Pagina principala",
+        "homepagebuttontext": "Pagina Principala",
         "continuebuttontext": "Continua"
     },
     "projectdefinition": {
@@ -116,6 +116,23 @@
         "instructions": "Vă rugăm să selectați cât mai multe domenii aplicați pentru proiectul dvs., întregi între 0-9. Dacă sunt mai mult de 1 cameră identice ca mărime, formă și design, vă rugăm să introduceți 1. Dacă aveți nevoie proiectare pentru o parte dintr-o cameră, vă rog alege categoria „Mic”. informațiile din această secțiune sunt de asemenea folosit pentru a estima costul dvs. proiecta. Zonele identice vor fi taxat ca o singură zonă. Vă rugăm să editați etichetele „alte”, după cum este necesar.",
         "instructionsoutdoor": "Vă rugăm să furnizați o suprafață totală de aproximativ mp pe suprafață funcțională; de exemplu, pentru două terase de 10 mp fiecare, dimensiunea de aproximativ 20 mp. Numărul de zone funcționale este opțional. Dacă mai mult de o suprafață sunt identice ca mărime, formă și design, Vă rugăm să introduceți dimensiunea unei unități. Informațiile din această secțiune sunt de asemenea utilizate pentru a estima costul proiectării dvs. Vă rugăm să editați etichetele \"alte \", după cum este necesar.",
         "tableerror": "rândurile non-zero trebuie să conțină atât numărul cât și dimensiunea"
+    },
+    "projectinfo": {
+        "title": "Informații Despre Proiect",
+        "urgencytitle": "Când ai nevoie de designul tău?",
+        "urgencybutton1label": "Urgent (5 zile)",
+        "urgencybutton2label": "Repede (10 zile)",
+        "urgencybutton3label": "Standard (20 zile)",
+        "urgencybutton4label": "Mult timp (30 zile)",
+        "urgencybutton5label": "Nu am termen",
+        "fileinstructions": "Aveți imagini, desene, planuri sau alte documente care ar putea fi utile?",
+        "fileextrainfo": "Nu vă faceți griji dacă nu le aveți încă pregătite. Puteți încărca aceste date mai târziu în proces (pe peretele proiectului)",
+        "filebutton": "Adăugați Fișiere",
+        "requirementsinstructions": "Cerințele lor speciale, preferințele, dozele și nu doriți să le comunicați proiectanților?",
+        "requirementstitle": "Cerințe speciale (opțional)",
+        "requirementsplaceholder": "Prezența copiilor mici, a persoanelor în vârstă sau a persoanelor cu handicap, culori sau materiale preferate, elemente imobile, mobilier pe care vrei să îl păstrezi etc.",
+        "projectbudget": "Bugetul general al proiectului (opțional, în euro)",
+        "projectname": "Numele proiectului (maxim 64 de caractere)"
     },
     "temp": "ești logat...pagina in constructie"
 }

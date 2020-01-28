@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 import { useStyles } from '../../../../containerstyle';
-import Button from '@material-ui/core/Button';
 import ProfileContext from '../../../../../ProfileContext';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import FunctionalAreaTable from './MyEditableTable';
-import SummaryPanel from './SummaryPanel';
+import SummaryPanel from '../controls/SummaryPanel';
 import InfoPanel from './InfoPanel';
-import ButtonGroup from '../ButtonGroup';
+import ButtonGroup from '../controls/ButtonGroup';
 import IconButton from '@material-ui/core/IconButton';
 import Collapse from '@material-ui/core/Collapse';
 import CloseIcon from '@material-ui/icons/Close';
 import Alert from '@material-ui/lab/Alert';
+import FormButtonPanel from '../controls/FormButtonPanel';
 
 const FormFunctionalAreas = ({
     prevStep,
@@ -170,56 +170,10 @@ const FormFunctionalAreas = ({
 
                             <br></br>
 
-                            <div className={classes.fabuttons} >
-                                <Button
-                                    size='medium'
-                                    // type='submit'
-                                    onClick={prevStep}
-                                    className={`${classes.button} ${classes.formButton}`}
-                                    style={{
-                                        width: '12rem',
-                                        marginBottom: '1rem'
-                                    }}
-                                    disabled={isSubmitting}
-                                >
-                                    {translations.prevButtonText}
-                                </Button>
-                                <Button
-                                    size='medium'
-                                    type='submit'
-                                    className={`${classes.button} ${classes.formButton}`}
-                                    style={{
-                                        width: '12rem',
-                                        marginBottom: '1rem'
-                                        // marginLeft: '24rem'
-                                    }}
-                                    disabled={isSubmitting}
-                                >
-                                    {translations.homeButtonText}
-                                </Button>
-                                <Button
-                                    size='medium'
-                                    type='submit'
-                                    variant="outlined"
-                                    // onClick={() => {
-                                    //     validateRows(indoors)
-                                    // }}
-                                    className={`${classes.button} ${classes.formButton}`}
-                                    style={{
-                                        width: '12rem',
-                                        marginBottom: '1rem',
-                                        borderColor: 'white',
-                                        borderStyle: 'solid',
-                                        borderWidth: '2px',
-                                        // marginRight: '24rem'
-                                    }}
-                                // disabled={isSubmitting}
-                                >
-                                    {translations.continueButtonText}
-                                </Button>
-
-                                {/* <Alert severity="error">This is an error message!</Alert> */}
-                            </div>
+                            <FormButtonPanel
+                                isSubmitting={isSubmitting}
+                                prevStep={prevStep}
+                            ></FormButtonPanel>
                         </div>
                     </form>
                 )}
