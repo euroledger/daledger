@@ -488,7 +488,8 @@ export const useStyles = makeStyles(theme => ({
         fontSize: '1.0rem',
         marginTop: '1rem',
         [theme.breakpoints.down('sm')]: {
-            width: '23rem',
+            width: 'auto',
+            marginRight: '2rem'
         }
     },
     pspanel: {
