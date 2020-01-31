@@ -71,7 +71,7 @@ const FormProjectDefinition = ({
                 }}
             >
                 {({ values, handleBlur, handleSubmit, isSubmitting }) => (
-                    <form onSubmit={handleSubmit} autoComplete='off'>
+                    <form onSubmit={handleSubmit} autoComplete='xxx'>
                         <div>
                             <div className={classes.radiobutton1}>
                                 <div
@@ -115,7 +115,6 @@ const FormProjectDefinition = ({
                                     data-test='country-select'
                                     name='countries'
                                     options={countries}
-                                    autoHighlight
                                     getOptionLabel={option => option.label}
                                     renderOption={option => (
                                         <React.Fragment>
@@ -128,14 +127,14 @@ const FormProjectDefinition = ({
                                     }}
                                     renderInput={params => (
                                         <Field
+                                            autoComplete='xxx'
                                             {...params}
                                             label={translations.projectDefinitionCountryTitle}
                                             variant='outlined'
                                             fullWidth
-                                            autoComplete='disabled'
                                             inputProps={{
                                                 ...params.inputProps,
-                                                autoComplete: 'disabled' // disable autocomplete and autofill
+                                                // autoComplete: 'xxx' // disable autocomplete and autofill
                                             }}
                                             className={classes.formfieldauto}
                                             name='country'

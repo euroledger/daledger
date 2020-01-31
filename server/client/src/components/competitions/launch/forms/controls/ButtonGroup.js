@@ -21,15 +21,7 @@ const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) 
 
     const useStyles = makeStyles({
         root: {
-            // component default is "inline-flex", using "flex" makes the
-            // label + control group use the entire width of the parent element
-            display: display,
-            // component default is "flex-start", using "space-between" pushes
-            // both flexed content to the right and left edges of the flexbox
-            // Note: the content is aligned to the right by default because
-            // the 'labelPlacement="start"' component prop changes the flexbox
-            // direction to "row-reverse"
-            // justifyContent: "space-between",
+            display: display
         },
     });
     const classes = useStyles();
@@ -45,16 +37,9 @@ const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) 
                     <FormControlLabel
                         key={item.value}
                         value={item.value}
-                        onClick={() => {
-                            // console.log("QUACK buttonRef=", myref.current)
-                            // form.current.dispatchEvent(new Event('submit'));
-                        }}
                         control={<Radio data-test={`${name}-${item.value}`} />}
                         label={item.label}
-                        // ref={buttonRef}
-                        // labelPlacement="start"
                         classes={classes}
-
                     />
                 ))}
             </RadioGroup>

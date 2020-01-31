@@ -5,13 +5,13 @@ import FormProjectDefinition from './FormProjectDefinition';
 import FormFunctionalAreas from './functionalareas/FormFunctionalAreas';
 import FormProjectInfo from './FormProjectInfo';
 import FormProjectStyle from './FormProjectStyle';
+import FormProjectSummary from './FormProjectSummary';
 
 const LaunchCompetitionForm = () => {
     const { translations } = useContext(ProfileContext);
 
     const { rows, rowsRight, outdoorRows } = TableData(translations);
 
-    // console.log("MEOW rows = ", outdoorRows);
     const initialState = {
         step: 1,
         space: 'residential',
@@ -28,6 +28,9 @@ const LaunchCompetitionForm = () => {
         budget: '',
         uploadedfiles: [],
         requirements: '',
+        // style: '',
+        styleId: -1,
+        uploadedphotos: [],
         translations: translations
     };
     const [form, setValues] = useState(initialState);
@@ -37,7 +40,6 @@ const LaunchCompetitionForm = () => {
         setValues(prevState => {
             return { ...prevState, step: step + 1 };
         });
-        // console.log('in nextStep: values= ', form);
     };
 
     const prevStep = () => {
@@ -48,9 +50,9 @@ const LaunchCompetitionForm = () => {
     };
 
 
-    const handleFileUpdate = (changedFiles) => {
+    const handleFileUpdate = (field, changedFiles) => {
         setValues(prevState => {
-            return { ...prevState, uploadedfiles: changedFiles };
+            return { ...prevState, [field]: changedFiles };
         });
     }
 
@@ -71,23 +73,20 @@ const LaunchCompetitionForm = () => {
 
     }
     const handleChange = (input, e) => {
-        console.log("values =", form);
         const { value } = e.target;
         setValues({ ...form, [input]: value });
+
+        // if the indoor outdoor button selection changes reset the style back to its default 
+        if (input === 'indooroutdoor') {
+            setValues(prevState => {
+                return { ...prevState, styleId: -1 };
+            });
+        }
     };
 
-    
+
     const setFieldValue = (input, value) => {
-        console.log("BARF SETTING value=", value);
-        // setValues({ ...form, [input]: value });
         setValues({ ...form, [input]: value });
-        console.log("form=", form);
-    }
-    const setFieldValue2 = (input, value) => {
-        console.log("BARF SETTING value=", value);
-        // setValues({ ...form, [input]: value });
-        setValues({ ...form, budget: value });
-        console.log("form=", form);
     }
     const setCountry = value => {
         setValues(prevState => {
@@ -150,7 +149,6 @@ const LaunchCompetitionForm = () => {
                     prevStep={prevStep}
                     values={form}
                     setFieldValue={setFieldValue}
-                    setFieldValue2={setFieldValue2}
                     handleFileUpdate={handleFileUpdate}
                 ></FormProjectInfo>
             );
@@ -161,9 +159,14 @@ const LaunchCompetitionForm = () => {
                 prevStep={prevStep}
                 values={form}
                 setFieldValue={setFieldValue}
+                handleFileUpdate={handleFileUpdate}
             ></FormProjectStyle>
         case 5:
-            return <h1>Confirm</h1>;
+            return <FormProjectSummary
+                handleSubmit={handleSubmit}
+                prevStep={prevStep}
+                values={form}
+            ></FormProjectSummary>
         case 6:
             return <h1>Success</h1>;
         default: {

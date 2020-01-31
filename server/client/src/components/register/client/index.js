@@ -68,9 +68,10 @@ const ClientRegister = () => {
                         handleSubmit,
                         isSubmitting
                     }) => (
-                            <form onSubmit={handleSubmit} autoComplete='off'>
+                            <form onSubmit={handleSubmit} autoComplete='bollocks'>
                                 <div>
                                     <Field
+                                        autoComplete='firstName'
                                         data-test='firstName'
                                         className={classes.formfield}
                                         label={translations.firstName}
@@ -83,6 +84,7 @@ const ClientRegister = () => {
                                     <Spinner active={form.loading}></Spinner>
 
                                     <Field
+                                        autoComplete='xxx'
                                         data-test='lastName'
                                         className={classes.formfield}
                                         label={translations.lastName}
@@ -92,6 +94,7 @@ const ClientRegister = () => {
                                         component={TextField}
                                     />
                                     <Field
+                                        // autoComplete='xxx'
                                         data-test='email'
                                         className={classes.formfield}
                                         label="Email"

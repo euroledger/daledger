@@ -76,18 +76,20 @@ const FormFunctionalAreas = ({
                 <>
                     <div className={classes.fatable}>
                         <div>
-                            <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left" indoors={indoors}></FunctionalAreaTable>
+                            <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left" indoors={indoors}>
+                            </FunctionalAreaTable>
                         </div>
 
                         <div className={classes.fatableright}>
-                            <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate} side="right" indoors={indoors}></FunctionalAreaTable>
+                            <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate}             side="right" indoors={indoors}>
+                            </FunctionalAreaTable>
                         </div>
                         <div className={classes.fainfopanelposition}>
                             <InfoPanel />
                             <div className={classes.fabuttonpanel}>
                                 <ButtonGroup
                                     title={translations.projectCoverageTitle}
-                                    selected='true'
+                                    selected={values.entireprop}
                                     buttonItems={buttonItems}
                                     onChange={handleChange}
                                     name='entireprop'
@@ -130,7 +132,7 @@ const FormFunctionalAreas = ({
                 }}
             >
                 {({ values, handleBlur, handleSubmit, isSubmitting }) => (
-                    <form onSubmit={handleSubmit} autoComplete='off'>
+                    <form onSubmit={handleSubmit} autoComplete='xxxx'>
                         <div>
                             <div className={classes.areaForm}>
                                 <div className={classes.summaryPanelPosition}>

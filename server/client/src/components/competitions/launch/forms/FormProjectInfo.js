@@ -57,6 +57,7 @@ const FormProjectInfo = ({
     const indoors = values.indooroutdoor === 'indoor';
 
 
+    // TODO move this to own component
     const MyTextField = (props) => {
         const id = props.field.name;
         return (
@@ -76,7 +77,6 @@ const FormProjectInfo = ({
             .required(translations.error2Text),
         budget: Yup.string()
             .matches(/^\d{1,3}(,\d{3})*(\.\d+)?$/, "must be a comma delimited number")
-            .required(translations.error2Text)
     });
 
     const urgencyButtonItems = [
@@ -92,7 +92,7 @@ const FormProjectInfo = ({
         fileReader.onload = (e) => {
             const fileList = values.uploadedfiles;
             fileList.push(target.files[0]);
-            handleFileUpdate(fileList);
+            handleFileUpdate("uploadedfiles", fileList);
         };
     };
 
@@ -137,7 +137,7 @@ const FormProjectInfo = ({
                                 <div className={classes.pisummarypanelposition}>
                                     <SummaryPanel objective={objective} indoors={indoors} />
                                 </div>
-                                <div className={classes.radiobutton1}>
+                                <div className={classes.piradiobutton}>
                                     <div
                                         className={classes.button1}
                                     >

@@ -149,10 +149,6 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '7rem',
         width: '80%',
         [theme.breakpoints.down('sm')]: {
-            // marginLeft: '2rem',
-            // width: '80%',
-            // display: 'flex',
-            // 'flexDirection': 'column',
             justifyContent: 'center',
             margin: '0 auto'
         }
@@ -355,8 +351,11 @@ export const useStyles = makeStyles(theme => ({
         fontSize: '1.2rem',
         color: 'white',
         height: '20rem',
+        maxWidth: '11rem',
         [theme.breakpoints.down('sm')]: {
-            height: '8rem',
+            height: '11rem',
+            maxWidth: '100rem',
+            marginBottom: '1rem'
         },
 
         // TEST FOR TABLETS...
@@ -375,7 +374,7 @@ export const useStyles = makeStyles(theme => ({
     summaryPanelPadding: {
         paddingLeft: '1rem',
         paddingRight: '1rem',
-        paddingTop: '6rem',
+        paddingTop: '2rem',
         [theme.breakpoints.down('sm')]: {
             paddingTop: 0,
         }
@@ -491,6 +490,12 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             width: '23rem',
         }
+    },
+    pspanel: {
+        width: '30rem',
+        fontSize: '1.0rem',
+        marginTop: '1rem',
+        marginLeft: '-4rem'
     },
     projectinfotext: {
         display: 'flex',
@@ -624,5 +629,78 @@ export const useStyles = makeStyles(theme => ({
             margin: '0 auto',
             width: '23rem'
         }
+    },
+    psroot: {
+        flexGrow: 1,
+        padding: theme.spacing(2),
+        minWidth: '50rem',
+        maxHeight: '20rem',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            maxHeight: '50rem',
+            minWidth: '20rem'
+        }
+    },
+    pscard: {
+        borderStyle: 'solid',
+        borderWidth: '3px',
+        borderRadius: 0,
+        borderColor: 'red',
+        boxShadow: "none"
+    },
+    pscardnoborder: {
+        borderStyle: 'solid',
+        borderWidth: '3px',
+        borderRadius: 0,
+        borderColor: 'transparent',
+        boxShadow: "none"
+    },
+    pscardhover: {
+        transition: "transform .2s", /* Animation */
+        '&:hover': {
+            transform: 'scale(1.5)',
+            zIndex: '1300',
+        }
+    },
+    pslistpanel: {
+        maxWidth: '25rem',
+        marginTop: '2rem',
+        marginLeft: '6rem',
+        height: '12rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '5rem',
+            width: '24rem'
+        }
+    },
+    pspopover: {
+        opacity: 0.9,
+        width: '80rem',
+        height: '23rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '26.5rem'
+        }
+    },
+    pstypogrpahy: {
+        [theme.breakpoints.down('sm')]: {
+            position: 'fixed',
+            left: '40px'
+        }
+    },
+    psformpanel2: {
+        marginTop: '4rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '8rem',
+            justifyContent: 'center',
+            margin: '0 auto'
+        }
+    },
+    piradiobutton: {
+        display: 'inline-block',
+        [theme.breakpoints.down('sm')]: {
+            // display: 'flex'
+            marginLeft: 0
+        }
+
     }
 }));

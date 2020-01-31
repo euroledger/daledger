@@ -6,6 +6,7 @@ const Translations = () => {
         return DeviceHelper();
     };
     const { t } = useTranslation();
+
     return {
         language: t('language'),
         links: [
@@ -108,6 +109,110 @@ const Translations = () => {
         projectInfoRequirementsPlaceholder: t('projectinfo.requirementsplaceholder'),
         projectInfoProjectBudget: t('projectinfo.projectbudget'),
         projectInfoProjectName: t('projectinfo.projectname'),
+        projectStyleTitle: t('projectstyle.title'),
+        projectStylePhotos: t('projectstyle.photos'),
+        projectStyleSelected: t('projectstyle.selectedstyle'),
+        projectStyleIndoor: [
+            {
+                title: t('projectstyle.indoors.title1'),
+                description: t('projectstyle.indoors.description1')
+            },
+            {
+                title: t('projectstyle.indoors.title2'),
+                description: t('projectstyle.indoors.description2')
+            },
+            {
+                title: t('projectstyle.indoors.title3'),
+                description: t('projectstyle.indoors.description3')
+            },
+            {
+                title: t('projectstyle.indoors.title4'),
+                description: t('projectstyle.indoors.description4')
+            },
+            {
+                title: t('projectstyle.indoors.title5'),
+                description: t('projectstyle.indoors.description5')
+            },
+            {
+                title: t('projectstyle.indoors.title6'),
+                description: t('projectstyle.indoors.description6')
+            },
+            {
+                title: t('projectstyle.indoors.title7'),
+                description: t('projectstyle.indoors.description7')
+            },
+            {
+                title: t('projectstyle.indoors.title8'),
+                description: t('projectstyle.indoors.description8')
+            },
+            {
+                title: t('projectstyle.indoors.title9'),
+                description: t('projectstyle.indoors.description9')
+            },
+            {
+                title: t('projectstyle.indoors.title10'),
+                description: t('projectstyle.indoors.description10')
+            },
+            {
+                title: t('projectstyle.indoors.title11'),
+                description: t('projectstyle.indoors.description11')
+            },
+            {
+                title: t('projectstyle.indoors.title12'),
+                description: t('projectstyle.indoors.description12')
+            },
+        ],
+        projectStyleOutdoor: [
+            {
+                title: t('projectstyle.outdoors.title1'),
+                description: t('projectstyle.outdoors.description1')
+            },
+            {
+                title: t('projectstyle.outdoors.title2'),
+                description: t('projectstyle.outdoors.description2')
+            },
+            {
+                title: t('projectstyle.outdoors.title3'),
+                description: t('projectstyle.outdoors.description3')
+            },
+            {
+                title: t('projectstyle.outdoors.title4'),
+                description: t('projectstyle.outdoors.description4')
+            },
+            {
+                title: t('projectstyle.outdoors.title5'),
+                description: t('projectstyle.outdoors.description5')
+            },
+            {
+                title: t('projectstyle.outdoors.title6'),
+                description: t('projectstyle.outdoors.description6')
+            },
+            {
+                title: t('projectstyle.outdoors.title7'),
+                description: t('projectstyle.outdoors.description7')
+            },
+            {
+                title: t('projectstyle.outdoors.title8'),
+                description: t('projectstyle.outdoors.description8')
+            },
+            {
+                title: t('projectstyle.outdoors.title9'),
+                description: t('projectstyle.outdoors.description9')
+            },
+            {
+                title: t('projectstyle.outdoors.title10'),
+                description: t('projectstyle.outdoors.description10')
+            },
+            {
+                title: t('projectstyle.outdoors.title11'),
+                description: t('projectstyle.outdoors.description11')
+            },
+            {
+                title: t('projectstyle.indoors.title12'),
+                description: t('projectstyle.indoors.description12')
+            },
+        ],
+
         settingsLink: t('navbar.link5'),
         loginbuttonText: isLaptop() ? t('loginbuttontext') : t('loginbuttontext_m'),
         logoutbuttonText: t('logoutbuttontext'),
