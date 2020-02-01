@@ -10,6 +10,7 @@ import StyleData from './data/ProjectStyleData';
 import Collapse from '@material-ui/core/Collapse';
 import CloseIcon from '@material-ui/icons/Close';
 import Alert from '@material-ui/lab/Alert';
+import { DeviceHelper } from '../../../../utils';
 
 // input imports
 import Paper from '@material-ui/core/Paper';
@@ -123,6 +124,15 @@ const FormProjectStyle = ({
         return values.styleId >= 0 ? data[values.styleId].title : '';
     }
 
+    const isLaptop = () => {
+        return DeviceHelper();
+    };
+
+    const getOrigin = () => {
+        return isLaptop() ? (
+            {}
+        ) : { horizontal: 800, vertical: 250 }
+    }
     return (
         <div className={`${classes.piformpanel2} ${classes.psformpanel2} ${classes.forminfospacing} `}>
             <div
@@ -159,7 +169,7 @@ const FormProjectStyle = ({
                                     >
                                         {data.map(elem => (
                                             <Grid item xs={12} sm={6} md={3} key={data.indexOf(elem)}>
-                                                {/* <div > */}
+
                                                 <Card className={data.indexOf(elem) === cardActive ? classes.pscard : classes.pscardnoborder} onClick={(e) => handleClick(data.indexOf(elem), e)}>
                                                     <CardMedia
                                                         style={{ height: '140px' }}
@@ -181,11 +191,10 @@ const FormProjectStyle = ({
                                                     anchorEl={anchorEl}
                                                     className={classes.pspopover}
                                                     onClose={handleClose}
-                                                    transformOrigin={{ horizontal: 800, vertical: 'center' }}
+                                                    transformOrigin={getOrigin()}
                                                 >
                                                     <Typography style={{
                                                         background: 'black', color: 'white',
-                                                        // marginLeft: '5rem',
                                                         justifyContent: 'center',
                                                         margin: '0 auto'
                                                     }}
@@ -217,11 +226,11 @@ const FormProjectStyle = ({
                                     </Collapse>
                                 </div>
 
-                                {/* </div> */}
+
 
                                 <div className={classes.pspanel}>
                                     <div style={{ marginLeft: '2rem' }}>
-                                       {translations.projectStylePhotos}
+                                        {translations.projectStylePhotos}
                                     </div>
                                     <div className={classes.projectinfotext}>
                                         <div style={{ marginLeft: '2rem' }}>

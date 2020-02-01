@@ -18,7 +18,7 @@ export const useStyles = makeStyles(theme => ({
     },
     container: {
         height: '91vh',
-        // width: '100vw',
+        width: '100vw',
         display: 'flex',
         justifyContent: 'center',
         textAlign: 'center',
@@ -232,7 +232,7 @@ export const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.only('md')]: {
             marginTop: '-22rem',
-            margineft: '5rem',
+            mLargineft: '5rem',
             marginRight: '5rem'
         },
     },
@@ -496,7 +496,13 @@ export const useStyles = makeStyles(theme => ({
         width: '30rem',
         fontSize: '1.0rem',
         marginTop: '1rem',
-        marginLeft: '-4rem'
+        marginLeft: '-4rem',
+        [theme.breakpoints.down('sm')]: {
+            width: 'fit-content',
+            marginLeft: '-4rem',
+            // justifyContent: 'center',
+            // margin: '0 auto'
+        }
     },
     projectinfotext: {
         display: 'flex',
@@ -648,14 +654,22 @@ export const useStyles = makeStyles(theme => ({
         borderWidth: '3px',
         borderRadius: 0,
         borderColor: 'red',
-        boxShadow: "none"
+        boxShadow: "none",
+        [theme.breakpoints.down('sm')]: {
+           marginLeft: '2rem',
+           marginRight: '2rem'
+        }
     },
     pscardnoborder: {
         borderStyle: 'solid',
         borderWidth: '3px',
         borderRadius: 0,
         borderColor: 'transparent',
-        boxShadow: "none"
+        boxShadow: "none",
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '2rem',
+            marginRight: '2rem'
+         }
     },
     pscardhover: {
         transition: "transform .2s", /* Animation */
