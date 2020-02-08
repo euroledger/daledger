@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ProfileContext from '../../../../ProfileContext';
 import TableData from './data/FunctionalAreaTableData';
-import FormProjectDefinition from './FormProjectDefinition';
+import FormProjectDefinition from './functionalareas/FormProjectDefinition';
 import FormFunctionalAreas from './functionalareas/FormFunctionalAreas';
 import FormProjectInfo from './FormProjectInfo';
 import FormProjectStyle from './FormProjectStyle';
@@ -28,7 +28,6 @@ const LaunchCompetitionForm = () => {
         budget: '',
         uploadedfiles: [],
         requirements: '',
-        // style: '',
         styleId: -1,
         uploadedphotos: [],
         translations: translations
@@ -166,6 +165,7 @@ const LaunchCompetitionForm = () => {
                 handleSubmit={handleSubmit}
                 prevStep={prevStep}
                 values={form}
+                setFieldValue={setFieldValue}
             ></FormProjectSummary>
         case 6:
             return <h1>Success</h1>;

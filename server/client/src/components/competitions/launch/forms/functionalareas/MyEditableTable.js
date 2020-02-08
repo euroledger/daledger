@@ -58,13 +58,6 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors }) 
         '.MuiTableCell-root': {
             padding: '7px'
         }
-        // '.EditCell-cell-444': {
-        //     padding: '8px',
-        //     paddingTop: '0px'
-        // },
-        // '.MuiTableCell-root': {
-        //     lineHeight: '1.0'
-        // }
     }
     let TableCss = withStyles({
         // @global is handled by jss-plugin-global.

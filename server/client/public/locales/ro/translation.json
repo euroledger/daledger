@@ -131,8 +131,8 @@
         "requirementsinstructions": "Cerințele lor speciale, preferințele, dozele și nu doriți să le comunicați proiectanților?",
         "requirementstitle": "Cerințe speciale (opțional)",
         "requirementsplaceholder": "Prezența copiilor mici, a persoanelor în vârstă sau a persoanelor cu handicap, culori sau materiale preferate, elemente imobile, mobilier pe care vrei să îl păstrezi etc.",
-        "projectbudget": "Bugetul general al proiectului (opțional, în euro)",
-        "projectname": "Numele proiectului (maxim 64 de caractere)"
+        "projectbudget": "Bugetul general al proiectului (opțional)",
+        "projectname": "Numele proiectului (max 64 de caractere)"
     },
     "projectstyle": {
         "title": "Stilul Proiectului",
@@ -190,6 +190,28 @@
             "title12": "Verde și Natural", 
             "description12": "Stilul mediteranean în designul interior este caracterizat de estetica simplă și romantică a țărilor din sudul Europei: tonuri ușoare și calde în schema de culori, precum și utilizarea pe scară largă a materialelor naturale precum ceramica, lemnul, fierul forjat și bumbacul. Designul combină îndrăzneala, simplitatea și omoditatea. Prin urmare, poate fi utilizat atât în ​​designul casei, cât și al apartamentului. Dacă doriți să vă completați locuința cu romantismul însorit al Spaniei, abundența culorilor calde ale Italiei, prospețimea marină a Greciei și condimentele Marocului, decorarea în stil mediteranean va deveni cu siguranță întruchiparea tuturor celor de mai sus."            
         }
+    },
+    "projectsummary": {
+        "scope": "Domeniu:",
+        "country": "Țară:",
+        "deadline": "Termen Limita:",
+        "budget": "Buget:",
+        "style": "Stil:",
+        "specialrequirements": "Cerinte speciale:",
+        "uploadfiles": "Fișiere încărcate:",
+        "aiaward": "Premiul AI Recomandat:",
+        "minaward": "Premiul Minim:",
+        "date1": "Data Curentă + 5 Zile Lucrătoare",
+        "date2": "Data Curentă + 10 Zile Lucrătoare",
+        "date3": "Data Curentă + 20 Zile Lucrătoare",
+        "date4": "Data Curentă + 30 Zile Lucrătoare",
+        "date5": "Fără Termen",
+        "nobudget": "Nespecificat",
+        "none":  "Nici Unul",
+        "youraward": "Premiul dvs. (euros)",
+        "awardtext1": "Folosim AI pentru agregarea informațiilor cu privire la prețul mediu de proiectare pe mp pe piața locală sau în toată lumea, oferind stilul ales și complexitatea și sfera proiectului, folosind un algoritm de ponderare propritară.",
+        "awardtext2": "Dumneavoastră decideți care va fi premiul, așa că nu ezitați să oferiți peste estimarea noastră! Cu cât premiul este mai mare, cu atât concurența este mai strânsă și șansele tale de a pune proiectul viselor tale este mai mare.",
+        "launchinfo": "Proiectanții vor fi anunțați despre competiția dvs. în 24 de ore de la lansare. Dacă decideți să anulați sau să modificați o competiție lansată, vă rugăm să ne contactați în termen de 24 de ore de la lansare."
     },
     "temp": "ești logat...pagina in constructie"
 }

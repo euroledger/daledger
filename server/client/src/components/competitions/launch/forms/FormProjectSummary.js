@@ -3,13 +3,13 @@ import { useStyles } from '../../../containerstyle';
 import ProfileContext from '../../../../ProfileContext';
 import { Formik, Form } from 'formik';
 import FormButtonPanel from './controls/FormButtonPanel';
-import SummaryPanel from '../forms/controls/SummaryPanel';
-
+import LargeSummaryPanel from '../forms/controls/LargeSummaryPanel';
 
 const FormProjectSummary = ({
     handleSubmit,
     prevStep,
-    values
+    values,
+    setFieldValue
 }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
@@ -22,7 +22,7 @@ const FormProjectSummary = ({
     }
 
     return (
-        <div className={`${classes.piformpanel2} ${classes.psformpanel2} ${classes.forminfospacing} `}>
+        <div className={`${classes.piformpanel2} ${classes.psummformpanel2} ${classes.forminfospacing} `}>
             <div
                 style={{
                     borderBottom: '1px solid black',
@@ -42,21 +42,18 @@ const FormProjectSummary = ({
             >
                 {({ values, handleSubmit, isSubmitting }) => (
                     <Form onSubmit={handleSubmit} autoComplete='off'>
-                        <div>
+                        <div  >
                             <div className={classes.areaForm}>
-                                <div className={classes.pisummarypanelposition}>
-                                    <SummaryPanel name={values.name} objective={objective} indoors={indoors} />
+                                <div style={{ justifyContent: 'center', margin: '0 auto', marginTop: '2rem' }}>
+                                    <LargeSummaryPanel values={values} objective={objective} indoors={indoors} large={true} setFieldValue={setFieldValue} />
                                 </div>
                             </div>
-
-
                             <div className={classes.pibuttons}>
                                 <FormButtonPanel style={{ marginTop: '1rem' }}
                                     isSubmitting={isSubmitting}
                                     prevStep={prevStep}
                                 ></FormButtonPanel>
                             </div>
-
                         </div>
                     </Form>
                 )}

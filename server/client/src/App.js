@@ -127,6 +127,7 @@ const App = props => {
 
     const getStateData = (language, auth) => {
         let translations = Translations();
+        console.log("QUACK scope = ", translations.projectSummaryScope);
         if (auth) {
             translations.links.push({
                 href: '#',

@@ -15,10 +15,10 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Cancel';
 
 import MuiTextField from '@material-ui/core/TextField';
-import {fieldToTextField} from 'formik-material-ui';
+import { fieldToTextField } from 'formik-material-ui';
 
 
-const UpLoadField = ({file, handler, values}) => {
+const UpLoadField = ({ file, handler, values }) => {
     const classes = useStyles();
     return (
         <div key={file.name} style={{ marginBottom: '0.5rem' }} >
@@ -62,12 +62,12 @@ const FormProjectInfo = ({
         const id = props.field.name;
         return (
             <MuiTextField
-          {...fieldToTextField(props)}
-          onBlur={event => {
-            const {value} = event.target;
-            setFieldValue(id, value);
-          }}
-        />
+                {...fieldToTextField(props)}
+                onBlur={event => {
+                    const { value } = event.target;
+                    setFieldValue(id, value);
+                }}
+            />
         )
     }
     const validationSchema = Yup.object().shape({
@@ -97,8 +97,10 @@ const FormProjectInfo = ({
     };
 
     const handleFileDelete = (target, values) => {
-            const changedFiles = values.uploadedfiles.filter(file => file.name !== target.name);
-            handleFileUpdate(changedFiles);
+        console.log(">>>> BARK vales uploadedfiles: ", values.uploadedfiles);
+        const changedFiles = values.uploadedfiles.filter(file => file.name !== target.name);
+        console.log(">>>> BARK changed files: ", changedFiles);
+        handleFileUpdate("uploadedfiles",changedFiles);
     };
 
     let buttonFocus;
@@ -153,7 +155,7 @@ const FormProjectInfo = ({
 
                                 </div>
                                 <div className={classes.projectinfopanel}>
-                                    <div style={{ marginLeft: '2rem'}}>
+                                    <div style={{ marginLeft: '2rem' }}>
                                         {translations.projectInfoFileInstructions}
                                     </div>
                                     <div className={classes.projectinfotext}>
@@ -186,7 +188,7 @@ const FormProjectInfo = ({
                                 </div>
                                 <div className={classes.pirequirements}>
                                     <div className={classes.piheader}>
-                                       {translations.projectInfoRequirementsInstructions}
+                                        {translations.projectInfoRequirementsInstructions}
                                     </div>
                                     <Field className={classes.pitextarea}
                                         data-test='projectrequirements'
@@ -215,7 +217,7 @@ const FormProjectInfo = ({
                                     name='name'
                                     value={values.name}
                                     component={MyTextField}
-                                                           />
+                                />
                             </div>
                             <div className={classes.pibuttons}>
                                 <FormButtonPanel style={{ marginTop: '1rem' }}

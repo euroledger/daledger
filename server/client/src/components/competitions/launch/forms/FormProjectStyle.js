@@ -26,6 +26,7 @@ import {
     CardMedia,
     Popover
 } from '@material-ui/core/';
+import { withStyles } from '@material-ui/core';
 
 
 const UpLoadField = ({ file, handler, values }) => {
@@ -116,7 +117,6 @@ const FormProjectStyle = ({
         } else {
             handleSubmit(values);
         }
-
     }
 
     const { data } = StyleData(indoors, translations);
@@ -133,6 +133,15 @@ const FormProjectStyle = ({
             {}
         ) : { horizontal: 800, vertical: 250 }
     }
+    let PopoverCss = withStyles({
+        // @global is handled by jss-plugin-global.
+        '@global': {
+            '.MuiPopover-paper': {
+                borderRadius: '2rem'
+            },
+        }
+    })(() => null);
+
     return (
         <div className={`${classes.piformpanel2} ${classes.psformpanel2} ${classes.forminfospacing} `}>
             <div
@@ -185,18 +194,23 @@ const FormProjectStyle = ({
                                                         </ThemeProvider>
                                                     </CardContent>
                                                 </Card>
-
+                                                <PopoverCss></PopoverCss>
                                                 <Popover
                                                     open={data.indexOf(elem) === popId}
                                                     anchorEl={anchorEl}
                                                     className={classes.pspopover}
                                                     onClose={handleClose}
                                                     transformOrigin={getOrigin()}
+                                                    style={{borderRadius: '50px'}}
                                                 >
                                                     <Typography style={{
                                                         background: 'black', color: 'white',
+                                                        opacity: '0.6',
+                                                        textAlign: 'center',
+                                                        paddingLeft: '1rem',
+                                                        paddingRight: '1rem',
                                                         justifyContent: 'center',
-                                                        margin: '0 auto'
+                                                        margin: '0 auto',
                                                     }}
                                                         className={classes.pstypography}>
                                                         {elem.title}<br></br>
@@ -225,8 +239,6 @@ const FormProjectStyle = ({
                                         </Alert>
                                     </Collapse>
                                 </div>
-
-
 
                                 <div className={classes.pspanel}>
                                     <div style={{ marginLeft: '2rem' }}>

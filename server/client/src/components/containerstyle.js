@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { BACKGROUND_BUTTON_COLOR, BACKGROUND_INFO_PANEL_COLOR } from './register/client/constants';
 export const useStyles = makeStyles(theme => ({
     root: {
         padding: '2px 4px',
@@ -70,7 +71,7 @@ export const useStyles = makeStyles(theme => ({
         zIndex: '1200',
         background: 'black',
         '&:hover': {
-            backgroundColor: '#616060'
+            backgroundColor: BACKGROUND_BUTTON_COLOR
             // opacity: 0.4
         },
     },
@@ -80,7 +81,7 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: 'auto',
         marginRight: 'auto',
 
-        background: '#3399CC',
+        background: BACKGROUND_BUTTON_COLOR,
         color: 'white',
         width: '8em',
         height: '2.8em',
@@ -175,9 +176,6 @@ export const useStyles = makeStyles(theme => ({
     link: {
         color: 'blue'
     },
-    // input: {
-    //     color: 'white'
-    // },
     panel: {
         position: 'absolute',
         top: '50%',
@@ -185,21 +183,11 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('md')]: {
             position: 'static',
             marginTop: '5rem'
-            // top: '50%',
-            // width: '100vw',
         },
     },
     buttonpanel: {
         display: 'flex'
     },
-    // position: 'absolute',
-    // top: '40%',
-    // [theme.breakpoints.down('sm')]: {
-    //     top: '32%',
-    //     left: '-5%'
-    // },
-
-    // margin: '0 auto'
     panel1: {
         marginTop: '12rem',
         [theme.breakpoints.down('sm')]: {
@@ -347,7 +335,7 @@ export const useStyles = makeStyles(theme => ({
         borderColor: 'white',
         borderWidth: '2px',
         borderRadius: '18px',
-        backgroundColor: '#3399CC',
+        backgroundColor: BACKGROUND_BUTTON_COLOR,
         fontSize: '1.2rem',
         color: 'white',
         height: '20rem',
@@ -363,6 +351,32 @@ export const useStyles = makeStyles(theme => ({
             backgroundColor: 'red',
         },
     },
+    largeSummaryPanel: {
+        borderStyle: 'solid',
+        borderColor: 'white',
+        borderWidth: '2px',
+        borderRadius: '18px',
+        backgroundColor: BACKGROUND_BUTTON_COLOR,
+        fontSize: '1.2rem',
+        color: 'white',
+        height: 'fit-content',
+        // maxWidth: '60vw',
+        width: '70vw',
+        marginTop: '-1.5rem',
+        paddingBottom: '1rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '45rem',
+            maxWidth: '91vw',
+            width: '91vw',
+            marginBottom: '1rem'
+        },
+
+        // TEST FOR TABLETS...
+        [theme.breakpoints.only('md')]: {
+            backgroundColor: 'red',
+        },
+    },
+
     summaryPanelPosition: {
         marginTop: '1rem',
         marginLeft: '5.5rem',
@@ -378,6 +392,18 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             paddingTop: 0,
         }
+    },
+    summaryPanelBody: {
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
+        fontSize: '0.8rem',
+        lineHeight: '50%',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: 0,
+        }
+    },
+    summaryPanelTitle: {
+        fontSize: '1.5rem'
     },
     facontent: {
         marginRight: '4.5rem',
@@ -548,7 +574,7 @@ export const useStyles = makeStyles(theme => ({
             paddingLeft: 0,
             paddingRight: 0,
             fontSize: '0.6px',
-            marginTop: '9rem',
+            marginTop: '11rem',
             justifyContent: 'center',
             margin: '0 auto'
         },
@@ -656,8 +682,8 @@ export const useStyles = makeStyles(theme => ({
         borderColor: 'red',
         boxShadow: "none",
         [theme.breakpoints.down('sm')]: {
-           marginLeft: '2rem',
-           marginRight: '2rem'
+            marginLeft: '2rem',
+            marginRight: '2rem'
         }
     },
     pscardnoborder: {
@@ -669,13 +695,31 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             marginLeft: '2rem',
             marginRight: '2rem'
-         }
+        }
     },
     pscardhover: {
         transition: "transform .2s", /* Animation */
         '&:hover': {
             transform: 'scale(1.5)',
             zIndex: '1300',
+        }
+    },
+    biginnerstyle: {
+        width: '100vw', 
+        textAlign: 'left',
+        marginLeft: '5rem', 
+        overflowX: 'hidden', 
+        overflowY: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 0
+        }
+    },
+    smallinnerstyle: {
+        textAlign: 'left', 
+        marginLeft: '5rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 0,
+            lineHeight: '1rem'
         }
     },
     pslistpanel: {
@@ -705,7 +749,15 @@ export const useStyles = makeStyles(theme => ({
     psformpanel2: {
         marginTop: '4rem',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '8rem',
+            marginTop: '11rem',
+            justifyContent: 'center',
+            margin: '0 auto'
+        }
+    },
+    psummformpanel2: {
+        marginTop: '2rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '11rem',
             justifyContent: 'center',
             margin: '0 auto'
         }
@@ -717,5 +769,77 @@ export const useStyles = makeStyles(theme => ({
             marginLeft: 0
         }
 
+    },
+    psumpanelposition: {
+        marginTop: '1rem',
+        // marginLeft: '1.5rem',
+        width: '90vw',
+        justifyContent: 'center',
+        margin: '0 auto',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '2rem',
+            marginRight: '2rem'
+        }
+    },
+    psinfopanel: {
+        backgroundColor: BACKGROUND_INFO_PANEL_COLOR,
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        borderRadius: '5px',
+        borderColor: 'white',
+        paddingRight: '1rem',
+        paddingLeft: '1rem'
+    },
+    pslabelstyle: {
+        textAlign: 'left',
+        marginLeft: '5rem',
+        minWidth: '10rem',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: 0,
+            minWidth: '9.3rem',
+            lineHeight: '1rem'
+        }  
+    },
+    psreq: {
+        marginTop: '-4px',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 0,
+        }  
+    },
+    psupload: {
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '17px'
+        }
+    },
+    psuploadfiles: {
+       lineHeight: 'inherit',
+       [theme.breakpoints.down('sm')]: {
+        marginTop: '23px'
+    }
+    },
+   
+    psfilelist: {
+        marginTop: '6px', 
+        listStyle: 'none', 
+        padding: 0, 
+        lineHeight: '150%' ,
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '-8px'
+        }
+    },
+    psinfopanelposition: {
+        fontSize: '0.8rem', 
+        textAlign: 'justify', 
+        marginLeft: '1rem', 
+        marginRight: '1rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '1rem'
+        }
+    },
+    psouter: {
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block'
+        },
     }
 }));

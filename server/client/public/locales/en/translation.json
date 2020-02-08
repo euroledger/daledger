@@ -190,8 +190,29 @@
             "description11": "The Mediterranean style in interior design is characterized by simple and romantic aesthetics of Southern European countries: light and warm tones in color scheme, as well as the extensive use of natural materials such as ceramics, wood, wrought iron and cotton. Design combines boldness, simplicity and convenience. Therefore, it could be used in both house or apartment design. If you want to fill your dwelling with the sunny romance of Spain, the abundance of warm colors of Italy, the marine freshness of Greece and the spices of Morocco, the decoration in Mediterranean style will surely become the embodiment of all the above",
             "title12": "Green and Natural", 
             "description12": "The Mediterranean style in interior design is characterized by simple and romantic aesthetics of Southern European countries: light and warm tones in color scheme, as well as the extensive use of natural materials such as ceramics, wood, wrought iron and cotton. Design combines boldness, simplicity and convenience. Therefore, it could be used in both house or apartment design. If you want to fill your dwelling with the sunny romance of Spain, the abundance of warm colors of Italy, the marine freshness of Greece and the spices of Morocco, the decoration in Mediterranean style will surely become the embodiment of all the above"            
-        }
-        
+        }  
+    },
+    "projectsummary": {
+        "scope": "Scope:",
+        "country": "Country:",
+        "deadline": "Deadline:",
+        "budget": "Budget:",
+        "style": "Style:",
+        "specialrequirements": "Special Requirements:",
+        "uploadfiles": "Uploaded Files:",
+        "aiaward": "AI Recommended Award:",
+        "minaward": "Minimum Award:",
+        "date1": "Current Date + 5 Working Days",
+        "date2": "Current Date + 10 Working Days",
+        "date3": "Current Date + 20 Working Days",
+        "date4": "Current Date + 30 Working Days",
+        "date5": "No deadline",
+        "nobudget": "Not Specified",
+        "none":     "None",
+        "youraward": "Your Award (euros)",
+        "awardtext1": "We use AI to aggregate info on the average design price per sqm in your local market or worlwide, giving the style of your choice and the complexity and scope of the project, using a propritary weighting algorithm.",
+        "awardtext2": "You decide what the award will be, so feel free to offer above our estimate! The bigger the award, the tighter the competition and your chances to land the design of your dreams higher.",
+        "launchinfo": "Designers will be notified of your competition 24h from the launch. If you decide to cancel or modify a launched competition please Contact Us within 24h from launching."
     },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
 
