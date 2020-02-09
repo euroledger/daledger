@@ -17,7 +17,7 @@
     "loginbuttontext_m": "Login",
     "logoutbuttontext": "Sign Out",
     "frontbuttons": {
-        "project": "I have a Dream",
+        "project": "I have a Project",
         "designer": "I am a Designer"
     },
     "footer": {
@@ -43,7 +43,6 @@
         "error3": "Invalid email",
         "error4": "Must enter a country"
     },
-
     "clienthome": {
         "button1text": "Launch a Competition",
         "button2text": "My Draft Competitions",
@@ -54,6 +53,16 @@
         "tooltip3": "Shows your current open competitions (excluding draft competitions)",
         "tooltip4": "Every competition launched (excluding current and draft competitions)"
     },  
+    "designerhome": {
+        "button1text": "My Ongoing Competitions",
+        "button2text": "My Past Competitions",
+        "button3text": "Upload To My Portfolio",
+        "button4text": "Suggest a New Style",
+        "tooltip1": "Shows your current open competitions",
+        "tooltip2": "Shows every competition participated in",
+        "tooltip3": "Add new files to your portfolio (blueprints, photos, drawings, reviews etc)",
+        "tooltip4": "Do you know of a style that we are missing? Please contact us at admin@dablock.com or fill out the form"
+    },  
     "launchcompetition": {
         "drawertext": "Read Me",
         "sidebar1": "Welcome to your journey to pick the design you love!",
@@ -62,7 +71,8 @@
         "sidebar4": "Remember, that up to the moment of launching, you can always find your draft for further editing.",
         "previousbuttontext": "Previous",
         "homepagebuttontext": "My Home Page",
-        "continuebuttontext": "Continue"
+        "continuebuttontext": "Continue",
+        "launchbuttontext": "Launch"
     },
     "projectdefinition": {
         "title": "Project Definition",

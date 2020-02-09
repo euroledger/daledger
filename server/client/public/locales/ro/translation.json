@@ -53,6 +53,16 @@
         "tooltip3": "Prezintă competițiile deschise curente (excluzând proiectele de concurs)",
         "tooltip4": "Fiecare competiție lansată (cu excepția competițiilor curente și a proiectului)"
     },
+    "designerhome": {
+        "button1text": "Concurența mea continuă",
+        "button2text": "Competițiile mele din trecut",
+        "button3text": "Încărcați în portofoliul meu",
+        "button4text": "Propuneți un stil nou",
+        "tooltip1": "Afișează competițiile dvs. deschise actuale",
+        "tooltip2": "Prezintă fiecare competiție la care a participat",
+        "tooltip3": "Adăugați fișiere noi în portofoliul dvs. (planuri, fotografii, desene, recenzii etc.)",
+        "tooltip4": "Știți de un stil care ne lipsește? Vă rugăm să ne contactați la adresa admin@dablock.com sau completați formularul"
+    },
     "launchcompetition": {
         "drawertext": "Citește-mă",
         "sidebar1": "Bine ați venit în călătoria dvs. pentru a alege designul care vă place!",
@@ -61,7 +71,8 @@
         "sidebar4": "Rețineți că, până la momentul lansării, puteți găsi întotdeauna schița pentru editare ulterioară.",
         "previousbuttontext": "Anterior",
         "homepagebuttontext": "Pagina Principala",
-        "continuebuttontext": "Continua"
+        "continuebuttontext": "Continua",
+        "launchbuttontext": "Lansa"
     },
     "projectdefinition": {
         "title": "Definiția Proiectului",

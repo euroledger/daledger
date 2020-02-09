@@ -37,6 +37,7 @@ const Translations = () => {
         prevButtonText: t('launchcompetition.previousbuttontext'),
         homeButtonText: t('launchcompetition.homepagebuttontext'),
         continueButtonText: t('launchcompetition.continuebuttontext'),
+        launchButtonText: t('launchcompetition.launchbuttontext'),
         projectDefinitionTitle: t('projectdefinition.title'),
         projectDefinitionRadioTitle1: t('projectdefinition.radiotitle1'),
         projectDefinitionRadioTitle2: t('projectdefinition.radiotitle2'),
@@ -261,6 +262,14 @@ const Translations = () => {
         tooltip2text: t("clienthome.tooltip2"),
         tooltip3text: t("clienthome.tooltip3"),
         tooltip4text: t("clienthome.tooltip4"),
+        designerbutton1text: t("designerhome.button1text"),
+        designerbutton2text: t("designerhome.button2text"),
+        designerbutton3text: t("designerhome.button3text"),
+        designerbutton4text: t("designerhome.button4text"),
+        designertooltip1text: t("designerhome.tooltip1"),
+        designertooltip2text: t("designerhome.tooltip2"),
+        designertooltip3text: t("designerhome.tooltip3"),
+        designertooltip4text: t("designerhome.tooltip4"),
     };
 }
 

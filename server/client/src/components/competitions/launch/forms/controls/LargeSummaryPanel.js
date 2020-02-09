@@ -67,7 +67,10 @@ const SummaryPanel = ({ values, objective, indoors, setFieldValue }) => {
             },
             '.MuiInput-underline:after': {
                 borderBottom: '1px solid white'
-            }
+            },
+            // '.MuiFormControl-root': {
+            //     marginLeft: '1rem'
+            // }
         }
     })(() => null);
 

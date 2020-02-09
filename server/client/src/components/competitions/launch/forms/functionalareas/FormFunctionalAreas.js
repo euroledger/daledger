@@ -175,6 +175,7 @@ const FormFunctionalAreas = ({
                             <FormButtonPanel
                                 isSubmitting={isSubmitting}
                                 prevStep={prevStep}
+                                button3text={translations.continueButtonText}
                             ></FormButtonPanel>
                         </div>
                     </form>

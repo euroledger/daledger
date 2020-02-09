@@ -50,7 +50,7 @@ const ClientRegister = () => {
     return (
         <div
             className={classes.container}
-            style={{ backgroundImage: 'url("mainimage.jpg")' }}
+            style={{ backgroundImage: 'url("front.jpg")' }}
             data-test='contentComponent'
         >
             <div className={classes.formpanel}>

@@ -7,6 +7,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Content from './components/content';
 import ClientHome from './components/clienthome';
+import DesignerHome from './components/designerhome';
 import ClientRegister from './components/register/client';
 import Launch from './components/competitions/launch';
 import Draft from './components/competitions/draft';
@@ -61,7 +62,8 @@ const GlobalCss = withStyles({
         // padding for card typography (subtitle)
         '.MuiCardContent-root:last-child': {
             padding: '9px'
-        }
+        },
+        
         
         // size of editable table cells
         // '.MuiInputBase-input': {
@@ -127,7 +129,6 @@ const App = props => {
 
     const getStateData = (language, auth) => {
         let translations = Translations();
-        console.log("QUACK scope = ", translations.projectSummaryScope);
         if (auth) {
             translations.links.push({
                 href: '#',
@@ -161,6 +162,11 @@ const App = props => {
                             exact
                             path='/clienthome'
                             component={ClientHome}
+                        />
+                        <Route
+                            exact
+                            path='/designerhome'
+                            component={DesignerHome}
                         />
                         <Route
                             path='/clientregister'

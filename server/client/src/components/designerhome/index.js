@@ -7,7 +7,7 @@ import HelpIcon from '@material-ui/icons/Help';
 import { DeviceHelper } from '../../utils';
 
 
-const ClientHome = () => {
+const DesignerHome = () => {
     const { translations } = useContext(ProfileContext);
     const classes = useStyles();
 
@@ -18,12 +18,12 @@ const ClientHome = () => {
     return (
         <div
             className={classes.container}
-            style={{ backgroundImage: 'url("garden3.jpg")'}}
+            style={{ backgroundImage: 'url("beard.jpg")'}}
             data-test='contentComponent'
         >
             <div>
                 <div className={classes.panel1} >
-                    <Tooltip enterDelay={500} leaveDelay={200} title={translations.tooltip1text}>
+                    <Tooltip enterDelay={500} leaveDelay={200} title={translations.designertooltip1text}>
                         <Button
                             color='inherit'
                             className={classes.button}
@@ -31,10 +31,10 @@ const ClientHome = () => {
                             endIcon={!isLaptop() ? <HelpIcon /> : <p />}
                             data-test="launchButton"
                         >
-                            {translations.button1text}
+                            {translations.designerbutton1text}
                         </Button>
                     </Tooltip>
-                    <Tooltip title={translations.tooltip2text}>
+                    <Tooltip title={translations.designertooltip2text}>
                         <Button
                             color='inherit'
                             className={classes.button}
@@ -42,13 +42,13 @@ const ClientHome = () => {
                             endIcon={!isLaptop() ? <HelpIcon /> : <p />}
                             data-test="draftButton"
                         >
-                            {translations.button2text}
+                            {translations.designerbutton2text}
                         </Button>
                     </Tooltip>
                 </div>
                 <div>
                     <div className={classes.panel2}>
-                        <Tooltip title={translations.tooltip3text}>
+                        <Tooltip title={translations.designertooltip3text}>
                             <Button
                                 color='inherit'
                                 className={classes.button}
@@ -56,10 +56,10 @@ const ClientHome = () => {
                                 data-test="ongoingButton"
                                 endIcon={!isLaptop() ? <HelpIcon /> : <p />}
                             >
-                                {translations.button3text}
+                                {translations.designerbutton3text}
                             </Button>
                         </Tooltip>
-                        <Tooltip title={translations.tooltip4text}>
+                        <Tooltip title={translations.designertooltip4text}>
                             <Button
                                 color='inherit'
                                 className={classes.button}
@@ -67,7 +67,7 @@ const ClientHome = () => {
                                 href='/past'
                                 endIcon={!isLaptop() ? <HelpIcon /> : <p />}
                             >
-                                {translations.button4text}
+                                {translations.designerbutton4text}
                             </Button>
                         </Tooltip>
                     </div>
@@ -77,4 +77,4 @@ const ClientHome = () => {
     );
 };
 
-export default ClientHome;
+export default DesignerHome;

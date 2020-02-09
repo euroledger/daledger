@@ -279,6 +279,7 @@ const FormProjectStyle = ({
                                 <FormButtonPanel style={{ marginTop: '1rem' }}
                                     isSubmitting={isSubmitting}
                                     prevStep={prevStep}
+                                    button3text={translations.continueButtonText}
                                 ></FormButtonPanel>
                             </div>
 

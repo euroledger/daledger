@@ -26,7 +26,7 @@ export const useStyles = makeStyles(theme => ({
         fontSize: 'calc(1rem + 2vmin)',
         color: 'white',
         background:
-            'linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(carmen.jpg)',
+            'linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(front.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
@@ -792,7 +792,7 @@ export const useStyles = makeStyles(theme => ({
     },
     pslabelstyle: {
         textAlign: 'left',
-        marginLeft: '5rem',
+        marginLeft: 0,
         minWidth: '10rem',
         [theme.breakpoints.down('sm')]: {
             marginLeft: 0,

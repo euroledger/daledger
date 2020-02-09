@@ -21,7 +21,7 @@ const Content = () => {
                     color='inherit'
                     data-test='designerButton'
                     className={classes.button}
-                    href='/designerregister'
+                    href={auth ? '/designerhome' : '/designerregister'}
                 >
                     {translations.designerButtonText}
                 </Button>
