@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { BACKGROUND_BUTTON_COLOR, BACKGROUND_INFO_PANEL_COLOR } from './register/client/constants';
+import { BACKGROUND_BUTTON_COLOR, BACKGROUND_BUTTON_HOVER_COLOR, BACKGROUND_INFO_PANEL_COLOR } from './constants';
 export const useStyles = makeStyles(theme => ({
     root: {
         padding: '2px 4px',
@@ -45,6 +45,13 @@ export const useStyles = makeStyles(theme => ({
             height: '40rem',
         },
     },
+    containerdesigner: {
+        backgroundImage: 'url("beard.jpg")',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: 'url("beard2.jpg")',
+            height: '40rem',
+        },
+    },
     button: {
         textTransform: 'none',
         marginLeft: '1rem',
@@ -56,7 +63,7 @@ export const useStyles = makeStyles(theme => ({
         width: '22rem',
         height: '4.5rem',
         '&:hover': {
-            backgroundColor: '#616060',
+            backgroundColor: BACKGROUND_BUTTON_HOVER_COLOR,
             opacity: 0.4
         },
         marginTop: 0,
@@ -78,7 +85,7 @@ export const useStyles = makeStyles(theme => ({
         zIndex: '1200',
         background: 'black',
         '&:hover': {
-            backgroundColor: BACKGROUND_BUTTON_COLOR
+            backgroundColor: BACKGROUND_BUTTON_HOVER_COLOR
             // opacity: 0.4
         },
     },
@@ -659,8 +666,7 @@ export const useStyles = makeStyles(theme => ({
     piuploadbutton: {
         backgroundColor: 'black',
         '&:hover': {
-            backgroundColor: '#616060'
-            // opacity: 0.4
+            backgroundColor: BACKGROUND_BUTTON_HOVER_COLOR
         },
     },
     piheader: {

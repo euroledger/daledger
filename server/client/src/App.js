@@ -56,20 +56,10 @@ const GlobalCss = withStyles({
             fontFamily: 'inherit',
             userSelect: 'none'
         },
-        // '.MuiCardContent-root': {
-
-        // },
         // padding for card typography (subtitle)
         '.MuiCardContent-root:last-child': {
             padding: '9px'
-        },
-        
-        
-        // size of editable table cells
-        // '.MuiInputBase-input': {
-        //     fontSize: '13px',
-        //     padding: 0
-        // }
+        }
     }
 })(() => null);
 

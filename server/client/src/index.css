@@ -10,3 +10,6 @@ body, html {
     -webkit-text-stroke: 1px transparent;
   }
 
+.Modal {
+    min-width: 500px;
+}

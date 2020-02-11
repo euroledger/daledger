@@ -40,7 +40,6 @@ const FormProjectSummary = ({
     }
 
     const getAwardValue = (amount) => {
-        console.log("QUACK Amount = ",  parseFloat(amount) * 100);
         return parseFloat(amount) * 100;
     }
 

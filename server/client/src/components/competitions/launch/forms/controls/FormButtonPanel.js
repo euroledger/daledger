@@ -16,7 +16,6 @@ const FormButtonPanel = ({ isSubmitting, prevStep, button3text, payment, amount 
                 size='medium'
                 type='submit'
                 variant="outlined"
-                // onFocus={nextSubmit}
                 className={`${classes.button} ${classes.formButton}`}
                 style={{
                     width: '12rem',

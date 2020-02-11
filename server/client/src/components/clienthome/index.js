@@ -17,9 +17,7 @@ const ClientHome = () => {
 
     return (
         <div
-            // className={classes.container}
             className={`${classes.container} ${classes.containerclient} `}
-           
             data-test='contentComponent'
         >
             <div>

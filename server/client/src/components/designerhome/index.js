@@ -17,8 +17,7 @@ const DesignerHome = () => {
 
     return (
         <div
-            className={classes.container}
-            style={{ backgroundImage: 'url("beard.jpg")'}}
+            className={`${classes.container} ${classes.containerdesigner} `}
             data-test='contentComponent'
         >
             <div>
