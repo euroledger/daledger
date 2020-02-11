@@ -10,7 +10,6 @@ import MuiTextField from '@material-ui/core/TextField';
 
 
 const FormProjectSummary = ({
-    handleSubmit,
     prevStep,
     values,
     setFieldValue
@@ -20,10 +19,6 @@ const FormProjectSummary = ({
 
     const objective = values.objective === 'newspace' ? translations.functionalAreaPanelLabel2newspace : translations.functionalAreaPanelLabel2remodel;
     const indoors = values.indooroutdoor === 'indoor';
-
-    const submit = (values) => {
-        handleSubmit(values);
-    }
 
     const MyTextField = (props) => {
         const id = props.field.name;

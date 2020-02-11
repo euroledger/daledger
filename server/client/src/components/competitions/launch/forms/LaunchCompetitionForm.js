@@ -163,7 +163,6 @@ const LaunchCompetitionForm = () => {
             ></FormProjectStyle>
         case 5:
             return <FormProjectSummary
-                handleSubmit={handleSubmit}
                 prevStep={prevStep}
                 values={form}
                 setFieldValue={setFieldValue}
