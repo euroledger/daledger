@@ -202,7 +202,7 @@ export const useStyles = makeStyles(theme => ({
             'flexDirection': 'column',
             'justifyContent': 'center',
             margin: '0 auto',
-            marginTop: '7rem'
+            marginTop: '4rem'
         }
     },
     panel2: {
