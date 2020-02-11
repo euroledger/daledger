@@ -121,8 +121,7 @@ export const useStyles = makeStyles(theme => ({
         paddingTop: '2rem',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
-            // height: '70%',
-            height: '70vh',
+            height: '50rem',
             paddingLeft: 0,
             paddingRight: 0,
             marginTop: '1rem'

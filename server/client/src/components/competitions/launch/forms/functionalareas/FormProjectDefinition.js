@@ -157,6 +157,7 @@ const FormProjectDefinition = ({
                                     className={`${classes.button} ${classes.formButton} ${classes.buttonPos1}`}
                                     disabled={isSubmitting}
                                     data-test="homeButton"
+                                    href='/clienthome'
                                 >
                                     {translations.homeButtonText}
                                 </Button>

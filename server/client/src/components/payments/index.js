@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import { useStyles } from '../containerstyle';
 
 
-const Payments = ({ amount }) => {
+const Payments = ({ amount, disabled }) => {
     const classes = useStyles();
     const getDescription = () => {
         let smallamount = amount / 100;
@@ -32,6 +32,7 @@ const Payments = ({ amount }) => {
                     // type='submit'
                     variant="outlined"
                     className={`${classes.button} ${classes.formButton} ${classes.paybutton}`}
+                    disabled={disabled}
 
                 >
                     Pay &amp; Launch

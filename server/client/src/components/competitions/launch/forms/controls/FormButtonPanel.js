@@ -4,13 +4,13 @@ import Button from '@material-ui/core/Button';
 import ProfileContext from '../../../../../ProfileContext';
 import Payment from '../../../../payments';
 
-const FormButtonPanel = ({ isSubmitting, prevStep, button3text, payment, amount }) => {
+const FormButtonPanel = ({ isSubmitting, prevStep, button3text, payment, amount, disabled }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
 
     const getThirdButton = () => {
         if (payment) {
-            return <Payment amount={amount}></Payment>
+            return <Payment amount={amount} disabled={disabled}></Payment>
         } else return (
             <Button
                 size='medium'
@@ -52,6 +52,7 @@ const FormButtonPanel = ({ isSubmitting, prevStep, button3text, payment, amount 
                     marginBottom: '1rem'
                 }}
                 disabled={isSubmitting}
+                href='/clienthome'
             >
                 {translations.homeButtonText}
             </Button>
