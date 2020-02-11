@@ -30,6 +30,7 @@ const LaunchCompetitionForm = () => {
         requirements: '',
         styleId: -1,
         uploadedphotos: [],
+        award: '',
         translations: translations
     };
     const [form, setValues] = useState(initialState);

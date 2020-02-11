@@ -213,6 +213,7 @@ const Translations = () => {
                 description: t('projectstyle.indoors.description12')
             },
         ],
+        projectSummaryTitle: t('projectsummary.title'),
         projectSummaryScope: t('projectsummary.scope'),
         projectSummaryCountry: t('projectsummary.country'),
         projectSummaryDeadline: t('projectsummary.deadline'),

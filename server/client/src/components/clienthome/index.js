@@ -17,8 +17,9 @@ const ClientHome = () => {
 
     return (
         <div
-            className={classes.container}
-            style={{ backgroundImage: 'url("garden3.jpg")'}}
+            // className={classes.container}
+            className={`${classes.container} ${classes.containerclient} `}
+           
             data-test='contentComponent'
         >
             <div>

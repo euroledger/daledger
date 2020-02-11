@@ -203,6 +203,7 @@
         }
     },
     "projectsummary": {
+        "title": "Sumarul Proiectului",
         "scope": "Domeniu:",
         "country": "Țară:",
         "deadline": "Termen Limita:",

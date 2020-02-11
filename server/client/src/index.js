@@ -7,7 +7,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import { blue } from '@material-ui/core/colors';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
+import reducers from './components/reducers';
 import reduxThunk from 'redux-thunk';
 import './components/language/i18n';
 

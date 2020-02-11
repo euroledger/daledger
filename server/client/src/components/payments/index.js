@@ -6,11 +6,10 @@ import { useStyles } from '../containerstyle';
 const Payments = ({ amount }) => {
     const classes = useStyles();
     return <StripeCheckout style={{width: '40rem'}}
-        amount={500}
+        amount={amount}
         name='Competition Payment'
         currency='EUR'
-        // locale="de"
-        // panelLabel="Pay"
+
         shippingAddress
         billingAddress
         image="logo6-en.png"
@@ -24,18 +23,10 @@ const Payments = ({ amount }) => {
             size='medium'
             // type='submit'
             variant="outlined"
-            className={`${classes.button} ${classes.formButton}`}
-            style={{
-                width: '12rem',
-                marginBottom: '1rem',
-                marginRight: '10rem',
-                marginLeft: '6rem',
-                borderColor: 'white',
-                borderStyle: 'solid',
-                borderWidth: '2px',
-            }}
+            className={`${classes.button} ${classes.formButton} ${classes.paybutton}`}
+            
         >
-            Pay the Dude
+            Pay &amp; Launch
         </Button>
     </StripeCheckout>
 }

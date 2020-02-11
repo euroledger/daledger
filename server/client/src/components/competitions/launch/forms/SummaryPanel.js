@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import ProfileContext from '../../../../../ProfileContext';
-import { useStyles } from '../../../../containerstyle';
+import ProfileContext from '../../../../ProfileContext';
+import { useStyles } from '../../../containerstyle';
 
 const SummaryPanel = ({ name, objective, indoors }) => {
     const classes = useStyles();

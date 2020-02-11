@@ -203,6 +203,7 @@
         }  
     },
     "projectsummary": {
+        "title": "Project Summary",
         "scope": "Scope:",
         "country": "Country:",
         "deadline": "Deadline:",

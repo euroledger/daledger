@@ -5,7 +5,7 @@ import ProfileContext from '../../../../ProfileContext';
 import { Formik, Form } from 'formik';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 import FormButtonPanel from './controls/FormButtonPanel';
-import SummaryPanel from '../forms/controls/SummaryPanel';
+import SummaryPanel from './SummaryPanel';
 import StyleData from './data/ProjectStyleData';
 import Collapse from '@material-ui/core/Collapse';
 import CloseIcon from '@material-ui/icons/Close';

@@ -38,6 +38,13 @@ export const useStyles = makeStyles(theme => ({
             height: '120vh',
         }
     },
+    containerclient: {
+        backgroundImage: 'url("garden3.jpg")',
+        [theme.breakpoints.down('sm')]: {
+            backgroundImage: 'url("garden4.jpg")',
+            height: '40rem',
+        },
+    },
     button: {
         textTransform: 'none',
         marginLeft: '1rem',
@@ -315,7 +322,8 @@ export const useStyles = makeStyles(theme => ({
             // marginLeft: '3rem',
             marginRight: '2rem',
             marginBottom: '2rem',
-            minWidth: '10rem'
+            minWidth: '8rem',
+            width: '8rem'
         }
     },
     buttonPos2: {
@@ -324,7 +332,8 @@ export const useStyles = makeStyles(theme => ({
         marginRight: '24rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '0.9rem',
-            minWidth: '7rem',
+            minWidth: '8rem',
+            width: '8rem'
             // marginLeft: '9rem',
             // marginRight: '2rem',
             // width: '20rem'
@@ -705,17 +714,17 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     biginnerstyle: {
-        width: '100vw', 
+        width: '100vw',
         textAlign: 'left',
-        marginLeft: '5rem', 
-        overflowX: 'hidden', 
+        marginLeft: '5rem',
+        overflowX: 'hidden',
         overflowY: 'auto',
         [theme.breakpoints.down('sm')]: {
             marginLeft: 0
         }
     },
     smallinnerstyle: {
-        textAlign: 'left', 
+        textAlign: 'left',
         marginLeft: '5rem',
         [theme.breakpoints.down('sm')]: {
             marginLeft: 0,
@@ -798,13 +807,13 @@ export const useStyles = makeStyles(theme => ({
             marginLeft: 0,
             minWidth: '9.3rem',
             lineHeight: '1rem'
-        }  
+        }
     },
     psreq: {
         marginTop: '-4px',
         [theme.breakpoints.down('sm')]: {
             marginTop: 0,
-        }  
+        }
     },
     psupload: {
         [theme.breakpoints.down('sm')]: {
@@ -812,25 +821,25 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     psuploadfiles: {
-       lineHeight: 'inherit',
-       [theme.breakpoints.down('sm')]: {
-        marginTop: '23px'
-    }
+        lineHeight: 'inherit',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '23px'
+        }
     },
-   
+
     psfilelist: {
-        marginTop: '6px', 
-        listStyle: 'none', 
-        padding: 0, 
-        lineHeight: '150%' ,
+        marginTop: '6px',
+        listStyle: 'none',
+        padding: 0,
+        lineHeight: '150%',
         [theme.breakpoints.down('sm')]: {
             marginTop: '-8px'
         }
     },
     psinfopanelposition: {
-        fontSize: '0.8rem', 
-        textAlign: 'justify', 
-        marginLeft: '1rem', 
+        fontSize: '0.8rem',
+        textAlign: 'justify',
+        marginLeft: '1rem',
         marginRight: '1rem',
         [theme.breakpoints.down('sm')]: {
             marginTop: '1rem'
@@ -840,6 +849,20 @@ export const useStyles = makeStyles(theme => ({
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
             display: 'block'
+        },
+    },
+    paybutton: {
+        width: '12rem',
+        marginBottom: '1rem',
+        marginRight: '10rem',
+        marginLeft: '6rem',
+        borderColor: 'white',
+        borderStyle: 'solid',
+        borderWidth: '2px',
+        [theme.breakpoints.down('sm')]: {
+            width: '8rem',
+            marginRight: 0,
+            marginLeft: 0
         },
     }
 }));

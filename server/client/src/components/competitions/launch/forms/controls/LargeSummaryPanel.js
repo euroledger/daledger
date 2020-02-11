@@ -4,9 +4,6 @@ import { useStyles } from '../../../../containerstyle';
 import countriesEN from '../data/countriesEN';
 import countriesRO from '../data/countriesRO';
 import StyleData from '../data/ProjectStyleData';
-
-import { Field } from 'formik';
-import { TextField } from 'formik-material-ui';
 import { withStyles } from '@material-ui/core';
 
 
@@ -31,7 +28,7 @@ const SummaryRow = ({ label, value, big, classes }) => {
     )
 }
 
-const SummaryPanel = ({ values, objective, indoors, setFieldValue }) => {
+const SummaryPanel = ({ values, objective, indoors, awardField }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
 
@@ -88,7 +85,7 @@ const SummaryPanel = ({ values, objective, indoors, setFieldValue }) => {
         });
         return country.label;
     };
-   
+
     const getScopeTitle = () => {
         return <p>{translations.projectSummaryScope} </p>
     }
@@ -111,7 +108,7 @@ const SummaryPanel = ({ values, objective, indoors, setFieldValue }) => {
     const getSpecialRequirementsTitle = () => {
         return <p>{translations.projectSummarySpecialRequirements} </p>
     }
-   
+
     const getUploadFilesTitle = () => {
         return <p className={classes.psupload}>{translations.projectSummaryUploadFiles} </p>
     }
@@ -190,12 +187,7 @@ const SummaryPanel = ({ values, objective, indoors, setFieldValue }) => {
     const getMinAward = () => {
         return <p>80 euros</p>
     }
-    const getColor = () => {
-        return {
-            color: 'white',
-            borderBottom: '1px solid white',
-        }
-    }
+   
     return (
         <div
             className={classes.largeSummaryPanel}
@@ -220,26 +212,14 @@ const SummaryPanel = ({ values, objective, indoors, setFieldValue }) => {
                         <SummaryRow label={getAwardTitle()} value={getAward()} big={false} classes={classes}></SummaryRow>
                         <SummaryRow label={getMinAwardTitle()} value={getMinAward()} big={false} classes={classes}></SummaryRow>
                         <FieldCss></FieldCss>
-                        <Field className={classes.pifield} style={getColor()}
-                            data-test='projectaward'
-                            label={translations.projectSummaryYourAward}
-                            name='award'
-                            value=''
-                            InputProps={{
-                                style: {
-                                    color: 'white'
-                                }
-                            }}
-                            type='number'
-                            component={TextField}
-                        />
+                        {awardField}
                     </div>
                 </div>
                 <div className={classes.psinfopanelposition}>
                     <div className={classes.psinfopanel} >
                         <p>{translations.projectSummaryAwardText1}</p><p>{translations.projectSummaryAwardText2}</p>
                     </div>
-                    <div className={classes.psinfopanel} style={{marginTop: '2rem', paddingTop: '1rem', paddingBottom: '1rem'}}>
+                    <div className={classes.psinfopanel} style={{ marginTop: '2rem', paddingTop: '1rem', paddingBottom: '1rem' }}>
                         {translations.projectSummaryLaunchInfo}
                     </div>
                 </div>

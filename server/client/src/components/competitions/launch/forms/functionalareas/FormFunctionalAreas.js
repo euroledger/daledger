@@ -4,7 +4,7 @@ import ProfileContext from '../../../../../ProfileContext';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import FunctionalAreaTable from './MyEditableTable';
-import SummaryPanel from '../controls/SummaryPanel';
+import SummaryPanel from '../SummaryPanel';
 import InfoPanel from './InfoPanel';
 import ButtonGroup from '../controls/ButtonGroup';
 import IconButton from '@material-ui/core/IconButton';

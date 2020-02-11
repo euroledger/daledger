@@ -6,7 +6,7 @@ import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import ButtonGroup from './controls/ButtonGroup';
 import FormButtonPanel from './controls/FormButtonPanel';
-import SummaryPanel from '../forms/controls/SummaryPanel';
+import SummaryPanel from './SummaryPanel';
 
 // input imports
 import Paper from '@material-ui/core/Paper';

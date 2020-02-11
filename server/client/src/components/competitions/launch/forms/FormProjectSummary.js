@@ -4,6 +4,10 @@ import ProfileContext from '../../../../ProfileContext';
 import { Formik, Form } from 'formik';
 import FormButtonPanel from './controls/FormButtonPanel';
 import LargeSummaryPanel from '../forms/controls/LargeSummaryPanel';
+import { Field } from 'formik';
+import { fieldToTextField } from 'formik-material-ui';
+import MuiTextField from '@material-ui/core/TextField';
+
 
 const FormProjectSummary = ({
     handleSubmit,
@@ -21,6 +25,47 @@ const FormProjectSummary = ({
         handleSubmit(values);
     }
 
+    const MyTextField = (props) => {
+        const id = props.field.name;
+        return (
+            <MuiTextField
+                {...fieldToTextField(props)}
+                onBlur={event => {
+                    const { value } = event.target;
+                    setFieldValue(id, value);
+                }}
+            />
+        )
+    }
+    const getColor = () => {
+        return {
+            color: 'white',
+            borderBottom: '1px solid white',
+        }
+    }
+
+    const getAwardValue = (amount) => {
+        console.log("QUACK Amount = ",  parseFloat(amount) * 100);
+        return parseFloat(amount) * 100;
+    }
+
+    const getAwardField = () => {
+        return (
+            <Field className={classes.pifield} style={getColor()}
+                data-test='projectaward'
+                label={translations.projectSummaryYourAward}
+                name='award'
+                value=''
+                InputProps={{
+                    style: {
+                        color: 'white'
+                    }
+                }}
+                type='number'
+                component={MyTextField}
+            />
+        )
+    }
     return (
         <div className={`${classes.piformpanel2} ${classes.psummformpanel2} ${classes.forminfospacing} `}>
             <div
@@ -30,22 +75,22 @@ const FormProjectSummary = ({
                     marginLeft: '6rem',
                 }}
             >
-                <p className={classes.formTitle}>Project Summary</p>
+                <p className={classes.formTitle}>{translations.projectSummaryTitle}</p>
             </div>
 
             <Formik
                 enableReinitialize
                 initialValues={values}
-                onSubmit={(values) => {
-                    submit(values);
-                }}
+            // onSubmit={(values) => {
+            //     submit(values);
+            // }}
             >
                 {({ values, handleSubmit, isSubmitting }) => (
                     <Form onSubmit={handleSubmit} autoComplete='off'>
                         <div  >
                             <div className={classes.areaForm}>
                                 <div style={{ justifyContent: 'center', margin: '0 auto', marginTop: '2rem' }}>
-                                    <LargeSummaryPanel values={values} objective={objective} indoors={indoors} large={true} setFieldValue={setFieldValue} />
+                                    <LargeSummaryPanel values={values} objective={objective} indoors={indoors} large={true} setFieldValue={setFieldValue} awardField={getAwardField()} />
                                 </div>
                             </div>
                             <div className={classes.pibuttons}>
@@ -54,6 +99,8 @@ const FormProjectSummary = ({
                                     prevStep={prevStep}
                                     button3text={translations.launchButtonText}
                                     payment={true}
+                                    amount={getAwardValue(values.award)}
+                                    disabled={values.award === ''}
                                 ></FormButtonPanel>
                             </div>
                         </div>
