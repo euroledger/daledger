@@ -8,6 +8,7 @@ export const fetchUser = () => async dispatch => {
 
 export const fetchProjects = (id) => async dispatch => {
     const res = await axios.get(`/draftprojects?_id=${id}`);
+    console.log("QUACK >>>>>>>> res =", res);
     dispatch({ type: FETCH_PROJECTS, payload: res.data });
 };
 

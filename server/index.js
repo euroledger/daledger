@@ -78,6 +78,10 @@ app.get('/draftprojects/*', (req, res) => {
     console.log("MEEOW got a GET");
 });
 
+app.get('/draftprojects', (req, res) => {
+    console.log("BOGS got a GET");
+});
+
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
