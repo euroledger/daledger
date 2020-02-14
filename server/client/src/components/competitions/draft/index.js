@@ -49,11 +49,7 @@ const Draft = (props) => {
         <div className={`${classes.container} ${classes.containerdraft} `}>
             <div className={`${classes.pdformpanel2} ${classes.pdraftpanel} ${classes.forminfospacing} `}>
                 <div
-                    style={{
-                        borderBottom: '1px solid black',
-                        marginRight: '6rem',
-                        marginLeft: '6rem'
-                    }}
+                    className={classes.formborder}
                 >
                     <p className={classes.formTitle}>{translations.draftCompetitionsTitle}</p>
                 </div>

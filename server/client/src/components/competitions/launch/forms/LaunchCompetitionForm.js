@@ -9,6 +9,7 @@ import FormProjectSummary from './FormProjectSummary';
 import { saveProject } from './draftprojects/SaveProject';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
+import { logMessage } from '../../../../utils/Logger';
 import { FOREGROUND_PANEL_COLOR } from '../../../constants';
 
 import * as actions from '../../../../actions';
@@ -110,7 +111,13 @@ const LaunchCompetitionForm = (props) => {
 
     const saveDraftDetails = async (step) => {
         setValues({ ...form, userId: auth._id });
-        return await saveProject(step, form, form.id, auth._id);
+        try {
+            return await saveProject(step, form, form.id, auth._id);
+        } catch (error) {
+            const msg = "Failed to save draft competition id = " + form.id;
+            logMessage(auth._id, "ERROR", msg);
+            return null;
+        }
     };
 
 

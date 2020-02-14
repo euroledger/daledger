@@ -697,7 +697,7 @@ export const useStyles = makeStyles(theme => ({
         marginTop: '2rem',
         backgroundColor: BACKGROUND_PANEL_COLOR,
         borderColor: FOREGROUND_PANEL_COLOR,
-        color: 'black',
+        color: FOREGROUND_PANEL_COLOR,
         opacity: 0.8,
         marginLeft: '-8rem',
         marginRight: '-7rem',
