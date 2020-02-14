@@ -66,32 +66,30 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.post('/draftprojects', (req, res, next) => {
-    console.log("BARK got a POST");
     return next();
 });
 
-app.get('/draftprojects/', (req, res) => {
-    console.log("WOOF got a GET");
-});
+// app.get('/draftprojects/', (req, res) => {
+//     console.log("WOOF got a GET");
+// });
 
-app.get('/draftprojects/*', (req, res) => {
-    console.log("MEEOW got a GET");
-});
+// app.get('/draftprojects/*', (req, res) => {
+//     console.log("MEEOW got a GET");
+// });
 
-app.get('/draftprojects', (req, res) => {
+app.get('/', (req, res) => {
     console.log("BOGS got a GET");
 });
 
+
+app.get('/draftprojects/:_id', (req, res) => {
+    console.log("POO got a GET");
+});
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
 app.use(jsonServer.router('db.json'));
 
-// app.post(
-//     '/draftprojects',(req, res) => {
-//         console.log("MEEEOW")
-//     }
-// );
 
 app.listen(port, () => {
     logger.info(`Server running on port ${port} ...`);
