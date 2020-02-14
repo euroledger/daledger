@@ -21,7 +21,7 @@ const Draft = (props) => {
     }
     useEffect(() => {
         getProjects();
-    }, [auth, fetchProjects]);
+    });
 
     // user id just used for logging; delete project based on project id
     const handleDelete = async (projectId) => {

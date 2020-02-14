@@ -9,7 +9,7 @@ import FormProjectSummary from './FormProjectSummary';
 import { saveProject } from './draftprojects/SaveProject';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core';
-import { FOREGROUND_PANEL_COLOR, BACKGROUND_PANEL_COLOR } from '../../../constants';
+import { FOREGROUND_PANEL_COLOR } from '../../../constants';
 
 import * as actions from '../../../../actions';
 import { red } from '@material-ui/core/colors';
@@ -18,8 +18,6 @@ import { red } from '@material-ui/core/colors';
 const LaunchCompetitionForm = (props) => {
 
     const { translations, auth } = useContext(ProfileContext);
-
-    console.log("BARK auth = ", auth);
 
     const { rows, rowsRight, outdoorRows } = TableData(translations);
 
@@ -41,25 +39,12 @@ const LaunchCompetitionForm = (props) => {
             '.MuiFormLabel-root.Mui-focused': {
                 color: FOREGROUND_PANEL_COLOR
             },
-            '.MuiSvgIcon-root': {
-                color: FOREGROUND_PANEL_COLOR
-            },
             '.MuiOutlinedInput-notchedOutline': {
                 borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
-            },
-            // bollocs
-            '.MuiFormLabel-root': {
-                color: FOREGROUND_PANEL_COLOR
-            },
-            '.MuiFormLabel-root.Mui-focused': {
-                color: FOREGROUND_PANEL_COLOR
             },
             '.MuiInput-underline': {
                 transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
                 borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR}`
-            },
-            '.MuiOutlinedInput-notchedOutline': {
-                borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
             },
             '.MuiOutlinedInput': {
                 notchedOutline: {
@@ -116,7 +101,6 @@ const LaunchCompetitionForm = (props) => {
 
     useEffect(() => {
         if (competition) {
-            console.log("LOADING competition: ", competition);
             setValues(prevState => {
                 return { ...prevState, ...competition };
             });

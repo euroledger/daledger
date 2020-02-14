@@ -6,6 +6,8 @@ import { Formik, Field } from 'formik';
 import { TextField } from 'formik-material-ui';
 import * as Yup from 'yup';
 import Spinner from '../../../utils/Spinner';
+import { withStyles } from '@material-ui/core';
+import { FOREGROUND_PANEL_COLOR } from '../../constants';
 
 const ClientRegister = () => {
     const classes = useStyles();
@@ -17,7 +19,50 @@ const ClientRegister = () => {
         loading: false,
         translations: translations
     };
-
+    let FieldCss = withStyles({
+        // @global is handled by jss-plugin-global.
+        '@global': {
+            '.MuiFormLabel-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiRadio-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiRadio-colorSecondary.Mui-checked': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiInputBase-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiFormLabel-root.Mui-focused': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiOutlinedInput-notchedOutline': {
+                borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
+            },
+            '.MuiInput-underline': {
+                transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+                borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR}`
+            },
+            '.MuiOutlinedInput': {
+                notchedOutline: {
+                    borderColor: FOREGROUND_PANEL_COLOR
+                },
+                focused: {
+                    borderColor: FOREGROUND_PANEL_COLOR
+                },
+            },
+            // '.MuiInput-underline:before': {
+            //     borderBottom:  `2px solid ${BACKGROUND_PANEL_COLOR}`
+            // },
+            '.MuiInput-underline:hover:before': {
+                borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
+            },
+            '.MuiInput-underline:hover:after': {
+                borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
+            },
+        }
+    })(() => null);
     const validationSchema = Yup.object().shape({
         // minimum length of 1, max 255
         firstName: Yup.string()
@@ -39,7 +84,6 @@ const ClientRegister = () => {
             return { ...prevState, ...values };
         });
         setSubmitting(true);
-        console.log("values =", values);
         setTimeout(() => {
             resetForm();
             setSubmitting = false;
@@ -48,106 +92,109 @@ const ClientRegister = () => {
         }, 3000);
     };
     return (
-        <div
-            className={classes.container}
-            style={{ backgroundImage: 'url("front.jpg")' }}
-            data-test='contentComponent'
-        >
-            <div className={classes.formpanel}>
-                <Formik
-                    enableReinitialize
-                    initialValues={initialState}
-                    validationSchema={validationSchema}
-                    onSubmit={(values, { setSubmitting, resetForm }) => {
-                        handleSubmit(values, setSubmitting, resetForm);
-                    }}
-                >
-                    {({
-                        values,
-                        handleBlur,
-                        handleSubmit,
-                        isSubmitting
-                    }) => (
-                            <form onSubmit={handleSubmit} autoComplete='bollocks'>
-                                <div>
-                                    <Field
-                                        autoComplete='firstName'
-                                        data-test='firstName'
-                                        className={classes.formfield}
-                                        label={translations.firstName}
-                                        name='firstName'
-                                        onBlur={handleBlur}
-                                        value={values.first}
-                                        component={TextField}
-                                    />
+        <>
+            <FieldCss></FieldCss>
+            <div
+                className={classes.container}
+                style={{ backgroundImage: 'url("front.jpg")' }}
+                data-test='contentComponent'
+            >
+                <div className={classes.formpanel}>
+                    <Formik
+                        enableReinitialize
+                        initialValues={initialState}
+                        validationSchema={validationSchema}
+                        onSubmit={(values, { setSubmitting, resetForm }) => {
+                            handleSubmit(values, setSubmitting, resetForm);
+                        }}
+                    >
+                        {({
+                            values,
+                            handleBlur,
+                            handleSubmit,
+                            isSubmitting
+                        }) => (
+                                <form onSubmit={handleSubmit} autoComplete='bollocks'>
+                                    <div>
+                                        <Field
+                                            autoComplete='firstName'
+                                            data-test='firstName'
+                                            className={classes.formfield}
+                                            label={translations.firstName}
+                                            name='firstName'
+                                            onBlur={handleBlur}
+                                            value={values.first}
+                                            component={TextField}
+                                        />
 
-                                    <Spinner active={form.loading}></Spinner>
+                                        <Spinner active={form.loading}></Spinner>
 
-                                    <Field
-                                        autoComplete='xxx'
-                                        data-test='lastName'
-                                        className={classes.formfield}
-                                        label={translations.lastName}
-                                        name='lastName'
-                                        onBlur={handleBlur}
-                                        value={values.last}
-                                        component={TextField}
-                                    />
-                                    <Field
-                                        // autoComplete='xxx'
-                                        data-test='email'
-                                        className={classes.formfield}
-                                        label="Email"
-                                        name='email'
-                                        onBlur={handleBlur}
-                                        value={values.email}
-                                        component={TextField}
-                                    />
-                                    <p
-                                        className={classes.labelText}
-                                        style={{
-                                            marginTop: '3rem'
-                                        }}
-                                    >
-                                        {translations.text1}
-                                        <a href='/'>{translations.text2link}</a>
-                                        {translations.text3}
-                                        <a href='/'>
-                                            {' '}
-                                            {translations.text4link}
-                                        </a>{' '}
-                                        {translations.text5}
-                                    </p>
-                                    <Button
-                                        size='medium'
-                                        type='submit'
-                                        data-test="registerButton"
-                                        className={`${classes.button} ${classes.formButton}`}
-                                        disabled={isSubmitting}
-                                    >
-                                        {translations.registerBtn}
-                                    </Button>
-                                </div>
-                            </form>
-                        )}
-                </Formik>
+                                        <Field
+                                            autoComplete='xxx'
+                                            data-test='lastName'
+                                            className={classes.formfield}
+                                            label={translations.lastName}
+                                            name='lastName'
+                                            onBlur={handleBlur}
+                                            value={values.last}
+                                            component={TextField}
+                                        />
+                                        <Field
+                                            // autoComplete='xxx'
+                                            data-test='email'
+                                            className={classes.formfield}
+                                            label="Email"
+                                            name='email'
+                                            onBlur={handleBlur}
+                                            value={values.email}
+                                            component={TextField}
+                                        />
+                                        <p
+                                            className={classes.labelText}
+                                            style={{
+                                                marginTop: '3rem'
+                                            }}
+                                        >
+                                            {translations.text1}
+                                            <a className={classes.link} href='/'>{translations.text2link}</a>
+                                            {translations.text3}
+                                            <a className={classes.link} href='/'>
+                                                {' '}
+                                                {translations.text4link}
+                                            </a>{' '}
+                                            {translations.text5}
+                                        </p>
+                                        <Button
+                                            size='medium'
+                                            type='submit'
+                                            data-test="registerButton"
+                                            className={`${classes.button} ${classes.formButton}`}
+                                            disabled={isSubmitting}
+                                        >
+                                            {translations.registerBtn}
+                                        </Button>
+                                    </div>
+                                </form>
+                            )}
+                    </Formik>
 
-                <p
-                    className={classes.labelText}
-                    style={{
-                        marginTop: '2.5rem'
-                        // position: 'absolute',
-                        // bottom: '0.5rem',
-                        // right: '5%'
-                    }}
-                >
-                    {translations.text6}{' '}
-                    <a className={classes.link} href='/auth/google'>
-                        {translations.text7link}
-                    </a>
-                </p>
+                    <p
+                        className={classes.labelText}
+                        style={{
+                            marginTop: '2.5rem'
+                            // position: 'absolute',
+                            // bottom: '0.5rem',
+                            // right: '5%'
+                        }}
+                    >
+                        {translations.text6}{' '}
+                        <a className={classes.link} href='/auth/google'>
+                            {translations.text7link}
+                        </a>
+                    </p>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

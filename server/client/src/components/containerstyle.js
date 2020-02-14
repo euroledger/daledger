@@ -157,7 +157,6 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: BACKGROUND_PANEL_COLOR,
         borderColor: FOREGROUND_PANEL_COLOR,
         color: FOREGROUND_PANEL_COLOR,
-        backgroundColor: BACKGROUND_PANEL_COLOR,
         opacity: 0.8,
         // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
         [theme.breakpoints.down('md')]: {
@@ -206,15 +205,15 @@ export const useStyles = makeStyles(theme => ({
         margin: '0 auto',
         opacity: 1,
         borderStyle: 'none',
-        // color: 'red',
         marginBottom: '1.5rem',
-        color: 'black',
+        color: FOREGROUND_PANEL_COLOR,
         fontSize: '0.7rem',
         fontFamily: 'inherit',
         lineHeight: 1.6
     },
     link: {
-        color: 'blue'
+        color: FOREGROUND_PANEL_COLOR,
+        fontWeight: 'bold'
     },
     panel: {
         position: 'absolute',
