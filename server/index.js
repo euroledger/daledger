@@ -65,31 +65,35 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.get('/draftprojects', (req, res) => {
-    console.log("WOOF got a GET");
-    return next();
-});
+// app.get('/draftprojects', (req, res) => {
+//     console.log("WOOF got a GET");
+//     return next();
+// });
 
-app.get('/draftprojects/*', (req, res) => {
-    console.log("MEEOW got a GET");
-    return next();
-});
+// app.get('/draftprojects/*', (req, res) => {
+//     console.log("MEEOW got a GET");
+//     return next();
+// });
 
-app.get('/', (req, res) => {
-    console.log("BOGS got a GET");
-    return next();
-});
+// app.get('/', (req, res) => {
+//     console.log("BOGS got a GET");
+//     return next();
+// });
 
-app.get('/draftprojects/:_id', (req, res) => {
+// app.get('/draftprojects/:_id', (req, res) => {
+//     console.log("POO got a GET");
+//     return next();
+// });
+
+app.get('*', (req, res) => {
     console.log("POO got a GET");
-    return next();
+    // return next();
 });
+// app.post('/draftprojects', (req, res, next) => {
+//     console.log("BARK: GOT A POST!");
+//     return next();
 
-app.post('/draftprojects', (req, res, next) => {
-    console.log("BARK: GOT A POST!");
-    return next();
-
-});
+// });
 
 
 // You may want to mount JSON Server on a specific end-point, for example /api
