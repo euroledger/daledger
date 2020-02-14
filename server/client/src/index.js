@@ -34,7 +34,7 @@ const theme = createMuiTheme({
         }
     },
     props: {
-        // Name of the component ⚛️
+        // Name of the component 
         MuiListItemText: {
             // The default props to change
             fontFamily: 'inherit'

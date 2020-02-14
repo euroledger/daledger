@@ -65,28 +65,22 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-// app.post('/draftprojects', (req, res) => {
-//     console.log("BARK got a POST");
-//     res.jsonp(req.query);
-// });
+app.post('/draftprojects', (req, res, next) => {
+    console.log("BARK got a POST");
+    // res.jsonp(req.query);
+    next();
+});
 
 // app.get('/draftprojects', (req, res) => {
 //     console.log("WOOF got a GET");
 //     // res.jsonp(req.query);
 // });
-app.use(jsonServer.bodyParser)
-app.use((req, res, next) => {
-  if (req.method === 'POST') {
-    req.body.createdAt = Date.now()
-  }
-  // Continue to JSON Server router
-  next();
-})
+
 
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
-app.use('/draftprojects', jsonServer.router('db.json'));
+app.use('/api', jsonServer.router('db.json'));
 
 // app.post(
 //     '/draftprojects',(req, res) => {

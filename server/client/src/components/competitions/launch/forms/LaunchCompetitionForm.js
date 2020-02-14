@@ -183,17 +183,19 @@ const LaunchCompetitionForm = (props) => {
 
     const save = async (step) => {
         const res = await saveDraftDetails(step);
-        logMessage(auth._id, "INFO", "Successfully saved draft competition!");
-        var propValue;
-        for (var propName in res) {
-            propValue = res[propName]
-            let field = propName + ":" + propValue;
-            logMessage(auth._id, "INFO", field);
-            console.log(propName, propValue);
+        if (res !== null) {
+            logMessage(auth._id, "INFO", "Successfully saved draft competition!");
+            var propValue;
+            for (var propName in res) {
+                propValue = res[propName]
+                let field = propName + ":" + propValue;
+                logMessage(auth._id, "INFO", field);
+                console.log(propName, propValue);
+            }
+            
+            setValues({ ...form, id: res.id });
+            nextStep();
         }
-        
-        setValues({ ...form, id: res.id });
-        nextStep();
     }
 
     const handleSubmit = (values, setSubmitting, resetForm) => {
