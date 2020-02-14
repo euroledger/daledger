@@ -65,7 +65,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.get('/draftprojects/', (req, res) => {
+app.get('/draftprojects', (req, res) => {
     console.log("WOOF got a GET");
 });
 
