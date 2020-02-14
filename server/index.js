@@ -80,7 +80,7 @@ app.post('/draftprojects', (req, res, next) => {
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
-app.use('/api', jsonServer.router('db.json'));
+app.use(jsonServer.router('db.json'));
 
 // app.post(
 //     '/draftprojects',(req, res) => {
