@@ -68,7 +68,7 @@ if (process.env.NODE_ENV === 'production') {
 app.post('/draftprojects', (req, res, next) => {
     console.log("BARK got a POST");
     // res.jsonp(req.query);
-    next();
+    return next();
 });
 
 // app.get('/draftprojects', (req, res) => {
