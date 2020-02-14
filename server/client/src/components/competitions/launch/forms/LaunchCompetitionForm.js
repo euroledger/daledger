@@ -183,8 +183,8 @@ const LaunchCompetitionForm = (props) => {
 
     const save = async (step) => {
         const res = await saveDraftDetails(step);
-        const msg = "Successfully saved draft competition result = ", res;
-        logMessage(auth._id, "INFO", msg);
+        const msg = "Successfully saved draft competition!";
+        logMessage(auth._id, "INFO", res);
         setValues({ ...form, id: res.id });
         nextStep();
     }
