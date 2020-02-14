@@ -114,7 +114,7 @@ const LaunchCompetitionForm = (props) => {
         try {
             return await saveProject(step, form, form.id, auth._id);
         } catch (error) {
-            const msg = "Failed to save draft competition id = " + form.id;
+            const msg = "Failed to save draft competition";
             logMessage(auth._id, "ERROR", msg);
             return null;
         }

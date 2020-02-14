@@ -65,38 +65,12 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-// app.get('/draftprojects', (req, res) => {
-//     console.log("WOOF got a GET");
-//     return next();
-// });
-
-// app.get('/draftprojects/*', (req, res) => {
-//     console.log("MEEOW got a GET");
-//     return next();
-// });
-
-// app.get('/', (req, res) => {
-//     console.log("BOGS got a GET");
-//     return next();
-// });
-
-// app.get('/draftprojects/:_id', (req, res) => {
-//     console.log("POO got a GET");
-//     return next();
-// });
-
-// app.post('/draftprojects', (req, res, next) => {
-//     console.log("BARK: GOT A POST!");
-//     return next();
-
-// });
-
 
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
 // app.use(jsonServer.bodyParser);
-app.use(jsonServer.router('./db.json'));
+app.use(jsonServer.router('./tmp/projects.json'));
 
 
 app.listen(port, () => {
