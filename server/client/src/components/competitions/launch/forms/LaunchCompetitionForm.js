@@ -184,7 +184,7 @@ const LaunchCompetitionForm = (props) => {
     const save = async (step) => {
         const res = await saveDraftDetails(step);
         if (res !== null) {
-            logMessage(auth._id, "INFO", "Successfully saved draft competition!");
+            logMessage(auth._id, "INFO", "Successfully saved draft competition! project data = ", res.data);
             var propValue;
             for (var propName in res) {
                 propValue = res[propName]

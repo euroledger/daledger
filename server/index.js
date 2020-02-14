@@ -96,7 +96,7 @@ if (process.env.NODE_ENV === 'production') {
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
 // app.use(jsonServer.bodyParser);
-app.use('/api',jsonServer.router('./db.json'));
+app.use(jsonServer.router('./db.json'));
 
 
 app.listen(port, () => {
