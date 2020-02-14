@@ -26,7 +26,7 @@ var logger = log4js.getLogger('index.js');
 
 // logger.level = 'all';
 
-logger.info('Starting EXPRESSJS server...(environment='+ environment+ ')');
+logger.info('Starting EXPRESSJS server...(environment=' + environment + ')');
 mongoose.connect(keys.mongoURI).catch(error => logger.error("Failed to connect: ", error));
 
 const app = express();
@@ -45,7 +45,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 
-app.post('/api/logger', function(req, res) {
+app.post('/api/logger', function (req, res) {
     const { user, level, text } = req.body;
     // console.log('WE ARE IN /api/logger');
 
@@ -65,16 +65,25 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
+app.post('/draftprojects', (req, res) => {
+    console.log("BARK: req=", req);
+    res.jsonp(req.query)
+})
+
+app.post('/api/draftprojects', (req, res) => {
+    console.log("MEEOW: req=", req);
+    res.jsonp(req.query)
+})
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
 app.use('/api', jsonServer.router('db.json'));
 
-app.post(
-    '/draftprojects',(req, res) => {
-        console.log("MEEEOW")
-    }
-);
+// app.post(
+//     '/draftprojects',(req, res) => {
+//         console.log("MEEEOW")
+//     }
+// );
 
 app.listen(port, () => {
     logger.info(`Server running on port ${port} ...`);
