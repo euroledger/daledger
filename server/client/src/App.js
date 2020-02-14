@@ -110,11 +110,11 @@ const App = props => {
     const appPadding = 0;
     const { fetchUser } = props;
     useEffect(() => {
-        async function getUserData() {
+        async function getStateData() {
             i18next.changeLanguage(language);
             fetchUser();
         }
-        getUserData();
+        getStateData();
     }, [language, fetchUser]);
 
     const getStateData = (language, auth) => {
@@ -179,8 +179,8 @@ const App = props => {
     );
 };
 
-function mapStateToProps({ auth }) {
-    return { auth };
+function mapStateToProps({ auth, projects }) {
+    return { auth, projects };
 }
 
 export default connect(mapStateToProps, actions)(App);

@@ -1,0 +1,2863 @@
+{
+  "draftprojects": [
+    {
+      "_id": "5debb037bbb0c81c80dd6a92",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "outdoor",
+      "entireprop": "true",
+      "country": "FR",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "Cats Are Great",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "8YFVXpz"
+    },
+    {
+      "_id": "5debb037bbb0c81c80dd6a92",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "outdoor",
+      "entireprop": "true",
+      "country": "FR",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "Cats Are Not Great",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "8YFVXpx"
+    },
+    {
+      "step": 1,
+      "space": "residential",
+      "objective": "remodelling",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "AL",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "TApq1ih"
+    },
+    {
+      "_id": -1,
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "outdoor",
+      "entireprop": "true",
+      "country": "GB",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "HoEtaFP"
+    },
+    {
+      "_id": -1,
+      "step": 1,
+      "space": "commercial",
+      "objective": "remodelling",
+      "indooroutdoor": "outdoor",
+      "entireprop": "true",
+      "country": "MT",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "LwrLDAm"
+    },
+    {
+      "_id": -1,
+      "step": 1,
+      "space": "commercial",
+      "objective": "remodelling",
+      "indooroutdoor": "outdoor",
+      "entireprop": "true",
+      "country": "HU",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "1YAaQnl"
+    },
+    {
+      "_id": -1,
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "AM",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "Ozj_jFO"
+    },
+    {
+      "_id": -1,
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "AO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "iOQT-LF"
+    },
+    {
+      "_id": -1,
+      "step": 1,
+      "space": "residential",
+      "objective": "remodelling",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "TC",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "yO7BkZj"
+    },
+    {
+      "_id": "5debb037bbb0c81c80dd6a92",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "outdoor",
+      "entireprop": "true",
+      "country": "LA",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "6XsfVTI"
+    },
+    {
+      "_id": "5debb037bbb0c81c80dd6a92",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": "",
+      "id": "sF2Zr6M"
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "4YDRdV1",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "WTkb9JP",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "IUdnkuV",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "UqlSmJX",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "PEJWzG2",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "boOCGk7",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "9UEkLfM",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "4y6YJvO",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    },
+    {
+      "userId": "5debb037bbb0c81c80dd6a92",
+      "id": "n9p0FhS",
+      "step": 1,
+      "space": "residential",
+      "objective": "newspace",
+      "indooroutdoor": "indoor",
+      "entireprop": "true",
+      "country": "RO",
+      "loading": false,
+      "rows": [
+        {
+          "id": 0,
+          "type": "Living Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Kitchens",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Bathrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Child Bedrooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "rowsRight": [
+        {
+          "id": 0,
+          "type": "Dining Rooms",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 1,
+          "type": "Staircases",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 2,
+          "type": "Hallways",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 3,
+          "type": "Other-1",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        },
+        {
+          "id": 4,
+          "type": "Other-2",
+          "small": 0,
+          "medium": 0,
+          "large": 0
+        }
+      ],
+      "outdoorRows": [
+        {
+          "id": 0,
+          "type": "Terraces",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 1,
+          "type": "Patios",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 2,
+          "type": "Gardens",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 3,
+          "type": "Backyards",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 4,
+          "type": "Pool Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 5,
+          "type": "BBQ Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 6,
+          "type": "Play Areas",
+          "number": 0,
+          "size": 0
+        },
+        {
+          "id": 7,
+          "type": "Other",
+          "number": 0,
+          "size": 0
+        }
+      ],
+      "urgency": "fast",
+      "name": "",
+      "budget": "",
+      "uploadedfiles": [],
+      "requirements": "",
+      "styleId": -1,
+      "uploadedphotos": [],
+      "award": ""
+    }
+  ]
+}

@@ -94,6 +94,7 @@ const FormProjectSummary = ({
                                     button3text={translations.launchButtonText}
                                     payment={true}
                                     amount={getAwardValue(values.award)}
+                                    projectId={values.id}
                                     disabled={values.award === ''}
                                 ></FormButtonPanel>
                             </div>

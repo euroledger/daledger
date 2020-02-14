@@ -71,7 +71,7 @@
         "sidebar4": "Remember, that up to the moment of launching, you can always find your draft for further editing.",
         "previousbuttontext": "Previous",
         "homepagebuttontext": "My Home Page",
-        "continuebuttontext": "Continue",
+        "continuebuttontext": "Save & Continue",
         "launchbuttontext": "Launch"
     },
     "projectdefinition": {
@@ -224,6 +224,12 @@
         "awardtext1": "We use AI to aggregate info on the average design price per sqm in your local market or worlwide, giving the style of your choice and the complexity and scope of the project, using a propritary weighting algorithm.",
         "awardtext2": "You decide what the award will be, so feel free to offer above our estimate! The bigger the award, the tighter the competition and your chances to land the design of your dreams higher.",
         "launchinfo": "Designers will be notified of your competition 24h from the launch. If you decide to cancel or modify a launched competition please Contact Us within 24h from launching."
+    },
+    "draftcompetitions": {
+        "title": "Draft Competitions",
+        "deletebuttontext": "Delete Project",
+        "moredetailsbuttontext": "Add More Details",
+        "unnamedprojexttext": "Unnamed Project"
     },
     "temp": "YOU ARE LOGGED IN...PAGE UNDER CONSTRUCTION"
 

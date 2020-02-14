@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import ProfileContext from '../../../../../ProfileContext';
-
+import { BACKGROUND_BUTTON_COLOR } from '../../../../constants';
 
 const InfoPanel = () => {
     const { translations } = useContext(ProfileContext);
@@ -16,7 +16,7 @@ const InfoPanel = () => {
                 borderColor: 'white',
                 borderWidth: '2px',
                 borderRadius: '18px',
-                backgroundColor: '#3399CC',
+                backgroundColor: BACKGROUND_BUTTON_COLOR,
                 fontSize: '1rem',
                 color: 'white',
                 width: '12rem',

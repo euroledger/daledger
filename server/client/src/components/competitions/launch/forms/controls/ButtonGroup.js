@@ -10,12 +10,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import { makeStyles } from "@material-ui/core/styles";
 
 const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) => {
-    const [value, setValue] = React.useState(selected);
-
-    // const buttonRef = React.createRef();
-
     const handleChange = event => {
-        setValue(event.target.value);
         onChange(name, event)
     };
 
@@ -30,7 +25,7 @@ const ButtonGroup = ({ title, selected, onChange, buttonItems, name, display }) 
             <FormLabel component='legend'>{title}</FormLabel>
             <RadioGroup
                 name={name}
-                value={value}
+                value={selected}
                 onChange={handleChange}
             >
                 {buttonItems.map(item => (

@@ -71,7 +71,7 @@
         "sidebar4": "Rețineți că, până la momentul lansării, puteți găsi întotdeauna schița pentru editare ulterioară.",
         "previousbuttontext": "Anterior",
         "homepagebuttontext": "Pagina Principala",
-        "continuebuttontext": "Continua",
+        "continuebuttontext": "Salvați și Continuați",
         "launchbuttontext": "Lansa"
     },
     "projectdefinition": {
@@ -224,6 +224,12 @@
         "awardtext1": "Folosim AI pentru agregarea informațiilor cu privire la prețul mediu de proiectare pe mp pe piața locală sau în toată lumea, oferind stilul ales și complexitatea și sfera proiectului, folosind un algoritm de ponderare propritară.",
         "awardtext2": "Dumneavoastră decideți care va fi premiul, așa că nu ezitați să oferiți peste estimarea noastră! Cu cât premiul este mai mare, cu atât concurența este mai strânsă și șansele tale de a pune proiectul viselor tale este mai mare.",
         "launchinfo": "Proiectanții vor fi anunțați despre competiția dvs. în 24 de ore de la lansare. Dacă decideți să anulați sau să modificați o competiție lansată, vă rugăm să ne contactați în termen de 24 de ore de la lansare."
+    },
+    "draftcompetitions": {
+        "title": "Proiect de Concursuri",
+        "deletebuttontext": "Ștergeți Proiectul",
+        "moredetailsbuttontext": "Adăugați Mai Multe Detalii",
+        "unnamedprojexttext": "Proiect Fără Nume"
     },
     "temp": "ești logat...pagina in constructie"
 }

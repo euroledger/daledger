@@ -113,12 +113,12 @@ const FormFunctionalAreas = ({
     }
     return (
         <div className={`${classes.formpanel2} ${classes.areaspacing} `} >
-            <div
-                style={{
-                    borderBottom: '1px solid black',
-                    marginRight: '6rem',
-                    marginLeft: '6rem'
-                }}
+            <div className={classes.formborder}
+                // style={{
+                //     borderBottom: '1px solid black',
+                //     marginRight: '6rem',
+                //     marginLeft: '6rem'
+                // }}
             >
                 <p className={classes.formTitle}>{translations.functionalAreaTitle}</p>
             </div>

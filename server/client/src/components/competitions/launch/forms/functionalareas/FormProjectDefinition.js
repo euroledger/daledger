@@ -16,7 +16,8 @@ const FormProjectDefinition = ({
     handleSubmit,
     handleChange,
     setCountry,
-    values
+    values, 
+    auth
 }) => {
     const classes = useStyles();
     const { translations } = useContext(ProfileContext);
@@ -50,14 +51,11 @@ const FormProjectDefinition = ({
         { value: 'remodelling', label: translations.projectDefinitionCountryRadio3Option2 }
     ];
     const savedCountry = getCountryByCode(values.country);
+  
     return (
         <div className={`${classes.formpanel2} ${classes.formdefspacing} `}>
-            <div
-                style={{
-                    borderBottom: '1px solid black',
-                    marginRight: '6rem',
-                    marginLeft: '6rem'
-                }}
+            <div className={classes.formborder}
+               
             >
                 <p className={classes.formTitle}>{translations.projectDefinitionTitle}</p>
             </div>
@@ -132,10 +130,10 @@ const FormProjectDefinition = ({
                                             label={translations.projectDefinitionCountryTitle}
                                             variant='outlined'
                                             fullWidth
-                                            inputProps={{
-                                                ...params.inputProps,
-                                                // autoComplete: 'xxx' // disable autocomplete and autofill
-                                            }}
+                                            // inputProps={{
+                                            //     ...params.inputProps,
+                                            //     // autoComplete: 'xxx' // disable autocomplete and autofill
+                                            // }}
                                             className={classes.formfieldauto}
                                             name='country'
                                             onBlur={handleBlur}
@@ -155,7 +153,7 @@ const FormProjectDefinition = ({
                                     size='medium'
                                     type='submit'
                                     className={`${classes.button} ${classes.formButton} ${classes.buttonPos1}`}
-                                    disabled={isSubmitting}
+                                   
                                     data-test="homeButton"
                                     href='/clienthome'
                                 >
@@ -166,7 +164,8 @@ const FormProjectDefinition = ({
                                     type='submit'
                                     className={`${classes.button} ${classes.formButton}  ${classes.buttonPos2}`}
                                     data-test="continueButton"
-                                    disabled={isSubmitting}
+                                    // disabled={isSubmitting}
+                                    disabled={auth === null}
                                 >
                                     {translations.continueButtonText}
                                 </Button>

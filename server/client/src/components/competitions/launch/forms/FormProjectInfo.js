@@ -21,12 +21,12 @@ import { fieldToTextField } from 'formik-material-ui';
 const UpLoadField = ({ file, handler, values }) => {
     const classes = useStyles();
     return (
-        <div key={file.name} style={{ marginBottom: '0.5rem' }} >
+        <div key={file} style={{ marginBottom: '0.5rem' }} >
             <Paper className={classes.root} style={{ height: '2rem' }}>
                 <InputBase
                     style={{ color: 'black', minWidth: '19rem' }}
                     className={classes.input}
-                    placeholder={file.name}
+                    placeholder={file}
                     inputProps={{ 'aria-label': 'file' }}
                     disabled={true}
                 />
@@ -91,15 +91,13 @@ const FormProjectInfo = ({
         fileReader.readAsDataURL(target.files[0]);
         fileReader.onload = (e) => {
             const fileList = values.uploadedfiles;
-            fileList.push(target.files[0]);
+            fileList.push(target.files[0].name);
             handleFileUpdate("uploadedfiles", fileList);
         };
     };
 
     const handleFileDelete = (target, values) => {
-        console.log(">>>> BARK vales uploadedfiles: ", values.uploadedfiles);
-        const changedFiles = values.uploadedfiles.filter(file => file.name !== target.name);
-        console.log(">>>> BARK changed files: ", changedFiles);
+        const changedFiles = values.uploadedfiles.filter(name => name !== target);
         handleFileUpdate("uploadedfiles",changedFiles);
     };
 
@@ -115,11 +113,7 @@ const FormProjectInfo = ({
     return (
         <div className={`${classes.piformpanel2} ${classes.forminfospacing} `}>
             <div
-                style={{
-                    borderBottom: '1px solid black',
-                    marginRight: '6rem',
-                    marginLeft: '6rem',
-                }}
+                className={classes.formborder}
             >
                 <p className={classes.formTitle}>{translations.projectInfoTitle}</p>
             </div>
@@ -181,7 +175,7 @@ const FormProjectInfo = ({
                                     <div className={classes.pilistpanel}>
                                         <div style={{ maxHeight: '11rem', paddingRight: '3rem', overflowX: 'hidden', overflowY: 'auto' }}>
                                             {values.uploadedfiles.map(item => (
-                                                <UpLoadField key={item.name.name} file={item} handler={handleFileDelete} values={values} />
+                                                <UpLoadField key={item} file={item} handler={handleFileDelete} values={values} />
                                             ))}
                                         </div>
                                     </div>

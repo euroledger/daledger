@@ -11,7 +11,8 @@
         "start": "node index.js",
         "server": "nodemon index.js",
         "client": "npm run start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "json-server": "json-server --watch db.json --port 5001",
+        "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run json-server\"",
         "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
     "author": "",
@@ -27,5 +28,8 @@
         "nodemon": "^2.0.1",
         "passport": "^0.4.0",
         "passport-google-oauth20": "^2.0.0"
+    },
+    "devDependencies": {
+        "json-server": "^0.15.1"
     }
 }

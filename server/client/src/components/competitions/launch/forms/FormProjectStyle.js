@@ -32,12 +32,12 @@ import { withStyles } from '@material-ui/core';
 const UpLoadField = ({ file, handler, values }) => {
     const classes = useStyles();
     return (
-        <div key={file.name} style={{ marginBottom: '0.5rem' }} >
+        <div key={file} style={{ marginBottom: '0.5rem' }} >
             <Paper className={classes.root} style={{ height: '2rem' }}>
                 <InputBase
                     style={{ color: 'black', minWidth: '19rem' }}
                     className={classes.input}
-                    placeholder={file.name}
+                    placeholder={file}
                     inputProps={{ 'aria-label': 'file' }}
                     disabled={true}
                 />
@@ -100,14 +100,14 @@ const FormProjectStyle = ({
         fileReader.readAsDataURL(target.files[0]);
         fileReader.onload = (e) => {
             const fileList = values.uploadedphotos;
-            fileList.push(target.files[0]);
+            fileList.push(target.files[0].name);
             handleFileUpdate("uploadedphotos", fileList);
         };
     };
 
     const handleFileDelete = (target, values) => {
-        const changedFiles = values.uploadedphotos.filter(file => file.name !== target.name);
-        handleFileUpdate(changedFiles);
+        const changedFiles = values.uploadedphotos.filter(name => name !== target);
+        handleFileUpdate("uploadedphotos",changedFiles);
     };
 
     const submit = (values) => {
@@ -264,7 +264,7 @@ const FormProjectStyle = ({
                                     <div className={classes.pslistpanel}>
                                         <div style={{ maxHeight: '11rem', paddingRight: '3rem', overflowX: 'hidden', overflowY: 'auto' }}>
                                             {values.uploadedphotos.map(item => (
-                                                <UpLoadField key={item.name.name} file={item} handler={handleFileDelete} values={values} />
+                                                <UpLoadField key={item} file={item} handler={handleFileDelete} values={values} />
                                             ))}
                                         </div>
                                     </div>

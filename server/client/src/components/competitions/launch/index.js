@@ -6,6 +6,8 @@ import List from '@material-ui/core/List';
 import LaunchCompetitionForm from './forms/LaunchCompetitionForm';
 import ProfileContext from '../../../ProfileContext';
 
+
+
 const Launch = () => {
     const { translations } = useContext(ProfileContext);
     const [state, setState] = React.useState(false);
@@ -48,7 +50,7 @@ const Launch = () => {
     );
 
     return (
-        <div className={classes.container} data-test='contentComponent'>
+        <div className={`${classes.container} ${classes.launch}`} data-test='contentComponent'>
             <div
                 style={{
                     textAlign: 'right',

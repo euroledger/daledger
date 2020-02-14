@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { BACKGROUND_BUTTON_COLOR, BACKGROUND_BUTTON_HOVER_COLOR, BACKGROUND_INFO_PANEL_COLOR } from './constants';
+import { BACKGROUND_BUTTON_COLOR, BACKGROUND_BUTTON_HOVER_COLOR, BACKGROUND_DARK_BUTTON_COLOR, BACKGROUND_INFO_PANEL_COLOR, FOREGROUND_PANEL_COLOR, FORM_PANEL_BORDER_WIDTH, BACKGROUND_PANEL_COLOR } from './constants';
 export const useStyles = makeStyles(theme => ({
     root: {
         padding: '2px 4px',
@@ -32,10 +32,24 @@ export const useStyles = makeStyles(theme => ({
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         [theme.breakpoints.down('sm')]: {
-            height: '100rem',
+            height: '102rem',
         },
         [theme.breakpoints.only('md')]: {
             height: '120vh',
+        }
+    },
+    launch: {
+        background:
+            'linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(launch2.jpg)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+    },
+    containerdraft: {
+        height: '41.1rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '60rem',
         }
     },
     containerclient: {
@@ -83,7 +97,7 @@ export const useStyles = makeStyles(theme => ({
         transform: 'rotate(270deg) translateY(44px)',
 
         zIndex: '1200',
-        background: 'black',
+        background: BACKGROUND_DARK_BUTTON_COLOR,
         '&:hover': {
             backgroundColor: BACKGROUND_BUTTON_HOVER_COLOR
             // opacity: 0.4
@@ -105,6 +119,7 @@ export const useStyles = makeStyles(theme => ({
             opacity: 0.7
         },
         [theme.breakpoints.down('sm')]: {
+            height: '2.8em',
             fontSize: '0.7rem',
         }
     },
@@ -113,10 +128,10 @@ export const useStyles = makeStyles(theme => ({
         height: '60vh',
         width: '50vw',
         borderStyle: 'solid',
-        borderWidth: '2px',
+        borderWidth: FORM_PANEL_BORDER_WIDTH,
         borderRadius: '18px',
-        backgroundColor: '#E9E7E7',
-        borderColor: 'black',
+        backgroundColor: BACKGROUND_PANEL_COLOR,
+        borderColor: FOREGROUND_PANEL_COLOR,
         opacity: 0.8,
         paddingTop: '2rem',
         [theme.breakpoints.down('sm')]: {
@@ -136,12 +151,13 @@ export const useStyles = makeStyles(theme => ({
     },
     formpanel2: {
         borderStyle: 'solid',
-        borderWidth: '1px',
+        borderWidth: FORM_PANEL_BORDER_WIDTH,
         borderRadius: '18px',
         marginTop: '2rem',
-        backgroundColor: '#E9E7E7',
-        borderColor: 'black',
-        color: 'black',
+        backgroundColor: BACKGROUND_PANEL_COLOR,
+        borderColor: FOREGROUND_PANEL_COLOR,
+        color: FOREGROUND_PANEL_COLOR,
+        backgroundColor: BACKGROUND_PANEL_COLOR,
         opacity: 0.8,
         // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
         [theme.breakpoints.down('md')]: {
@@ -153,6 +169,17 @@ export const useStyles = makeStyles(theme => ({
             fontSize: '0.6px',
             marginTop: '6rem'
         }
+    },
+    formborder: {
+        borderBottomWidth: '1px',
+        borderBottomStyle: 'solid',
+        borderBottomColor: FOREGROUND_PANEL_COLOR,
+        marginRight: '6rem',
+        marginLeft: '6rem'
+
+    },
+    formfieldauto: {
+        borderColor: 'red'
     },
     formfield: {
         width: '80%',
@@ -169,7 +196,7 @@ export const useStyles = makeStyles(theme => ({
     },
     formTitle: {
         fontSize: '1.5rem',
-        color: 'black'
+        color: FOREGROUND_PANEL_COLOR
     },
     labelText: {
         width: '80%',
@@ -328,7 +355,7 @@ export const useStyles = makeStyles(theme => ({
             // marginLeft: '3rem',
             marginRight: '2rem',
             marginBottom: '2rem',
-            minWidth: '8rem',
+            minWidth: '11rem',
             width: '8rem'
         }
     },
@@ -338,7 +365,7 @@ export const useStyles = makeStyles(theme => ({
         marginRight: '24rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '0.9rem',
-            minWidth: '8rem',
+            minWidth: '11rem',
             width: '8rem'
             // marginLeft: '9rem',
             // marginRight: '2rem',
@@ -365,6 +392,60 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.only('md')]: {
             backgroundColor: 'red',
         },
+    },
+    competitionpanel: {
+        borderStyle: 'solid',
+        borderColor: 'white',
+        borderWidth: '2px',
+        borderRadius: '18px',
+        backgroundColor: BACKGROUND_BUTTON_COLOR,
+        fontSize: '1.2rem',
+        color: 'white',
+        height: '7rem',
+        margin: '1rem',
+        display: 'flex',
+        // maxWidth: '11rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '11rem',
+            // maxWidth: '100rem',
+            marginBottom: '1rem',
+            display: 'block'
+        },
+
+        // TEST FOR TABLETS...
+        [theme.breakpoints.only('md')]: {
+            backgroundColor: 'red',
+        },
+    },
+    comptitionpanelpadding: {
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
+        // paddingTop: '2rem',
+        marginLeft: '6rem',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: 0,
+            justifyContent: 'center',
+            margin: '0 auto',
+        }
+    },
+    competitionbutton: {
+        // marginTop: '2rem',
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '0.5rem',
+        background: BACKGROUND_DARK_BUTTON_COLOR,
+        color: 'white',
+        width: '8em',
+        height: '2.5rem',
+        fontSize: '1.0rem',
+        '&:hover': {
+            backgroundColor: '#256381',
+            opacity: 0.7
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '0.7rem',
+        }
     },
     largeSummaryPanel: {
         borderStyle: 'solid',
@@ -492,6 +573,14 @@ export const useStyles = makeStyles(theme => ({
             marginTop: '2rem'
         }
     },
+    pdbuttons: {
+        display: 'flex',
+        // marginTop: 'rem',
+        [theme.breakpoints.down('sm')]: {
+            // display: 'flex',
+            marginTop: '2rem'
+        }
+    },
     fainfopanelposition: {
         marginTop: '1rem',
         marginLeft: '4rem',
@@ -575,23 +664,54 @@ export const useStyles = makeStyles(theme => ({
         borderWidth: '1px',
         borderRadius: '18px',
         marginTop: '2rem',
-        backgroundColor: '#E9E7E7',
-        borderColor: 'black',
-        color: 'black',
+        backgroundColor: BACKGROUND_PANEL_COLOR,
+        borderColor: FOREGROUND_PANEL_COLOR,
+        color: FOREGROUND_PANEL_COLOR,
         opacity: 0.8,
         marginLeft: '-8rem',
         marginRight: '-7rem',
         // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
         [theme.breakpoints.down('sm')]: {
-            // maxWidth: '25rem',
-            // height: '70%',
             height: 'fit-content',
             paddingLeft: 0,
             paddingRight: 0,
             fontSize: '0.6px',
             marginTop: '11rem',
             justifyContent: 'center',
+            margin: '0 auto',
+            maxWidth: '24rem'
+        },
+        [theme.breakpoints.only('md')]: {
+            // maxWidth: '25rem',
+            // height: '70%',
+
+            paddingLeft: 0,
+            paddingRight: 0,
+            justifyContent: 'center',
             margin: '0 auto'
+        }
+    },
+    pdformpanel2: {
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        borderRadius: '18px',
+        marginTop: '2rem',
+        backgroundColor: BACKGROUND_PANEL_COLOR,
+        borderColor: FOREGROUND_PANEL_COLOR,
+        color: 'black',
+        opacity: 0.8,
+        marginLeft: '-8rem',
+        marginRight: '-7rem',
+        // height: '150vh', // USE THIS AS EXAMPLE WITH THE HEIGHT OF THE CONTAINER - SEE Launch COMPONENT 
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
+            paddingLeft: 0,
+            paddingRight: 0,
+            fontSize: '0.6px',
+            marginTop: '2rem',
+            justifyContent: 'center',
+            margin: '0 auto',
+            maxWidth: '24rem'
         },
         [theme.breakpoints.only('md')]: {
             // maxWidth: '25rem',
@@ -663,7 +783,7 @@ export const useStyles = makeStyles(theme => ({
         marginTop: '1rem'
     },
     piuploadbutton: {
-        backgroundColor: 'black',
+        backgroundColor: BACKGROUND_DARK_BUTTON_COLOR,
         '&:hover': {
             backgroundColor: BACKGROUND_BUTTON_HOVER_COLOR
         },
@@ -772,6 +892,26 @@ export const useStyles = makeStyles(theme => ({
         marginTop: '2rem',
         [theme.breakpoints.down('sm')]: {
             marginTop: '11rem',
+            justifyContent: 'center',
+            margin: '0 auto'
+        }
+    },
+    pdraftpanel: {
+        marginTop: '7rem',
+        marginBottom: '1rem',
+        width: '54rem',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '3rem',
+            justifyContent: 'center',
+            margin: '0 auto'
+        }
+    },
+    pdraftprojectspanel: {
+        height: '22rem',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            height: '38rem',
             justifyContent: 'center',
             margin: '0 auto'
         }

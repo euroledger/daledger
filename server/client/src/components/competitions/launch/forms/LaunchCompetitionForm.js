@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import ProfileContext from '../../../../ProfileContext';
 import TableData from './data/FunctionalAreaTableData';
 import FormProjectDefinition from './functionalareas/FormProjectDefinition';
@@ -6,13 +6,89 @@ import FormFunctionalAreas from './functionalareas/FormFunctionalAreas';
 import FormProjectInfo from './FormProjectInfo';
 import FormProjectStyle from './FormProjectStyle';
 import FormProjectSummary from './FormProjectSummary';
+import { saveProject } from './draftprojects/SaveProject';
+import { connect } from 'react-redux';
+import { withStyles } from '@material-ui/core';
+import { FOREGROUND_PANEL_COLOR, BACKGROUND_PANEL_COLOR } from '../../../constants';
 
-const LaunchCompetitionForm = () => {
-    const { translations } = useContext(ProfileContext);
+import * as actions from '../../../../actions';
+import { red } from '@material-ui/core/colors';
+
+
+const LaunchCompetitionForm = (props) => {
+
+    const { translations, auth } = useContext(ProfileContext);
+
+    console.log("BARK auth = ", auth);
 
     const { rows, rowsRight, outdoorRows } = TableData(translations);
 
-    const initialState = {
+    let FieldCss = withStyles({
+        // @global is handled by jss-plugin-global.
+        '@global': {
+            '.MuiFormLabel-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiRadio-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiRadio-colorSecondary.Mui-checked': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiInputBase-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiFormLabel-root.Mui-focused': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiSvgIcon-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiOutlinedInput-notchedOutline': {
+                borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
+            },
+            // bollocs
+            '.MuiFormLabel-root': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiFormLabel-root.Mui-focused': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiInput-underline': {
+                transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+                borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR}`
+            },
+            '.MuiOutlinedInput-notchedOutline': {
+                borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
+            },
+            '.MuiOutlinedInput': {
+                notchedOutline: {
+                    borderColor: FOREGROUND_PANEL_COLOR
+                },
+                focused: {
+                    borderColor: FOREGROUND_PANEL_COLOR
+                },
+            },
+            // '.MuiInput-underline:before': {
+            //     borderBottom:  `2px solid ${BACKGROUND_PANEL_COLOR}`
+            // },
+            '.MuiInput-underline:hover:before': {
+                borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
+            },
+            '.MuiInput-underline:hover:after': {
+                borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
+            },
+            '.MuiSvgIcon-root': {
+                color: red
+            }
+            
+        }
+    })(() => null);
+
+    let initialState =
+    {
+        userId: -1,
+        id: '', // id of the project
         step: 1,
         space: 'residential',
         objective: 'newspace',
@@ -33,7 +109,26 @@ const LaunchCompetitionForm = () => {
         award: '',
         translations: translations
     };
+
     const [form, setValues] = useState(initialState);
+
+    const { competition } = props;
+
+    useEffect(() => {
+        if (competition) {
+            console.log("LOADING competition: ", competition);
+            setValues(prevState => {
+                return { ...prevState, ...competition };
+            });
+        }
+    }, [competition]);
+
+
+    const saveDraftDetails = async (step) => {
+        setValues({ ...form, userId: auth._id });
+        return await saveProject(step, form, form.id, auth._id);
+    };
+
 
     const nextStep = () => {
         const { step } = form;
@@ -94,6 +189,13 @@ const LaunchCompetitionForm = () => {
         });
     };
 
+
+    const save = async (step) => {
+        const res = await saveDraftDetails(step);
+        setValues({ ...form, id: res.id });
+        nextStep();
+    }
+
     const handleSubmit = (values, setSubmitting, resetForm) => {
         // values.loading = true;
 
@@ -101,8 +203,9 @@ const LaunchCompetitionForm = () => {
             return { ...prevState, ...values };
         });
 
+        // poke the user id into the values object before saving it
         if (form.step < 5) {
-            nextStep();
+            save(form.step);
         }
         // setSubmitting(true);
 
@@ -115,64 +218,92 @@ const LaunchCompetitionForm = () => {
     };
     const { step } = form;
     switch (step) {
+
         case 1:
             return (
-                <FormProjectDefinition
-                    handleSubmit={handleSubmit}
-                    handleChange={handleChange}
-                    setCountry={setCountry}
-                    values={form}
-                ></FormProjectDefinition>
+                <>
+
+                    {/* <MuiThemeProvider theme={theme}> */}
+                    <FieldCss></FieldCss>
+                    <FormProjectDefinition
+                        handleSubmit={handleSubmit}
+                        handleChange={handleChange}
+                        setCountry={setCountry}
+                        values={form}
+                        auth={auth}
+                    ></FormProjectDefinition>
+                    {/* </MuiThemeProvider> */}
+
+                </>
             );
         case 2:
             return (
-                <FormFunctionalAreas
-                    prevStep={prevStep}
-                    rows={form.rows}
-                    rowsRight={form.rowsRight}
-                    columns={translations.functionalareacolumns}
-                    outdoorRows={form.outdoorRows}
-                    outdoorColumns={translations.functionalareacolumnsoutdoors}
-                    handleRowUpdate={handleRowUpdate}
-                    handleSubmit={handleSubmit}
-                    handleChange={handleChange}
-                    values={form}
-                    objective={form.objective === 'newspace' ? translations.functionalAreaPanelLabel2newspace : translations.functionalAreaPanelLabel2remodel}
-                    indooroutdoor={form.indooroutdoor}
-                ></FormFunctionalAreas>
+                <>
+                    <FieldCss></FieldCss>
+                    <FormFunctionalAreas
+                        prevStep={prevStep}
+                        rows={form.rows}
+                        rowsRight={form.rowsRight}
+                        columns={translations.functionalareacolumns}
+                        outdoorRows={form.outdoorRows}
+                        outdoorColumns={translations.functionalareacolumnsoutdoors}
+                        handleRowUpdate={handleRowUpdate}
+                        handleSubmit={handleSubmit}
+                        handleChange={handleChange}
+                        values={form}
+                        objective={form.objective === 'newspace' ? translations.functionalAreaPanelLabel2newspace : translations.functionalAreaPanelLabel2remodel}
+                        indooroutdoor={form.indooroutdoor}
+                    ></FormFunctionalAreas>
+                </>
             );
         case 3:
             return (
-                <FormProjectInfo
+                <>
+                    <FieldCss></FieldCss>
+                    <FormProjectInfo
+                        handleSubmit={handleSubmit}
+                        handleChange={handleChange}
+                        prevStep={prevStep}
+                        values={form}
+                        setFieldValue={setFieldValue}
+                        handleFileUpdate={handleFileUpdate}
+                    ></FormProjectInfo>
+                </>
+            );
+        case 4:
+            return (
+            <>
+                <FieldCss></FieldCss>
+                <FormProjectStyle
                     handleSubmit={handleSubmit}
                     handleChange={handleChange}
                     prevStep={prevStep}
                     values={form}
                     setFieldValue={setFieldValue}
                     handleFileUpdate={handleFileUpdate}
-                ></FormProjectInfo>
-            );
-        case 4:
-            return <FormProjectStyle
-                handleSubmit={handleSubmit}
-                handleChange={handleChange}
-                prevStep={prevStep}
-                values={form}
-                setFieldValue={setFieldValue}
-                handleFileUpdate={handleFileUpdate}
-            ></FormProjectStyle>
+                ></FormProjectStyle>
+            </>
+            )
         case 5:
-            return <FormProjectSummary
-                prevStep={prevStep}
-                values={form}
-                setFieldValue={setFieldValue}
-            ></FormProjectSummary>
-        case 6:
-            return <h1>Success</h1>;
+            return (
+            <>
+                <FieldCss></FieldCss>
+                <FormProjectSummary
+                    prevStep={prevStep}
+                    values={form}
+                    setFieldValue={setFieldValue}
+                ></FormProjectSummary>
+            </>)
         default: {
             console.log("Error: unexpected step: ", step);
         }
     }
 };
 
-export default LaunchCompetitionForm;
+// export default LaunchCompetitionForm;
+
+function mapStateToProps({ competition }) {
+    return { competition };
+}
+
+export default connect(mapStateToProps, actions)(LaunchCompetitionForm);
