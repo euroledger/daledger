@@ -66,13 +66,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.post('/draftprojects', (req, res) => {
-    // console.log("BARK: req=", req);
+    console.log("BARK got a POST");
     res.jsonp(req.query);
 });
 
 app.get('/draftprojects', (req, res) => {
-    console.log("WOOF GET query...")
-    res.jsonp(req.query);
+    console.log("WOOF got a GET");
+    // res.jsonp(req.query);
 });
 
 // app.post('/api/draftprojects', (req, res) => {

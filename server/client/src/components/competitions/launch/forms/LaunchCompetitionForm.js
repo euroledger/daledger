@@ -67,7 +67,7 @@ const LaunchCompetitionForm = (props) => {
             '.MuiSvgIcon-root': {
                 color: red
             }
-            
+
         }
     })(() => null);
 
@@ -184,7 +184,14 @@ const LaunchCompetitionForm = (props) => {
     const save = async (step) => {
         const res = await saveDraftDetails(step);
         logMessage(auth._id, "INFO", "Successfully saved draft competition!");
-        logMessage(auth._id, "INFO", res);
+        var propValue;
+        for (var propName in res) {
+            propValue = res[propName]
+            let field = propName + ":" + propValue;
+            logMessage(auth._id, "INFO", field);
+            console.log(propName, propValue);
+        }
+        
         setValues({ ...form, id: res.id });
         nextStep();
     }
@@ -265,28 +272,28 @@ const LaunchCompetitionForm = (props) => {
             );
         case 4:
             return (
-            <>
-                <FieldCss></FieldCss>
-                <FormProjectStyle
-                    handleSubmit={handleSubmit}
-                    handleChange={handleChange}
-                    prevStep={prevStep}
-                    values={form}
-                    setFieldValue={setFieldValue}
-                    handleFileUpdate={handleFileUpdate}
-                ></FormProjectStyle>
-            </>
+                <>
+                    <FieldCss></FieldCss>
+                    <FormProjectStyle
+                        handleSubmit={handleSubmit}
+                        handleChange={handleChange}
+                        prevStep={prevStep}
+                        values={form}
+                        setFieldValue={setFieldValue}
+                        handleFileUpdate={handleFileUpdate}
+                    ></FormProjectStyle>
+                </>
             )
         case 5:
             return (
-            <>
-                <FieldCss></FieldCss>
-                <FormProjectSummary
-                    prevStep={prevStep}
-                    values={form}
-                    setFieldValue={setFieldValue}
-                ></FormProjectSummary>
-            </>)
+                <>
+                    <FieldCss></FieldCss>
+                    <FormProjectSummary
+                        prevStep={prevStep}
+                        values={form}
+                        setFieldValue={setFieldValue}
+                    ></FormProjectSummary>
+                </>)
         default: {
             console.log("Error: unexpected step: ", step);
         }
