@@ -67,15 +67,16 @@ if (process.env.NODE_ENV === 'production') {
 
 app.post('/draftprojects', (req, res, next) => {
     console.log("BARK got a POST");
-    // res.jsonp(req.query);
     return next();
 });
 
-// app.get('/draftprojects', (req, res) => {
-//     console.log("WOOF got a GET");
-//     // res.jsonp(req.query);
-// });
+app.get('/draftprojects/', (req, res) => {
+    console.log("WOOF got a GET");
+});
 
+app.get('/draftprojects/*', (req, res) => {
+    console.log("MEEOW got a GET");
+});
 
 // You may want to mount JSON Server on a specific end-point, for example /api
 // Optiona,l except if you want to have JSON Server defaults
