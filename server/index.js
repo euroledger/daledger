@@ -67,21 +67,28 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('/draftprojects', (req, res) => {
     console.log("WOOF got a GET");
+    return next();
 });
 
 app.get('/draftprojects/*', (req, res) => {
     console.log("MEEOW got a GET");
+    return next();
 });
 
 app.get('/', (req, res) => {
     console.log("BOGS got a GET");
+    return next();
 });
 
 app.get('/draftprojects/:_id', (req, res) => {
     console.log("POO got a GET");
-});
-app.post('/draftprojects', (req, res, next) => {
     return next();
+});
+
+app.post('/draftprojects', (req, res, next) => {
+    console.log("BARK: GOT A POST!");
+    return next();
+
 });
 
 
