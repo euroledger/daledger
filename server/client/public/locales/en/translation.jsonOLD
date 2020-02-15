@@ -49,9 +49,9 @@
         "button3text": "My Ongoing Competitions",
         "button4text": "My Past Competitions",
         "tooltip1": "If you decide to cancel or modify a launched competition please contact us within 24 hours of launching",
-        "tooltip2": "Your draft competitions (not yet been launched)",
-        "tooltip3": "Your currently open competitions (launched, but before awarding the winning designer. can only be modified within 24 hours of launching)",
-        "tooltip4": "You competitions launched and closed (after awarding a winnng designer)"
+        "tooltip2": "Competitions which have not yet been launched, still in draft state",
+        "tooltip3": "Shows your current open competitions (excluding draft competitions)",
+        "tooltip4": "Every competition launched (excluding current and draft competitions)"
     },  
     "designerhome": {
         "button1text": "My Ongoing Competitions",
@@ -59,7 +59,7 @@
         "button3text": "Upload To My Portfolio",
         "button4text": "Suggest a New Style",
         "tooltip1": "Shows your current open competitions",
-        "tooltip2": "Shows every competition you participated in",
+        "tooltip2": "Shows every competition participated in",
         "tooltip3": "Add new files to your portfolio (blueprints, photos, drawings, reviews etc)",
         "tooltip4": "Do you know of a style that we are missing? Please contact us at admin@dablock.com or fill out the form"
     },  
@@ -76,7 +76,7 @@
     },
     "projectdefinition": {
         "title": "Project Definition",
-        "radiotitle1": "What kind of space do you need to decorate?",
+        "radiotitle1": "What kind of space do you need to renovate?",
         "radiotitle2": "What is the objective of your project?",
         "radiotitle3": "Is the project Indoor or outdoor?",
         "countrytitle": "Project Country",
@@ -124,7 +124,7 @@
         "panellabel2remodel": "Remodel",
         "panellabel3indoors": "Indoor",
         "panellabel3outdoors": "Outdoor",
-        "instructions": "Please select as many areas as apply to your project, integers between 0-9. If more than 1 room are identical in size, shape and design, please introduce 1. If you need design for a part of a room, please choose the category “Small”. The information in this section is also used to estimate the suggested award of your design. Identical areas will be charged as one single area. Please edit the \"other\" labels as required.",
+        "instructions": "Please select as many areas as apply to your project, integers between 0-9. If more than 1 room are identical in size, shape and design, please introduce 1. If you need design for a part of a room, please choose the category “Small”. The information in this section is also used to estimate the cost of your design. Identical areas will be charged as one single area. Please edit the \"other\" labels as required.",
         "instructionsoutdoor": "Please provide the total approx. sqm size by functional area; e.g., for two terraces of 10sqm each, the approx size is 20sqm. Number of functional areas is optional. If 2 or more areas are identical in size, shape and design, please introduce one-unit size. The information in this section is also used to estimate the cost of your design. Please edit the \"other\" label as required.",
         "tableerror": "non-zero rows must both contain number and size"
     },

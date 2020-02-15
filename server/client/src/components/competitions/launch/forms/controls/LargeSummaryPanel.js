@@ -57,7 +57,7 @@ const SummaryPanel = ({ values, objective, indoors, awardField }) => {
                 },
             },
             '.MuiInput-underline:before': {
-                borderBottom: '2px solid #3399CC'
+                borderBottom: '2px solid transparent'
             },
             '.MuiInput-underline:hover:before': {
                 borderBottom: '1px solid white !important'

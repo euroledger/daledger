@@ -451,7 +451,7 @@ export const useStyles = makeStyles(theme => ({
         borderColor: 'white',
         borderWidth: '2px',
         borderRadius: '18px',
-        backgroundColor: BACKGROUND_BUTTON_COLOR,
+        backgroundColor: BACKGROUND_PANEL_COLOR,
         fontSize: '1.2rem',
         color: 'white',
         height: 'fit-content',
@@ -460,10 +460,12 @@ export const useStyles = makeStyles(theme => ({
         marginTop: '-1.5rem',
         paddingBottom: '1rem',
         [theme.breakpoints.down('sm')]: {
+            borderStyle: 'none',
             height: '45rem',
             maxWidth: '91vw',
             width: '91vw',
-            marginBottom: '1rem'
+            marginBottom: '1rem',
+            marginTop: '3rem'
         },
 
         // TEST FOR TABLETS...
@@ -840,7 +842,7 @@ export const useStyles = makeStyles(theme => ({
     biginnerstyle: {
         width: '100vw',
         textAlign: 'left',
-        marginLeft: '5rem',
+        marginLeft: '2rem',
         overflowX: 'hidden',
         overflowY: 'auto',
         [theme.breakpoints.down('sm')]: {
@@ -849,10 +851,11 @@ export const useStyles = makeStyles(theme => ({
     },
     smallinnerstyle: {
         textAlign: 'left',
-        marginLeft: '5rem',
+        marginLeft: '2rem',
         [theme.breakpoints.down('sm')]: {
             marginLeft: 0,
-            lineHeight: '1rem'
+            lineHeight: '1rem',
+            marginLeft: '0rem'
         }
     },
     pslistpanel: {

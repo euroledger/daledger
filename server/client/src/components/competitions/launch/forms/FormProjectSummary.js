@@ -3,7 +3,7 @@ import { useStyles } from '../../../containerstyle';
 import ProfileContext from '../../../../ProfileContext';
 import { Formik, Form } from 'formik';
 import FormButtonPanel from './controls/FormButtonPanel';
-import LargeSummaryPanel from '../forms/controls/LargeSummaryPanel';
+import LargeSummaryPanel from './controls/LargeSummaryPanel';
 import { Field } from 'formik';
 import { fieldToTextField } from 'formik-material-ui';
 import MuiTextField from '@material-ui/core/TextField';
@@ -62,13 +62,7 @@ const FormProjectSummary = ({
     }
     return (
         <div className={`${classes.piformpanel2} ${classes.psummformpanel2} ${classes.forminfospacing} `}>
-            <div
-                style={{
-                    borderBottom: '1px solid black',
-                    marginRight: '6rem',
-                    marginLeft: '6rem',
-                }}
-            >
+            <div className={classes.formborder}>
                 <p className={classes.formTitle}>{translations.projectSummaryTitle}</p>
             </div>
 

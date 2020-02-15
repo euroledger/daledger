@@ -1,4 +1,5 @@
-import axios from 'axios';
+// import axios from 'axios';
+import { addToStore, updateStore } from './FileStore';
 
 export const saveProject = async (step, values, projectId, userId) => {
 
@@ -8,12 +9,14 @@ export const saveProject = async (step, values, projectId, userId) => {
         if (step === 1 && !projectId) {
             // new project: create
             values.userId = userId;
-            res = await axios.post('/draftprojects', values);
+            // res = await axios.post('/draftprojects', values);
+            let id = addToStore(values);
         } else {
             // existing project: update
-            res = await axios.put(`/draftprojects/${projectId}/`, values)
+            updateStore(values, projectId);
+            // res = await axios.put(`/draftprojects/${projectId}/`, values)
         }
-        return res.data;
+        return values;
     } catch (error) {
         throw (error);
     }

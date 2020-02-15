@@ -46,7 +46,6 @@ const FormFunctionalAreas = ({
     const submit = (values) => {
         if (!indoors) {
             const found = outdoorRows.find(row => (row.number > 0 && row.size === 0) || (row.number === 0 && row.size > 0));
-            console.log("found = ", found)
             if (found) {
                 setOpen(true);
                 return;

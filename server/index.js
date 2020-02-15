@@ -47,7 +47,6 @@ require('./routes/authRoutes')(app);
 
 app.post('/api/logger', function (req, res) {
     const { user, level, text } = req.body;
-    // console.log('WE ARE IN /api/logger');
 
     logger.info(`[${user}] [${level}] ${text}`);
 
@@ -70,7 +69,7 @@ if (process.env.NODE_ENV === 'production') {
 // Optiona,l except if you want to have JSON Server defaults
 // server.use('/api', jsonServer.defaults()); 
 // app.use(jsonServer.bodyParser);
-app.use(jsonServer.router('tmp/projects.json'));
+app.use(jsonServer.router('projects.json'));
 
 
 app.listen(port, () => {

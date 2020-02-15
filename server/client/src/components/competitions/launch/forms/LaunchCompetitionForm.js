@@ -34,7 +34,10 @@ const LaunchCompetitionForm = (props) => {
             '.MuiRadio-colorSecondary.Mui-checked': {
                 color: FOREGROUND_PANEL_COLOR
             },
-            '.MuiInputBase-root': {
+            '.MuiAutocomplete-inputRoot': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiInput-formControl': {
                 color: FOREGROUND_PANEL_COLOR
             },
             '.MuiFormLabel-root.Mui-focused': {
@@ -55,9 +58,9 @@ const LaunchCompetitionForm = (props) => {
                     borderColor: FOREGROUND_PANEL_COLOR
                 },
             },
-            // '.MuiInput-underline:before': {
-            //     borderBottom:  `2px solid ${BACKGROUND_PANEL_COLOR}`
-            // },
+            '.MuiInput-underline:before': {
+                borderBottom:  `2px solid transparent`
+            },
             '.MuiInput-underline:hover:before': {
                 borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
             },
@@ -66,6 +69,13 @@ const LaunchCompetitionForm = (props) => {
             },
             '.MuiSvgIcon-root': {
                 color: red
+            },
+            '.MuiAutocomplete-popupIndicator': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiAutocomplete-clearIndicator': {
+                visibility: 'visible',
+                color: FOREGROUND_PANEL_COLOR
             }
 
         }
@@ -185,14 +195,6 @@ const LaunchCompetitionForm = (props) => {
         const res = await saveDraftDetails(step);
         if (res !== null) {
             logMessage(auth._id, "INFO", "Successfully saved draft competition! project data = ", res.data);
-            var propValue;
-            for (var propName in res) {
-                propValue = res[propName]
-                let field = propName + ":" + propValue;
-                logMessage(auth._id, "INFO", field);
-                console.log(propName, propValue);
-            }
-            
             setValues({ ...form, id: res.id });
             nextStep();
         }

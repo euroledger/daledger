@@ -14,14 +14,14 @@ const Draft = (props) => {
     const { translations, auth } = useContext(ProfileContext);
 
     const { fetchProjects, loadProject } = props;
-    async function getProjects() {
+    async function getProjects() {     
         if (auth) {
             fetchProjects(auth._id);
         }
     }
     useEffect(() => {
         getProjects();
-    });
+    }, [auth]);
 
     // user id just used for logging; delete project based on project id
     const handleDelete = async (projectId) => {
@@ -54,7 +54,8 @@ const Draft = (props) => {
                     <p className={classes.formTitle}>{translations.draftCompetitionsTitle}</p>
                 </div>
                 <div className={classes.pdraftprojectspanel}>
-                    {props.projects.map(project => (
+                    {props.projects.map(project => {
+                        return(
                         <DraftProjectPanel
                             key={project.id}
                             id={project.id}
@@ -63,7 +64,7 @@ const Draft = (props) => {
                             handleMoreDetails={addMoreDetails}
                         >
                         </DraftProjectPanel>
-                    ))}
+                    )})}
                 </div>
                 <div className={classes.pdbuttons} >
                     <Button

@@ -27,7 +27,6 @@ const FormProjectDefinition = ({
         countries = countriesRO;
     }
 
-    // console.log("countries = ", countries);
     const getCountryByCode = code => {
         return countries.find(obj => {
             return obj.code === code;
