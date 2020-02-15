@@ -9,7 +9,7 @@ import Content from './components/content';
 import ClientHome from './components/clienthome';
 import DesignerHome from './components/designerhome';
 import ClientRegister from './components/register/client';
-import Launch from './components/competitions/launch';
+import Launch from './components/competitions/launch/forms';
 import Draft from './components/competitions/draft';
 import Ongoing from './components/competitions/ongoing';
 import Past from './components/competitions/past';

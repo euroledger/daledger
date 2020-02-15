@@ -4,6 +4,7 @@ export const addToStore = (project) => {
     const items = JSON.parse(localStorage.getItem('projects'));
     project.id = items.length + 1;
     items.push(project);
+    console.log("set projects items to", items);
     localStorage.setItem('projects', JSON.stringify(items));
     return project.id;
 }

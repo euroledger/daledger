@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { useStyles } from '../../containerstyle';
+import { useStyles } from '../../../containerstyle';
 import { SwipeableDrawer } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import LaunchCompetitionForm from './forms/LaunchCompetitionForm';
-import ProfileContext from '../../../ProfileContext';
+import LaunchCompetitionForm from './LaunchCompetitionForm';
+import ProfileContext from '../../../../ProfileContext';
 
 
 

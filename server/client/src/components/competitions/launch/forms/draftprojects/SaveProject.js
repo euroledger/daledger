@@ -9,6 +9,7 @@ export const saveProject = async (step, values, projectId, userId) => {
             // new project: create
             values.userId = userId;
             // res = await axios.post('/draftprojects', values);
+            console.log("saveProject: addToStore new project");
             addToStore(values);
         } else {
             // existing project: update
