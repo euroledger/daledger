@@ -449,7 +449,7 @@ export const useStyles = makeStyles(theme => ({
     largeSummaryPanel: {
         borderStyle: 'solid',
         borderColor: 'white',
-        borderWidth: '2px',
+        borderWidth: '1px',
         borderRadius: '18px',
         backgroundColor: BACKGROUND_PANEL_COLOR,
         fontSize: '1.2rem',
