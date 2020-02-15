@@ -854,8 +854,7 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '2rem',
         [theme.breakpoints.down('sm')]: {
             marginLeft: 0,
-            lineHeight: '1rem',
-            marginLeft: '0rem'
+            lineHeight: '1rem'
         }
     },
     pslistpanel: {

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useCallback } from 'react';
 import { useStyles } from '../../containerstyle';
 import ProfileContext from '../../../ProfileContext';
 import Button from '@material-ui/core/Button';
@@ -14,14 +14,19 @@ const Draft = (props) => {
     const { translations, auth } = useContext(ProfileContext);
 
     const { fetchProjects, loadProject } = props;
-    async function getProjects() {     
+    // async function getProjects() {     
+    //     if (auth) {
+    //         fetchProjects(auth._id);
+    //     }
+    // }
+    const getProjects = useCallback(() => {
         if (auth) {
             fetchProjects(auth._id);
         }
-    }
+    }, [auth, fetchProjects])
     useEffect(() => {
         getProjects();
-    }, [auth]);
+    }, [auth, getProjects]);
 
     // user id just used for logging; delete project based on project id
     const handleDelete = async (projectId) => {
@@ -55,16 +60,17 @@ const Draft = (props) => {
                 </div>
                 <div className={classes.pdraftprojectspanel}>
                     {props.projects.map(project => {
-                        return(
-                        <DraftProjectPanel
-                            key={project.id}
-                            id={project.id}
-                            name={project.name}
-                            handleDelete={handleDelete}
-                            handleMoreDetails={addMoreDetails}
-                        >
-                        </DraftProjectPanel>
-                    )})}
+                        return (
+                            <DraftProjectPanel
+                                key={project.id}
+                                id={project.id}
+                                name={project.name}
+                                handleDelete={handleDelete}
+                                handleMoreDetails={addMoreDetails}
+                            >
+                            </DraftProjectPanel>
+                        )
+                    })}
                 </div>
                 <div className={classes.pdbuttons} >
                     <Button
