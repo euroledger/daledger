@@ -805,6 +805,7 @@ export const useStyles = makeStyles(theme => ({
         maxHeight: '20rem',
         overflowX: 'hidden',
         overflowY: 'auto',
+        marginTop: '1rem',
         [theme.breakpoints.down('sm')]: {
             maxHeight: '50rem',
             minWidth: '20rem'

@@ -7,7 +7,7 @@ import { TextField } from 'formik-material-ui';
 import * as Yup from 'yup';
 import Spinner from '../../../utils/Spinner';
 import { withStyles } from '@material-ui/core';
-import { FOREGROUND_PANEL_COLOR } from '../../constants';
+import { FOREGROUND_PANEL_COLOR, UNDERLINE_BORDER_COLOR } from '../../constants';
 
 const ClientRegister = () => {
     const classes = useStyles();
@@ -19,6 +19,51 @@ const ClientRegister = () => {
         loading: false,
         translations: translations
     };
+    // let FieldCss = withStyles({
+    //     // @global is handled by jss-plugin-global.
+    //     '@global': {
+    //         '.MuiFormLabel-root': {
+    //             color: FOREGROUND_PANEL_COLOR
+    //         },
+    //         '.MuiRadio-root': {
+    //             color: FOREGROUND_PANEL_COLOR
+    //         },
+    //         '.MuiRadio-colorSecondary.Mui-checked': {
+    //             color: FOREGROUND_PANEL_COLOR
+    //         },
+    //         '.MuiInputBase-root': {
+    //             color: FOREGROUND_PANEL_COLOR
+    //         },
+    //         '.MuiFormLabel-root.Mui-focused': {
+    //             color: FOREGROUND_PANEL_COLOR
+    //         },
+    //         '.MuiOutlinedInput-notchedOutline': {
+    //             borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
+    //         },
+    //         '.MuiInput-underline': {
+    //             transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+    //             borderBottom: `1px solid transparent`
+    //         },
+    //         '.MuiOutlinedInput': {
+    //             notchedOutline: {
+    //                 borderColor: FOREGROUND_PANEL_COLOR
+    //             },
+    //             focused: {
+    //                 borderColor: FOREGROUND_PANEL_COLOR
+    //             },
+    //         },
+    //         '.MuiInput-underline:before': {
+    //             borderBottom: `1px solid ${UNDERLINE_BORDER_COLOR} !important`
+    //         },
+            
+    //         '.MuiInput-underline:hover:before': {
+    //             borderBottom: `1px solid ${UNDERLINE_BORDER_COLOR} !important`
+    //         },
+    //         '.MuiInput-underline:hover:after': {
+    //             borderBottom: `1px solid ${UNDERLINE_BORDER_COLOR} !important`
+    //         },
+    //     }
+    // })(() => null);
     let FieldCss = withStyles({
         // @global is handled by jss-plugin-global.
         '@global': {
@@ -31,7 +76,10 @@ const ClientRegister = () => {
             '.MuiRadio-colorSecondary.Mui-checked': {
                 color: FOREGROUND_PANEL_COLOR
             },
-            '.MuiInputBase-root': {
+            '.MuiAutocomplete-inputRoot': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiInput-formControl': {
                 color: FOREGROUND_PANEL_COLOR
             },
             '.MuiFormLabel-root.Mui-focused': {
@@ -52,15 +100,24 @@ const ClientRegister = () => {
                     borderColor: FOREGROUND_PANEL_COLOR
                 },
             },
-            // '.MuiInput-underline:before': {
-            //     borderBottom:  `2px solid ${BACKGROUND_PANEL_COLOR}`
-            // },
+            '.MuiInput-underline:before': {
+                borderBottom:  `2px solid transparent`
+            },
             '.MuiInput-underline:hover:before': {
                 borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
             },
             '.MuiInput-underline:hover:after': {
                 borderBottom: `1px solid ${FOREGROUND_PANEL_COLOR} !important`
             },
+           
+            '.MuiAutocomplete-popupIndicator': {
+                color: FOREGROUND_PANEL_COLOR
+            },
+            '.MuiAutocomplete-clearIndicator': {
+                visibility: 'visible',
+                color: FOREGROUND_PANEL_COLOR
+            }
+
         }
     })(() => null);
     const validationSchema = Yup.object().shape({

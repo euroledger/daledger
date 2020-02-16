@@ -24,6 +24,7 @@ const FormButtonPanel = ({ isSubmitting, prevStep, button3text, payment, amount,
                     borderStyle: 'solid',
                     borderWidth: '2px',
                 }}
+                data-test="continueButton"
             >
                 {button3text}
             </Button>);

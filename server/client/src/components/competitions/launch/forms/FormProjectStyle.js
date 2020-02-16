@@ -145,11 +145,7 @@ const FormProjectStyle = ({
     return (
         <div className={`${classes.piformpanel2} ${classes.psformpanel2} ${classes.forminfospacing} `}>
             <div
-                style={{
-                    borderBottom: '1px solid black',
-                    marginRight: '6rem',
-                    marginLeft: '6rem',
-                }}
+                className={classes.formborder}
             >
                 <p className={classes.formTitle}>{translations.projectStyleTitle}</p>
             </div>
