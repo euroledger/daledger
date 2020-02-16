@@ -7,7 +7,7 @@ import { TextField } from 'formik-material-ui';
 import * as Yup from 'yup';
 import Spinner from '../../../utils/Spinner';
 import { withStyles } from '@material-ui/core';
-import { FOREGROUND_PANEL_COLOR, UNDERLINE_BORDER_COLOR } from '../../constants';
+import { FOREGROUND_PANEL_COLOR } from '../../constants';
 
 const ClientRegister = () => {
     const classes = useStyles();
