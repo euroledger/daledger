@@ -173,7 +173,7 @@ const FormProjectStyle = ({
                                         alignItems="flex-start"
                                     >
                                         {data.map(elem => (
-                                            <Grid item xs={12} sm={6} md={3} key={data.indexOf(elem)}>
+                                            <Grid item xs={12} sm={6} md={3} data-test={`card-${data.indexOf(elem)}`} key={data.indexOf(elem)}>
 
                                                 <Card className={data.indexOf(elem) === cardActive ? classes.pscard : classes.pscardnoborder} onClick={(e) => handleClick(data.indexOf(elem), e)}>
                                                     <CardMedia
