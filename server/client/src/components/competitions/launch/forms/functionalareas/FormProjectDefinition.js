@@ -163,7 +163,6 @@ const FormProjectDefinition = ({
                                     type='submit'
                                     className={`${classes.button} ${classes.formButton}  ${classes.buttonPos2}`}
                                     data-test="continueButton"
-                                    // disabled={isSubmitting}
                                     disabled={auth === null}
                                 >
                                     {translations.continueButtonText}
