@@ -26,7 +26,7 @@ export const useStyles = makeStyles(theme => ({
         fontSize: 'calc(1rem + 2vmin)',
         color: 'white',
         background:
-            'linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(front2.jpg)',
+            'linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url(launch.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',

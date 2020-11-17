@@ -1,10 +1,47 @@
 # daledger
 DA Ledger Blockchain MarketPlace for Architects in Romania
+=======
+Instructions for how to install and run the code (windows):
 
-If you want to clone the code, be sure to switch to the test branch (code not yet pushed to master, i.e., production).
+1. To view the github repo go to:
 
-It is possible to run this code locally, but you will need the file dev.js (ask me, emerysolutions@yahoo.co.uk) as this contains the private keys for MongoDB and Google (and some other keys we don't use yet). This goes in the /server/config folder.
+`https://github.com/euroledger/daledger`
 
-To run, cd into the server directory and use the command "npm run dev".
+2. clone the code (important: always work on test branch)
 
-Note that this repo contains only the web server code, the blockchain code is in the separate fabric repo
+`git clone -b test https://github.com/euroledger/daledger.git`
+
+`cd daledger\server`
+
+3. Install server node modules
+
+`npm install`
+
+4. Install client node modules (on dev there are two processes running concurrently: expressjs and react client)
+
+`cd client`
+`npm install` 
+
+5. Create the file dev.js in server\config and paste in the dev keys (ask Mike).
+These are our private keys for various APIs such as Google and MongoDB which are not committed to github for security reasons.
+
+6. Run the app
+
+`npm run dev`
+
+This concurrently runs the server and client (see package.json)
+
+# To change branch in git
+`git checkout master`
+`git checkout test`
+
+# To commit to test branch
+
+`git push -u origin test`
+
+# To merge test -> master
+
+`git checkout master`
+`git merge test`
+`git push origin master`
+>>>>>>> 4c47dc9b21fc32dc2cbfda5cbde061bd2f56a479

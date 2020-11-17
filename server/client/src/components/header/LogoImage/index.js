@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 
 const LogoImage = ({ language }) => {
     const classes = useStyles();
-    const image = `logo-${language}.jpg`;
+    const image = "logo.png";
     return (
         <div id='parent' className='logo' data-test='logoIMG'>
             <Link href={'/'}>
