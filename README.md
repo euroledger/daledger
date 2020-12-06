@@ -47,5 +47,6 @@ This concurrently runs the server and client (see package.json)
 `git merge test`
 `git push origin master`
 
-# DAB-31 TEST
-For information on Git branches/pull requests for the project see Cookbook
+
+# DAB-31 TEST 
+For information on Git branches/pull requests for the project see Cookbook (or ask Mike)
