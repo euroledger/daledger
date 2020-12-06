@@ -44,4 +44,3 @@ This concurrently runs the server and client (see package.json)
 `git checkout master`
 `git merge test`
 `git push origin master`
->>>>>>> 4c47dc9b21fc32dc2cbfda5cbde061bd2f56a479
