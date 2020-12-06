@@ -1,17 +1,15 @@
 # daledger
 DA Ledger Blockchain MarketPlace for Architects in Romania
-
+=======
 Instructions for how to install and run the code (windows):
 
-1. Go to the github rep
+1. To view the github repo go to:
 
 `https://github.com/euroledger/daledger`
 
-Change branch to "test" (select test from the branches dropdown)
+2. clone the code (important: always work on test branch)
 
-2. clone the code
-
-`git clone https://github.com/euroledger/daledger.git`
+`git clone -b test https://github.com/euroledger/daledger.git`
 
 `cd daledger\server`
 
@@ -47,6 +45,7 @@ This concurrently runs the server and client (see package.json)
 `git merge test`
 `git push origin master`
 
-
 # DAB-31 TEST 
 For information on Git branches/pull requests for the project see Cookbook (or ask Mike)
+=======
+

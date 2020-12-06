@@ -10,7 +10,7 @@ const SummaryPanel = ({ name, objective, indoors }) => {
 
     const getName = () => {
         if (name) {
-            return <p style={{overflowWrap: 'break-word'}}>{name}</p>;
+            return <p data-test="project-summary-name" style={{overflowWrap: 'break-word'}}>{name}</p>;
         }
         return <></>;
     }
@@ -22,9 +22,9 @@ const SummaryPanel = ({ name, objective, indoors }) => {
                 className={classes.summaryPanelPadding}
             >
                 {getName()}
-                <p>{translations.functionalAreaPanelLabel1}</p>
-                <p>{objective}</p>
-                <p>{indooroutdoorLabel}</p>
+                <p data-test="project-summary-area">{translations.functionalAreaPanelLabel1}</p>
+                <p data-test="project-summary-objective">{objective}</p>
+                <p data-test="project-summary-indoor">{indooroutdoorLabel}</p>
             </div>
         </div>
 

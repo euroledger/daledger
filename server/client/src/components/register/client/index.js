@@ -153,7 +153,7 @@ const ClientRegister = () => {
             <FieldCss></FieldCss>
             <div
                 className={classes.container}
-                style={{ backgroundImage: 'url("front.jpg")' }}
+                style={{ backgroundImage: 'url("carmen.jpg")' }}
                 data-test='contentComponent'
             >
                 <div className={classes.formpanel}>
