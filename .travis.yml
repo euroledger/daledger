@@ -17,7 +17,7 @@ script:
 
 deploy:
     provider: heroku
-    api_key: 658742ce-2954-4b44-be8b-723b024f062a
+    api_key: f093f4a6-64ec-47b7-891f-a31f08509c31
     app:
       master: daledger-prod
       test: daledger-test
