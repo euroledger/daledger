@@ -9,15 +9,9 @@ export const findByTestAttribute = (component, attr) => {
     return wrapper;
 };
 
-export const checkProps = (component, expectedProps) => {
-    // const propsErr = checkPropTypes(
-    //     component.propTypes,
-    //     expectedProps,
-    //     'props',
-    //     component.name
-    // );
-    return null;
-};
+// export const checkProps = (component, expectedProps) => {
+//     return null;
+// };
 
 // returns true if this is a laptop device, false otherwise
 export const DeviceHelper = () => {
