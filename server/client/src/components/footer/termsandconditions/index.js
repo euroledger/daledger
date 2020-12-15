@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 import { useStyles } from '../../containerstyle';
-import ProfileContext from '../../../ProfileContext';
-import { DeviceHelper } from '../../../utils';
+// import ProfileContext from '../../../ProfileContext';
+// import { DeviceHelper } from '../../../utils';
 import TextContent from '../TextContent';
 
 
 const Terms = () => {
-    const { translations } = useContext(ProfileContext);
+    // const { translations } = useContext(ProfileContext);
     const classes = useStyles();
 
-    const isLaptop = () => {
-        return DeviceHelper();
-    };
+    // const isLaptop = () => {
+    //     return DeviceHelper();
+    // };
 
     return (
         <div

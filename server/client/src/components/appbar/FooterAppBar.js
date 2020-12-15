@@ -51,7 +51,6 @@ function ListItemLink(props) {
 }
 const ButtonAppBar = ({ linkItems }) => {
     const classes = useStyles();
-    const preventDefault = event => event.preventDefault();
     const isLaptop = () => {
         return DeviceHelper();
     };
