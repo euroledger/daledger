@@ -35,8 +35,14 @@ This concurrently runs the server and client (see package.json)
 `git checkout master`
 `git checkout test`
 
-# To commit to test branch
+# To check status
+`git status`
 
+This shows which branch you are on and what has changed since the last commit
+
+# To commit to test branch
+`git add .`
+`git commit -m<comment>`
 `git push -u origin test`
 
 # To merge test -> master
@@ -45,7 +51,9 @@ This concurrently runs the server and client (see package.json)
 `git merge test`
 `git push origin master`
 
-# DAB-31 TEST 
+# DAS-1 TEST 
 For information on Git branches/pull requests for the project see Cookbook (or ask Mike)
 =======
+
+Also see the Technical Notes document
 

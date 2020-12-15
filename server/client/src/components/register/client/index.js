@@ -19,51 +19,7 @@ const ClientRegister = () => {
         loading: false,
         translations: translations
     };
-    // let FieldCss = withStyles({
-    //     // @global is handled by jss-plugin-global.
-    //     '@global': {
-    //         '.MuiFormLabel-root': {
-    //             color: FOREGROUND_PANEL_COLOR
-    //         },
-    //         '.MuiRadio-root': {
-    //             color: FOREGROUND_PANEL_COLOR
-    //         },
-    //         '.MuiRadio-colorSecondary.Mui-checked': {
-    //             color: FOREGROUND_PANEL_COLOR
-    //         },
-    //         '.MuiInputBase-root': {
-    //             color: FOREGROUND_PANEL_COLOR
-    //         },
-    //         '.MuiFormLabel-root.Mui-focused': {
-    //             color: FOREGROUND_PANEL_COLOR
-    //         },
-    //         '.MuiOutlinedInput-notchedOutline': {
-    //             borderColor: `${FOREGROUND_PANEL_COLOR} !important`,
-    //         },
-    //         '.MuiInput-underline': {
-    //             transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-    //             borderBottom: `1px solid transparent`
-    //         },
-    //         '.MuiOutlinedInput': {
-    //             notchedOutline: {
-    //                 borderColor: FOREGROUND_PANEL_COLOR
-    //             },
-    //             focused: {
-    //                 borderColor: FOREGROUND_PANEL_COLOR
-    //             },
-    //         },
-    //         '.MuiInput-underline:before': {
-    //             borderBottom: `1px solid ${UNDERLINE_BORDER_COLOR} !important`
-    //         },
-            
-    //         '.MuiInput-underline:hover:before': {
-    //             borderBottom: `1px solid ${UNDERLINE_BORDER_COLOR} !important`
-    //         },
-    //         '.MuiInput-underline:hover:after': {
-    //             borderBottom: `1px solid ${UNDERLINE_BORDER_COLOR} !important`
-    //         },
-    //     }
-    // })(() => null);
+   
     let FieldCss = withStyles({
         // @global is handled by jss-plugin-global.
         '@global': {

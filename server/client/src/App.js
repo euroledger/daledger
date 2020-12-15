@@ -19,6 +19,12 @@ import i18next from 'i18next';
 import Translations from './components/config';
 import ProfileContext from './ProfileContext';
 import { withStyles } from '@material-ui/core';
+import AboutUs from './components/footer/aboutus';
+import Technology from './components/footer/technology';
+import Terms from './components/footer/termsandconditions';
+import Privacy from './components/footer/privacypolicy';
+import Contact from './components/footer/contactus';
+
 
 const GlobalCss = withStyles({
     // @global is handled by jss-plugin-global.
@@ -26,7 +32,7 @@ const GlobalCss = withStyles({
         '.MuiTypography-root': {
             fontFamily: 'inherit'
         },
-        
+
         '.MuiFormLabel-root': {
             fontFamily: 'inherit',
             color: 'black',
@@ -45,7 +51,7 @@ const GlobalCss = withStyles({
         '.MuiDrawer-paper': {
             background: 'black',
             color: 'white'
-        }, 
+        },
 
         // selected radio button color
         '.MuiRadio-colorSecondary.Mui-checked': {
@@ -75,7 +81,7 @@ const setupLogging = () => {
     window.applogger.addAppender(ajaxAppender);
 
     //report all user console errors
-    window.onerror = function(message, url, lineNumber) {
+    window.onerror = function (message, url, lineNumber) {
         const errorMsg = {
             user: 'Mike', // replace with login info
             level: 'ERROR',
@@ -166,6 +172,26 @@ const App = props => {
                         <Route
                             path='/designerregister'
                             component={ClientRegister}
+                        />
+                        <Route
+                            path='/aboutus'
+                            component={AboutUs}
+                        />
+                        <Route
+                            path='/technology'
+                            component={Technology}
+                        />
+                         <Route
+                            path='/terms'
+                            component={Terms}
+                        />
+                         <Route
+                            path='/privacy'
+                            component={Privacy}
+                        />
+                         <Route
+                            path='/contact'
+                            component={Contact}
                         />
                         <Route path='/launch' component={Launch} />
                         <Route path='/draft' component={Draft} />

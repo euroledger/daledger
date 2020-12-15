@@ -17,6 +17,18 @@ export const useStyles = makeStyles(theme => ({
     deletebutton: {
         marginLeft: '-4rem'
     },
+    center: {
+        margin: 'auto',
+        width: '50%',
+        padding: '2rem',
+
+        [theme.breakpoints.down('sm')]: {
+            width: '73%',
+            marginTop: '1rem',
+            padding: '2rem'
+        },
+    },
+    
     container: {
         height: '91vh',
         width: '100vw',
@@ -945,6 +957,12 @@ export const useStyles = makeStyles(theme => ({
         borderColor: 'white',
         paddingRight: '1rem',
         paddingLeft: '1rem'
+    },
+    standardborder: {
+        borderStyle: 'solid',
+        borderWidth: '1px',
+        borderRadius: '5px',
+        borderColor: 'white',
     },
     pslabelstyle: {
         textAlign: 'left',

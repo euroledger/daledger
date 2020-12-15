@@ -8,6 +8,8 @@ import { DeviceHelper } from '../../utils';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Button from '@material-ui/core/Button';
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -56,35 +58,47 @@ const ButtonAppBar = ({ linkItems }) => {
     return (
         <div className={classes.root}>
             {isLaptop() ? (
-                <AppBar position='relative' style={{bottom: 0}}>
+                <AppBar position='relative' style={{ bottom: 0 }}>
                     <Toolbar className={classes.links}>
                         <Typography style={{ fontFamily: 'inherit' }}>
-                            {linkItems.map(item => (
-                                <Link
-                                    key={item.title}
-                                    href={item.href}
-                                    onClick={preventDefault}
-                                    color='inherit'
-                                    className={classes.link}
-                                >
-                                    {item.title}
-                                </Link>
-                            ))}
+                            {linkItems.map(item => {
+                                const href = item.href;
+                                return (
+                                    // <Link
+                                    //     key={item.title}
+                                    //     href={item.href}
+                                    //     onClick={preventDefault}
+                                    //     color='inherit'
+                                    //     className={classes.link}
+                                    // >
+                                    //     {item.title}
+                                    // </Link>
+                                    <Button style={{ color: 'white', border: 'none' }}
+                                        component="button"
+                                        variant="body2"
+                                        onClick={() => {
+                                            window.location.href = href;
+                                        }}
+                                    >
+                                        {item.title}
+                                    </Button>
+                                );
+                            })}
                         </Typography>
                     </Toolbar>
                 </AppBar>
             ) : (
-                <List component='nav'>
-                    {linkItems.map(item => (
-                        <ListItemLink href={item.href} key={item.title}>
-                            <ListItemText
-                                // className={classes.text}
-                                primary={item.title}
-                            />
-                        </ListItemLink>
-                    ))}
-                </List>
-            )}
+                    <List component='nav'>
+                        {linkItems.map(item => (
+                            <ListItemLink href={item.href} key={item.title}>
+                                <ListItemText
+                                    // className={classes.text}
+                                    primary={item.title}
+                                />
+                            </ListItemLink>
+                        ))}
+                    </List>
+                )}
         </div>
     );
 };

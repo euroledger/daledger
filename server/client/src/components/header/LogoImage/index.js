@@ -19,10 +19,14 @@ const useStyles = makeStyles(theme => ({
 const LogoImage = ({ language }) => {
     const classes = useStyles();
     const image = "logo.png";
+    // const image = "logo7.png";
+
     return (
         <div id='parent' className='logo' data-test='logoIMG'>
             <Link href={'/'}>
                 <img className={classes.img} src={image} alt='Logo'></img>
+                {/* <img style = {{maxHeight: '4rem'}} className={classes.img} src={image} alt='Logo'></img> */}
+
             </Link>
         </div>
     );

@@ -6,23 +6,23 @@ const Footer = () => {
     const { t } = useTranslation();
     const linkItems = [
         {
-            href: '#',
+            href: '/aboutus',
             title: t('footer.link1')
         },
         {
-            href: '#',
+            href: '/technology',
             title: t('footer.link2')
         },
         {
-            href: '#',
+            href: '/terms',
             title: t('footer.link3')
         },
         {
-            href: '#',
+            href: '/privacy',
             title: t('footer.link4')
         },
         {
-            href: '#',
+            href: '/contact',
             title: t('footer.link5')
         }
     ];
