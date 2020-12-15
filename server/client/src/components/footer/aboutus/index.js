@@ -9,9 +9,9 @@ const AboutUs = () => {
     // const { translations } = useContext(ProfileContext);
     const classes = useStyles();
 
-    const isLaptop = () => {
-        return DeviceHelper();
-    };
+    // const isLaptop = () => {
+    //     return DeviceHelper();
+    // };
 
     return (
         <div
