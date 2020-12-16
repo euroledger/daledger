@@ -31,7 +31,15 @@ const useStyles = makeStyles(theme => ({
     },
     text: {
         fontFamily: 'inherit'
-    }
+    },
+    footerbutton: {
+        color: 'white', 
+        border: 'none',
+        '&:hover': {
+            textDecoration: 'underline',
+            textDecorationThickness: '10em'
+        },
+    },
 }));
 function ListItemLink(props) {
     return (
@@ -72,7 +80,7 @@ const ButtonAppBar = ({ linkItems }) => {
                                     // >
                                     //     {item.title}
                                     // </Link>
-                                    <Button style={{ color: 'white', border: 'none' }}
+                                    <Button className={classes.footerbutton}
                                         component="button"
                                         variant="body2"
                                         onClick={() => {
