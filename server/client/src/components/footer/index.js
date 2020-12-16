@@ -7,7 +7,7 @@ const Footer = () => {
     const linkItems = [
         {
             href: '/aboutus',
-            title: t('footer.link1')
+            title: t('footer.link1'),
         },
         {
             href: '/technology',

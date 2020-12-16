@@ -125,6 +125,7 @@ const App = props => {
 
     const getStateData = (language, auth) => {
         let translations = Translations();
+        
         if (auth) {
             translations.links.push({
                 href: '#',
