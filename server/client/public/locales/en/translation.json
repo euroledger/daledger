@@ -21,11 +21,11 @@
         "designer": "I am a Designer"
     },
     "footer": {
-        "link1": "About us",
+        "link1": "About Us",
         "link2": "Technology",
         "link3": "Terms and Conditions",
         "link4": "Privacy Policy",
-        "link5": "Stay in Contact",
+        "link5": "Contact Us",
         "aboutus": 
         [ 
             "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
@@ -45,7 +45,13 @@
             "This is primarily done by using Distributed Ledger Technology (DLT), utilizing strong cryptography for building a global blockchain-like consensus network that provides trust for all participants.",
             "This application uses SSI technology to verify credentials related to portfolio access management, whereby designers can issue a credential to clients which proves they have sufficient permission to access that portfolio.",
             "In the next release we intend to expand on this idea by also implementing password-free access to the website and different levels of access for portfolios."
-        ]
+        ],
+        "contactus": {
+            "title": "Contact Us",
+            "subtitle": "Do you have an enquiry? Do not hesitate to contact us.",
+            "socialmedia": "Follow us on Social Media",
+            "comingsoon": "(Coming Soon)"
+        }
     },
     "register": {
         "firstname": "First Name",

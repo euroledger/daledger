@@ -276,7 +276,13 @@ const Translations = () => {
         designertooltip3text: t("designerhome.tooltip3"),
         designertooltip4text: t("designerhome.tooltip4"),
         aboutustext: t('footer.aboutus', { returnObjects: true }),
-        technologytext: t('footer.technology', { returnObjects: true })
+        technologytext: t('footer.technology', { returnObjects: true }),
+        contactustitle: t('footer.contactus.title'),
+        contactussubtitle: t('footer.contactus.subtitle'),
+        contactussocialmedia: t('footer.contactus.socialmedia'),
+        contactuscomingsoon: t('footer.contactus.comingsoon'),
+
+        
     };
 }
 
