@@ -1,8 +1,5 @@
 import React, { useContext } from 'react';
 import { useStyles } from '../../containerstyle';
-import Icon from '@material-ui/core/Icon';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from '@material-ui/core';
 import ProfileContext from '../../../ProfileContext';
