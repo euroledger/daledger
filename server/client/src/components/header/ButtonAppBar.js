@@ -68,7 +68,6 @@ const ButtonAppBar = ({
     auth
 }) => {
     const classes = useStyles();
-    const preventDefault = event => event.preventDefault();
     return (
         <div className={classes.root} data-test='buttonAppBarComponent'>
             <AppBar position='fixed' className={classes.header}>
