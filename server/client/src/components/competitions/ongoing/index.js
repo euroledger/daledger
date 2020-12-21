@@ -1,16 +1,15 @@
-// import React, { useContext } from 'react';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useStyles } from '../../containerstyle';
-// import ProfileContext from '../../../ProfileContext';
+import ProfileContext from '../../../ProfileContext';
 
 const Ongoing = () => {
-    // const { translations } = useContext(ProfileContext);
+    const { translations } = useContext(ProfileContext);
     const classes = useStyles();
 
     return (
         <div className={classes.container} data-test='contentComponent'>
         <div className={classes.panel}>
-            <p style={{ background: 'white', color: 'black' }}>ONGOING COMPETITIONS</p>
+            <p style={{ background: 'transparent', color: 'white' }}>{translations.ongoingcompetitionsemptytext}</p>
         </div>
     </div>
     )

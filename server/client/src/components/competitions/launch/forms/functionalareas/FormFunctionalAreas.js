@@ -25,7 +25,8 @@ const FormFunctionalAreas = ({
     handleSubmit,
     values,
     objective,
-    indooroutdoor
+    indooroutdoor,
+    space
 }) => {
 
     const classes = useStyles();
@@ -69,31 +70,40 @@ const FormFunctionalAreas = ({
             )
         }
     }
+
+    const getEntireAreaButtonGroup = () => {
+        if (space === "commercial") {
+            return <p></p>;
+        }
+        return (
+            <ButtonGroup
+                title={translations.projectCoverageTitle}
+                selected={values.entireprop}
+                buttonItems={buttonItems}
+                onChange={handleChange}
+                name='entireprop'
+                display="block"
+            ></ButtonGroup>
+        );
+    }
     const renderContent = () => {
         if (indoors) {
             return (
                 <>
                     <div className={classes.fatable}>
                         <div>
-                            <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left" indoors={indoors}>
+                            <FunctionalAreaTable rows={rows} columns={columns} handleRowUpdate={handleRowUpdate} side="left" indoors={indoors} space={space}>
                             </FunctionalAreaTable>
                         </div>
 
                         <div className={classes.fatableright}>
-                            <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate}             side="right" indoors={indoors}>
+                            <FunctionalAreaTable rows={rowsRight} columns={columns} handleRowUpdate={handleRowUpdate} side="right" indoors={indoors} space={space}>
                             </FunctionalAreaTable>
                         </div>
                         <div className={classes.fainfopanelposition}>
-                            <InfoPanel />
+                            <InfoPanel space={space}/>
                             <div className={classes.fabuttonpanel}>
-                                <ButtonGroup
-                                    title={translations.projectCoverageTitle}
-                                    selected={values.entireprop}
-                                    buttonItems={buttonItems}
-                                    onChange={handleChange}
-                                    name='entireprop'
-                                    display="block"
-                                ></ButtonGroup>
+                                {getEntireAreaButtonGroup()}
                             </div>
                         </div>
                     </div>
@@ -113,11 +123,11 @@ const FormFunctionalAreas = ({
     return (
         <div className={`${classes.formpanel2} ${classes.areaspacing} `} >
             <div className={classes.formborder}
-                // style={{
-                //     borderBottom: '1px solid black',
-                //     marginRight: '6rem',
-                //     marginLeft: '6rem'
-                // }}
+            // style={{
+            //     borderBottom: '1px solid black',
+            //     marginRight: '6rem',
+            //     marginLeft: '6rem'
+            // }}
             >
                 <p className={classes.formTitle}>{translations.functionalAreaTitle}</p>
             </div>

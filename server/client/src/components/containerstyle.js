@@ -65,9 +65,9 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     containerclient: {
-        backgroundImage: 'url("garden3.jpg")',
+        backgroundImage: 'url("launch10.jpg")',
         [theme.breakpoints.down('sm')]: {
-            backgroundImage: 'url("garden4.jpg")',
+            backgroundImage: 'url("launch10.jpg")',
             height: '40rem',
         },
     },

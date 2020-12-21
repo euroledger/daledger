@@ -5,7 +5,16 @@
         "link2": "Competiții în curs",
         "link3": "Competiții anterioare",
         "link4": "Comunitate",
-        "link5": "Setări"
+        "link5": "Setări",
+        "howitworks": {
+            "title": "Cum functioneaza",            
+            "describetitle": "Descrie-ți proiectul",
+            "describebody": "Definiți provocarea dvs. de design. Puteți lansa remodelări, noi rezidențiale, design interior, peisaj și proiecte comerciale / publice.",
+            "launchtitle": "Lansați concurența",
+            "launchbody": "Bucurați-vă de procesul de concurs distractiv. Designerii din întreaga lume concurează la proiectul dvs. - prin platforma de încredere Just Do It Design.",
+            "picktitle": "Alegeți cele mai bune modele",
+            "pickbody": "Evaluați și clasificați toate intrările de proiectare. Puteți cere familiei / prietenilor să evalueze și ei. Alege-ți Top 3 designeri câștigători."
+        }
     },
     "help": {
         "button": "Ajutor",
@@ -40,11 +49,11 @@
         ],
         "technology": 
         [
-            "The term Self-Sovereign Identity (SSI) refers to a special form of User-Centric Identity that enables the identity itself (human or non-human) to be in full control of the identity and its associated data. This requires a decentralized identity ecosystem without administrative authorities.",
-            "In the world of SSI, identity-related data is stored in a digital wallet that could reside on a smartphone. Everyone in an SSI ecosystem can issue, receive, and validate credentials that contain individual claims.",
-            "This is primarily done by using Distributed Ledger Technology (DLT), utilizing strong cryptography for building a global blockchain-like consensus network that provides trust for all participants.",
-            "This application uses SSI technology to verify credentials related to portfolio access management, whereby designers can issue a credential to clients which proves they have sufficient permission to access that portfolio.",
-            "In the next release we intend to expand on this idea by also implementing password-free access to the website and different levels of access for portfolios."
+            "Termenul de identitate auto-suverană (SSI) se referă la o formă specială de identitate centrată pe utilizator care permite utilizatorului (uman sau non-uman) să aibă control deplin asupra datelor sale identității sale și celor asociate acesteia. Acest lucru necesită un ecosistem de identități descentralizate fără autorități administrative. ",
+            "În lumea SSI, datele legate de identitate sunt stocate într-un portofel digital care ar putea fi găzduit pe un smartphone. Participanții dintr-un ecosistem SSI pot emite, primi și valida certificate digitale.",
+            "Acest lucru se realizează în primul rând prin utilizarea tehnologiei registrelor distribuite (DLT), utilizând algoritmi criptografici avansați pentru construirea unei rețele globale de tip blockchain, care conferă încredere tuturor participanților.",
+            "Această aplicație folosește tehnologia SSI pentru a verifica certificate digitale legate de gestionarea accesului la portofoliu, prin care designerii pot elibera un certificat digital clienților care dovedește că le-au acordat access pentru a vizualiza propriul portofoliu.",
+            "În următoarea versiune intenționăm să extindem această abordare prin implementarea accesului fără parolă la site-ul web și a diferitelor niveluri de acces pentru portofolii."
         ],
         "contactus": {
             "title": "Contactează-ne",
@@ -88,6 +97,18 @@
         "tooltip2": "Competițiile finalizate la care ati participat",
         "tooltip3": "Adăugați fișiere noi în portofoliul dvs. (planuri, fotografii, desene, recenzii etc.)",
         "tooltip4": "Știți de un stil care ne lipsește? Vă rugăm să ne contactați la adresa admin@dablock.com sau completați formularul"
+    },
+    "ongoingcompetitions": {
+        "none": "Nu aveți concursuri în desfășurare"
+    },
+    "pastcompetitions": {
+        "none": "Nu aveți competiții trecute"
+    },
+    "globalongoingcompetitions": {
+        "none": "Nu există competiții în desfășurare"
+    },
+    "globalpastcompetitions": {
+        "none": "Nu există competiții anterioare"
     },
     "launchcompetition": {
         "drawertext": "Citește-mă",

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useStyles } from '../../containerstyle';
 import Icon from '@material-ui/core/Icon';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+// import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import { makeStyles } from "@material-ui/core/styles";
@@ -92,7 +92,7 @@ const ContactPanel = ({ title }) => {
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <div style={{ marginBottom: '1rem' }}>{translations.contactussocialmedia}</div>
                         <div style={{ marginLeft: 'auto', marginRight: 'auto', display: 'flex', flexDirection: 'row' }}>
-                            <LinkedInIcon style={{ marginLeft: '0.2rem', marginRight: '0.2rem' }} ></LinkedInIcon>
+                            {/* <LinkedInIcon style={{ marginLeft: '0.2rem', marginRight: '0.2rem' }} ></LinkedInIcon> */}
                             <InstagramIcon style={{ marginLeft: '0.2rem', marginRight: '0.2rem' }} ></InstagramIcon>
                             <FacebookIcon style={{ marginLeft: '0.2rem', marginRight: '0.2rem' }} ></FacebookIcon>
                         </div>

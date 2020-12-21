@@ -77,6 +77,83 @@ const TableData = (translations) => {
                 large: 0
             }
         ];
+        const commercialRows =
+        [
+            {
+                id: 0,
+                type: translations.commercialrows[0],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 1,
+                type: translations.commercialrows[1],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 2,
+                type: translations.commercialrows[2],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 3,
+                type: translations.commercialrows[3],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 4,
+                type: translations.commercialrows[4],
+                small: 0,
+                medium: 0,
+                large: 0
+            }
+        ];
+
+    const commercialRowsRight =
+        [
+            {
+                id: 0,
+                type: translations.commercialrows[5],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 1,
+                type: translations.commercialrows[6],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 2,
+                type: translations.commercialrows[7],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 3,
+                type: translations.commercialrows[8],
+                small: 0,
+                medium: 0,
+                large: 0
+            },
+            {
+                id: 4,
+                type: translations.commercialrows[9],
+                small: 0,
+                medium: 0,
+                large: 0
+            }
+        ];
         const outdoorRows =
         [
             {
@@ -132,6 +209,8 @@ const TableData = (translations) => {
         return {
             rows: rows,
             rowsRight: rowsRight,
+            commercialRows: commercialRows,
+            commercialRowsRight: commercialRowsRight,
             outdoorRows: outdoorRows
         }
 }

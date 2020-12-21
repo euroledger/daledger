@@ -11,22 +11,27 @@ const Translations = () => {
         language: t('language'),
         links: [
             {
-                href: '#',
+                href: '/howitworks',
                 title: t('navbar.link1')
             },
             {
-                href: '#',
+                href: '/globalongoing',
                 title: t('navbar.link2')
             },
             {
-                href: '#',
+                href: '/globalpast',
                 title: t('navbar.link3')
             },
-            {
-                href: '#',
-                title: t('navbar.link4')
-            }
+            // {
+            //     href: '#',
+            //     title: t('navbar.link4')
+            // }
         ],
+
+        
+        // For now, Dec 20, no links in navbar we may put them back later
+        // links: [],
+
         sidebarTitle: t('launchcompetition.drawertext'),
         competitionDrawerText: [
             t('launchcompetition.sidebar1'),
@@ -76,6 +81,18 @@ const Translations = () => {
             t('functionalarea.row8'),
             t('functionalarea.row9'),
             t('functionalarea.row10')
+        ],
+        commercialrows: [
+            t('functionalarea.commercialrow1'),
+            t('functionalarea.commercialrow2'),
+            t('functionalarea.commercialrow3'),
+            t('functionalarea.commercialrow4'),
+            t('functionalarea.commercialrow5'),
+            t('functionalarea.commercialrow6'),
+            t('functionalarea.commercialrow7'),
+            t('functionalarea.commercialrow8'),
+            t('functionalarea.commercialrow9'),
+            t('functionalarea.commercialrow10')
         ],
         functionalareaoutdoorrows: [
             t('functionalarea.outdoorrow1'),
@@ -238,7 +255,7 @@ const Translations = () => {
         draftCompetitionsDeleteButtonText: t('draftcompetitions.deletebuttontext'),
         draftCompetitionsMoreDetailsButtonText: t('draftcompetitions.moredetailsbuttontext'),
         draftCompetitionsUnnamedProjectText: t('draftcompetitions.unnamedprojexttext'),
-        settingsLink: t('navbar.link5'),
+        // settingsLink: t('navbar.link5'), Dec 20 remove for now
         loginbuttonText: isLaptop() ? t('loginbuttontext') : t('loginbuttontext_m'),
         logoutbuttonText: t('logoutbuttontext'),
         helpTitle: t('help.button'),
@@ -275,14 +292,23 @@ const Translations = () => {
         designertooltip2text: t("designerhome.tooltip2"),
         designertooltip3text: t("designerhome.tooltip3"),
         designertooltip4text: t("designerhome.tooltip4"),
+        ongoingcompetitionsemptytext: t('ongoingcompetitions.none'),
+        noongoingcompetitions:  t('globalongoingcompetitions.none'),
+        pastcompetitionsemptytext: t('pastcompetitions.none'),
+        nopastcompetitions: t('globalpastcompetitions.none'),
         aboutustext: t('footer.aboutus', { returnObjects: true }),
         technologytext: t('footer.technology', { returnObjects: true }),
         contactustitle: t('footer.contactus.title'),
         contactussubtitle: t('footer.contactus.subtitle'),
         contactussocialmedia: t('footer.contactus.socialmedia'),
         contactuscomingsoon: t('footer.contactus.comingsoon'),
-
-        
+        howitworkstitle: t('navbar.howitworks.title'),
+        howitworksdescribetitle: t('navbar.howitworks.describetitle'),
+        howitworksdescribebody: t('navbar.howitworks.describebody'),
+        howitworkslaunchtitle: t('navbar.howitworks.launchtitle'),
+        howitworkslaunchbody: t('navbar.howitworks.launchbody'),
+        howitworkspicktitle: t('navbar.howitworks.picktitle'),
+        howitworkspickbody: t('navbar.howitworks.pickbody'),
     };
 }
 

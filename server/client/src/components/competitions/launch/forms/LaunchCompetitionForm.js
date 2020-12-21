@@ -257,6 +257,7 @@ const LaunchCompetitionForm = (props) => {
                         values={form}
                         objective={form.objective === 'newspace' ? translations.functionalAreaPanelLabel2newspace : translations.functionalAreaPanelLabel2remodel}
                         indooroutdoor={form.indooroutdoor}
+                        space={form.space}
                     ></FormFunctionalAreas>
                 </>
             );

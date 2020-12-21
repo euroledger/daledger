@@ -5,7 +5,16 @@
         "link2": "Ongoing Competitions",
         "link3": "Past Competitions",
         "link4": "Community",
-        "link5": "Settings"
+        "link5": "Settings",
+        "howitworks": {
+            "title": "How It Works",
+            "describetitle": "Describe Your Project",
+            "describebody": "Define your design challenge. You can launch remodeling, new residential, interior design, landscape, and commercial/public projects.",
+            "launchtitle": "Launch Your Competition",
+            "launchbody": "Enjoy the fun competition process. Designers from around the globe compete on your project - through Just Do It Design's trusted platform.",
+            "picktitle": "Pick The Best Designs",
+            "pickbody": "Rate and rank all design entries. You can ask family/friends to rate as well. Pick your Top 3 winning designers."
+        }
     },
     "help": {
         "button": "Help",
@@ -40,10 +49,10 @@
         ],
         "technology": 
         [
-            "The term Self-Sovereign Identity (SSI) refers to a special form of User-Centric Identity that enables the identity itself (human or non-human) to be in full control of the identity and its associated data. This requires a decentralized identity ecosystem without administrative authorities.",
-            "In the world of SSI, identity-related data is stored in a digital wallet that could reside on a smartphone. Everyone in an SSI ecosystem can issue, receive, and validate credentials that contain individual claims.",
+            "The term Self-Sovereign Identity (SSI) refers to a special form of User-Centric Identity that enables the user itself (human or non-human) to be in full control of its identity data and associated data. This requires a decentralized identity ecosystem without administrative authorities.",
+            "In the world of SSI, identity-related data is stored in a digital wallet that could reside on a smartphone. The participants in an SSI ecosystem can issue, receive, and validate credentials",
             "This is primarily done by using Distributed Ledger Technology (DLT), utilizing strong cryptography for building a global blockchain-like consensus network that provides trust for all participants.",
-            "This application uses SSI technology to verify credentials related to portfolio access management, whereby designers can issue a credential to clients which proves they have sufficient permission to access that portfolio.",
+            "This application uses SSI technology to verify credentials related to portfolio access management, whereby designers can issue a credential to clients which proves they have permission to access that portfolio.",
             "In the next release we intend to expand on this idea by also implementing password-free access to the website and different levels of access for portfolios."
         ],
         "contactus": {
@@ -89,6 +98,18 @@
         "tooltip3": "Add new files to your portfolio (blueprints, photos, drawings, reviews etc)",
         "tooltip4": "Do you know of a style that we are missing? Please contact us at admin@dablock.com or fill out the form"
     },  
+    "ongoingcompetitions": {
+        "none": "You have no ongoing competitions"
+    },
+    "pastcompetitions": {
+        "none": "You have no past competitions"
+    },  
+    "globalongoingcompetitions": {
+        "none": "There are no ongoing competitions"
+    },
+    "globalpastcompetitions": {
+        "none": "There are no past competitions"
+    },
     "launchcompetition": {
         "drawertext": "Read Me",
         "sidebar1": "Welcome to your journey to pick the design you love!",
@@ -137,6 +158,16 @@
         "row8": "Hallways",
         "row9": "Other-1",
         "row10": "Other-2",
+        "commercialrow1": "Retail",
+        "commercialrow2": "Medical Clinic",
+        "commercialrow3": "Restaurant",
+        "commercialrow4": "Fitness Club",
+        "commercialrow5": "Office",
+        "commercialrow6": "School",
+        "commercialrow7": "Cafe",
+        "commercialrow8": "Beauty Salon",
+        "commercialrow9": "Other-1",
+        "commercialrow10": "Other-2",
         "outdoorrow1": "Terraces",
         "outdoorrow2": "Patios",
         "outdoorrow3": "Gardens",

@@ -37,7 +37,7 @@ const validate = (side, change, row) => {
         }
     }
 }
-const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors }) => {
+const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors, space }) => {
     const getRowStyle = () => {
         if (indoors) {
             return {}
@@ -118,7 +118,11 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors }) 
             rows[i].type = translations.functionalarearows[i + offset];
         }
     }
-
+    const setCommercialRowTypesAccordingToLanguage = (offset) => {
+        for (let i = 0; i < rows.length; i++) {
+            rows[i].type = translations.commercialrows[i + offset];
+        }
+    }
     const setRowTypesAccordingToLanguageOutdoors = () => {
         for (let i = 0; i < rows.length; i++) {
             if (i === 7) {
@@ -143,7 +147,18 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors }) 
             rows[i].type = translations.functionalarearows[i + offset];
         }
     }
-
+    const setCommercialRowTypesAccordingToLanguageRight = (offset) => {
+        console.log("FUCK QUACK IN HERE")
+        for (let i = 0; i < rows.length; i++) {
+            if (i >= 3) {
+                if (rows[i].type !== "Other-1" && rows[i].type !== "Other-2" && rows[i].type !== "Alte Spatii-1" && rows[i].type !== "Alte Spatii-1") {
+                    continue;
+                }
+            }
+            rows[i].type = translations.commercialrows[i + offset];
+        }
+    }
+    
     const isLaptop = () => {
         return DeviceHelper();
     };
@@ -192,13 +207,19 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors }) 
     };
 
     // bit hacky...better to split the rows translations into two arrays and use the correct one here
-    if (side === "left") {
+
+    console.log("QUACK fucker side =", side, " space = ", space);
+    if (side === "left" && space === "commercial") {
+        setCommercialRowTypesAccordingToLanguage(0);
+    } else if (side === "right" && space === "commercial") {
+        setCommercialRowTypesAccordingToLanguageRight(5);
+    } else if (side === "left") {
         setRowTypesAccordingToLanguage(0);
     } else if (side === "right") {
         setRowTypesAccordingToLanguageRight(5);
     } else if (side === "outdoors") {
         setRowTypesAccordingToLanguageOutdoors()
-    }
+    } 
 
 
     return (

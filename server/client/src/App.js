@@ -12,6 +12,8 @@ import ClientRegister from './components/register/client';
 import Launch from './components/competitions/launch/forms';
 import Draft from './components/competitions/draft';
 import Ongoing from './components/competitions/ongoing';
+import GlobalOngoing from './components/competitions/global/ongoing';
+import GlobalPast from './components/competitions/global/past';
 import Past from './components/competitions/past';
 import { Container } from '@material-ui/core';
 import log4javascript from 'log4javascript';
@@ -20,6 +22,7 @@ import Translations from './components/config';
 import ProfileContext from './ProfileContext';
 import { withStyles } from '@material-ui/core';
 import AboutUs from './components/footer/aboutus';
+import HowItWorks from './components/header/HowItWorks';
 import Technology from './components/footer/technology';
 import Terms from './components/footer/termsandconditions';
 import Privacy from './components/footer/privacypolicy';
@@ -125,7 +128,7 @@ const App = props => {
 
     const getStateData = (language, auth) => {
         let translations = Translations();
-        
+
         if (auth) {
             translations.links.push({
                 href: '#',
@@ -156,6 +159,18 @@ const App = props => {
                     <BrowserRouter>
                         <Route exact path='/' component={Content} />
                         <Route
+                            path='/howitworks'
+                            component={HowItWorks}
+                        />
+                        <Route
+                            path='/globalongoing'
+                            component={GlobalOngoing}
+                        />
+                           <Route
+                            path='/globalpast'
+                            component={GlobalPast}
+                        />
+                        <Route
                             exact
                             path='/clienthome'
                             component={ClientHome}
@@ -182,15 +197,15 @@ const App = props => {
                             path='/technology'
                             component={Technology}
                         />
-                         <Route
+                        <Route
                             path='/terms'
                             component={Terms}
                         />
-                         <Route
+                        <Route
                             path='/privacy'
                             component={Privacy}
                         />
-                         <Route
+                        <Route
                             path='/contact'
                             component={Contact}
                         />

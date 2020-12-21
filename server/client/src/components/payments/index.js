@@ -37,7 +37,7 @@ const Payments = ({ amount, projectId, disabled }) => {
                 currency='EUR'
                 shippingAddress
                 billingAddress
-                image="logo.png"
+                image="logo9.png"
                 // Note: enabling both zipCode checks and billing or shipping address will
                 // cause zipCheck to be pulled from billing address (set to shipping if none provided).
                 zipCode

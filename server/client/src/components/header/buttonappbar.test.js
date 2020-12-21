@@ -19,10 +19,10 @@ const createTestProps = () => {
                 href: '#',
                 title: "Past Competitions"
             },
-            {
-                href: '#',
-                title: "Community"
-            }
+            // {
+            //     href: '#',
+            //     title: "Community"
+            // }
         ],
         buttonText: "login",
         helpTitle: "help",
