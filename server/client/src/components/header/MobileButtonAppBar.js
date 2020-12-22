@@ -73,16 +73,7 @@ const MobileButtonAppBar = ({
 
         setState({ ...state, [side]: open });
     };
-   
-    const sideList = side => (
-        <div
-            role='presentation'
-            onClick={toggleDrawer(side, false)}
-            onKeyDown={toggleDrawer(side, false)}
-        >
-            <div className={classes.toolbar}>
-                <IconButton onClick={toggleDrawer('left', false)}>
-                    <ChevronLeftIcon className={classes.icon} />
+   qses.icon} />
                 </IconButton>
             </div>
             {/* <Divider /> */}

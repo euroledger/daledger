@@ -148,7 +148,6 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors, sp
         }
     }
     const setCommercialRowTypesAccordingToLanguageRight = (offset) => {
-        console.log("FUCK QUACK IN HERE")
         for (let i = 0; i < rows.length; i++) {
             if (i >= 3) {
                 if (rows[i].type !== "Other-1" && rows[i].type !== "Other-2" && rows[i].type !== "Alte Spatii-1" && rows[i].type !== "Alte Spatii-1") {
@@ -208,7 +207,6 @@ const FunctionalAreaTable = ({ rows, columns, handleRowUpdate, side, indoors, sp
 
     // bit hacky...better to split the rows translations into two arrays and use the correct one here
 
-    console.log("QUACK fucker side =", side, " space = ", space);
     if (side === "left" && space === "commercial") {
         setCommercialRowTypesAccordingToLanguage(0);
     } else if (side === "right" && space === "commercial") {
