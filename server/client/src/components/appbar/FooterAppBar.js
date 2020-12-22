@@ -8,7 +8,6 @@ import { DeviceHelper } from '../../utils';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles(theme => ({
@@ -71,8 +70,6 @@ const ButtonAppBar = ({ linkItems }) => {
                     <Toolbar className={classes.links}>
                         <Typography style={{ fontFamily: 'inherit' }}>
                             {linkItems.map(item => {
-                                const href = item.href;
-
                                 return (
                                     <Link
                                         key={item.title}
