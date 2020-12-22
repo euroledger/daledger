@@ -108,7 +108,7 @@ const MobileButtonAppBar = ({
                     >
                         <Link
                             href={item.href}
-                            onClick={preventDefault}
+                            // onClick={preventDefault}
                             color='inherit'
                             className={classes.link}
                         >

@@ -89,7 +89,6 @@ const ButtonAppBar = ({ linkItems }) => {
                         {linkItems.map(item => (
                             <ListItemLink href={item.href} key={item.title}>
                                 <ListItemText
-                                    // className={classes.text}
                                     primary={item.title}
                                 />
                             </ListItemLink>
