@@ -1,26 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useStyles } from '../../containerstyle';
-// import ProfileContext from '../../../ProfileContext';
-// import { DeviceHelper } from '../../../utils';
+import ProfileContext from '../../../ProfileContext';
 import TextContent from '../TextContent';
 
 
 const Privacy = () => {
-    // const { translations } = useContext(ProfileContext);
+    const { translations } = useContext(ProfileContext);
     const classes = useStyles();
 
-    // const isLaptop = () => {
-    //     return DeviceHelper();
-    // };
+    const text = translations.privacytext;
+    const title = translations.privacytitle;
 
     return (
         <div
-        className={classes.container}
-        data-test='contentComponent'
+            className={classes.container}
+            data-test='contentComponent'
         >
-            <TextContent title="Privacy Policy"></TextContent>
+            <TextContent title={title} text={text}></TextContent>
         </div>
     );
-};
+}
 
 export default Privacy;

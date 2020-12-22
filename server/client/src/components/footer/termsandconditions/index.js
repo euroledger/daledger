@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useStyles } from '../../containerstyle';
-// import ProfileContext from '../../../ProfileContext';
-// import { DeviceHelper } from '../../../utils';
+import ProfileContext from '../../../ProfileContext';
 import TextContent from '../TextContent';
 
 
 const Terms = () => {
-    // const { translations } = useContext(ProfileContext);
+    const { translations } = useContext(ProfileContext);
     const classes = useStyles();
 
-    // const isLaptop = () => {
-    //     return DeviceHelper();
-    // };
+    const text = translations.termstext;
+    const title = translations.termstitle;
 
     return (
         <div
-        className={classes.container}
-        data-test='contentComponent'
+            className={classes.container}
+            data-test='contentComponent'
         >
-            <TextContent title="Terms and Conditions"></TextContent>
+            <TextContent title={title} text={text}></TextContent>
         </div>
     );
 };

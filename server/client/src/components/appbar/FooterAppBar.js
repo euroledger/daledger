@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'inherit'
     },
     footerbutton: {
-        color: 'white', 
+        color: 'white',
         border: 'none',
         '&:hover': {
             textDecoration: 'underline',
@@ -57,6 +57,8 @@ function ListItemLink(props) {
         />
     );
 }
+
+
 const ButtonAppBar = ({ linkItems }) => {
     const classes = useStyles();
     const isLaptop = () => {
@@ -70,25 +72,16 @@ const ButtonAppBar = ({ linkItems }) => {
                         <Typography style={{ fontFamily: 'inherit' }}>
                             {linkItems.map(item => {
                                 const href = item.href;
+
                                 return (
-                                    // <Link
-                                    //     key={item.title}
-                                    //     href={item.href}
-                                    //     onClick={preventDefault}
-                                    //     color='inherit'
-                                    //     className={classes.link}
-                                    // >
-                                    //     {item.title}
-                                    // </Link>
-                                    <Button className={classes.footerbutton}
-                                        component="button"
-                                        variant="body2"
-                                        onClick={() => {
-                                            window.location.href = href;
-                                        }}
+                                    <Link
+                                        key={item.title}
+                                        href={item.href}
+                                        color='inherit'
+                                        className={classes.link}
                                     >
                                         {item.title}
-                                    </Button>
+                                    </Link>
                                 );
                             })}
                         </Typography>

@@ -8,7 +8,7 @@ import AppBarMenu from '../menu/AppBarMenu';
 import LogoImage from './LogoImage';
 import 'react-flags-select/scss/react-flags-select.scss';
 import FlagMenu from './FlagMenu';
-import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles(theme => ({
@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: '1em'
     },
     footerbutton: {
-        color: 'white', 
+        color: 'white',
         border: 'none',
         '&:hover': {
             textDecoration: 'underline',
@@ -76,25 +76,24 @@ const ButtonAppBar = ({
                     <>
                         <Typography className={classes.typography}>
                             {links.map(item => (
-                                // <Link
-                                //     data-test={item.title}
-                                //     key={item.title}
-                                //     href={item.href}
-                                //     onClick={preventDefault}
-                                //     color='inherit'
-                                //     className={classes.link}
+                                <Link
+                                    data-test={item.title}
+                                    key={item.title}
+                                    href={item.href}
+                                    color='inherit'
+                                    className={classes.link}
+                                >
+                                    {item.title}
+                                </Link>
+                                // <Button className={classes.footerbutton}
+                                //     component="button"
+                                //     variant="body2"
+                                //     onClick={() => {
+                                //         window.location.href = item.href;
+                                //     }}
                                 // >
                                 //     {item.title}
-                                // </Link>
-                                <Button className={classes.footerbutton}
-                                component="button"
-                                variant="body2"
-                                onClick={() => {
-                                    window.location.href = item.href;
-                                }}
-                            >
-                                {item.title}
-                            </Button>
+                                // </Button>
                             ))}
                         </Typography>
                         <AppBarMenu

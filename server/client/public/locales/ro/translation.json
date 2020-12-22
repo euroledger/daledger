@@ -8,12 +8,12 @@
         "link5": "Setări",
         "howitworks": {
             "title": "Cum functioneaza",            
-            "describetitle": "Descrie-ți proiectul",
+            "describetitle": "Definiți proiectul de design interior",
             "describebody": "Definiți provocarea dvs. de design. Puteți lansa remodelări, noi rezidențiale, design interior, peisaj și proiecte comerciale / publice.",
-            "launchtitle": "Lansați concurența",
+            "launchtitle": "Lansați un concurs",
             "launchbody": "Bucurați-vă de procesul de concurs distractiv. Designerii din întreaga lume concurează la proiectul dvs. - prin platforma de încredere Just Do It Design.",
             "picktitle": "Alegeți cele mai bune modele",
-            "pickbody": "Evaluați și clasificați toate intrările de proiectare. Puteți cere familiei / prietenilor să evalueze și ei. Alege-ți Top 3 designeri câștigători."
+            "pickbody": "Aranjati in ordinea preferata propunerile designerilor. Alegeți top 5 proiecte câștigătoare."
         }
     },
     "help": {
@@ -31,30 +31,42 @@
     },
        "footer": {
         "link1": "Despre noi",
-        "link2": "Tehnologie",
+        "link2": "Technologie",
         "link3": "Termeni și condiții",
         "link4": "Politica de confidențialitate",
         "link5": "Contactează-ne",
-        "aboutus": 
-        [ 
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
-            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" 
-        ],
-        "technology": 
-        [
-            "Termenul de identitate auto-suverană (SSI) se referă la o formă specială de identitate centrată pe utilizator care permite utilizatorului (uman sau non-uman) să aibă control deplin asupra datelor sale identității sale și celor asociate acesteia. Acest lucru necesită un ecosistem de identități descentralizate fără autorități administrative. ",
-            "În lumea SSI, datele legate de identitate sunt stocate într-un portofel digital care ar putea fi găzduit pe un smartphone. Participanții dintr-un ecosistem SSI pot emite, primi și valida certificate digitale.",
-            "Acest lucru se realizează în primul rând prin utilizarea tehnologiei registrelor distribuite (DLT), utilizând algoritmi criptografici avansați pentru construirea unei rețele globale de tip blockchain, care conferă încredere tuturor participanților.",
-            "Această aplicație folosește tehnologia SSI pentru a verifica certificate digitale legate de gestionarea accesului la portofoliu, prin care designerii pot elibera un certificat digital clienților care dovedește că le-au acordat access pentru a vizualiza propriul portofoliu.",
-            "În următoarea versiune intenționăm să extindem această abordare prin implementarea accesului fără parolă la site-ul web și a diferitelor niveluri de acces pentru portofolii."
-        ],
+        "aboutus": {
+            "title": "Despre noi",
+            "text":
+            [ 
+                "Alina Stoian este un architect cu proiecte de success in Romania, SUA, UK, Danemarca, Austria si Dubai. Carmen este strategist de business, pasionata de arhitectura si design.", 
+                "Sunt prietene si partenere de business si amandoua considera ca spatiile in care locuim sau muncim ne definesc, pe noi si valorile noastre, si ne influenteaza starea de spirit. Că fiecare spațiu are propria energie și poveste care este spusă prin fiecare obiect care face parte din el.",
+                "Acest proiect este un rezultat al convingerii lor puternice că fiecare dintre noi merităm o poveste bine spusă."
+            ]
+        },
+        "technology": {
+            "title" : "Technologie",
+            "text":         
+            [
+                "Termenul de identitate auto-suverană (SSI) se referă la o formă specială de identitate centrată pe utilizator care permite utilizatorului (uman sau non-uman) să aibă control deplin asupra datelor sale identității sale și celor asociate acesteia. Acest lucru necesită un ecosistem de identități descentralizate fără autorități administrative. ",
+                "În lumea SSI, datele legate de identitate sunt stocate într-un portofel digital care ar putea fi găzduit pe un smartphone. Participanții dintr-un ecosistem SSI pot emite, primi și valida certificate digitale.",
+                "Acest lucru se realizează în primul rând prin utilizarea tehnologiei registrelor distribuite (DLT), utilizând algoritmi criptografici avansați pentru construirea unei rețele globale de tip blockchain, care conferă încredere tuturor participanților.",
+                "Această aplicație folosește tehnologia SSI pentru a verifica certificate digitale legate de gestionarea accesului la portofoliu, prin care designerii pot elibera un certificat digital clienților care dovedește că le-au acordat access pentru a vizualiza propriul portofoliu.",
+                "În următoarea versiune intenționăm să extindem această abordare prin implementarea accesului fără parolă la site-ul web și a diferitelor niveluri de acces pentru portofolii."
+            ]
+        },
+        "privacy": {
+            "title": "Politica de confidențialitate",
+            "text": [
+                "blah blah blah privacy"
+            ]
+        },
+        "terms": {
+            "title": "Termeni și condiții",
+            "text": [
+                "blah blah blah terms"
+            ]
+        },       
         "contactus": {
             "title": "Contactează-ne",
             "subtitle": "Aveți o anchetă? Nu ezita să ne contactezi.",

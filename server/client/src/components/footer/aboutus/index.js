@@ -6,13 +6,15 @@ import TextContent from '../TextContent';
 const AboutUs = () => {
     const { translations } = useContext(ProfileContext);
     const text = translations.aboutustext;
+    const title = translations.aboutustitle;
+
     const classes = useStyles();
 
     return (
         <div
             className={classes.container}
             data-test='contentComponent'>
-            <TextContent title="About Us" text={text}></TextContent>
+            <TextContent title={title} text={text}></TextContent>
         </div>
     );
 };

@@ -8,12 +8,12 @@
         "link5": "Settings",
         "howitworks": {
             "title": "How It Works",
-            "describetitle": "Describe Your Project",
-            "describebody": "Define your design challenge. You can launch remodeling, new residential, interior design, landscape, and commercial/public projects.",
-            "launchtitle": "Launch Your Competition",
-            "launchbody": "Enjoy the fun competition process. Designers from around the globe compete on your project - through Just Do It Design's trusted platform.",
-            "picktitle": "Pick The Best Designs",
-            "pickbody": "Rate and rank all design entries. You can ask family/friends to rate as well. Pick your Top 3 winning designers."
+            "describetitle": "Define Your Design Project",
+            "describebody": "Choose from residential, commercial, landscape. Create a new project or remodel existing spaces.",
+            "launchtitle": "Launch A Competition",
+            "launchbody": " Our designers will compete to deliver your dream interior design project.",
+            "picktitle": "Rate and Rank all Entries",
+            "pickbody": "Pick up your top 5 winning designs."
         }
     },
     "help": {
@@ -35,26 +35,38 @@
         "link3": "Terms and Conditions",
         "link4": "Privacy Policy",
         "link5": "Contact Us",
-        "aboutus": 
-        [ 
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. ",
-            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" 
-        ],
-        "technology": 
-        [
-            "The term Self-Sovereign Identity (SSI) refers to a special form of User-Centric Identity that enables the user itself (human or non-human) to be in full control of its identity data and associated data. This requires a decentralized identity ecosystem without administrative authorities.",
-            "In the world of SSI, identity-related data is stored in a digital wallet that could reside on a smartphone. The participants in an SSI ecosystem can issue, receive, and validate credentials",
-            "This is primarily done by using Distributed Ledger Technology (DLT), utilizing strong cryptography for building a global blockchain-like consensus network that provides trust for all participants.",
-            "This application uses SSI technology to verify credentials related to portfolio access management, whereby designers can issue a credential to clients which proves they have permission to access that portfolio.",
-            "In the next release we intend to expand on this idea by also implementing password-free access to the website and different levels of access for portfolios."
-        ],
+        "aboutus": {
+            "title": "About Us",
+            "text":
+            [ 
+                "Alina is an architect with successful projects in Romania, USA, UK, Denmark, Austria and Dubai. Carmen is a business strategist, passionate about architecture and design.",
+                "They are friends and business partners and they both consider that the spaces in which we live, or work define us and our values and influence our spirit. That each space has its own energy and story told through every object that is part of it.",
+                "This project is a result of their strong belief that each of us we deserve a story well told."
+            ]
+        },
+        "technology": {
+            "title" : "Technology",
+            "text":         
+            [
+                "The term Self-Sovereign Identity (SSI) refers to a special form of User-Centric Identity that enables the user itself (human or non-human) to be in full control of its identity data and associated data. This requires a decentralized identity ecosystem without administrative authorities.",
+                "In the world of SSI, identity-related data is stored in a digital wallet that could reside on a smartphone. The participants in an SSI ecosystem can issue, receive, and validate credentials",
+                "This is primarily done by using Distributed Ledger Technology (DLT), utilizing strong cryptography for building a global blockchain-like consensus network that provides trust for all participants.",
+                "This application uses SSI technology to verify credentials related to portfolio access management, whereby designers can issue a credential to clients which proves they have permission to access that portfolio.",
+                "In the next release we intend to expand on this idea by also implementing password-free access to the website and different levels of access for portfolios."
+            ]
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "text": [
+                "blah blah blah"
+            ]
+        },
+        "terms": {
+            "title": "Terms and Conditions",
+            "text": [
+                "blah blah blah"
+            ]
+        },
         "contactus": {
             "title": "Contact Us",
             "subtitle": "Do you have an enquiry? Do not hesitate to contact us.",
