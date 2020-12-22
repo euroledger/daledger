@@ -62,12 +62,7 @@ const MobileButtonAppBar = ({
         bottom: false,
         right: false
     });
-    // if (auth) {
-    //     links.push({
-    //         href: '#',
-    //         title: settingsLink
-    //     });
-    // }
+
     const toggleDrawer = (side, open) => event => {
         if (
             event.type === 'keydown' &&
@@ -78,12 +73,9 @@ const MobileButtonAppBar = ({
 
         setState({ ...state, [side]: open });
     };
-    const preventDefault = event => {
-        event.preventDefault();
-    };
+   
     const sideList = side => (
         <div
-            // className={classes.list}
             role='presentation'
             onClick={toggleDrawer(side, false)}
             onKeyDown={toggleDrawer(side, false)}
@@ -108,7 +100,6 @@ const MobileButtonAppBar = ({
                     >
                         <Link
                             href={item.href}
-                            // onClick={preventDefault}
                             color='inherit'
                             className={classes.link}
                         >
