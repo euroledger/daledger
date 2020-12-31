@@ -33,6 +33,8 @@ This concurrently runs the server and client (see package.json)
 
 # To change branch in git
 `git checkout master`
+
+
 `git checkout test`
 
 # To check status
@@ -42,18 +44,28 @@ This shows which branch you are on and what has changed since the last commit
 
 # To commit to test branch
 `git add .`
+
+
 `git commit -m<comment>`
+
+
 `git push -u origin test`
 
 # To merge test -> master
 
 `git checkout master`
+
+
 `git merge test`
+
+
 `git push origin master`
 
 # DAS-1 TEST 
+
+
+
 For information on Git branches/pull requests for the project see Cookbook (or ask Mike)
-=======
 
 Also see the Technical Notes document
 

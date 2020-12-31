@@ -62,7 +62,7 @@ const MobileButtonAppBar = ({
         bottom: false,
         right: false
     });
-
+  
     const toggleDrawer = (side, open) => event => {
         if (
             event.type === 'keydown' &&
@@ -73,7 +73,16 @@ const MobileButtonAppBar = ({
 
         setState({ ...state, [side]: open });
     };
-   qses.icon} />
+  
+    const sideList = side => (
+        <div
+            role='presentation'
+            onClick={toggleDrawer(side, false)}
+            onKeyDown={toggleDrawer(side, false)}
+        >
+            <div className={classes.toolbar}>
+                <IconButton onClick={toggleDrawer('left', false)}>
+                    <ChevronLeftIcon className={classes.icon} />
                 </IconButton>
             </div>
             {/* <Divider /> */}
