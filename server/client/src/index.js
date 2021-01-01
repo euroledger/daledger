@@ -42,7 +42,7 @@ const theme = createMuiTheme({
     }
 });
 ReactDOM.render(
-    <Suspense fallback={<div>Loading</div>}>
+    <Suspense fallback={<div></div>}>
         <MuiThemeProvider theme={theme}>
             <Provider store={store}>
                 <App />
