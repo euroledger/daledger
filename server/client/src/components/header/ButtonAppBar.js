@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import LoginButton from './LoginButton';
-import AppBarMenu from '../menu/AppBarMenu';
+// import AppBarMenu from '../menu/AppBarMenu';
 import LogoImage from './LogoImage';
 import 'react-flags-select/scss/react-flags-select.scss';
 import FlagMenu from './FlagMenu';
