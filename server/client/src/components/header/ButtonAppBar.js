@@ -96,10 +96,10 @@ const ButtonAppBar = ({
                                 // </Button>
                             ))}
                         </Typography>
-                        <AppBarMenu
+                        {/* <AppBarMenu
                             title={helpTitle}
                             items={helpItems}
-                        ></AppBarMenu>
+                        ></AppBarMenu> */}
                     </>
 
                     <LoginButton
