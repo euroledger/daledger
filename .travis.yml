@@ -28,6 +28,5 @@ notifications:
     email:
         recipients:
             - emerysolutions@yahoo.co.uk
-            - oxford2017a@hotmail.com
         on_success: always 
         on_failure: always 
