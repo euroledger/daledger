@@ -32,15 +32,10 @@ passport.use(
             logger.info('We are in callback, profile.id = ', profile.id);
             const existingUser = await User.findOne({ googleId: profile.id }); // query db to see if user already exists
             logger.info('Got user');
-            // if (existingUser) {
-            //     // TODO retrieve fabric keys from wallet here...if they don't exist reject this login...
-
-            //     logger.info('Google authentication ok, id = ', profile.id);
-            //     return done(null, existingUser);
-            // }
-            // // if we have registration info (in state store?) then call Fabric to enroll and register
-            // // new keys...store in wallet and then save info in MongoDB
-            // // otherwise reject "you must register ...etc"
+            if (existingUser) {
+                logger.info('Google authentication ok, id = ', profile.id);
+                return done(null, existingUser);
+            }
             const user = await new User({ googleId: profile.id }).save();
 
             logger.info("DB DONE!");
