@@ -29,9 +29,9 @@ passport.use(
         },
         async (accessToken, refreshToken, profile, done) => {
         
-            logger.info('We are in callback');
-            // const existingUser = await User.findOne({ googleId: profile.id }); // query db to see if user already exists
-            // logger.info('Got user');
+            logger.info('We are in callback, profile.id = ', profile.id);
+            const existingUser = await User.findOne({ googleId: profile.id }); // query db to see if user already exists
+            logger.info('Got user');
             // if (existingUser) {
             //     // TODO retrieve fabric keys from wallet here...if they don't exist reject this login...
 
